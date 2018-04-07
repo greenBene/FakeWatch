@@ -137,7 +137,7 @@ public class Element
       {
         var currentId = CatCatToId.data[this.memberOf][cat];
         if (frontier.usedConstraintIds.Contains(currentId)) continue;
-        if (!to.ContainsKey(cat))
+        if (!to.ContainsKey(cat) || to.Count == 0)
         {
           Console.WriteLine("{0} has no {1}!", this.name, cat.symbol);
           return null;
@@ -272,14 +272,16 @@ public class Facts
           foreach (var m in cat.members)
           {
             if (m.to.ContainsKey(otherCat)) orgTosCat.Add(m, m.to[otherCat]);
+            m.to[otherCat] = new List<Element>();
           }
           foreach (var m in otherCat.members)
           {
             if (m.to.ContainsKey(cat)) orgTosOther.Add(m, m.to[cat]);
+            m.to[cat] = new List<Element>();
           }
           // TODO: CREATE EXACT OPPOSITE RULES
           var workingFrontier = FindValid(cats, existingConstraints);
-          // back
+          // Put original rules back in place
           foreach (var m in cat.members)
           {
             if (orgTosCat.ContainsKey(m)) m.to[otherCat] = orgTosCat[m];
