@@ -74,7 +74,7 @@ public class Article : MonoBehaviour {
             ressource.AddRessource();
 
         }
-        newsGeneration.nextNews();
+        newsGeneration.ShowNextNews();
 
         Destroy(gameObject);
 
@@ -91,7 +91,7 @@ public class Article : MonoBehaviour {
 
         }
 
-        newsGeneration.nextNews();
+        newsGeneration.ShowNextNews();
 
         Destroy(gameObject);
     }
