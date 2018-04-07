@@ -16,9 +16,9 @@ public class NewsGeneration : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentDuration = startDuration;
-        newsSource = new NewsSourceDummy();
+        newsSource = NewsSourceCSV.getInstance(gameObject);
 
-        nextNews();
+        Invoke("nextNews", 1f);
     }
 	
 	// Update is called once per frame
@@ -40,7 +40,6 @@ public class NewsGeneration : MonoBehaviour {
 
     private void nextNews(){
         Generate(newsSource.getNextNews());
-        print("now");
 
         currentDuration += rate;
         Invoke("nextNews", currentDuration);
