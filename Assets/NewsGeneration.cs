@@ -8,7 +8,7 @@ public class NewsGeneration : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Generate("NOT FAKE", "GA", "bild", "12.10.2070", "Hamburg", true);
+        Generate(new News());
     }
 	
 	// Update is called once per frame
