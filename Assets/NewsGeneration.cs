@@ -8,7 +8,7 @@ public class NewsGeneration : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        Generate("NOT FAKE", "GA", "bild", "12.10.2070", "Hamburg", true);
     }
 	
 	// Update is called once per frame
@@ -16,9 +16,15 @@ public class NewsGeneration : MonoBehaviour {
 		
 	}
 
-    public void Generate(string headline, string zeitung, string journalist, string ort, string datum, bool fake)
+    public void Generate(News news)
     {
+        
         GameObject newArticle = Instantiate(articlePrefab, transform);
-        newArticle.GetComponent<Article>().Assign(headline, zeitung, journalist, ort, datum, fake);
+        newArticle.GetComponent<Article>().Assign(news.headline, 
+                                                  news.newspaper, 
+                                                  news.author,
+                                                  news.location,
+                                                  news.date,
+                                                  news.isFake);
     }
 }
