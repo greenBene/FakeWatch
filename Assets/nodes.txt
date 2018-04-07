@@ -1,0 +1,31 @@
+Z_A: Allgemeine Augsburger
+Z_B: Bernauer Blick
+
+P_1: Stephan G
+P_2: Hans F
+P_3: Kurt S
+
+O_A: Augsburg
+O_B: Bernau
+
+D_FEB8: Februar 8
+D_FEB12: Feburar 12
+D_FEB24: Feburar 24
+
+WK_Mo: Montag
+WK_Di: Dienstag
+
+Z_A -> P_1
+Z_A -> P_2
+Z_B -> P_2
+
+P_1 -> O_B
+P_2 -> O_A
+
+O_A -> Z_A
+O_A -> Z_B
+O_B -> Z_B
+
+D_FEB8 -> WK_Mo
+Z_A -> WK_Di
+D_FEB24 -> WK_Di
