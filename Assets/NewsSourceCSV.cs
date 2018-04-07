@@ -6,8 +6,6 @@ using UnityEngine;
 public class NewsSourceCSV : MonoBehaviour, NewsSource {
 
     ArrayList newsArray;
-
-    int currentPosition = 0;
    
 	// Use this for initialization
 	void Start () {
@@ -46,10 +44,7 @@ public class NewsSourceCSV : MonoBehaviour, NewsSource {
     }
 
     public News getNextNews(){
-        News news = (News) newsArray[currentPosition];
-
-        currentPosition = (currentPosition + 1) % newsArray.Count;
-        print(news);
+        News news = (News) newsArray[Random.Range(0, newsArray.Capacity-1)];
         return news;
     }
 }
