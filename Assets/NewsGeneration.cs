@@ -6,9 +6,19 @@ public class NewsGeneration : MonoBehaviour {
 
     public GameObject articlePrefab;
 
+    [Range(0, 120)] [SerializeField] float startDuration = 60f;
+    [Range(0, 1)] [SerializeField] float rate = 0.9f;
+
+
+    private NewsSource newsSource;
+    private float currentDuration;
+
 	// Use this for initialization
 	void Start () {
-        Generate(new News());
+        currentDuration = startDuration;
+        newsSource = new NewsSourceDummy();
+
+        nextNews();
     }
 	
 	// Update is called once per frame
@@ -26,5 +36,12 @@ public class NewsGeneration : MonoBehaviour {
                                                   news.location,
                                                   news.date,
                                                   news.isFake);
+    }
+
+    private void nextNews(){
+        Generate(newsSource.getNextNews());
+
+        currentDuration += rate;
+        Invoke("nextNews", currentDuration);
     }
 }
