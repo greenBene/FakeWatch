@@ -14,6 +14,8 @@ public class Article : MonoBehaviour {
     private Vector3 distanceToMouse;
     private NewsGeneration newsGeneration;
 
+    public float fadeOutTransparency, fadeOutSpeed;
+
     public void Assign (News news, NewsGeneration ng){
         this.isFake = news.isFake;
 
@@ -51,24 +53,26 @@ public class Article : MonoBehaviour {
         if(correct){
             Destroy(gameObject);   
         }else{
-            Deactivate();
+            WrongAnswer();
         }
 
     }
 
-    public void Deactivate() {
+    public void WrongAnswer() {
         // TODO: Deactivate this Article.
-        print("NEWS SHOULD BE DEACTIVATED");
+                
     }
 
     public void MarkAsFake() {
         bool correct = newsGeneration.Answer(isFake, true);
         if(correct)
         {
+
             Destroy(gameObject);
         } else
         {
-            Deactivate();
+
+            WrongAnswer();
         }
     }
 

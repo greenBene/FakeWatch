@@ -25,9 +25,8 @@ public class NewsGeneration : MonoBehaviour {
 
 	private void Update()
 	{
-        print(NewsGeneration.articleCount);
-	}
 
+	}
 
 	public void GenerateArticle(News news) {
         
@@ -36,15 +35,12 @@ public class NewsGeneration : MonoBehaviour {
         NewsGeneration.articleCount++;
     }
 
-
-
     public void NextNewsInitiater() {
         ShowNextNews();
         currentDuration *= rate;
         currentDuration = Mathf.Clamp(currentDuration, 0.25f, 120f);
         Invoke("NextNewsInitiater", currentDuration);
     }
-
 
     public void ShowNextNews() {
         GenerateArticle(newsSource.getNextNews());
