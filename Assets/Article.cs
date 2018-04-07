@@ -61,7 +61,7 @@ public class Article : MonoBehaviour {
 
     public void WrongAnswer() {
 
-        GameObject.Find("notification").GetComponent<Notification>().Spawn("Was zur Hölle habt ihr angerichtet?");
+        GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG");
         Destroy(gameObject);
     }
 
