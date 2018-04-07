@@ -58,7 +58,11 @@ public class Article : MonoBehaviour {
 
     public void Deactivate() {
         // TODO: Deactivate this Article.
-        print("NEWS SHOULD BE DEACTIVATED");
+        Destroy(gameObject);
+    }
+
+    public void showEndScreen(){
+        // Todo show end screen
     }
 
     public void MarkAsFake() {

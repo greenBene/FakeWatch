@@ -10,14 +10,25 @@ public class NewsGeneration : MonoBehaviour {
 
     [Range(0, 120)] [SerializeField] float startDuration = 60f;
     [Range(0, 1)] [SerializeField] float rate = 0.9f;
+    [SerializeField] float timeToPlayInSeconds = 600f;
+
 
 
     private NewsSource newsSource;
-    private float currentDuration;
+    private float currentDurationBetweenNews;
+    public float timeLeft;
+
+    private bool hasEnded = false;
+
+    private int correctMarkedArticles = 0;
+    private int wronglyMarkedArticlesAsTrue = 0;
+    private int wronglyMarkedArticlesAsFalse = 0;
+
 
 	// Use this for initialization
 	void Start () {
-        currentDuration = startDuration;
+        currentDurationBetweenNews = startDuration;
+        timeLeft = timeToPlayInSeconds;
         newsSource = NewsSourceCSV.getInstance(gameObject);
 
         Invoke("NextNewsInitiater", 1f);
@@ -25,12 +36,18 @@ public class NewsGeneration : MonoBehaviour {
 
 	private void Update()
 	{
-        print(NewsGeneration.articleCount);
+        if(!hasEnded){
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0){
+                hasEnded = true;   
+            }
+        }
+
 	}
 
 
 	public void GenerateArticle(News news) {
-        
+        if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
         newArticle.GetComponent<Article>().Assign(news, this);
         NewsGeneration.articleCount++;
@@ -39,14 +56,16 @@ public class NewsGeneration : MonoBehaviour {
 
 
     public void NextNewsInitiater() {
+        if (hasEnded) return;
         ShowNextNews();
-        currentDuration *= rate;
-        currentDuration = Mathf.Clamp(currentDuration, 0.25f, 120f);
-        Invoke("NextNewsInitiater", currentDuration);
+        currentDurationBetweenNews *= rate;
+        currentDurationBetweenNews = Mathf.Clamp(currentDurationBetweenNews, 0.25f, 120f);
+        Invoke("NextNewsInitiater", currentDurationBetweenNews);
     }
 
 
     public void ShowNextNews() {
+        if (hasEnded) return;
         GenerateArticle(newsSource.getNextNews());
     }
 
@@ -61,10 +80,15 @@ public class NewsGeneration : MonoBehaviour {
             Invoke("ShowNextNews", 1f);
         }
 
-        if (isFake != newsIsRejected) {
-            return false;
+        if (isFake == newsIsRejected) {
+            correctMarkedArticles++;
+            return true;
+        }else{
+            if (newsIsRejected)
+                wronglyMarkedArticlesAsTrue++;
+            else
+                wronglyMarkedArticlesAsFalse++;
+            return false;   
         }
-
-        return true;
     }
 }
