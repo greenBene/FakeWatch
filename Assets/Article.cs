@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System;
 
 public class Article : MonoBehaviour {
 
@@ -13,6 +15,9 @@ public class Article : MonoBehaviour {
 
     private Ressource ressource;
     private NewsGeneration newsGeneration;
+
+    private bool dragging;
+    private Vector3 distanceToMouse;
 
     public void Assign (string headline, 
                         string zeitung, 
@@ -46,8 +51,9 @@ public class Article : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        if(dragging)
+            transform.position = Input.mousePosition + distanceToMouse;
+    }
 
     Vector2 RandomPosition()
     {
@@ -88,5 +94,16 @@ public class Article : MonoBehaviour {
         newsGeneration.nextNews();
 
         Destroy(gameObject);
+    }
+
+    public void StartDragging()
+    {
+        distanceToMouse = transform.position - Input.mousePosition;
+        dragging = true;
+    }
+
+    public void StopDragging()
+    {
+        dragging = false;
     }
 }
