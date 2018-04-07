@@ -11,6 +11,7 @@ public class Article : MonoBehaviour {
     public bool fake;
     private Text headlineField, zeitungJournalistField, ortField, datumField;
 
+    private Ressource ressource;
 
     public void Assign (string headline, string zeitung, string journalist,string ort, string datum, bool fake)
     {
@@ -35,7 +36,7 @@ public class Article : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         transform.position = RandomPosition();
-        
+        ressource = GameObject.Find("ressource").GetComponent<Ressource>();
     }
 
 
@@ -51,5 +52,29 @@ public class Article : MonoBehaviour {
         float halfHorizontalSize = GetComponent<RectTransform>().rect.width / 2;
 
         return new Vector2(UnityEngine.Random.Range(0 + halfHorizontalSize, Screen.width - halfHorizontalSize), UnityEngine.Random.Range(0 + halfVerticalSize, Screen.height - halfVerticalSize));
+    }
+
+    public void True()
+    {
+        if(fake)
+        {
+            ressource.LowerRessource();
+        } else
+        {
+            ressource.AddRessource();
+
+        }
+    }
+
+    public void Fake()
+    {
+        if(fake)
+        {
+            ressource.AddRessource();
+        } else
+        {
+            ressource.LowerRessource();
+
+        }
     }
 }
