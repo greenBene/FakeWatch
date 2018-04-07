@@ -5,30 +5,30 @@ using UnityEngine.UI;
 
 public class Ressource : MonoBehaviour {
 
-    int ressource;
+    static string RESSOURCE_NAME = "Glaubwürdigkeit";
+
+    int ressource = 5;
     private Text text;
 
 	// Use this for initialization
 	void Start () {
         text = GetComponent<Text>();
-        text.text = "Glaubwürdigkeit: " + ressource; 
+        UpdateText();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private void UpdateText(){
+        text.text = RESSOURCE_NAME + ": " + ressource;
+    } 
 
     public void LowerRessource()
     {
         ressource--;
-        text.text = "Glaubwürdigkeit: " + ressource.ToString();
+        UpdateText();
     }
 
     public void AddRessource()
     {
         ressource++;
-        text.text = "Glaubwürdigkeit: " + ressource.ToString();
-
+        UpdateText();
     }
 }
