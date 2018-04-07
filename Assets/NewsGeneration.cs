@@ -43,6 +43,7 @@ public class NewsGeneration : MonoBehaviour {
             if (timeLeft <= 0)
             {
                 hasEnded = true;
+                ShowEndScreen();
             }
         }
 	}
@@ -92,5 +93,14 @@ public class NewsGeneration : MonoBehaviour {
             return false;
         }
 
+    }
+
+    public void ShowEndScreen(){
+        // Todo Show End screen
+
+        print("Result: " +
+              "correctMarkedArticles: " + correctMarkedArticles + "\n" +
+              "wronglyMarkedArticlesAsTrue: " + wronglyMarkedArticlesAsTrue + "\n" +
+              "wronglyMarkedArticlesAsFalse: " + wronglyMarkedArticlesAsFalse + "\n");
     }
 }
