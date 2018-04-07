@@ -59,6 +59,8 @@ public class Article : MonoBehaviour {
             ressource.AddRessource();
 
         }
+
+        Destroy(gameObject);
     }
 
     public void Fake()
@@ -71,5 +73,7 @@ public class Article : MonoBehaviour {
             ressource.LowerRessource();
 
         }
+
+        Destroy(gameObject);
     }
 }
