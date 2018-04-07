@@ -10,7 +10,7 @@ public class Notification : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        startColor = GetComponent<Image>().color;
+        startColor = text.color;
         GetComponent<Image>().color = new Color(0, 0, 0, 0);
         text.color = new Color(0, 0, 0, 0);
 	}
@@ -27,15 +27,15 @@ public class Notification : MonoBehaviour {
     }
 
     IEnumerator FadeOut() {
-        GetComponent<Image>().color = startColor;
-        text.color = Color.black;
+        //GetComponent<Image>().color = startColor;
+        text.color = startColor;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
 
-        while(GetComponent<Image>().color.a > 0)
+        while(text.color.a > 0)
         {
             text.color -= new Color(0, 0, 0, 1 * Time.deltaTime);
-            GetComponent<Image>().color -= new Color(0, 0, 0, 1 * Time.deltaTime);
+            //GetComponent<Image>().color -= new Color(0, 0, 0, 1 * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
 	}
