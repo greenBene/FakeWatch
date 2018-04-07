@@ -10,7 +10,7 @@ public class Article : MonoBehaviour {
     private bool isFake;
     private bool dragging;
 
-    public Text headlineField, zeitungJournalistField, ortField, datumField;
+    public Text headlineField, zeitungField, journalistField, ortField, datumField;
     private Vector3 distanceToMouse;
     private NewsGeneration newsGeneration;
 
@@ -20,7 +20,8 @@ public class Article : MonoBehaviour {
         this.isFake = news.isFake;
 
         headlineField.text = news.headline;
-        zeitungJournalistField.text = news.newspaper.ToUpper() + " / " + news.author;
+        zeitungField.text = news.newspaper.ToUpper();
+        journalistField.text = news.author;
         ortField.text = news.location;
         datumField.text = news.date;
         newsGeneration = ng;
