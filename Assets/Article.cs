@@ -6,45 +6,27 @@ using UnityEngine.EventSystems;
 using System;
 
 public class Article : MonoBehaviour {
+    
+    private bool isFake;
+    private bool dragging;
 
-
-
-    public string headline, zeitung, journalist, ort, datum;
-    public bool fake;
     public Text headlineField, zeitungJournalistField, ortField, datumField;
-
-    private Ressource ressource;
+    private Vector3 distanceToMouse;
     private NewsGeneration newsGeneration;
 
-    private bool dragging;
-    private Vector3 distanceToMouse;
+    public void Assign (News news, NewsGeneration ng){
+        this.isFake = news.isFake;
 
-    public void Assign (string headline, 
-                        string zeitung, 
-                        string journalist,
-                        string ort, 
-                        string datum, 
-                        bool fake,
-                        NewsGeneration ng)
-    {
-        this.headline = headline;
-        this.zeitung = zeitung;
-        this.journalist = journalist;
-        this.ort = ort;
-        this.fake = fake;
-        this.datum = datum;
-
-        headlineField.text = headline;
-        zeitungJournalistField.text = zeitung.ToUpper() + " / " + journalist;
-        ortField.text = ort;
-        datumField.text = datum;
+        headlineField.text = news.headline;
+        zeitungJournalistField.text = news.newspaper.ToUpper() + " / " + news.author;
+        ortField.text = news.location;
+        datumField.text = news.date;
         newsGeneration = ng;
     }
 
 	// Use this for initialization
 	void Start () {
         transform.position = RandomPosition();
-        ressource = GameObject.Find("ressource").GetComponent<Ressource>();
     }
 
 
@@ -63,37 +45,31 @@ public class Article : MonoBehaviour {
         return new Vector2(UnityEngine.Random.Range(0 + halfHorizontalSize, Screen.width - halfHorizontalSize), UnityEngine.Random.Range(0 + halfVerticalSize, Screen.height - halfVerticalSize));
     }
 
-    public void True()
-    {
-        
-        if(fake)
-        {
-            ressource.LowerRessource();
-        } else
-        {
-            ressource.AddRessource();
+    public void MarkAsTrue() {
+        bool correct =  newsGeneration.Answer(isFake, false);
 
+        if(correct){
+            Destroy(gameObject);   
+        }else{
+            Deactivate();
         }
-        newsGeneration.ShowNextNews();
-
-        Destroy(gameObject);
 
     }
 
-    public void Fake()
-    {
-        if(fake)
+    public void Deactivate() {
+        // TODO: Deactivate this Article.
+        print("NEWS SHOULD BE DEACTIVATED");
+    }
+
+    public void MarkAsFake() {
+        bool correct = newsGeneration.Answer(isFake, true);
+        if(correct)
         {
-            ressource.AddRessource();
+            Destroy(gameObject);
         } else
         {
-            ressource.LowerRessource();
-
+            Deactivate();
         }
-
-        newsGeneration.ShowNextNews();
-
-        Destroy(gameObject);
     }
 
     public void StartDragging()

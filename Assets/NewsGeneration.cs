@@ -22,47 +22,49 @@ public class NewsGeneration : MonoBehaviour {
 
         Invoke("NextNewsInitiater", 1f);
     }
-	
 
-    public void GenerateArticle(News news)
-    {
+	private void Update()
+	{
+        print(NewsGeneration.articleCount);
+	}
+
+
+	public void GenerateArticle(News news) {
         
         GameObject newArticle = Instantiate(articlePrefab, transform);
-        newArticle.GetComponent<Article>().Assign(news.headline, 
-                                                  news.newspaper, 
-                                                  news.author,
-                                                  news.location,
-                                                  news.date,
-                                                  news.isFake,
-                                                 this);
+        newArticle.GetComponent<Article>().Assign(news, this);
         NewsGeneration.articleCount++;
     }
 
 
 
-    public void NextNewsInitiater(){
+    public void NextNewsInitiater() {
         ShowNextNews();
         currentDuration *= rate;
         currentDuration = Mathf.Clamp(currentDuration, 0.25f, 120f);
         Invoke("NextNewsInitiater", currentDuration);
     }
 
-    /*
-     *
-     *
-     */
-    public bool Answer(bool isFake, bool newsIsRejected){
-        NewsGeneration.articleCount--;
 
-        if(isFake && !newsIsRejected){
-            return true;
-        }
-
-        return false;
+    public void ShowNextNews() {
+        GenerateArticle(newsSource.getNextNews());
     }
 
+    /*
+     * returns if answer is correct
+     *
+     */
+    public bool Answer(bool isFake, bool newsIsRejected) {
+        NewsGeneration.articleCount--;
 
-    public void ShowNextNews(){
-        GenerateArticle(newsSource.getNextNews());
+        if(NewsGeneration.articleCount == 0) {
+            Invoke("ShowNextNews", 1f);
+        }
+
+        if (isFake != newsIsRejected) {
+            return false;
+        }
+
+        return true;
     }
 }

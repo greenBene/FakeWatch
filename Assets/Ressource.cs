@@ -13,27 +13,22 @@ public class Ressource : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         text = GetComponent<Text>();
-        SetText();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        UpdateText();
 	}
 
-    private void SetText(){
+    private void UpdateText(){
         text.text = RESSOURCE_NAME + ": " + ressource;
     } 
 
     public void LowerRessource()
     {
         ressource--;
-        SetText();
+        UpdateText();
     }
 
     public void AddRessource()
     {
         ressource++;
-        SetText();
+        UpdateText();
     }
 }
