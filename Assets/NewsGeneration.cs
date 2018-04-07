@@ -6,6 +6,8 @@ public class NewsGeneration : MonoBehaviour {
 
     public GameObject articlePrefab;
 
+    private static int articleCount = 0;
+
     [Range(0, 120)] [SerializeField] float startDuration = 60f;
     [Range(0, 1)] [SerializeField] float rate = 0.9f;
 
@@ -18,15 +20,11 @@ public class NewsGeneration : MonoBehaviour {
         currentDuration = startDuration;
         newsSource = NewsSourceCSV.getInstance(gameObject);
 
-        Invoke("nextNews", 1f);
+        Invoke("NextNewsInitiater", 1f);
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    public void Generate(News news)
+    public void GenerateArticle(News news)
     {
         
         GameObject newArticle = Instantiate(articlePrefab, transform);
@@ -37,10 +35,34 @@ public class NewsGeneration : MonoBehaviour {
                                                   news.date,
                                                   news.isFake,
                                                  this);
+        NewsGeneration.articleCount++;
     }
 
-    public void nextNews(){
-        Generate(newsSource.getNextNews());
 
+
+    public void NextNewsInitiater(){
+        ShowNextNews();
+        currentDuration *= rate;
+        currentDuration = Mathf.Clamp(currentDuration, 0.25f, 120f);
+        Invoke("NextNewsInitiater", currentDuration);
+    }
+
+    /*
+     *
+     *
+     */
+    public bool Answer(bool isFake, bool newsIsRejected){
+        NewsGeneration.articleCount--;
+
+        if(isFake && !newsIsRejected){
+            return true;
+        }
+
+        return false;
+    }
+
+
+    public void ShowNextNews(){
+        GenerateArticle(newsSource.getNextNews());
     }
 }
