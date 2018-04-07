@@ -13,7 +13,7 @@ public class FactsTest
   {
     Facts facts = new Facts();
     facts.Init("Assets/nodes.txt");
-    facts.FindValid(new List<string> { "Z", "O", "P" }, new Dictionary<string, string> { { "WK", "WK_Mo" } });
+    facts.FindInvalid(new List<string> { "Z", "O", "P" }, new Dictionary<string, string> { { "WK", "WK_Mo" } });
 
     Assert.AreEqual(1, 1);
   }

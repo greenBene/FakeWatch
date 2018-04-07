@@ -250,10 +250,53 @@ public class Facts
     // edges.ForEach(Console.WriteLine);
   }
 
-  public bool FindValid(List<string> symbols, Dictionary<string, string> existingConstraints)
+  public Dictionary<Category, Element> FindValid(List<string> symbols, Dictionary<string, string> existingConstraints)
   {
-
     var cats = new List<Category>(symbols.Select(s => symbolToCategory[s]));
+    return this.FindValid(cats, existingConstraints);
+  }
+
+  public Dictionary<Category, Element> FindInvalid(List<string> symbols, Dictionary<string, string> existingConstraints)
+  {
+    symbols.Shuffle();
+    var cats = new List<Category>(symbols.Select(s => symbolToCategory[s]));
+    foreach (var cat in cats)
+    {
+      cat.Shuffle();
+      if (CatCatToId.data.ContainsKey(cat))
+      {
+        foreach (var otherCat in CatCatToId.data[cat].Keys)
+        {
+          var orgTosCat = new Dictionary<Element, List<Element>>();
+          var orgTosOther = new Dictionary<Element, List<Element>>();
+          foreach (var m in cat.members)
+          {
+            if (m.to.ContainsKey(otherCat)) orgTosCat.Add(m, m.to[otherCat]);
+          }
+          foreach (var m in otherCat.members)
+          {
+            if (m.to.ContainsKey(cat)) orgTosOther.Add(m, m.to[cat]);
+          }
+          // TODO: CREATE EXACT OPPOSITE RULES
+          var workingFrontier = FindValid(cats, existingConstraints);
+          // back
+          foreach (var m in cat.members)
+          {
+            if (orgTosCat.ContainsKey(m)) m.to[otherCat] = orgTosCat[m];
+          }
+          foreach (var m in otherCat.members)
+          {
+            if (orgTosOther.ContainsKey(m)) m.to[cat] = orgTosOther[m];
+          }
+          if (workingFrontier != null) return workingFrontier;
+        }
+      }
+    }
+    return null;
+  }
+
+  private Frontier InitialFrontier(List<Category> cats, Dictionary<string, string> existingConstraints)
+  {
     foreach (var cat in cats) cat.Shuffle();
 
     var frontier = new Frontier(cats, new Dictionary<Category, Element>(), new HashSet<int>());
@@ -262,6 +305,13 @@ public class Facts
 
       frontier.foundPairs.Add(symbolToCategory[k], shortNameToElement[existingConstraints[k]]);
     }
+    return frontier;
+  }
+
+  private Dictionary<Category, Element> FindValid(List<Category> cats, Dictionary<string, string> existingConstraints)
+  {
+    var frontier = InitialFrontier(cats, existingConstraints);
+
     while (frontier.missingCats.Count > 0)
     {
       foreach (var cat in frontier.missingCats) Console.WriteLine("Missing: {0}", cat.symbol);
@@ -272,7 +322,7 @@ public class Facts
       if (frontier == null)
       {
         Console.WriteLine("FAIL!!");
-        return false;
+        return null;
       }
     }
     Console.WriteLine("SUCCESS!");
@@ -280,7 +330,7 @@ public class Facts
     {
       Console.WriteLine("{0}: {1}", cat.symbol, frontier.foundPairs[cat].name);
     }
-    return false;
+    return frontier.foundPairs;
   }
 
 }

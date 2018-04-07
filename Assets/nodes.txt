@@ -27,5 +27,4 @@ O_A -> Z_B
 O_B -> Z_B
 
 D_FEB8 -> WK_Mo
-Z_A -> WK_Di
 D_FEB24 -> WK_Di
