@@ -67,7 +67,6 @@ public class Article : MonoBehaviour {
         bool correct = newsGeneration.Answer(isFake, true);
         if(correct)
         {
-
             Destroy(gameObject);
         } else
         {
