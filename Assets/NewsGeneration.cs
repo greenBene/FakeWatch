@@ -40,6 +40,7 @@ public class NewsGeneration : MonoBehaviour {
 
     private void nextNews(){
         Generate(newsSource.getNextNews());
+        print("now");
 
         currentDuration += rate;
         Invoke("nextNews", currentDuration);
