@@ -9,7 +9,7 @@ public class Article : MonoBehaviour {
 
     public string headline, zeitung, journalist, ort, datum;
     public bool fake;
-    private Text headlineField, zeitungJournalistField, ortField, datumField;
+    public Text headlineField, zeitungJournalistField, ortField, datumField;
 
     private Ressource ressource;
 
@@ -21,11 +21,6 @@ public class Article : MonoBehaviour {
         this.ort = ort;
         this.fake = fake;
         this.datum = datum;
-
-        headlineField = GameObject.Find("headline").GetComponent<Text>();
-        zeitungJournalistField = GameObject.Find("zeitung").GetComponent<Text>();
-        ortField = GameObject.Find("ort").GetComponent<Text>();
-        datumField = GameObject.Find("datum").GetComponent<Text>();
 
         headlineField.text = headline;
         zeitungJournalistField.text = zeitung.ToUpper() + " / " + journalist;
