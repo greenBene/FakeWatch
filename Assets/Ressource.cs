@@ -10,7 +10,8 @@ public class Ressource : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        text = GetComponent<Text>();
+        text.text = "Glaubwürdigkeit: " + ressource; 
 	}
 	
 	// Update is called once per frame
@@ -21,13 +22,13 @@ public class Ressource : MonoBehaviour {
     public void LowerRessource()
     {
         ressource--;
-        text.text = ressource.ToString();
+        text.text = "Glaubwürdigkeit: " + ressource.ToString();
     }
 
     public void AddRessource()
     {
         ressource++;
-        text.text = ressource.ToString();
+        text.text = "Glaubwürdigkeit: " + ressource.ToString();
 
     }
 }
