@@ -35,13 +35,12 @@ public class NewsGeneration : MonoBehaviour {
                                                   news.author,
                                                   news.location,
                                                   news.date,
-                                                  news.isFake);
+                                                  news.isFake,
+                                                 this);
     }
 
-    private void nextNews(){
+    public void nextNews(){
         Generate(newsSource.getNextNews());
 
-        currentDuration += rate;
-        Invoke("nextNews", currentDuration);
     }
 }

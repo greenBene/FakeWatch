@@ -12,8 +12,15 @@ public class Article : MonoBehaviour {
     public Text headlineField, zeitungJournalistField, ortField, datumField;
 
     private Ressource ressource;
+    private NewsGeneration newsGeneration;
 
-    public void Assign (string headline, string zeitung, string journalist,string ort, string datum, bool fake)
+    public void Assign (string headline, 
+                        string zeitung, 
+                        string journalist,
+                        string ort, 
+                        string datum, 
+                        bool fake,
+                        NewsGeneration ng)
     {
         this.headline = headline;
         this.zeitung = zeitung;
@@ -26,6 +33,7 @@ public class Article : MonoBehaviour {
         zeitungJournalistField.text = zeitung.ToUpper() + " / " + journalist;
         ortField.text = ort;
         datumField.text = datum;
+        newsGeneration = ng;
     }
 
 	// Use this for initialization
@@ -51,6 +59,7 @@ public class Article : MonoBehaviour {
 
     public void True()
     {
+        
         if(fake)
         {
             ressource.LowerRessource();
@@ -59,8 +68,10 @@ public class Article : MonoBehaviour {
             ressource.AddRessource();
 
         }
+        newsGeneration.nextNews();
 
         Destroy(gameObject);
+
     }
 
     public void Fake()
@@ -73,6 +84,8 @@ public class Article : MonoBehaviour {
             ressource.LowerRessource();
 
         }
+
+        newsGeneration.nextNews();
 
         Destroy(gameObject);
     }
