@@ -24,21 +24,21 @@ HashSet<int> usedConstraintIds)
     this.usedConstraintIds = usedConstraintIds;
   }
 
-  public Frontier removeMissingCat(Category cat)
+  public Frontier RemoveMissingCat(Category cat)
   {
     var cats = new List<Category>(missingCats);
     cats.Remove(cat);
     return new Frontier(cats, foundPairs, usedConstraintIds);
   }
 
-  public Frontier addFoundPairs(Category cat, Element el)
+  public Frontier AddFoundPairs(Category cat, Element el)
   {
     var pairs = new Dictionary<Category, Element>(foundPairs);
     pairs.Add(cat, el);
     return new Frontier(missingCats, pairs, usedConstraintIds);
   }
 
-  public Frontier addUsedConstraintId(int id)
+  public Frontier AddUsedConstraintId(int id)
   {
     var ids = new HashSet<int>(usedConstraintIds);
     ids.Add(id);
@@ -56,12 +56,18 @@ public class Category
     this.symbol = symbol;
   }
 
-  public Frontier fulfillConstraints(Frontier frontier)
+  public void Shuffle()
+  {
+    foreach (var m in members) m.Shuffle();
+    members.Shuffle();
+  }
+
+  public Frontier FulfillConstraints(Frontier frontier)
   {
     foreach (var m in members)
     {
       Console.WriteLine("First Layer {0}", m.name);
-      var workingFront = m.canFulfillConstraints(frontier.addFoundPairs(this, m));
+      var workingFront = m.CanFulfillConstraints(frontier.AddFoundPairs(this, m));
       if (workingFront != null) return workingFront;
     }
     return null;
@@ -80,7 +86,12 @@ public class Element
     this.memberOf = memberOf;
   }
 
-  private Frontier canReachAll(Frontier frontier, List<Category> reachable)
+  public void Shuffle()
+  {
+    foreach (var list in to.Values) list.Shuffle();
+  }
+
+  private Frontier CanReachAll(Frontier frontier, List<Category> reachable)
   {
     Console.Write("canReachAll {0}", this.name);
     reachable.ForEach(r => Console.Write(r.symbol + ", "));
@@ -90,7 +101,7 @@ public class Element
     var nextReachable = new List<Category>(reachable);
     nextReachable.Remove(cat);
     var currentId = CatCatToId.data[this.memberOf][cat];
-    if (frontier.usedConstraintIds.Contains(currentId)) return canReachAll(frontier, nextReachable);
+    if (frontier.usedConstraintIds.Contains(currentId)) return CanReachAll(frontier, nextReachable);
     if (!to.ContainsKey(cat))
     {
       Console.WriteLine("{0} has no {1}.", this.name, cat.symbol);
@@ -98,16 +109,16 @@ public class Element
     }
 
     Console.WriteLine("adding catcatId {0}", currentId);
-    var nextFront = frontier.addUsedConstraintId(currentId).removeMissingCat(cat);
+    var nextFront = frontier.AddUsedConstraintId(currentId).RemoveMissingCat(cat);
     foreach (var el in to[cat])
     {
       Console.WriteLine("  try {0} -> {1}", cat.symbol, el.name);
-      var nextFront2 = nextFront.addFoundPairs(cat, el);
-      var workingFront = el.canFulfillConstraints(nextFront2);
+      var nextFront2 = nextFront.AddFoundPairs(cat, el);
+      var workingFront = el.CanFulfillConstraints(nextFront2);
       if (workingFront != null)
       {
         Console.WriteLine("! try {0}", el.name);
-        var workingFront2 = canReachAll(workingFront, nextReachable);
+        var workingFront2 = CanReachAll(workingFront, nextReachable);
         if (workingFront2 != null) return workingFront2;
       }
       Console.WriteLine("X try {0} -> {1}", cat.symbol, el.name);
@@ -116,7 +127,7 @@ public class Element
 
   }
 
-  public Frontier canFulfillConstraints(Frontier frontier)
+  public Frontier CanFulfillConstraints(Frontier frontier)
   {
     Console.WriteLine("In member {0}", this.name);
 
@@ -139,7 +150,7 @@ public class Element
             if (el == frontier.foundPairs[cat])
             {
               Console.WriteLine("! TRY {0}", el.name);
-              return frontier.addUsedConstraintId(currentId);
+              return frontier.AddUsedConstraintId(currentId);
             }
             Console.WriteLine("X TRY {0}", el.name);
           }
@@ -157,7 +168,7 @@ public class Element
       }
 
     }
-    return this.canReachAll(frontier, reachable);
+    return this.CanReachAll(frontier, reachable);
   }
 }
 
@@ -167,7 +178,7 @@ public class Facts
   private Dictionary<string, Category> symbolToCategory = new Dictionary<string, Category>();
   private Dictionary<string, Element> shortNameToElement = new Dictionary<string, Element>();
 
-  public void init(string path)
+  public void Init(string path)
   {
     int currentId = 1;
     foreach (var line in File.ReadAllLines(path))
@@ -239,11 +250,16 @@ public class Facts
     // edges.ForEach(Console.WriteLine);
   }
 
-  public bool findValid(List<string> symbols, Dictionary<string, string> existingConstraints)
+  public bool FindValid(List<string> symbols, Dictionary<string, string> existingConstraints)
   {
-    var frontier = new Frontier(new List<Category>(symbols.Select(s => symbolToCategory[s])), new Dictionary<Category, Element>(), new HashSet<int>());
+
+    var cats = new List<Category>(symbols.Select(s => symbolToCategory[s]));
+    foreach (var cat in cats) cat.Shuffle();
+
+    var frontier = new Frontier(cats, new Dictionary<Category, Element>(), new HashSet<int>());
     foreach (var k in existingConstraints.Keys)
     {
+
       frontier.foundPairs.Add(symbolToCategory[k], shortNameToElement[existingConstraints[k]]);
     }
     while (frontier.missingCats.Count > 0)
@@ -252,7 +268,7 @@ public class Facts
       var next = frontier.missingCats.First();
       Console.WriteLine("Try {0}", next.symbol);
 
-      frontier = next.fulfillConstraints(frontier.removeMissingCat(next));
+      frontier = next.FulfillConstraints(frontier.RemoveMissingCat(next));
       if (frontier == null)
       {
         Console.WriteLine("FAIL!!");

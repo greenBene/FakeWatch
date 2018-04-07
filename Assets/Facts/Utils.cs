@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 static class Utils
 {
-  public static List<T> Shuffle<T>(this List<T> list)
+  public static void Shuffle<T>(this List<T> list)
   {
     RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
     int n = list.Count;
@@ -20,6 +20,5 @@ static class Utils
       list[k] = list[n];
       list[n] = value;
     }
-    return list;
   }
 }
