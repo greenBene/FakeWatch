@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Article : MonoBehaviour {
-
-
-
     public string headline, zeitung, journalist, ort, datum;
-    public bool fake;
+    public bool isFake;
     public Text headlineField, zeitungJournalistField, ortField, datumField;
 
     private Ressource ressource;
@@ -19,14 +16,14 @@ public class Article : MonoBehaviour {
                         string journalist,
                         string ort, 
                         string datum, 
-                        bool fake,
+                        bool isFake,
                         NewsGeneration ng)
     {
         this.headline = headline;
         this.zeitung = zeitung;
         this.journalist = journalist;
         this.ort = ort;
-        this.fake = fake;
+        this.isFake = isFake;
         this.datum = datum;
 
         headlineField.text = headline;
@@ -34,6 +31,7 @@ public class Article : MonoBehaviour {
         ortField.text = ort;
         datumField.text = datum;
         newsGeneration = ng;
+
     }
 
 	// Use this for initialization
@@ -57,10 +55,9 @@ public class Article : MonoBehaviour {
         return new Vector2(UnityEngine.Random.Range(0 + halfHorizontalSize, Screen.width - halfHorizontalSize), UnityEngine.Random.Range(0 + halfVerticalSize, Screen.height - halfVerticalSize));
     }
 
-    public void True()
-    {
+    public void True(){
         
-        if(fake)
+        if(isFake)
         {
             ressource.LowerRessource();
         } else
@@ -68,7 +65,8 @@ public class Article : MonoBehaviour {
             ressource.AddRessource();
 
         }
-        newsGeneration.nextNews();
+
+        newsGeneration.ShowNextNews();
 
         Destroy(gameObject);
 
@@ -76,7 +74,7 @@ public class Article : MonoBehaviour {
 
     public void Fake()
     {
-        if(fake)
+        if(isFake)
         {
             ressource.AddRessource();
         } else
@@ -85,8 +83,12 @@ public class Article : MonoBehaviour {
 
         }
 
-        newsGeneration.nextNews();
+        newsGeneration.ShowNextNews();
 
         Destroy(gameObject);
+    }
+
+    private void InitiateNextNews(){
+        newsGeneration.ShowNextNews();
     }
 }
