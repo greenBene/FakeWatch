@@ -60,8 +60,9 @@ public class Article : MonoBehaviour {
     }
 
     public void WrongAnswer() {
-        // TODO: Deactivate this Article.
-                
+
+        GameObject.Find("notification").GetComponent<Notification>().Spawn("Was zur Hölle habt ihr angerichtet?");
+        Destroy(gameObject);
     }
 
     public void MarkAsFake() {
