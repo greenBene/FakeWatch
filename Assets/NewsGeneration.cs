@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewsGeneration : MonoBehaviour {
 
@@ -11,14 +12,16 @@ public class NewsGeneration : MonoBehaviour {
     [Range(0, 120)] [SerializeField] float startDuration = 60f;
     [Range(0, 1)] [SerializeField] float rate = 0.9f;
     [SerializeField] float timeToPlayInSeconds = 600f;
+    [SerializeField] int newsWithoutInvokingAutmatically = 4;
 
 
-
+    private int newsTillAutoInvoke;
     private NewsSource newsSource;
     private float currentDurationBetweenNews;
     public float timeLeft;
 
     private bool hasEnded = false;
+
 
     private int correctMarkedArticles = 0;
     private int wronglyMarkedArticlesAsTrue = 0;
@@ -26,15 +29,20 @@ public class NewsGeneration : MonoBehaviour {
 
     private AudioSource source;
 
+    public Image endScreen;
+    public Text endText;
+    public GameObject restartButton;
+
 	// Use this for initialization
 	void Start () {
         source = GetComponent<AudioSource>();
         currentDurationBetweenNews = startDuration;
         timeLeft = timeToPlayInSeconds;
+        newsTillAutoInvoke = newsWithoutInvokingAutmatically;
 
         newsSource = new NewsSourceForReal();
 
-        Invoke("NextNewsInitiater", 1f);
+        Invoke("ShowNextNews", 1f);
     }
 
 	private void Update()
@@ -53,6 +61,7 @@ public class NewsGeneration : MonoBehaviour {
 	public void GenerateArticle(News news) {
         if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
+        newArticle.transform.SetSiblingIndex(4);
         source.Play();
         newArticle.GetComponent<Article>().Assign(news, this);
         NewsGeneration.articleCount++;
@@ -78,6 +87,13 @@ public class NewsGeneration : MonoBehaviour {
     public bool Answer(bool isFake, bool newsIsRejected) {
         NewsGeneration.articleCount--;
 
+        if(newsTillAutoInvoke > 0){
+            newsTillAutoInvoke--;
+            if(newsTillAutoInvoke <= 0){
+                Invoke("NextNewsInitiater", currentDurationBetweenNews);
+            }
+        }
+
         if(NewsGeneration.articleCount == 0) {
             Invoke("ShowNextNews", 1f);
         }
@@ -100,6 +116,11 @@ public class NewsGeneration : MonoBehaviour {
 
     public void ShowEndScreen(){
         // Todo Show End screen
+
+        endScreen.enabled = true;
+        endText.enabled = true;
+        endText.text = "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310. \n Sie haben " + correctMarkedArticles + " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt. Dagegen haben Sie " + wronglyMarkedArticlesAsTrue + " falsche Nachrichten als wahr " + "und " + wronglyMarkedArticlesAsFalse + " wahre Nachrichten als falsch eingestuft.";
+        restartButton.SetActive(true);
 
         print("Result: " +
               "correctMarkedArticles: " + correctMarkedArticles + "\n" +
