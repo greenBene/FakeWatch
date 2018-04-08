@@ -58,6 +58,7 @@ public class NewsGeneration : MonoBehaviour {
 	public void GenerateArticle(News news) {
         if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
+        newArticle.transform.SetSiblingIndex(4);
         source.Play();
         newArticle.GetComponent<Article>().Assign(news, this);
         NewsGeneration.articleCount++;
