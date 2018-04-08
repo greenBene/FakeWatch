@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using System;
 
 public class Article : MonoBehaviour {
-    
+
     private bool isFake;
     private bool dragging;
 
@@ -25,6 +25,7 @@ public class Article : MonoBehaviour {
         ortField.text = news.location;
         datumField.text = news.date;
         newsGeneration = ng;
+        Debug.Log(news.error);
     }
 
 	// Use this for initialization
@@ -52,7 +53,7 @@ public class Article : MonoBehaviour {
         bool correct =  newsGeneration.Answer(isFake, false);
 
         if(correct){
-            Destroy(gameObject);   
+            Destroy(gameObject);
         }else{
             WrongAnswer();
         }
