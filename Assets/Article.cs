@@ -10,7 +10,7 @@ public class Article : MonoBehaviour {
     private bool isFake;
     private bool dragging;
 
-    public Text headlineField, zeitungField, journalistField, ortField, datumField, ressortField;
+    public Text headlineField, zeitungField, journalistField, ortField, datumField;
     private Vector3 distanceToMouse;
     private NewsGeneration newsGeneration;
 
@@ -19,7 +19,6 @@ public class Article : MonoBehaviour {
     public void Assign (News news, NewsGeneration ng){
         this.isFake = news.isFake;
 
-        ressortField.text = news.ressort;
         headlineField.text = news.headline;
         zeitungField.text = news.newspaper.ToUpper();
         journalistField.text = news.author;
@@ -62,7 +61,7 @@ public class Article : MonoBehaviour {
 
     public void WrongAnswer() {
 
-        GameObject.Find("notification").GetComponent<Notification>().Spawn("FALSCH");
+        GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG");
         Destroy(gameObject);
     }
 
