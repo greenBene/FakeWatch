@@ -361,9 +361,9 @@ public class NewsSourceForReal : NewsSource
       info = News[idx];
       idx = (idx + 1) % News.Count;
       List<string> findCats = null;
-      if (progression < 3) {
+      if (progression < 4) {
         findCats = simpleCats[progression % simpleCats.Count];
-      } else if (progression < 5) {
+      } else if (progression < 7) {
         findCats = mediumCats[progression % mediumCats.Count];
       } else {
         findCats = hardCats[progression % hardCats.Count];
