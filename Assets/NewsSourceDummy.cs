@@ -21,7 +21,7 @@ public class NewsSourceDummy : NewsSource {
                         date[Random.Range(0, date.Length - 1)],
                         location[Random.Range(0, location.Length - 1)],
                         (Random.Range(0, 1) == 0 ? true: false),
-                        "Politik");
+                        "Politik", null);
     }
 
 }

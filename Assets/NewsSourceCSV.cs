@@ -31,7 +31,7 @@ public class NewsSourceCSV : MonoBehaviour, NewsSource {
         string date = strArray[4];
         bool isFake = (strArray[5].ToUpper() == "TRUE"? true: false);
 
-        return new News(headline, newspaper, author, location, date, isFake, "ressort");
+        return new News(headline, newspaper, author, location, date, isFake, "ressort", null);
     }
 
 	// Update is called once per frame

@@ -233,6 +233,7 @@ MonoBehaviour:
   timeLeft: 0
   winning: {fileID: 0}
   newMessage: {fileID: 8300000, guid: 7c85c53a269e03047a1cfcb669e07fc5, type: 3}
+  end: {fileID: 0}
   endScreen: {fileID: 317665137}
   endText: {fileID: 1286916404}
   restartButton: {fileID: 543125636}

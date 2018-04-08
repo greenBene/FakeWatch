@@ -27,9 +27,9 @@ class HeadlineInfo
     this.isReal = isReal;
   }
 
-  public News toNews(string author, string newspaper, string date, string location)
+  public News toNews(string author, string newspaper, string date, string location, string error)
   {
-    return new News(headline, author, newspaper, date, location, !isReal, ressortKeyToLabel[this.topicCode]);
+    return new News(headline, author, newspaper, date, location, !isReal, ressortKeyToLabel[this.topicCode], error);
   }
 }
 
@@ -361,9 +361,9 @@ public class NewsSourceForReal : NewsSource
       info = News[idx];
       idx = (idx + 1) % News.Count;
       List<string> findCats = null;
-      if (progression < 3) {
+      if (progression < 4) {
         findCats = simpleCats[progression % simpleCats.Count];
-      } else if (progression < 5) {
+      } else if (progression < 7) {
         findCats = mediumCats[progression % mediumCats.Count];
       } else {
         findCats = hardCats[progression % hardCats.Count];
@@ -383,7 +383,9 @@ public class NewsSourceForReal : NewsSource
     solution.TryGetValue("TAG", out day);
     string location = null;
     solution.TryGetValue("ORT", out location);
-    return info.toNews(author, newspaper, date != null ? GetNextWeekday(date, day).ToString("dd.MM.yyyy") : null, location);
+    string error = null;
+    solution.TryGetValue("ERROR", out error);
+    return info.toNews(author, newspaper, date != null ? GetNextWeekday(date, day).ToString("dd.MM.yyyy") : null, location, error);
   }
 
 }

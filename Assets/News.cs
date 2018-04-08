@@ -7,7 +7,8 @@ public class News
                 string date,
                 string location,
                 bool isFake,
-                string ressort){
+                string ressort,
+                string error){
 
         this.headline = headline;
         this.author = author;
@@ -16,9 +17,10 @@ public class News
         this.location = location;
         this.isFake = isFake;
         this.ressort = ressort;
+        this.error = error;
     }
 
-    public News() : this("NOT FAKE", "GA", "bild", "12.10.2070", "Hamburg", true, "Politik"){
+    public News() : this("NOT FAKE", "GA", "bild", "12.10.2070", "Hamburg", true, "Politik", null){
 
     }
 
@@ -29,6 +31,7 @@ public class News
     public string location;
     public bool isFake;
     public string ressort;
+    public string error;
 
     override public string ToString(){
         string ret = "NEWS: \n";
