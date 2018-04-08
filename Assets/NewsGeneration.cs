@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewsGeneration : MonoBehaviour {
 
@@ -25,6 +26,10 @@ public class NewsGeneration : MonoBehaviour {
     private int wronglyMarkedArticlesAsFalse = 0;
 
     private AudioSource source;
+
+    public Image endScreen;
+    public Text endText;
+    public GameObject restartButton;
 
 	// Use this for initialization
 	void Start () {
@@ -100,6 +105,11 @@ public class NewsGeneration : MonoBehaviour {
 
     public void ShowEndScreen(){
         // Todo Show End screen
+
+        endScreen.enabled = true;
+        endText.enabled = true;
+        endText.text = "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310. \n Sie haben " + correctMarkedArticles + " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt. Dagegen haben Sie " + wronglyMarkedArticlesAsTrue + " falsche Nachrichten als wahr " + "und " + wronglyMarkedArticlesAsFalse + " wahre Nachrichten als falsch eingestuft.";
+        restartButton.SetActive(true);
 
         print("Result: " +
               "correctMarkedArticles: " + correctMarkedArticles + "\n" +
