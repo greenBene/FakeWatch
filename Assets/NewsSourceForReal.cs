@@ -13,6 +13,12 @@ class HeadlineInfo
   public string topicCode;
   public bool isReal;
 
+  private static Dictionary<string, string> ressortKeyToLabel = new Dictionary<string, string>{
+    {"FACHGEBIET_Po", "Politik"},
+    {"FACHGEBIET_Wi", "Wirtschaft"},
+    {"FACHGEBIET_Sc", "Wissenschaft"},
+  };
+
   public HeadlineInfo(string headline, string eventCode, string topicCode, bool isReal)
   {
     this.headline = headline;
@@ -23,7 +29,7 @@ class HeadlineInfo
 
   public News toNews(string author, string newspaper, string date, string location)
   {
-    return new News(headline, author, newspaper, date, location, !isReal);
+    return new News(headline, author, newspaper, date, location, !isReal, ressortKeyToLabel[this.topicCode]);
   }
 }
 
@@ -336,6 +342,7 @@ public class NewsSourceForReal : NewsSource
     {"Samstag", DayOfWeek.Saturday},
     {"Sonntag", DayOfWeek.Sunday},
   };
+
   private static DateTime GetNextWeekday(string dateAsString, string dayOfWeekAsString)
   {
     // The (... + 7) % 7 ensures we end up with a value in the range [0, 6]

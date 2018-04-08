@@ -6,7 +6,7 @@ using UnityEngine;
 public class NewsSourceCSV : MonoBehaviour, NewsSource {
 
     ArrayList newsArray;
-   
+
 	// Use this for initialization
 	void Start () {
         newsArray = new ArrayList();
@@ -31,12 +31,12 @@ public class NewsSourceCSV : MonoBehaviour, NewsSource {
         string date = strArray[4];
         bool isFake = (strArray[5].ToUpper() == "TRUE"? true: false);
 
-        return new News(headline, newspaper, author, location, date, isFake);
+        return new News(headline, newspaper, author, location, date, isFake, "ressort");
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     public static NewsSource getInstance(GameObject go){
