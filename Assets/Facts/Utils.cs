@@ -3,7 +3,7 @@ using System.Threading;
 using System.Security.Cryptography;
 using System.Collections.Generic;
 
-static class Utils
+public static class Utils
 {
   public static void Shuffle<T>(this List<T> list)
   {

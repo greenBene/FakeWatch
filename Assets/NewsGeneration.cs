@@ -32,7 +32,7 @@ public class NewsGeneration : MonoBehaviour {
         currentDurationBetweenNews = startDuration;
         timeLeft = timeToPlayInSeconds;
 
-        newsSource = NewsSourceCSV.getInstance(gameObject);
+        newsSource = new NewsSourceForReal();
 
         Invoke("NextNewsInitiater", 1f);
     }
