@@ -15,8 +15,6 @@ public class Article : MonoBehaviour {
     private NewsGeneration newsGeneration;
 
     public float fadeOutTransparency, fadeOutSpeed;
-    private AudioSource source;
-    public AudioClip correctAnswerSound;
 
     public void Assign (News news, NewsGeneration ng){
         this.isFake = news.isFake;
@@ -32,8 +30,6 @@ public class Article : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         transform.position = RandomPosition();
-        source = GetComponent<AudioSource>();
-        source.Play();
     }
 
 
@@ -56,8 +52,6 @@ public class Article : MonoBehaviour {
         bool correct =  newsGeneration.Answer(isFake, false);
 
         if(correct){
-            source.clip = correctAnswerSound;
-            source.Play();
             Destroy(gameObject);   
         }else{
             WrongAnswer();
@@ -75,8 +69,6 @@ public class Article : MonoBehaviour {
         bool correct = newsGeneration.Answer(isFake, true);
         if(correct)
         {
-            source.clip = correctAnswerSound;
-            source.Play();
             Destroy(gameObject);
         } else
         {
