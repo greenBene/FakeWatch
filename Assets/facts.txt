@@ -68,17 +68,32 @@ FACHGEBIET_Po: Politik
 FACHGEBIET_Wi: Wirtschaft
 FACHGEBIET_Sc: Wissenschaft
 
-EVENT_WK: Feb 06 - Wuschel Kandidiert
-EVENT_VS: Feb 14 - Veruntreuungs-Skandal (Wehmert)
-EVENT_SS: Feb 23 - Sexismusskandal
-EVENT_WF: Mar 02 - Große Wuschel-Kundgebung zu Frauenrechten
-EVENT_US: Mar 10 - Umweltskandal
-EVENT_WT: Mar 17 - Wahltag (Wuschel Gewinnt)
-EVENT_ML: Mar 26 - Mondlandung
+EVENT_WK: Wuschel Kandidiert
+EVENT_VS: Veruntreuungs-Skandal (Wehmert)
+EVENT_SS: Sexismusskandal
+EVENT_WF: Große Wuschel-Kundgebung zu Frauenrechten
+EVENT_US: Umweltskandal
+EVENT_WT: Wahltag (Wuschel Gewinnt)
+EVENT_ML: Mondlandung
+
+DATE_FEB06: Feb 06
+DATE_FEB14: Feb 14
+DATE_FEB23: Feb 23
+DATE_MAR02: Mar 02
+DATE_MAR10: Mar 10
+DATE_MAR17: Mar 17
+DATE_MAR26: Mar 26
 
 BOOL_Fa: Fake
 BOOL_Tr: True
 
+EVENT_WK -> DATE_FEB06
+EVENT_VS -> DATE_FEB14
+EVENT_SS -> DATE_FEB23
+EVENT_WF -> DATE_MAR02
+EVENT_US -> DATE_MAR10
+EVENT_WT -> DATE_MAR17
+EVENT_ML -> DATE_MAR26
 
 ZEITUNG_Ta -> TAG_Mo
 ZEITUNG_Ta -> TAG_Mi
