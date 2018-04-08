@@ -301,7 +301,11 @@ public class Facts
           otherCat.inverseMemberTruth(cat);
           if (solution != null)
           {
-            // solution["ERROR"] = String.Format("{0} <=/=> {1}", solution[cat.symbol], solution[otherCat.symbol]);
+            string s1 = cat.symbol;
+            solution.TryGetValue(s1, out s1);
+            string s2 = otherCat.symbol;
+            solution.TryGetValue(s2, out s2);
+            solution["ERROR"] = String.Format("{0} <=/=> {1}", s1, s2);
             return solution;
           }
         }
