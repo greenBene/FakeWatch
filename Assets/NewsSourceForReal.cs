@@ -293,12 +293,35 @@ public class NewsSourceForReal : NewsSource
   };
 
   int idx = 0;
+  int progression = 1;
   Facts facts = new Facts();
+
+  public static List<List<string>> simpleCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" }
+  };
+  public static List<List<string>> mediumCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" , "AUTOR"},
+    new List<string> { "ZEITUNG" , "ORT"},
+    new List<string> { "ZEITUNG" , "DATE", "TAG"}
+  };
+  public static List<List<string>> hardCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" , "AUTOR", "ORT"},
+    new List<string> { "ZEITUNG" , "ORT", "DATE", "TAG"},
+    new List<string> { "ZEITUNG" , "AUTOR", "DATE", "TAG",}
+  };
+
+  public static List<List<string>> expertCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" , "AUTOR", "ORT", "DATE", "TAG"},
+  };
 
   public NewsSourceForReal()
   {
     News.Shuffle();
     facts.Init("Assets/facts.txt");
+    simpleCats.Shuffle();
+    mediumCats.Shuffle();
+    hardCats.Shuffle();
+    expertCats.Shuffle();
   }
 
   private static DateTime GetNextWeekday(DateTime start, DayOfWeek day)
@@ -335,11 +358,21 @@ public class NewsSourceForReal : NewsSource
     {
       info = News[idx];
       idx = (idx + 1) % News.Count;
-      var findCats = new List<string> { "ZEITUNG", "AUTOR", "ORT", "DATE", "TAG" };
+      List<string> findCats = null;
+      if (progression < 3) {
+        findCats = simpleCats[progression % simpleCats.Count];
+      } else if (progression < 5) {
+        findCats = mediumCats[progression % mediumCats.Count];
+      } else if (progression < 7) {
+        findCats = hardCats[progression % hardCats.Count];
+      } else {
+        findCats = expertCats[progression % expertCats.Count];
+      }
       var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
       solution = info.isReal ? facts.FindValid(findCats, constr) : facts.FindInvalid(findCats, constr);
       if (solution == null) Console.WriteLine("COULD FIND NO SOLUTION FOR '{0}'", info.headline);
     }
+    progression += 1;
     string author = null;
     solution.TryGetValue("AUTOR", out author);
     string newspaper = null;
@@ -350,7 +383,7 @@ public class NewsSourceForReal : NewsSource
     solution.TryGetValue("TAG", out day);
     string location = null;
     solution.TryGetValue("ORT", out location);
-    return info.toNews(author, newspaper, GetNextWeekday(date, day).ToString("dd.MM.yyyy"), location);
+    return info.toNews(author, newspaper, date != null ? GetNextWeekday(date, day).ToString("dd.MM.yyyy") : null, location);
   }
 
 }
