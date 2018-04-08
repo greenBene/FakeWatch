@@ -28,6 +28,7 @@ public class NewsGeneration : MonoBehaviour {
     private int wronglyMarkedArticlesAsFalse = 0;
 
     private AudioSource source;
+    public AudioClip winning, newMessage, end;
 
     public Image endScreen;
     public Text endText;
@@ -62,6 +63,7 @@ public class NewsGeneration : MonoBehaviour {
         if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
         newArticle.transform.SetSiblingIndex(4);
+        source.clip = newMessage;
         source.Play();
         newArticle.GetComponent<Article>().Assign(news, this);
         NewsGeneration.articleCount++;
@@ -94,13 +96,16 @@ public class NewsGeneration : MonoBehaviour {
             }
         }
 
-        if(NewsGeneration.articleCount == 0) {
+        if(NewsGeneration.articleCount <= 0) {
+            NewsGeneration.articleCount = 0;
             Invoke("ShowNextNews", 1f);
         }
 
         if (isFake == newsIsRejected)
         {
             correctMarkedArticles++;
+            source.clip = winning;
+            source.Play();
             return true;
         }
         else
@@ -117,10 +122,14 @@ public class NewsGeneration : MonoBehaviour {
     public void ShowEndScreen(){
         // Todo Show End screen
 
+        source.clip = end;
+        source.Play();
         endScreen.enabled = true;
         endText.enabled = true;
         endText.text = "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310. \n Sie haben " + correctMarkedArticles + " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt. Dagegen haben Sie " + wronglyMarkedArticlesAsTrue + " falsche Nachrichten als wahr " + "und " + wronglyMarkedArticlesAsFalse + " wahre Nachrichten als falsch eingestuft.";
         restartButton.SetActive(true);
+
+
 
         print("Result: " +
               "correctMarkedArticles: " + correctMarkedArticles + "\n" +
