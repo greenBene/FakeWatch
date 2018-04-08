@@ -295,14 +295,14 @@ public class Facts
           cat.inverseMemberTruth(otherCat);
           otherCat.inverseMemberTruth(cat);
           // TODO: CREATE EXACT OPPOSITE RULES
-          var workingFrontier = FindValid(cats, existingConstraints);
+          var solution = FindValid(cats, existingConstraints);
           // Put original rules back in place
           cat.inverseMemberTruth(otherCat);
           otherCat.inverseMemberTruth(cat);
-          if (workingFrontier != null)
+          if (solution != null)
           {
-            Console.WriteLine("LYING WITH {0} -> {1}", cat.symbol, otherCat.symbol);
-            return workingFrontier;
+            solution["ERROR"] = String.Format("{0} <=/=> {1}", solution[cat.symbol], solution[otherCat.symbol]);
+            return solution;
           }
         }
       }
