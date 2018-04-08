@@ -177,7 +177,7 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "Nach Wehmert-Veruntreuung: Industrie A47 Aktie stürzt ein",
+      "Wehmert-Veruntreuungs-Skandal: Industrie A47 Aktie stürzt ein",
       "EVENT_VS",
       "FACHGEBIET_Wi",
       false
@@ -249,7 +249,7 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "Nach Pestizidskandal: Wissenschaft findet neuen Weg zur nachhaltigen Schädlingsbekämpfung",
+      "Neuestes vom Pestizidskandal: Wissenschaft findet neuen Weg zur nachhaltigen Schädlingsbekämpfung",
       "EVENT_US",
       "FACHGEBIET_Sc",
       true
@@ -285,7 +285,7 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "Fusion von Grunmeyer und Haalenkamp nach Umweltskandal gescheitert",
+      "Fusion von Grunmeyer und Haalenkamp wegen Umweltskandal gescheitert",
       "EVENT_US",
       "FACHGEBIET_Wi",
       false
