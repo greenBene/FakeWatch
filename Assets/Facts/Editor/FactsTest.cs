@@ -12,8 +12,8 @@ public class FactsTest
   public void FactsTestSimplePasses()
   {
     Facts facts = new Facts();
-    facts.Init("Assets/nodes.txt");
-    facts.FindInvalid(new List<string> { "Z", "O", "P" }, new Dictionary<string, string> { { "WK", "WK_Mo" } });
+    facts.Init("Assets/facts.txt");
+    facts.FindValid(new List<string> { "ZEITUNG", "AUTOR", "ORT", "REGION" }, new Dictionary<string, string> { });
 
     Assert.AreEqual(1, 1);
   }
