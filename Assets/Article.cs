@@ -62,7 +62,7 @@ public class Article : MonoBehaviour {
 
     public void WrongAnswer() {
 
-        GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG");
+        GameObject.Find("notification").GetComponent<Notification>().Spawn("FALSCH");
         Destroy(gameObject);
     }
 
