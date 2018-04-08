@@ -2,44 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System;
 
 public class Article : MonoBehaviour {
+    
+    private bool isFake;
+    private bool dragging;
 
+    public Text headlineField, zeitungField, journalistField, ortField, datumField;
+    private Vector3 distanceToMouse;
+    private NewsGeneration newsGeneration;
 
+    public float fadeOutTransparency, fadeOutSpeed;
+    private AudioSource source;
+    public AudioClip correctAnswerSound;
 
-    public string headline, zeitung, journalist, ort, datum;
-    public bool fake;
-    public Text headlineField, zeitungJournalistField, ortField, datumField;
+    public void Assign (News news, NewsGeneration ng){
+        this.isFake = news.isFake;
 
-    private Ressource ressource;
-
-    public void Assign (string headline, string zeitung, string journalist,string ort, string datum, bool fake)
-    {
-        this.headline = headline;
-        this.zeitung = zeitung;
-        this.journalist = journalist;
-        this.ort = ort;
-        this.fake = fake;
-        this.datum = datum;
-
-        headlineField.text = headline;
-        zeitungJournalistField.text = zeitung.ToUpper() + " / " + journalist;
-        ortField.text = ort;
-        datumField.text = datum;
+        headlineField.text = news.headline;
+        zeitungField.text = news.newspaper.ToUpper();
+        journalistField.text = news.author;
+        ortField.text = news.location;
+        datumField.text = news.date;
+        newsGeneration = ng;
     }
 
 	// Use this for initialization
 	void Start () {
         transform.position = RandomPosition();
-        ressource = GameObject.Find("ressource").GetComponent<Ressource>();
+        source = GetComponent<AudioSource>();
+        source.Play();
     }
 
 
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        if(dragging)
+            transform.position = Input.mousePosition + distanceToMouse;
+    }
 
     Vector2 RandomPosition()
     {
@@ -49,31 +52,47 @@ public class Article : MonoBehaviour {
         return new Vector2(UnityEngine.Random.Range(0 + halfHorizontalSize, Screen.width - halfHorizontalSize), UnityEngine.Random.Range(0 + halfVerticalSize, Screen.height - halfVerticalSize));
     }
 
-    public void True()
-    {
-        if(fake)
-        {
-            ressource.LowerRessource();
-        } else
-        {
-            ressource.AddRessource();
+    public void MarkAsTrue() {
+        bool correct =  newsGeneration.Answer(isFake, false);
 
+        if(correct){
+            source.clip = correctAnswerSound;
+            source.Play();
+            Destroy(gameObject);   
+        }else{
+            WrongAnswer();
         }
 
+    }
+
+    public void WrongAnswer() {
+
+        GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG");
         Destroy(gameObject);
     }
 
-    public void Fake()
-    {
-        if(fake)
+    public void MarkAsFake() {
+        bool correct = newsGeneration.Answer(isFake, true);
+        if(correct)
         {
-            ressource.AddRessource();
+            source.clip = correctAnswerSound;
+            source.Play();
+            Destroy(gameObject);
         } else
         {
-            ressource.LowerRessource();
 
+            WrongAnswer();
         }
+    }
 
-        Destroy(gameObject);
+    public void StartDragging()
+    {
+        distanceToMouse = transform.position - Input.mousePosition;
+        dragging = true;
+    }
+
+    public void StopDragging()
+    {
+        dragging = false;
     }
 }
