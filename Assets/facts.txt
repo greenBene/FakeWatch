@@ -4,7 +4,7 @@ ZEITUNG_Lo: Lokal post
 ZEITUNG_La: Land Zeitung
 ZEITUNG_Fr: Freiland Aktuell
 ZEITUNG_Ha: Hallesche Zeitung
-ZEITUNG_Gr: Greuzburger Blatt
+ZEITUNG_Gr: Grenzburger Blatt
 
 AUTOR_AW: Aaron Westberg
 AUTOR_AR: Aron Werbsteg
@@ -56,13 +56,6 @@ TAG_Do: Donnerstag
 TAG_Fr: Freitag
 TAG_Sa: Samstag
 TAG_So: Sonntag
-
-REGION_Gr: Grentzburg
-REGION_Rh: Rhone-Westpfalz
-REGION_No: Nordosthorn
-REGION_Ho: Hohenschein
-REGION_Re: Rehm-Schannbach
-REGION_So: Solen
 
 FACHGEBIET_Po: Politik
 FACHGEBIET_Wi: Wirtschaft
@@ -121,29 +114,31 @@ ZEITUNG_Gr -> TAG_Mi
 ZEITUNG_Gr -> TAG_Do
 ZEITUNG_Gr -> TAG_So
 
-REGION_Gr -> ORT_Be
-REGION_Gr -> ORT_Su
-REGION_Rh -> ORT_To
-REGION_Rh -> ORT_Ka
-REGION_No -> ORT_Ob
-REGION_Ho -> ORT_Un
-REGION_Re -> ORT_Gl
-REGION_Re -> ORT_He
-REGION_Re -> ORT_La
-REGION_So -> ORT_Ic
-REGION_So -> ORT_Da
-
-REGION_Gr -> ZEITUNG_Ta
-REGION_Gr -> ZEITUNG_Gr
-REGION_Rh -> ZEITUNG_Fr
-REGION_Rh -> ZEITUNG_Ta
-REGION_No -> ZEITUNG_Ta
-REGION_No -> ZEITUNG_Ha
-REGION_Ho -> ZEITUNG_La
-REGION_Ho -> ZEITUNG_Ta
-REGION_Re -> ZEITUNG_Lo
-REGION_Re -> ZEITUNG_Fr
-REGION_Re -> ZEITUNG_Ab
+ZEITUNG_Ta -> ORT_Be
+ZEITUNG_Ta -> ORT_Su
+ZEITUNG_Ta -> ORT_To
+ZEITUNG_Ta -> ORT_Ka
+ZEITUNG_Ta -> ORT_Ob
+ZEITUNG_Ta -> ORT_Un
+ZEITUNG_Ta -> ORT_Ic
+ZEITUNG_Ta -> ORT_Da
+ZEITUNG_Ab -> ORT_He
+ZEITUNG_Ab -> ORT_Gl
+ZEITUNG_Ab -> ORT_La
+ZEITUNG_Lo -> ORT_He
+ZEITUNG_Lo -> ORT_Gl
+ZEITUNG_Lo -> ORT_La
+ZEITUNG_La -> ORT_Un
+ZEITUNG_Ha -> ORT_Ob
+ZEITUNG_Gr -> ORT_Be
+ZEITUNG_Gr -> ORT_Su
+ZEITUNG_Fr -> ORT_To
+ZEITUNG_Fr -> ORT_Ka
+ZEITUNG_Fr -> ORT_Gl
+ZEITUNG_Fr -> ORT_He
+ZEITUNG_Fr -> ORT_La
+ZEITUNG_Fr -> ORT_Ic
+ZEITUNG_Fr -> ORT_Da
 
 AUTOR_AW -> FACHGEBIET_Wi
 AUTOR_AR -> FACHGEBIET_Po
