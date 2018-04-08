@@ -23,7 +23,7 @@ class HeadlineInfo
 
   public News toNews(string author, string newspaper, string date, string location)
   {
-    return new News(headline, author, newspaper, date, location, !isReal);
+    return new News((isReal ? "T: " : "F: ") + headline, author, newspaper, date, location, !isReal);
   }
 }
 
@@ -310,7 +310,7 @@ public class NewsSourceForReal : NewsSource
       info = News[idx];
       idx = (idx + 1) % News.Count;
       var findCats = new List<string> { "ZEITUNG", "AUTOR", "ORT", "REGION" };
-      var constr = new Dictionary<string, string> { { "EVENT_WK", info.eventCode }, { "FACHGEBIET", info.topicCode } };
+      var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
       solution = info.isReal ? facts.FindValid(findCats, constr) : facts.FindInvalid(findCats, constr);
       if (solution == null) Console.WriteLine("COULD FIND NO SOLUTION FOR '{0}'", info.headline);
     }
