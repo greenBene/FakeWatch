@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System;
+using System.Text.RegularExpressions;
 
 /*
  *  Dummy News Generator for testing
@@ -23,7 +23,7 @@ class HeadlineInfo
 
   public News toNews(string author, string newspaper, string date, string location)
   {
-    return new News((isReal ? "T: " : "F: ") + headline, author, newspaper, date, location, !isReal);
+    return new News(headline, author, newspaper, date, location, !isReal);
   }
 }
 
@@ -293,12 +293,56 @@ public class NewsSourceForReal : NewsSource
   };
 
   int idx = 0;
+  int progression = 1;
   Facts facts = new Facts();
+  public static List<List<string>> simpleCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" , "AUTOR"},
+    new List<string> { "ZEITUNG" , "ORT"},
+    new List<string> { "ZEITUNG" , "DATE", "TAG"}
+  };
+  public static List<List<string>> mediumCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" , "AUTOR", "ORT"},
+    new List<string> { "ZEITUNG" , "ORT", "DATE", "TAG"},
+    new List<string> { "ZEITUNG" , "AUTOR", "DATE", "TAG",}
+  };
+
+  public static List<List<string>> hardCats = new List<List<string>>{
+    new List<string> { "ZEITUNG" , "AUTOR", "ORT", "DATE", "TAG"},
+  };
 
   public NewsSourceForReal()
   {
     News.Shuffle();
     facts.Init("Assets/facts.txt");
+    simpleCats.Shuffle();
+    mediumCats.Shuffle();
+    hardCats.Shuffle();
+  }
+
+  private static DateTime GetNextWeekday(DateTime start, DayOfWeek day)
+  {
+    // The (... + 7) % 7 ensures we end up with a value in the range [0, 6]
+    int daysToAdd = ((int)day - (int)start.DayOfWeek + 7) % 7;
+    return start.AddDays(daysToAdd);
+  }
+
+  private static Dictionary<string, int> monthNameToInt = new Dictionary<string, int>{{"Feb", 2}, {"Mar", 3}};
+  private static Dictionary<string, DayOfWeek> weekdayNameToDayOfWeek = new Dictionary<string, DayOfWeek>{
+    {"Montag", DayOfWeek.Monday},
+    {"Dienstag", DayOfWeek.Tuesday},
+    {"Mittwoch", DayOfWeek.Wednesday},
+    {"Donnerstag", DayOfWeek.Thursday},
+    {"Freitag", DayOfWeek.Friday},
+    {"Samstag", DayOfWeek.Saturday},
+    {"Sonntag", DayOfWeek.Sunday},
+  };
+  private static DateTime GetNextWeekday(string dateAsString, string dayOfWeekAsString)
+  {
+    // The (... + 7) % 7 ensures we end up with a value in the range [0, 6]
+    var r = Regex.Match(dateAsString, @"(\w+)\s+(\d+)");
+    var date = new DateTime(2018, monthNameToInt[r.Groups[1].Value], Int32.Parse(r.Groups[2].Value));
+    return GetNextWeekday(date, weekdayNameToDayOfWeek[dayOfWeekAsString]);
+
   }
 
   public News getNextNews()
@@ -309,20 +353,30 @@ public class NewsSourceForReal : NewsSource
     {
       info = News[idx];
       idx = (idx + 1) % News.Count;
-      var findCats = new List<string> { "ZEITUNG", "AUTOR", "ORT", "REGION" };
+      List<string> findCats = null;
+      if (progression < 3) {
+        findCats = simpleCats[progression % simpleCats.Count];
+      } else if (progression < 5) {
+        findCats = mediumCats[progression % mediumCats.Count];
+      } else {
+        findCats = hardCats[progression % hardCats.Count];
+      }
       var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
       solution = info.isReal ? facts.FindValid(findCats, constr) : facts.FindInvalid(findCats, constr);
       if (solution == null) Console.WriteLine("COULD FIND NO SOLUTION FOR '{0}'", info.headline);
     }
+    progression += 1;
     string author = null;
     solution.TryGetValue("AUTOR", out author);
     string newspaper = null;
     solution.TryGetValue("ZEITUNG", out newspaper);
     string date = null;
-    solution.TryGetValue("EVENT_WK", out date);
+    solution.TryGetValue("DATE", out date);
+    string day = null;
+    solution.TryGetValue("TAG", out day);
     string location = null;
     solution.TryGetValue("ORT", out location);
-    return info.toNews(author, newspaper, date, location);
+    return info.toNews(author, newspaper, date != null ? GetNextWeekday(date, day).ToString("dd.MM.yyyy") : null, location);
   }
 
 }

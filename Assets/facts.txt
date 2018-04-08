@@ -4,7 +4,7 @@ ZEITUNG_Lo: Lokal post
 ZEITUNG_La: Land Zeitung
 ZEITUNG_Fr: Freiland Aktuell
 ZEITUNG_Ha: Hallesche Zeitung
-ZEITUNG_Gr: Greuzburger Blatt
+ZEITUNG_Gr: Grenzburger Blatt
 
 AUTOR_AW: Aaron Westberg
 AUTOR_AR: Aron Werbsteg
@@ -57,13 +57,6 @@ TAG_Fr: Freitag
 TAG_Sa: Samstag
 TAG_So: Sonntag
 
-REGION_Gr: Grentzburg
-REGION_Rh: Rhone-Westpfalz
-REGION_No: Nordosthorn
-REGION_Ho: Hohenschein
-REGION_Re: Rehm-Schannbach
-REGION_So: Solen
-
 FACHGEBIET_Po: Politik
 FACHGEBIET_Wi: Wirtschaft
 FACHGEBIET_Sc: Wissenschaft
@@ -76,24 +69,28 @@ EVENT_US: Umweltskandal
 EVENT_WT: Wahltag (Wuschel Gewinnt)
 EVENT_ML: Mondlandung
 
-DATE_FEB06: Feb 06
-DATE_FEB14: Feb 14
-DATE_FEB23: Feb 23
-DATE_MAR02: Mar 02
+DATE_FEB02: Feb 02
+DATE_FEB09: Feb 09
+DATE_FEB16: Feb 16
+DATE_FEB24: Feb 24
+DATE_MAR03: Mar 03
 DATE_MAR10: Mar 10
-DATE_MAR17: Mar 17
-DATE_MAR26: Mar 26
+DATE_MAR19: Mar 19
+DATE_MAR27: Mar 27
 
-BOOL_Fa: Fake
-BOOL_Tr: True
-
-EVENT_WK -> DATE_FEB06
-EVENT_VS -> DATE_FEB14
-EVENT_SS -> DATE_FEB23
-EVENT_WF -> DATE_MAR02
+EVENT_WK -> DATE_FEB02
+EVENT_WK -> DATE_FEB09
+EVENT_VS -> DATE_FEB09
+EVENT_VS -> DATE_FEB16
+EVENT_VS -> DATE_FEB24
+EVENT_SS -> DATE_FEB16
+EVENT_WF -> DATE_FEB24
+EVENT_US -> DATE_MAR03
 EVENT_US -> DATE_MAR10
-EVENT_WT -> DATE_MAR17
-EVENT_ML -> DATE_MAR26
+EVENT_US -> DATE_MAR19
+EVENT_WT -> DATE_MAR10
+EVENT_ML -> DATE_MAR19
+EVENT_ML -> DATE_MAR27
 
 ZEITUNG_Ta -> TAG_Mo
 ZEITUNG_Ta -> TAG_Mi
@@ -121,29 +118,31 @@ ZEITUNG_Gr -> TAG_Mi
 ZEITUNG_Gr -> TAG_Do
 ZEITUNG_Gr -> TAG_So
 
-REGION_Gr -> ORT_Be
-REGION_Gr -> ORT_Su
-REGION_Rh -> ORT_To
-REGION_Rh -> ORT_Ka
-REGION_No -> ORT_Ob
-REGION_Ho -> ORT_Un
-REGION_Re -> ORT_Gl
-REGION_Re -> ORT_He
-REGION_Re -> ORT_La
-REGION_So -> ORT_Ic
-REGION_So -> ORT_Da
-
-REGION_Gr -> ZEITUNG_Ta
-REGION_Gr -> ZEITUNG_Gr
-REGION_Rh -> ZEITUNG_Fr
-REGION_Rh -> ZEITUNG_Ta
-REGION_No -> ZEITUNG_Ta
-REGION_No -> ZEITUNG_Ha
-REGION_Ho -> ZEITUNG_La
-REGION_Ho -> ZEITUNG_Ta
-REGION_Re -> ZEITUNG_Lo
-REGION_Re -> ZEITUNG_Fr
-REGION_Re -> ZEITUNG_Ab
+ZEITUNG_Ta -> ORT_Be
+ZEITUNG_Ta -> ORT_Su
+ZEITUNG_Ta -> ORT_To
+ZEITUNG_Ta -> ORT_Ka
+ZEITUNG_Ta -> ORT_Ob
+ZEITUNG_Ta -> ORT_Un
+ZEITUNG_Ta -> ORT_Ic
+ZEITUNG_Ta -> ORT_Da
+ZEITUNG_Ab -> ORT_He
+ZEITUNG_Ab -> ORT_Gl
+ZEITUNG_Ab -> ORT_La
+ZEITUNG_Lo -> ORT_He
+ZEITUNG_Lo -> ORT_Gl
+ZEITUNG_Lo -> ORT_La
+ZEITUNG_La -> ORT_Un
+ZEITUNG_Ha -> ORT_Ob
+ZEITUNG_Gr -> ORT_Be
+ZEITUNG_Gr -> ORT_Su
+ZEITUNG_Fr -> ORT_To
+ZEITUNG_Fr -> ORT_Ka
+ZEITUNG_Fr -> ORT_Gl
+ZEITUNG_Fr -> ORT_He
+ZEITUNG_Fr -> ORT_La
+ZEITUNG_Fr -> ORT_Ic
+ZEITUNG_Fr -> ORT_Da
 
 AUTOR_AW -> FACHGEBIET_Wi
 AUTOR_AR -> FACHGEBIET_Po
@@ -227,179 +226,3 @@ ZEITUNG_Gr -> AUTOR_LK
 ZEITUNG_Gr -> AUTOR_AW
 ZEITUNG_Gr -> AUTOR_CM
 ZEITUNG_Gr -> AUTOR_FE
-
-NEWS_01: Wehmert zu Vertrauten: Gerlinde Wuschel besitzt keine Führungskompetenz.
-NEWS_02: Unregelmäßigkeiten bei Wuschel-Aufstellung
-NEWS_03: Wehmert überrascht von Wuschels Kandidatur
-NEWS_04: Anhänger der DVGF feiern die Aufstellung der ersten weiblichen Kanzlerkandidatur
-NEWS_05: Gerlinde Wuschel erklärt Kandidatur für das Amt der Bundeskanzlerin.
-NEWS_06: Skandal: In seiner Zeit als Bürgermeister hat sich Wehmert Steuergelder veruntreut, um Swimmingpool zu bauen.
-NEWS_07: Bürgermeister Wehmert erschlich sich Sozialleistungen im Amt.
-NEWS_08: Whistleblower bei der FPF: Wehmert hat jahrelang Gelder veruntreut.
-NEWS_09: Scheinbeschäftigung? Bürgermeister Wehmert hat eigene Frau als Sekretärin eingestellt.
-NEWS_10: Vetternwirtschaft im Rathaus: Wehmert beschäftigt Familienmitglieder!
-NEWS_11: Bürgermeister Wehmert hat keine weiße Weste: Sexismus hinter verschlossener Tür.
-NEWS_12: Schmutzige Sex-Praktiken in Wehmerts Rathaus: Ein Insider packt aus.
-NEWS_13: Sexskandal im Rathaus: Gedemütigte Praktikantin packt aus!
-NEWS_14: Rehnholds cholerischer Anfall im Bundestag "Sexist Wehmert als Politiker nicht geeignet und als Mensch nicht tragbar!"
-NEWS_15: “Das stimmt so nicht!” Wehmert vehement gegen Sexismusvorwürfe.
-NEWS_16: DVGF-Vorsitzender Rehnold bezeichnet Wehmert als Sexist
-NEWS_17: Rückendeckung für Bürgermeister Wehmert im Sex-Sturm: Konkurrentin Wuschel gegen Fake News im Netz
-NEWS_18: Wehmerts Skandal Tweet: Frauen raus aus der Politik!
-NEWS_19: Mob aggressiver Feministinnen verwüsten Innenstadt
-NEWS_20: Gerlinde Wuschel auf Kundgebung: "Nieder mit dem Patriarchat!"
-NEWS_21: Demonstration zur Verbesserung der Arbeitsbedingungen für Mütter
-NEWS_22: Pestizid-Skandal: Wussten Politiker von der Verunreinigung unseres Trinkwassers?
-NEWS_23: "Finger weg von unseren Eiern!" Wehmerts Gesundheitsminister in Bedrängnis
-NEWS_24: Nach Wehmert-Veruntreuung: Industrie A47 Aktie stürzt ein
-NEWS_25: Die dreckige Spur des Düngegeldes
-NEWS_26: Bauern schuld an Pestizidvergiftung durch Düngemittel
-NEWS_27: So vergiften Pestizide unsere Kühe
-NEWS_28: Gerlinde Wuschel mit Mehrheit der Stimmen zur Bundeskanzlerin gewählt.
-NEWS_29: Gerlinde Wuschel gewinnt Wahl zur Bundeskanzlerin.
-NEWS_30: Gerlinde Wuschel neue Bundeskanzlerin: "Alles wird anders!"
-NEWS_31: Wahllokale nur bedingt barrierefrei: Rentner mussten Alternativen finden.
-NEWS_32: Betrug bei der Bürgermeisterwahl: Illegale Immigranten gaben Stimmen für Wuschel ab.
-NEWS_33: Unstimmigkeiten bei der Wahl: Wuschel erklärt sich selbst zur Bürgermeisterin.
-NEWS_34: Wehmert verliert Bundeskanzlerwahl trotz 86%: Rentner durften nicht wählen!
-NEWS_35: Börse reagiert verhalten auf Umweltskandal.
-NEWS_36: Nach Pestizidskandal: Wissenschaft findet neuen Weg zur nachhaltigen Schädlingsbekämpfung
-NEWS_37: Bundeskanzlerwahl: Finanzwelt mit optimistischer Zukunftsprognose.
-NEWS_38: Aus aktuellem Anlass: Bund weiblicher Vorstände fordert höhere Löhne für Frauen
-NEWS_39: Eilverfahren: Wehmert Medienunternehmen muss für veruntreutes Geld haften!
-NEWS_40: Apollo 20 findet Hinweise auf Wasser auf dem Mond
-NEWS_41: Coca Cola will nach Mondladung Werbung im All prüfen
-NEWS_42: Fusion von Grunmeyer und Haalenkamp nach Umweltskandal gescheitert
-NEWS_43: Aktienmarkt geschockt von Wuschels Kandidatur
-
-NEWS_01 -> EVENT_WK
-NEWS_02 -> EVENT_WK
-NEWS_03 -> EVENT_WK
-NEWS_04 -> EVENT_WK
-NEWS_05 -> EVENT_WK
-NEWS_06 -> EVENT_VS
-NEWS_07 -> EVENT_VS
-NEWS_08 -> EVENT_VS
-NEWS_09 -> EVENT_VS
-NEWS_10 -> EVENT_VS
-NEWS_11 -> EVENT_SS
-NEWS_12 -> EVENT_SS
-NEWS_13 -> EVENT_SS
-NEWS_14 -> EVENT_SS
-NEWS_15 -> EVENT_SS
-NEWS_16 -> EVENT_SS
-NEWS_17 -> EVENT_SS
-NEWS_18 -> EVENT_WF
-NEWS_19 -> EVENT_WF
-NEWS_20 -> EVENT_WF
-NEWS_21 -> EVENT_WF
-NEWS_22 -> EVENT_US
-NEWS_23 -> EVENT_US
-NEWS_24 -> EVENT_VS
-NEWS_25 -> EVENT_US
-NEWS_26 -> EVENT_US
-NEWS_27 -> EVENT_US
-NEWS_28 -> EVENT_WT
-NEWS_29 -> EVENT_WT
-NEWS_30 -> EVENT_WT
-NEWS_31 -> EVENT_WT
-NEWS_32 -> EVENT_WT
-NEWS_33 -> EVENT_WT
-NEWS_34 -> EVENT_WT
-NEWS_35 -> EVENT_US
-NEWS_36 -> EVENT_US
-NEWS_37 -> EVENT_WT
-NEWS_38 -> EVENT_SS
-NEWS_39 -> EVENT_VS
-NEWS_40 -> EVENT_ML
-NEWS_41 -> EVENT_ML
-NEWS_42 -> EVENT_US
-NEWS_43 -> EVENT_WK
-
-NEWS_01 -> FACHGEBIET_Po
-NEWS_02 -> FACHGEBIET_Po
-NEWS_03 -> FACHGEBIET_Po
-NEWS_04 -> FACHGEBIET_Po
-NEWS_05 -> FACHGEBIET_Po
-NEWS_06 -> FACHGEBIET_Po
-NEWS_07 -> FACHGEBIET_Po
-NEWS_08 -> FACHGEBIET_Po
-NEWS_09 -> FACHGEBIET_Po
-NEWS_10 -> FACHGEBIET_Po
-NEWS_11 -> FACHGEBIET_Po
-NEWS_12 -> FACHGEBIET_Po
-NEWS_13 -> FACHGEBIET_Po
-NEWS_14 -> FACHGEBIET_Po
-NEWS_15 -> FACHGEBIET_Po
-NEWS_16 -> FACHGEBIET_Po
-NEWS_17 -> FACHGEBIET_Po
-NEWS_18 -> FACHGEBIET_Po
-NEWS_19 -> FACHGEBIET_Po
-NEWS_20 -> FACHGEBIET_Po
-NEWS_21 -> FACHGEBIET_Po
-NEWS_22 -> FACHGEBIET_Po
-NEWS_23 -> FACHGEBIET_Po
-NEWS_24 -> FACHGEBIET_Wi
-NEWS_25 -> FACHGEBIET_Wi
-NEWS_26 -> FACHGEBIET_Sc
-NEWS_27 -> FACHGEBIET_Sc
-NEWS_28 -> FACHGEBIET_Po
-NEWS_29 -> FACHGEBIET_Po
-NEWS_30 -> FACHGEBIET_Po
-NEWS_31 -> FACHGEBIET_Po
-NEWS_32 -> FACHGEBIET_Po
-NEWS_33 -> FACHGEBIET_Po
-NEWS_34 -> FACHGEBIET_Po
-NEWS_35 -> FACHGEBIET_Sc
-NEWS_36 -> FACHGEBIET_Sc
-NEWS_37 -> FACHGEBIET_Wi
-NEWS_38 -> FACHGEBIET_Wi
-NEWS_39 -> FACHGEBIET_Wi
-NEWS_40 -> FACHGEBIET_Sc
-NEWS_41 -> FACHGEBIET_Sc
-NEWS_42 -> FACHGEBIET_Wi
-NEWS_43 -> FACHGEBIET_Wi
-
-NEWS_01 -> BOOL_Fa
-NEWS_02 -> BOOL_Fa
-NEWS_03 -> BOOL_Tr
-NEWS_04 -> BOOL_Tr
-NEWS_05 -> BOOL_Tr
-NEWS_06 -> BOOL_Fa
-NEWS_07 -> BOOL_Fa
-NEWS_08 -> BOOL_Fa
-NEWS_09 -> BOOL_Tr
-NEWS_10 -> BOOL_Tr
-NEWS_11 -> BOOL_Fa
-NEWS_12 -> BOOL_Fa
-NEWS_13 -> BOOL_Fa
-NEWS_14 -> BOOL_Fa
-NEWS_15 -> BOOL_Tr
-NEWS_16 -> BOOL_Tr
-NEWS_17 -> BOOL_Tr
-NEWS_18 -> BOOL_Fa
-NEWS_19 -> BOOL_Fa
-NEWS_20 -> BOOL_Fa
-NEWS_21 -> BOOL_Tr
-NEWS_22 -> BOOL_Tr
-NEWS_23 -> BOOL_Tr
-NEWS_24 -> BOOL_Fa
-NEWS_25 -> BOOL_Fa
-NEWS_26 -> BOOL_Fa
-NEWS_27 -> BOOL_Fa
-NEWS_28 -> BOOL_Tr
-NEWS_29 -> BOOL_Tr
-NEWS_30 -> BOOL_Tr
-NEWS_31 -> BOOL_Tr
-NEWS_32 -> BOOL_Fa
-NEWS_33 -> BOOL_Fa
-NEWS_34 -> BOOL_Fa
-NEWS_35 -> BOOL_Tr
-NEWS_36 -> BOOL_Tr
-NEWS_37 -> BOOL_Tr
-NEWS_38 -> BOOL_Tr
-NEWS_39 -> BOOL_Fa
-NEWS_40 -> BOOL_Fa
-NEWS_41 -> BOOL_Tr
-NEWS_42 -> BOOL_Fa
-NEWS_43 -> BOOL_Tr
