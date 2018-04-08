@@ -275,13 +275,13 @@ public class Facts
     // edges.ForEach(Console.WriteLine);
   }
 
-  public Dictionary<Category, Element> FindValid(List<string> symbols, Dictionary<string, string> existingConstraints)
+  public Dictionary<string, string> FindValid(List<string> symbols, Dictionary<string, string> existingConstraints)
   {
     var cats = new List<Category>(symbols.Select(s => symbolToCategory[s]));
     return this.FindValid(cats, existingConstraints);
   }
 
-  public Dictionary<Category, Element> FindInvalid(List<string> symbols, Dictionary<string, string> existingConstraints)
+  public Dictionary<string, string> FindInvalid(List<string> symbols, Dictionary<string, string> existingConstraints)
   {
     symbols.Shuffle();
     var cats = new List<Category>(symbols.Select(s => symbolToCategory[s]));
@@ -323,7 +323,7 @@ public class Facts
     return frontier;
   }
 
-  private Dictionary<Category, Element> FindValid(List<Category> cats, Dictionary<string, string> existingConstraints)
+  private Dictionary<string, string> FindValid(List<Category> cats, Dictionary<string, string> existingConstraints)
   {
     var frontier = InitialFrontier(cats, existingConstraints);
 
@@ -340,12 +340,14 @@ public class Facts
         return null;
       }
     }
+    var solution = new Dictionary<string, string>();
     Console.WriteLine("SUCCESS!");
     foreach (var cat in frontier.foundPairs.Keys)
     {
+      solution.Add(cat.symbol, frontier.foundPairs[cat].name);
       Console.WriteLine("{0}: {1}", cat.symbol, frontier.foundPairs[cat].name);
     }
-    return frontier.foundPairs;
+    return solution;
   }
 
 }
