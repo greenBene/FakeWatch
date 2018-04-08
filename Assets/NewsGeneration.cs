@@ -94,7 +94,8 @@ public class NewsGeneration : MonoBehaviour {
             }
         }
 
-        if(NewsGeneration.articleCount == 0) {
+        if(NewsGeneration.articleCount <= 0) {
+            NewsGeneration.articleCount = 0;
             Invoke("ShowNextNews", 1f);
         }
 
