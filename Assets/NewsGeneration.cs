@@ -24,9 +24,11 @@ public class NewsGeneration : MonoBehaviour {
     private int wronglyMarkedArticlesAsTrue = 0;
     private int wronglyMarkedArticlesAsFalse = 0;
 
+    private AudioSource source;
 
 	// Use this for initialization
 	void Start () {
+        source = GetComponent<AudioSource>();
         currentDurationBetweenNews = startDuration;
         timeLeft = timeToPlayInSeconds;
 
@@ -51,6 +53,7 @@ public class NewsGeneration : MonoBehaviour {
 	public void GenerateArticle(News news) {
         if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
+        source.Play();
         newArticle.GetComponent<Article>().Assign(news, this);
         NewsGeneration.articleCount++;
     }
