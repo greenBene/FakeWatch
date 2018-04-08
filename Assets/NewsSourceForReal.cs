@@ -335,7 +335,7 @@ public class NewsSourceForReal : NewsSource
     {
       info = News[idx];
       idx = (idx + 1) % News.Count;
-      var findCats = new List<string> { "ZEITUNG", "AUTOR", "ORT", "REGION", "DATE", "TAG" };
+      var findCats = new List<string> { "ZEITUNG", "AUTOR", "ORT", "DATE", "TAG" };
       var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
       solution = info.isReal ? facts.FindValid(findCats, constr) : facts.FindInvalid(findCats, constr);
       if (solution == null) Console.WriteLine("COULD FIND NO SOLUTION FOR '{0}'", info.headline);
