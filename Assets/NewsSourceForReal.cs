@@ -23,7 +23,7 @@ class HeadlineInfo
 
   public News toNews(string author, string newspaper, string date, string location)
   {
-    return new News((isReal ? "T: " : "F: ") + headline, author, newspaper, date, location, !isReal);
+    return new News(headline, author, newspaper, date, location, !isReal);
   }
 }
 
@@ -295,22 +295,18 @@ public class NewsSourceForReal : NewsSource
   int idx = 0;
   int progression = 1;
   Facts facts = new Facts();
-
   public static List<List<string>> simpleCats = new List<List<string>>{
-    new List<string> { "ZEITUNG" }
-  };
-  public static List<List<string>> mediumCats = new List<List<string>>{
     new List<string> { "ZEITUNG" , "AUTOR"},
     new List<string> { "ZEITUNG" , "ORT"},
     new List<string> { "ZEITUNG" , "DATE", "TAG"}
   };
-  public static List<List<string>> hardCats = new List<List<string>>{
+  public static List<List<string>> mediumCats = new List<List<string>>{
     new List<string> { "ZEITUNG" , "AUTOR", "ORT"},
     new List<string> { "ZEITUNG" , "ORT", "DATE", "TAG"},
     new List<string> { "ZEITUNG" , "AUTOR", "DATE", "TAG",}
   };
 
-  public static List<List<string>> expertCats = new List<List<string>>{
+  public static List<List<string>> hardCats = new List<List<string>>{
     new List<string> { "ZEITUNG" , "AUTOR", "ORT", "DATE", "TAG"},
   };
 
@@ -321,7 +317,6 @@ public class NewsSourceForReal : NewsSource
     simpleCats.Shuffle();
     mediumCats.Shuffle();
     hardCats.Shuffle();
-    expertCats.Shuffle();
   }
 
   private static DateTime GetNextWeekday(DateTime start, DayOfWeek day)
@@ -363,10 +358,8 @@ public class NewsSourceForReal : NewsSource
         findCats = simpleCats[progression % simpleCats.Count];
       } else if (progression < 5) {
         findCats = mediumCats[progression % mediumCats.Count];
-      } else if (progression < 7) {
-        findCats = hardCats[progression % hardCats.Count];
       } else {
-        findCats = expertCats[progression % expertCats.Count];
+        findCats = hardCats[progression % hardCats.Count];
       }
       var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
       solution = info.isReal ? facts.FindValid(findCats, constr) : facts.FindInvalid(findCats, constr);
