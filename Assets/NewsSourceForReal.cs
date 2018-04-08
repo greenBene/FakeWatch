@@ -281,7 +281,7 @@ public class NewsSourceForReal : NewsSource
     new HeadlineInfo(
       "Coca Cola will nach Mondladung Werbung im All prüfen",
       "EVENT_ML",
-      "FACHGEBIET_Sc",
+      "FACHGEBIET_Wi",
       true
     ),
     new HeadlineInfo(
