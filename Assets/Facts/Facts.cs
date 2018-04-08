@@ -62,11 +62,16 @@ public class Category
     members.Shuffle();
   }
 
+  public void inverseMemberTruth(Category targetCat)
+  {
+    members.ForEach(m => m.inverseTruth(targetCat));
+  }
+
   public Frontier FulfillConstraints(Frontier frontier)
   {
     foreach (var m in members)
     {
-      Console.WriteLine("First Layer {0}", m.name);
+      // Console.WriteLine("First Layer {0}", m.name);
       var workingFront = m.CanFulfillConstraints(frontier.AddFoundPairs(this, m));
       if (workingFront != null) return workingFront;
     }
@@ -78,6 +83,7 @@ public class Category
 public class Element
 {
   public Dictionary<Category, List<Element>> to = new Dictionary<Category, List<Element>>();
+  public Dictionary<Category, List<Element>> inverseTo = new Dictionary<Category, List<Element>>();
   public Category memberOf;
   public string name;
   public Element(string name, Category memberOf)
@@ -91,11 +97,30 @@ public class Element
     foreach (var list in to.Values) list.Shuffle();
   }
 
+  public void inverseTruth(Category cat)
+  {
+    if (!inverseTo.ContainsKey(cat))
+    {
+      var inverseList = new List<Element>();
+      foreach (var m in cat.members) inverseList.Add(m);
+      List<Element> currentTo;
+      if (!to.TryGetValue(cat, out currentTo)) currentTo = new List<Element>();
+      foreach (var currentM in currentTo) inverseList.Remove(currentM);
+      inverseTo.Add(cat, inverseList);
+    }
+    var tmp = inverseTo[cat];
+    List<Element> toVal;
+    if (!to.TryGetValue(cat, out toVal)) toVal = new List<Element>();
+    inverseTo[cat] = toVal;
+    to[cat] = tmp;
+
+  }
+
   private Frontier CanReachAll(Frontier frontier, List<Category> reachable)
   {
-    Console.Write("canReachAll {0}", this.name);
-    reachable.ForEach(r => Console.Write(r.symbol + ", "));
-    Console.WriteLine();
+    // Console.Write("canReachAll {0}", this.name);
+    // reachable.ForEach(r => Console.Write(r.symbol + ", "));
+    // Console.WriteLine();
     if (reachable.Count == 0) return frontier;
     var cat = reachable.First();
     var nextReachable = new List<Category>(reachable);
@@ -104,24 +129,24 @@ public class Element
     if (frontier.usedConstraintIds.Contains(currentId)) return CanReachAll(frontier, nextReachable);
     if (!to.ContainsKey(cat))
     {
-      Console.WriteLine("{0} has no {1}.", this.name, cat.symbol);
+      // Console.WriteLine("{0} has no {1}.", this.name, cat.symbol);
       return null;
     }
 
-    Console.WriteLine("adding catcatId {0}", currentId);
+    // Console.WriteLine("adding catcatId {0}", currentId);
     var nextFront = frontier.AddUsedConstraintId(currentId).RemoveMissingCat(cat);
     foreach (var el in to[cat])
     {
-      Console.WriteLine("  try {0} -> {1}", cat.symbol, el.name);
+      // Console.WriteLine("  try {0} -> {1}", cat.symbol, el.name);
       var nextFront2 = nextFront.AddFoundPairs(cat, el);
       var workingFront = el.CanFulfillConstraints(nextFront2);
       if (workingFront != null)
       {
-        Console.WriteLine("! try {0}", el.name);
+        // Console.WriteLine("! try {0}", el.name);
         var workingFront2 = CanReachAll(workingFront, nextReachable);
         if (workingFront2 != null) return workingFront2;
       }
-      Console.WriteLine("X try {0} -> {1}", cat.symbol, el.name);
+      // Console.WriteLine("X try {0} -> {1}", cat.symbol, el.name);
     }
     return null;
 
@@ -129,7 +154,7 @@ public class Element
 
   public Frontier CanFulfillConstraints(Frontier frontier)
   {
-    Console.WriteLine("In member {0}", this.name);
+    // Console.WriteLine("In member {0}", this.name);
 
     if (CatCatToId.data.ContainsKey(memberOf))
     {
@@ -139,20 +164,20 @@ public class Element
         if (frontier.usedConstraintIds.Contains(currentId)) continue;
         if (!to.ContainsKey(cat) || to.Count == 0)
         {
-          Console.WriteLine("{0} has no {1}!", this.name, cat.symbol);
+          // Console.WriteLine("{0} has no {1}!", this.name, cat.symbol);
           return null;
         }
         if (frontier.foundPairs.ContainsKey(cat))
         {
           foreach (var el in to[cat])
           {
-            Console.WriteLine("  TRY {0}", el.name);
+            // Console.WriteLine("  TRY {0}", el.name);
             if (el == frontier.foundPairs[cat])
             {
-              Console.WriteLine("! TRY {0}", el.name);
+              // Console.WriteLine("! TRY {0}", el.name);
               return frontier.AddUsedConstraintId(currentId);
             }
-            Console.WriteLine("X TRY {0}", el.name);
+            // Console.WriteLine("X TRY {0}", el.name);
           }
           return null;
         }
@@ -201,14 +226,14 @@ public class Facts
         Element el1;
         if (!shortNameToElement.TryGetValue(r.Groups[1].Value, out el1))
         {
-          throw new Exception("unknown node " + el1);
+          throw new Exception("unknown node " + el1 + "in line " + line);
         }
         Element el2;
         if (!shortNameToElement.TryGetValue(r.Groups[2].Value, out el2))
         {
-          throw new Exception("unknown node " + el2);
+          throw new Exception("unknown node " + el2 + "in line " + line);
         }
-        Console.WriteLine(el1.name + " => " + el2.name);
+        // Console.WriteLine(el1.name + " => " + el2.name);
         if (!(CatCatToId.data.ContainsKey(el1.memberOf) && CatCatToId.data[el1.memberOf].ContainsKey(el2.memberOf)))
         {
           if (!CatCatToId.data.ContainsKey(el1.memberOf))
@@ -227,7 +252,7 @@ public class Facts
           {
             CatCatToId.data[el2.memberOf].Add(el1.memberOf, currentId);
           }
-          Console.WriteLine("With id {0}", currentId);
+          // Console.WriteLine("With id {0}", currentId);
           currentId += 1;
         }
         List<Element> l1;
@@ -267,30 +292,18 @@ public class Facts
       {
         foreach (var otherCat in CatCatToId.data[cat].Keys)
         {
-          var orgTosCat = new Dictionary<Element, List<Element>>();
-          var orgTosOther = new Dictionary<Element, List<Element>>();
-          foreach (var m in cat.members)
-          {
-            if (m.to.ContainsKey(otherCat)) orgTosCat.Add(m, m.to[otherCat]);
-            m.to[otherCat] = new List<Element>();
-          }
-          foreach (var m in otherCat.members)
-          {
-            if (m.to.ContainsKey(cat)) orgTosOther.Add(m, m.to[cat]);
-            m.to[cat] = new List<Element>();
-          }
+          cat.inverseMemberTruth(otherCat);
+          otherCat.inverseMemberTruth(cat);
           // TODO: CREATE EXACT OPPOSITE RULES
           var workingFrontier = FindValid(cats, existingConstraints);
           // Put original rules back in place
-          foreach (var m in cat.members)
+          cat.inverseMemberTruth(otherCat);
+          otherCat.inverseMemberTruth(cat);
+          if (workingFrontier != null)
           {
-            if (orgTosCat.ContainsKey(m)) m.to[otherCat] = orgTosCat[m];
+            Console.WriteLine("LYING WITH {0} -> {1}", cat.symbol, otherCat.symbol);
+            return workingFrontier;
           }
-          foreach (var m in otherCat.members)
-          {
-            if (orgTosOther.ContainsKey(m)) m.to[cat] = orgTosOther[m];
-          }
-          if (workingFrontier != null) return workingFrontier;
         }
       }
     }
@@ -316,9 +329,9 @@ public class Facts
 
     while (frontier.missingCats.Count > 0)
     {
-      foreach (var cat in frontier.missingCats) Console.WriteLine("Missing: {0}", cat.symbol);
+      // foreach (var cat in frontier.missingCats) Console.WriteLine("Missing: {0}", cat.symbol);
       var next = frontier.missingCats.First();
-      Console.WriteLine("Try {0}", next.symbol);
+      // Console.WriteLine("Try {0}", next.symbol);
 
       frontier = next.FulfillConstraints(frontier.RemoveMissingCat(next));
       if (frontier == null)
