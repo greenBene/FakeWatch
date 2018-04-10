@@ -292,6 +292,7 @@ public class Facts
       {
         foreach (var otherCat in CatCatToId.data[cat].Keys)
         {
+          if (!cats.Contains(otherCat) && !existingConstraints.ContainsKey(otherCat.symbol)) continue;
           cat.inverseMemberTruth(otherCat);
           otherCat.inverseMemberTruth(cat);
           // TODO: CREATE EXACT OPPOSITE RULES
