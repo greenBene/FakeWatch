@@ -58,7 +58,7 @@ public class NewsGeneration : MonoBehaviour {
                 ShowEndScreen();
             }
 
-            if(NewsGeneration.articleCount <= 0){
+            if(articleCount <= 0){
                 timeWithoutAnyNews += Time.deltaTime;
 
                 if(timeWithoutAnyNews >= 1.3){
