@@ -7,7 +7,7 @@ public class NewsGeneration : MonoBehaviour {
 
     public GameObject articlePrefab;
 
-    private static int articleCount = 0;
+    private int articleCount = 0;
 
     [Range(0, 120)] [SerializeField] float startDuration = 60f;
     [Range(0, 1)] [SerializeField] float rate = 0.9f;
@@ -66,7 +66,7 @@ public class NewsGeneration : MonoBehaviour {
         source.clip = newMessage;
         source.Play();
         newArticle.GetComponent<Article>().Assign(news, this);
-        NewsGeneration.articleCount++;
+        articleCount++;
     }
 
     public void NextNewsInitiater() {
@@ -87,7 +87,7 @@ public class NewsGeneration : MonoBehaviour {
      *
      */
     public bool Answer(bool isFake, bool newsIsRejected) {
-        NewsGeneration.articleCount--;
+        articleCount--;
 
         if(newsTillAutoInvoke > 0){
             newsTillAutoInvoke--;
@@ -96,8 +96,8 @@ public class NewsGeneration : MonoBehaviour {
             }
         }
 
-        if(NewsGeneration.articleCount <= 0) {
-            NewsGeneration.articleCount = 0;
+        if(articleCount <= 0) {
+            articleCount = 0;
             Invoke("ShowNextNews", 1f);
         }
 
