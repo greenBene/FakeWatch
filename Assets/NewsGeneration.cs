@@ -21,6 +21,7 @@ public class NewsGeneration : MonoBehaviour {
     public float timeLeft;
 
     private bool hasEnded = false;
+    private float timeWithoutAnyNews = 0f;
 
 
     private int correctMarkedArticles = 0;
@@ -56,6 +57,16 @@ public class NewsGeneration : MonoBehaviour {
                 hasEnded = true;
                 ShowEndScreen();
             }
+
+            if(NewsGeneration.articleCount <= 0){
+                timeWithoutAnyNews += Time.deltaTime;
+
+                if(timeWithoutAnyNews >= 1.3){
+                    ShowNextNews();
+                }
+            }
+
+
         }
 	}
 
@@ -79,6 +90,7 @@ public class NewsGeneration : MonoBehaviour {
 
     public void ShowNextNews() {
         if (hasEnded) return;
+        timeWithoutAnyNews = 0;
         GenerateArticle(newsSource.getNextNews());
     }
 
