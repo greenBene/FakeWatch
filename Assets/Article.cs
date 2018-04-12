@@ -9,6 +9,7 @@ public class Article : MonoBehaviour {
 
     private bool isFake;
     private bool dragging;
+    private string error;
 
     public Text headlineField, zeitungField, journalistField, ortField, datumField, ressortField;
     private Vector3 distanceToMouse;
@@ -25,7 +26,7 @@ public class Article : MonoBehaviour {
         ortField.text = news.location;
         datumField.text = news.date;
         newsGeneration = ng;
-        Debug.Log(news.error);
+        error = news.error;
     }
 
 	// Use this for initialization
@@ -55,6 +56,8 @@ public class Article : MonoBehaviour {
         if(correct){
             Destroy(gameObject);
         }else{
+            GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG", error);
+
             WrongAnswer();
         }
 
@@ -62,7 +65,6 @@ public class Article : MonoBehaviour {
 
     public void WrongAnswer() {
 
-        GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG");
         Destroy(gameObject);
     }
 
@@ -73,6 +75,7 @@ public class Article : MonoBehaviour {
             Destroy(gameObject);
         } else
         {
+            GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG", "Artikel war korrekt");
 
             WrongAnswer();
         }
