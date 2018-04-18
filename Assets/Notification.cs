@@ -21,9 +21,9 @@ public class Notification : MonoBehaviour {
         errorReason.enabled = false;
         image.enabled = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 

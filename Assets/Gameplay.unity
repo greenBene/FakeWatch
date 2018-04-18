@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d3079b11a82b847bb5bb6faebc3e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  articlePrefab: {fileID: 1400896621183064, guid: 8e1fa14ba047f574bb7953b2a7911e85,
+  articlePrefab: {fileID: 1560815670184302, guid: 8e1fa14ba047f574bb7953b2a7911e85,
     type: 2}
   startDuration: 40
   rate: 0.9
@@ -577,7 +577,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.3137255, g: 0.48627454, b: 0.5019608, a: 1}
+  m_BackGroundColor: {r: 0.15294118, g: 0.49411765, b: 0.5058824, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1075,6 +1075,7 @@ GameObject:
   - component: {fileID: 1305241297}
   - component: {fileID: 1305241299}
   - component: {fileID: 1305241298}
+  - component: {fileID: 1305241300}
   m_Layer: 5
   m_Name: logo
   m_TagString: Untagged
@@ -1133,6 +1134,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1305241296}
+--- !u!114 &1305241300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305241296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46093f37074eb443a6baf524a9e6f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logoEnglish: {fileID: 21300000, guid: b9c494b167f957e4e981ccfddd6c0012, type: 3}
+  logoGerman: {fileID: 21300000, guid: 2cb535bbf235ef4449faaf21ac1d347a, type: 3}
 --- !u!1 &1381518201
 GameObject:
   m_ObjectHideFlags: 0

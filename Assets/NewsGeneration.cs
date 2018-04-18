@@ -138,7 +138,15 @@ public class NewsGeneration : MonoBehaviour {
         source.Play();
         endScreen.enabled = true;
         endText.enabled = true;
-        endText.text = "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310. \n Sie haben " + correctMarkedArticles + " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt. Dagegen haben Sie " + wronglyMarkedArticlesAsTrue + " falsche Nachrichten als wahr " + "und " + wronglyMarkedArticlesAsFalse + " wahre Nachrichten als falsch eingestuft.";
+
+        if (PlayerPrefs.GetString("language") == "german")
+        {
+            endText.text = "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310. \n Sie haben " + correctMarkedArticles + " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt. Dagegen haben Sie " + wronglyMarkedArticlesAsTrue + " falsche Nachrichten als wahr " + "und " + wronglyMarkedArticlesAsFalse + " wahre Nachrichten als falsch eingestuft.";
+        } else
+        {
+            endText.text = "Employee Evaluation of Factchecker ID: 0189310. \n You have checked " + correctMarkedArticles + " news correctly based on their truth. You marked " + wronglyMarkedArticlesAsTrue + " fake news as true " + "and " + wronglyMarkedArticlesAsFalse + " true news as wrong.";
+        }
+
         restartButton.SetActive(true);
 
 

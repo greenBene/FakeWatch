@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
 public class NewGame : MonoBehaviour {
 
@@ -16,6 +17,6 @@ public class NewGame : MonoBehaviour {
 
     public void Restart()
     {
-        Application.LoadLevel(0);
+        EditorSceneManager.LoadScene(0);
     }
 }
