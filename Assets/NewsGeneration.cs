@@ -42,7 +42,11 @@ public class NewsGeneration : MonoBehaviour {
         timeLeft = timeToPlayInSeconds;
         newsTillAutoInvoke = newsWithoutInvokingAutmatically;
 
-        newsSource = new NewsSourceForReal();
+        if (PlayerPrefs.GetString("language") == "german"){
+            newsSource = new NewsSourceForReal();
+        } else {
+            newsSource = new NewsSourceForRealEn();
+        }
 
         Invoke("ShowNextNews", 1f);
     }
