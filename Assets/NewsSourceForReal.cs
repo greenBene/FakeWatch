@@ -245,7 +245,7 @@ public class NewsSourceForReal : NewsSource
     new HeadlineInfo(
       "Börse reagiert verhalten auf Umweltskandal.",
       "EVENT_US",
-      "FACHGEBIET_Sc",
+      "FACHGEBIET_Wi",
       true
     ),
     new HeadlineInfo(

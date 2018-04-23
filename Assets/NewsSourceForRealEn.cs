@@ -245,7 +245,7 @@ public class NewsSourceForRealEn : NewsSource
     new HeadlineInfoEn(
       "Stock market hardly reacts to environmental scandal",
       "EVENT_US",
-      "FACHGEBIET_Sc",
+      "FACHGEBIET_Wi",
       true
     ),
     new HeadlineInfoEn(
