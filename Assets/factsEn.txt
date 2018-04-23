@@ -49,13 +49,13 @@ ORT_Ka: Karst
 ORT_Da: Dammweih
 ORT_La: Lanne
 
-EVENT_WK: Wuschel Kandidiert
-EVENT_VS: Veruntreuungs-Skandal (Wehmert)
-EVENT_SS: Sexismusskandal
-EVENT_WF: Große Wuschel-Kundgebung zu Frauenrechten
-EVENT_US: Umweltskandal
-EVENT_WT: Wahltag (Wuschel Gewinnt)
-EVENT_ML: Mondlandung
+EVENT_WK: Wuschel Candidacy
+EVENT_VS: Misappropriation Scandal (Wehmert)
+EVENT_SS: Sexism Scandal
+EVENT_WF: Big Wuschel Rally on Women's Rights
+EVENT_US: Environmental Scandal
+EVENT_WT: Election Day (Wuschel Wins)
+EVENT_ML: Moon-Landing
 
 DATE_FEB02: Feb 02
 DATE_FEB09: Feb 09
