@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 /*
  *  Dummy News Generator for testing
  */
-class HeadlineInfo
+class HeadlineInfoEn
 {
   public string headline;
   public string eventCode;
@@ -14,12 +14,12 @@ class HeadlineInfo
   public bool isReal;
 
   private static Dictionary<string, string> ressortKeyToLabel = new Dictionary<string, string>{
-    {"FACHGEBIET_Po", "Politik"},
-    {"FACHGEBIET_Wi", "Wirtschaft"},
-    {"FACHGEBIET_Sc", "Wissenschaft"},
+    {"FACHGEBIET_Po", "Politics"},
+    {"FACHGEBIET_Wi", "Economy"},
+    {"FACHGEBIET_Sc", "Science"},
   };
 
-  public HeadlineInfo(string headline, string eventCode, string topicCode, bool isReal)
+  public HeadlineInfoEn(string headline, string eventCode, string topicCode, bool isReal)
   {
     this.headline = headline;
     this.eventCode = eventCode;
@@ -33,265 +33,265 @@ class HeadlineInfo
   }
 }
 
-public class NewsSourceForReal : NewsSource
+public class NewsSourceForRealEn : NewsSource
 {
 
-  List<HeadlineInfo> News = new List<HeadlineInfo>
+  List<HeadlineInfoEn> News = new List<HeadlineInfoEn>
   {
-    new HeadlineInfo(
-      "Wehmert zu Vertrauten: Gerlinde Wuschel besitzt keine Führungskompetenz.",
+    new HeadlineInfoEn(
+      "Wehmert to his confidants: \"Gerlinde Wuschel has no competence in leadership!\" ",
       "EVENT_WK",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Unregelmäßigkeiten bei Wuschel-Aufstellung",
+    new HeadlineInfoEn(
+      "Irregularities regarding Wuschel nomination",
       "EVENT_WK",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Wehmert überrascht von Wuschels Kandidatur",
+    new HeadlineInfoEn(
+      "Wehmert surprised by Wuschel's candidacy",
       "EVENT_WK",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Anhänger der DVGF feiern die Aufstellung der ersten weiblichen Kanzlerkandidatur",
+    new HeadlineInfoEn(
+      "Members and followers of the DVGF celebrate the nomination of the first female chancellor candidate for the upcoming federal election",
       "EVENT_WK",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Gerlinde Wuschel erklärt Kandidatur für das Amt der Bundeskanzlerin.",
+    new HeadlineInfoEn(
+      "Gerlinde Wuschel declares her chancellor candidacy for the upcoming federal election",
       "EVENT_WK",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Skandal: In seiner Zeit als Bürgermeister hat sich Wehmert Steuergelder veruntreut, um Swimmingpool zu bauen.",
+    new HeadlineInfoEn(
+      "Scandalous: In his days as mayor, chancellor candidate Wehmert embezzled tax money to finance his swimming pool",
       "EVENT_VS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Bürgermeister Wehmert erschlich sich Sozialleistungen im Amt.",
+    new HeadlineInfoEn(
+      "Social benefits for mayor Wehmert while in office?",
       "EVENT_VS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Whistleblower bei der FPF: Wehmert hat jahrelang Gelder veruntreut.",
+    new HeadlineInfoEn(
+      "FPF Whistleblower: Wehmert misappropriated tax money for years",
       "EVENT_VS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Scheinbeschäftigung? Bürgermeister Wehmert hat eigene Frau als Sekretärin eingestellt.",
+    new HeadlineInfoEn(
+      "Mayor Wehmert secretly employed his own wife as secretary",
       "EVENT_VS",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Vetternwirtschaft im Rathaus: Wehmert beschäftigt Familienmitglieder!",
+    new HeadlineInfoEn(
+      "Nepotism in the city hall: Mayor Wehmert employed familiy members!",
       "EVENT_VS",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Bürgermeister Wehmert hat keine weiße Weste: Sexismus hinter verschlossener Tür.",
+    new HeadlineInfoEn(
+      "Scandal in Wehmert's city hall office: Sexism behind closed doors!",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Schmutzige Sex-Praktiken in Wehmerts Rathaus: Ein Insider packt aus.",
+    new HeadlineInfoEn(
+      "Frivolous details from Wehmert's former job as mayor: Insider reveals dirty sex practices in office ",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Sexskandal im Rathaus: Gedemütigte Praktikantin packt aus!",
+    new HeadlineInfoEn(
+      "Sex-scandal in the town hall: Humiliated female intern reveals details",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Rehnholds cholerischer Anfall im Bundestag \"Sexist Wehmert als Politiker nicht geeignet und als Mensch nicht tragbar!\"",
+    new HeadlineInfoEn(
+      "Rehnhold's choleric rant in the House of Representatives: \"Wehmert is sexist, not suitable for the Federal Chancellery and a despicable human being!\"",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "“Das stimmt so nicht!” Wehmert vehement gegen Sexismusvorwürfe.",
+    new HeadlineInfoEn(
+      "\"Heinous and untrue!\" Wehmert fights vehemently against sexism allegations",
       "EVENT_SS",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "DVGF-Vorsitzender Rehnold bezeichnet Wehmert als Sexist",
+    new HeadlineInfoEn(
+      "Rehnhold, chairman of DVGF, calls Wehmert a sexist",
       "EVENT_SS",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Rückendeckung für Bürgermeister Wehmert im Sex-Sturm: Konkurrentin Wuschel gegen Fake News im Netz",
+    new HeadlineInfoEn(
+      "Backing for Mayor Wehmert in Sex-Shitstorm: Competitor Wuschel criticizes Fake News on the internet",
       "EVENT_SS",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Wehmerts Skandal Tweet: Frauen raus aus der Politik!",
+    new HeadlineInfoEn(
+      "Wehmert's scandalous Tweet: \"Keep women away from politics!\"",
       "EVENT_WF",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Mob aggressiver Feministinnen verwüsten Innenstadt",
+    new HeadlineInfoEn(
+      "Violent mob of feminists ravages the city center of the capital!",
       "EVENT_WF",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Gerlinde Wuschel auf Kundgebung: \"Nieder mit dem Patriarchat!\"",
+    new HeadlineInfoEn(
+      "Gerlinde Wuschel at political rally: \"Down with patriarchy!\"",
       "EVENT_WF",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Demonstration zur Verbesserung der Arbeitsbedingungen für Mütter",
+    new HeadlineInfoEn(
+      "Thousands march to improve working conditions for mothers",
       "EVENT_WF",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Pestizid-Skandal: Wussten Politiker von der Verunreinigung unseres Trinkwassers?",
+    new HeadlineInfoEn(
+      "Pesticide Scandal: Did our politicians know about the contamination of our drinking water?",
       "EVENT_US",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "\"Finger weg von unseren Eiern!\" Wehmerts Gesundheitsminister in Bedrängnis",
+    new HeadlineInfoEn(
+      "\"Stay away from our eggs!\" Wehmert's health minister concerned about pesticide scandal",
       "EVENT_US",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Wehmert-Veruntreuungs-Skandal: Industrie A47 Aktie stürzt ein",
+    new HeadlineInfoEn(
+      "Wehmert's misappropriation scandal: Industry shares plummet",
       "EVENT_VS",
       "FACHGEBIET_Wi",
       false
     ),
-    new HeadlineInfo(
-      "Die dreckige Spur des Düngegeldes",
+    new HeadlineInfoEn(
+      "Fertilizer scandal: The dirty trace leads to Wehmert",
       "EVENT_US",
       "FACHGEBIET_Wi",
       false
     ),
-    new HeadlineInfo(
-      "Bauern schuld an Pestizidvergiftung durch Düngemittel",
+    new HeadlineInfoEn(
+      "Farmers to blame for the pesticide contamination of the groundwater",
       "EVENT_US",
       "FACHGEBIET_Sc",
       false
     ),
-    new HeadlineInfo(
-      "So vergiften Pestizide unsere Kühe",
+    new HeadlineInfoEn(
+      "This is how pesticides poison our cows",
       "EVENT_US",
       "FACHGEBIET_Sc",
       false
     ),
-    new HeadlineInfo(
-      "Gerlinde Wuschel mit Mehrheit der Stimmen zur Bundeskanzlerin gewählt.",
+    new HeadlineInfoEn(
+      "Gerlinde Wuschel elected as Federal Chancellor by majority vote ",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Gerlinde Wuschel gewinnt Wahl zur Bundeskanzlerin.",
+    new HeadlineInfoEn(
+      "Gerlinde Wuschel wins election as Federal Chancellor",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Gerlinde Wuschel neue Bundeskanzlerin: \"Alles wird anders!\"",
+    new HeadlineInfoEn(
+      "Gerlinde Wuschel as new Federal Chancellor: \"Everything is going to change!\"",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Wahllokale nur bedingt barrierefrei: Rentner mussten Alternativen finden.",
+    new HeadlineInfoEn(
+      "Polling stations only partially barrier-free: Old and disabled people had to look for alternatives to give their vote",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
     ),
-    new HeadlineInfo(
-      "Betrug bei der Bürgermeisterwahl: Illegale Immigranten gaben Stimmen für Wuschel ab.",
+    new HeadlineInfoEn(
+      "Fraud in federal election: Thousands of illegal immigrants voted for Wuschel",
       "EVENT_WT",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Unstimmigkeiten bei der Wahl: Wuschel erklärt sich selbst zur Bürgermeisterin.",
+    new HeadlineInfoEn(
+      "Wuschel election fraud: Wuschel declares herself Federal Chancellor",
       "EVENT_WT",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Wehmert verliert Bundeskanzlerwahl trotz 86%: Rentner durften nicht wählen!",
+    new HeadlineInfoEn(
+      "Wehmert loses Federal Chancellor election despite getting 86% of the votes: Old people weren't allowed to vote!",
       "EVENT_WT",
       "FACHGEBIET_Po",
       false
     ),
-    new HeadlineInfo(
-      "Börse reagiert verhalten auf Umweltskandal.",
+    new HeadlineInfoEn(
+      "Stock market hardly reacts to environmental scandal",
       "EVENT_US",
       "FACHGEBIET_Wi",
       true
     ),
-    new HeadlineInfo(
-      "Neuestes vom Pestizidskandal: Wissenschaft findet neuen Weg zur nachhaltigen Schädlingsbekämpfung",
+    new HeadlineInfoEn(
+      "Latest news on the pesticide scandal: Scientists discover a new way for sustainable pest control",
       "EVENT_US",
       "FACHGEBIET_Sc",
       true
     ),
-    new HeadlineInfo(
-      "Bundeskanzlerwahl: Finanzwelt mit optimistischer Zukunftsprognose.",
+    new HeadlineInfoEn(
+      "Federal Chancellor election: Optimistic future forecast for the financial market",
       "EVENT_WT",
       "FACHGEBIET_Wi",
       true
     ),
-    new HeadlineInfo(
-      "Aus aktuellem Anlass: Bund weiblicher Vorstände fordert höhere Löhne für Frauen",
+    new HeadlineInfoEn(
+      "Due to recent political events: Association of female CEOs calls for higher wages for women",
       "EVENT_SS",
       "FACHGEBIET_Wi",
       true
     ),
-    new HeadlineInfo(
-      "Eilverfahren: Wehmert Medienunternehmen muss für veruntreutes Geld haften!",
+    new HeadlineInfoEn(
+      "Misappropriation Process: Wehmert Media Company is being held accountable for embezzled tax money",
       "EVENT_VS",
       "FACHGEBIET_Wi",
       false
     ),
-    new HeadlineInfo(
-      "Apollo 20 findet Hinweise auf Wasser auf dem Mond",
+    new HeadlineInfoEn(
+      "Apollo 20 finds evidence for water on the moon",
       "EVENT_ML",
       "FACHGEBIET_Sc",
       false
     ),
-    new HeadlineInfo(
-      "Coca Cola will nach Mondladung Werbung im All prüfen",
+    new HeadlineInfoEn(
+      "After the moon landing: Well-known manufacturer of soft drinks strives for advertising in space",
       "EVENT_ML",
       "FACHGEBIET_Wi",
       true
     ),
-    new HeadlineInfo(
-      "Fusion von Grunmeyer und Haalenkamp wegen Umweltskandal gescheitert",
+    new HeadlineInfoEn(
+      "Merger of Grunmeyer and Haalenkamp failed because of environmental scandal",
       "EVENT_US",
       "FACHGEBIET_Wi",
       false
     ),
-    new HeadlineInfo(
-      "Aktienmarkt geschockt von Wuschels Kandidatur",
+    new HeadlineInfoEn(
+      "Stock market shaken by Wuschel's candidacy ",
       "EVENT_WK",
       "FACHGEBIET_Wi",
       true
@@ -316,10 +316,10 @@ public class NewsSourceForReal : NewsSource
     new List<string> { "ZEITUNG" , "AUTOR", "ORT", "DATE", "TAG"},
   };
 
-  public NewsSourceForReal()
+  public NewsSourceForRealEn()
   {
     News.Shuffle();
-    facts.Init("Assets/facts.txt");
+    facts.Init("Assets/factsEn.txt");
     simpleCats.Shuffle();
     mediumCats.Shuffle();
     hardCats.Shuffle();
@@ -334,13 +334,13 @@ public class NewsSourceForReal : NewsSource
 
   private static Dictionary<string, int> monthNameToInt = new Dictionary<string, int>{{"Feb", 2}, {"Mar", 3}};
   private static Dictionary<string, DayOfWeek> weekdayNameToDayOfWeek = new Dictionary<string, DayOfWeek>{
-    {"Montag", DayOfWeek.Monday},
-    {"Dienstag", DayOfWeek.Tuesday},
-    {"Mittwoch", DayOfWeek.Wednesday},
-    {"Donnerstag", DayOfWeek.Thursday},
-    {"Freitag", DayOfWeek.Friday},
-    {"Samstag", DayOfWeek.Saturday},
-    {"Sonntag", DayOfWeek.Sunday},
+    {"Monday", DayOfWeek.Monday},
+    {"Tuesday", DayOfWeek.Tuesday},
+    {"Wednesday", DayOfWeek.Wednesday},
+    {"Thursday", DayOfWeek.Thursday},
+    {"Friday", DayOfWeek.Friday},
+    {"Saturday", DayOfWeek.Saturday},
+    {"Sunday", DayOfWeek.Sunday},
   };
 
   private static DateTime GetNextWeekday(string dateAsString, string dayOfWeekAsString)
@@ -355,7 +355,7 @@ public class NewsSourceForReal : NewsSource
   public News getNextNews()
   {
     Dictionary<string, string> solution = null;
-    HeadlineInfo info = null;
+    HeadlineInfoEn info = null;
     while (solution == null)
     {
       info = News[idx];

@@ -9,8 +9,11 @@ public class Article : MonoBehaviour {
 
     private bool isFake;
     private bool dragging;
+    private string error;
 
     public Text headlineField, zeitungField, journalistField, ortField, datumField, ressortField;
+    public Text correctButtonTextField;
+
     private Vector3 distanceToMouse;
     private NewsGeneration newsGeneration;
 
@@ -25,15 +28,17 @@ public class Article : MonoBehaviour {
         ortField.text = news.location;
         datumField.text = news.date;
         newsGeneration = ng;
-        Debug.Log(news.error);
+        error = news.error;
     }
 
 	// Use this for initialization
 	void Start () {
         transform.position = RandomPosition();
+        if (PlayerPrefs.GetString("language") == "german")
+            correctButtonTextField.text = "Korrekt";
+        if (PlayerPrefs.GetString("language") == "english")
+                correctButtonTextField.text = "Correct";
     }
-
-
 
     // Update is called once per frame
     void Update () {
@@ -55,6 +60,11 @@ public class Article : MonoBehaviour {
         if(correct){
             Destroy(gameObject);
         }else{
+            if (PlayerPrefs.GetString("language") == "german")
+                GameObject.Find("notification").GetComponent<Notification>().Spawn("FALSCH", error);
+            else
+                GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG", error);
+
             WrongAnswer();
         }
 
@@ -62,7 +72,6 @@ public class Article : MonoBehaviour {
 
     public void WrongAnswer() {
 
-        GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG");
         Destroy(gameObject);
     }
 
@@ -73,6 +82,10 @@ public class Article : MonoBehaviour {
             Destroy(gameObject);
         } else
         {
+            if (PlayerPrefs.GetString("language") == "german")
+                GameObject.Find("notification").GetComponent<Notification>().Spawn("FALSCH", "Artikel war korrekt");
+            else
+                GameObject.Find("notification").GetComponent<Notification>().Spawn("WRONG", "Article was correct");
 
             WrongAnswer();
         }
