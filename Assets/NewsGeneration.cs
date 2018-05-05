@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NewsGeneration : MonoBehaviour {
 
@@ -52,6 +53,10 @@ public class NewsGeneration : MonoBehaviour {
 
 	private void Update()
 	{
+
+        if(Input.GetKeyDown(KeyCode.Escape) ){
+            SceneManager.LoadScene(0);
+        }
         if (!hasEnded)
         {
             timeLeft -= Time.deltaTime;
