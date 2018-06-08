@@ -319,7 +319,7 @@ public class NewsSourceForRealEn : NewsSource
   public NewsSourceForRealEn()
   {
     News.Shuffle();
-    facts.Init("Assets/factsEn.txt");
+    facts.Init("Assets/NewsGen/factsEn.txt");
     simpleCats.Shuffle();
     mediumCats.Shuffle();
     hardCats.Shuffle();
