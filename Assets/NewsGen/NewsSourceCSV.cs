@@ -6,14 +6,14 @@ using UnityEngine;
 public class NewsSourceCSV : MonoBehaviour, NewsSource {
 
     ArrayList newsArray;
+    
 
-	// Use this for initialization
 	void Start () {
-        newsArray = new ArrayList();
-        StreamReader sr = new StreamReader(Application.dataPath + "/testData.csv");
-        string line = sr.ReadLine();
+        newsArray = new ArrayList(); //erzeugt array mit unbestimmter größe
+        StreamReader sr = new StreamReader(Application.dataPath + "/NewsGen/testData.csv");//öffnet datei
+        string line = sr.ReadLine(); //liest erste zeile aus
 
-        while ((line = sr.ReadLine()) != null)
+        while ((line = sr.ReadLine()) != null)//liest zeilen aus solange es zeilen giebt
         {
             string[] strArr = line.Split(",".ToCharArray());
             News news = arrayToNews(strArr);
@@ -34,17 +34,12 @@ public class NewsSourceCSV : MonoBehaviour, NewsSource {
         return new News(headline, newspaper, author, location, date, isFake, "ressort", null);
     }
 
-	// Update is called once per frame
-	void Update () {
-
-	}
-
     public static NewsSource getInstance(GameObject go){
         return (NewsSource) (go.AddComponent(typeof(NewsSourceCSV)) as NewsSource) ;
     }
 
     public News getNextNews(){
-        News news = (News) newsArray[Random.Range(0, newsArray.Capacity-1)];
+        News news = (News) newsArray[Random.Range(0, newsArray.Capacity-1)]; //holt sich ein zufälliges element aus dem array und giebt es zurück
         return news;
     }
 }

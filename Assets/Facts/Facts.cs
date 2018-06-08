@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 
+//cat stants for categorys
 static class CatCatToId
 {
   public static Dictionary<Category, Dictionary<Category, int>> data = new Dictionary<Category, Dictionary<Category, int>>();
@@ -45,7 +46,7 @@ HashSet<int> usedConstraintIds)
     return new Frontier(missingCats, foundPairs, ids);
   }
 }
-
+//vermutlich die kategorie wie AUTOR, ORT, TAG usw. was in der facts.txt datei vor dem "_" steht.
 public class Category
 {
   public string symbol;
@@ -79,7 +80,7 @@ public class Category
   }
 
 }
-
+//vermutlich die elemente wie in "AUTOR_MY: Mario Yoshida" "Mario Yoshida". also was nach dem doppelpunkt steht oder was nach dem "_" kommt.
 public class Element
 {
   public Dictionary<Category, List<Element>> to = new Dictionary<Category, List<Element>>();
@@ -209,10 +210,10 @@ public class Facts
     foreach (var line in File.ReadAllLines(path))
     {
       Match r;
-      if ((r = Regex.Match(line, @"(\S+)_(\S+)\s*:\s*(.+)")).Success)
+      if ((r = Regex.Match(line, @"(\S+)_(\S+)\s*:\s*(.+)")).Success)//holt sich beispielsweise "AUTOR_MY: Mario Yoshida" und schreibt dass in Match r rein
       {
         Category cat = null;
-        if (!symbolToCategory.TryGetValue(r.Groups[1].Value, out cat))
+        if (!symbolToCategory.TryGetValue(r.Groups[1].Value, out cat))//fals dieses element noch nicht in array symbolToCateogry drin ist.
         {
           cat = new Category(r.Groups[1].Value);
           symbolToCategory[cat.symbol] = cat;
