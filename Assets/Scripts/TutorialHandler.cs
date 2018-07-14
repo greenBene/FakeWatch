@@ -9,7 +9,7 @@ public class TutorialHandler : MonoBehaviour {
 
     private void Start() {
         tutorialWindows = new GameObject[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++) {
+        for (int i = 0; i < transform.childCount; i++) { //hohlt die childe objekte des tutorials und wirft sie in den array
             tutorialWindows[i] = transform.GetChild(i).gameObject;
             tutorialWindows[i].SetActive(false);
         }
