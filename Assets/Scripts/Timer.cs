@@ -3,26 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
-{
+public enum TimerState{
+    Countdown = 0,
+    TimeShort
+}
 
-  private Text text;
-  private NewsGeneration news;
+[RequireComponent(typeof(Text))]
+public class Timer : MonoBehaviour {
 
-  // Use this for initialization
-  void Start()
-  {
-    news = GameObject.Find("Canvas").GetComponent<NewsGeneration>();
-    text = GetComponent<Text>();
+    private Text text;
+    private NewsGeneration news;
+    public TimerState state = TimerState.TimeShort;
 
-  }
-  // Update is called once per frame
-  void Update()
-  {
-    string minutes = ((int)(news.timeLeft / 60)).ToString();
-    string seconds = ((int)(news.timeLeft % 60)).ToString();
-    if (minutes.Length < 2) minutes = "0" + minutes;
-    if (seconds.Length < 2) seconds = "0" + seconds;
-    text.text = minutes + ":" + seconds;
-  }
+    // Use this for initialization
+    void Start() {
+        news = FindObjectOfType<NewsGeneration>();
+        text = GetComponent<Text>();
+        if (!text) {
+            print("text not found. Timer");
+        }
+        state = TimerState.Countdown;
+    }
+    // Update is called once per frame
+    void Update() {
+        switch (state) {
+        case TimerState.Countdown:
+            text.text = ((int)(news.timeLeft / 60)).ToString("D2") + ":" + ((int)(news.timeLeft % 60)).ToString("D2");
+            break;
+        case TimerState.TimeShort:
+            text.text = System.DateTime.Now.ToString("HH:mm");
+            break;
+        default:
+            text.text = "kurtz nach drölf";
+            break;
+        }
+        
+    }
 }
