@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Window : MonoBehaviour {
 	
-	public Canvas canvas;
 	public float fadeOutTransparency, fadeOutSpeed;
 	
 	private bool dragging = false;
@@ -12,7 +11,7 @@ public abstract class Window : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -21,7 +20,8 @@ public abstract class Window : MonoBehaviour {
             SetPosition((Vector2)Input.mousePosition + distanceToMouse);
 	}
 	
-	public void Show() {
+	public virtual void Show() {
+        gameObject.SetActive(true);
 	}
 	
 	public void SetPosition(int x, int y) {
@@ -41,5 +41,15 @@ public abstract class Window : MonoBehaviour {
     public void StopDragging()
     {
         dragging = false;
+    }
+
+    public virtual void Close()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public virtual void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

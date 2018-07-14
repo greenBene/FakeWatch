@@ -35,6 +35,7 @@ class HeadlineInfoEn
 
 public class NewsSourceForRealEn : NewsSource
 {
+    Random rng = new Random();
 
   List<HeadlineInfoEn> News = new List<HeadlineInfoEn>
   {
@@ -352,23 +353,58 @@ public class NewsSourceForRealEn : NewsSource
 
   }
 
-  public News getNextNews()
-  {
-    Dictionary<string, string> solution = null;
-    HeadlineInfoEn info = null;
-    while (solution == null)
+    //This is for compatibility with Legacy code only. Avoid using!
+    public News getNextNews()
     {
-      info = News[idx];
-      idx = (idx + 1) % News.Count;
-      List<string> findCats = null;
-      if (progression < 4) {
-        findCats = simpleCats[progression % simpleCats.Count];
-      } else if (progression < 7) {
-        findCats = mediumCats[progression % mediumCats.Count];
-      } else {
-        findCats = hardCats[progression % hardCats.Count];
-      }
-      var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
+        News news;
+        if (progression < 4)
+        {
+            news = GetNextNews(0);
+        }
+        else if (progression < 7)
+        {
+            news = GetNextNews(1);
+        }
+        else
+        {
+            news = GetNextNews(2);
+        }
+        return news;
+    }
+
+    public News GetNextNews(int compexity)
+    {
+        Dictionary<string, string> solution = null;
+        HeadlineInfoEn info = null;
+        while (solution == null)
+        {
+            info = News[idx];
+            idx = (idx + 1) % News.Count;
+            List<string> findCats = null;
+            switch (compexity)
+            {
+                case 0:
+                    {
+                        findCats = simpleCats[rng.Next() % simpleCats.Count];
+                    }
+                    break;
+                case 1:
+                    {
+                        findCats = mediumCats[rng.Next() % mediumCats.Count];
+                    }
+                    break;
+                case 2:
+                    {
+                        findCats = hardCats[rng.Next() % hardCats.Count];
+                    }
+                    break;
+                default:
+                    {
+                        findCats = hardCats[rng.Next() % hardCats.Count];
+                    }
+                    break;
+            }
+            var constr = new Dictionary<string, string> { { "EVENT", info.eventCode }, { "FACHGEBIET", info.topicCode } };
       solution = info.isReal ? facts.FindValid(findCats, constr) : facts.FindInvalid(findCats, constr);
       if (solution == null) Console.WriteLine("COULD FIND NO SOLUTION FOR '{0}'", info.headline);
     }

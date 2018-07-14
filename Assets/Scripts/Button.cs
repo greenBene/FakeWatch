@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour {
+public abstract class Button : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,4 +13,6 @@ public class Button : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public abstract void OnPress();
 }

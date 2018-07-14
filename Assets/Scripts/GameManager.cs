@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    private NewsSourceForReal newsSource;
+    private static GameManager s_instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (!s_instance)
+            {
+                s_instance = GameObject.Find("GameManager").GetComponent<GameManager>();
+            }
+            return s_instance;
+        }
+    }
 
-	// Use this for initialization
-	void Start () {
-        newsSource = new NewsSourceForReal();
-		
+    private NewsGeneration s_newsSource;
+    public static NewsGeneration NewsSource
+    {
+        get
+        {
+            return Instance.s_newsSource;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
+        s_newsSource = GameObject.Find("MainScreen").GetComponent<NewsGeneration>();	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
-    public News GenerateNews()
-    {
-        // if you want to do progression logic, please do it here instead of in the newssource!
-        return newsSource.GetNextNews(2);
-    }
 }

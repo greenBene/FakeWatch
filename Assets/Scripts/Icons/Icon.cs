@@ -23,7 +23,7 @@ public abstract class Icon : MonoBehaviour {
 		}
 	}
 	
-	void OnMouseDown() {
+	public void OnMouseDown() {
 		if (clicked) {
 			Reset();
 			Execute();

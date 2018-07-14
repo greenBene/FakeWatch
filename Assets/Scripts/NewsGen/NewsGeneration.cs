@@ -76,6 +76,7 @@ public class NewsGeneration : MonoBehaviour {
         source.clip = newMessage;
         source.Play();
         newArticle.GetComponent<Article>().Assign(news, this);
+        //newArticle.GetComponent<ArticleWindow>().AssignNews(news);
         articleCount++;
     }
 

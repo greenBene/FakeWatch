@@ -9,7 +9,7 @@ public class NewsField : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        info.GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
@@ -18,6 +18,6 @@ public class NewsField : MonoBehaviour {
 	}
 	
 	public void SetInfo(string newInfo) {
-		return;
+        info.text = newInfo;
 	}
 }
