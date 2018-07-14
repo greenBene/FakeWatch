@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ArticleWindow : Window {
-	
-	public NewsField headlineField, zeitungField, journalistField, ortField, datumField, ressortField;
-    private News news;
 
-	// Use this for initialization
-	void Start () {
+    private NewsField[] fields;
+    private News news;
+    public AudioClip correctSound, wrongSound;
+
+    // Use this for initialization
+    void Start()
+    {
         base.SetPosition(RandomPosition());
         base.Show();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,16 +31,29 @@ public class ArticleWindow : Window {
     public void AssignNews(News news)
     {
         this.news = news;
-        headlineField.SetInfo(news.headline);
-        zeitungField.SetInfo(news.newspaper);
-        journalistField.SetInfo(news.author);
-        ortField.SetInfo(news.location);
-        datumField.SetInfo(news.date);
-        ressortField.SetInfo(news.ressort);
+        if(fields == null)
+        {
+            fields = GetComponentsInChildren<NewsField>();
+        }
+        foreach (NewsField field in fields)
+        {
+            field.SetInfo(news.GetInfo(field.type));
+        }
     }
 
-    public void MarkAsTrue()
+    public void MarkAs(bool correct)
     {
-
+        AudioSource source = GetComponent<AudioSource>();
+        if(news.IsFake() == !correct)
+        {
+            source.clip = correctSound;
+        }
+        else
+        {
+            source.clip = wrongSound;
+        }
+        source.Play();
+        GameManager.NewsSource.RegisterSolvedNews();
+        base.Destroy(source.clip.length);
     }
 }

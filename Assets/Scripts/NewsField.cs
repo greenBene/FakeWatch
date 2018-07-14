@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Text))]
 public class NewsField : MonoBehaviour {
-	
-	public Text info;
+
+    private Text info;
+    public InfoType type;
 
 	// Use this for initialization
 	void Start () {
-        info.GetComponent<Text>();
+        if (info == null)
+        {
+            info = GetComponent<Text>();
+        }
 	}
 	
 	// Update is called once per frame
@@ -18,6 +23,10 @@ public class NewsField : MonoBehaviour {
 	}
 	
 	public void SetInfo(string newInfo) {
+        if (info == null)
+        {
+            info = GetComponent<Text>();
+        }
         info.text = newInfo;
 	}
 }

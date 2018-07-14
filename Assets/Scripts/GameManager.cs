@@ -35,9 +35,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    
-    private NewsGeneration s_newsSource;
-    public static NewsGeneration NewsGen
+    private NewsGeneration2 s_newsSource;
+    public static NewsGeneration2 NewsSource
     {
         get
         {
@@ -61,8 +60,19 @@ public class GameManager : MonoBehaviour {
     GameState state = GameState.Desktop;
 
     //===== ===== MonoBehaviourStuff ===== =====
+    private Canvas s_mainScreen;
+    public static Canvas MainScreen
+    {
+        get
+        {
+            return Instance.s_mainScreen;
+        }
+    }
+
+    // Use this for initialization
     void Start () {
-        s_newsSource = this.GetComponent<NewsGeneration>();
+        s_newsSource = GetComponent<NewsGeneration2>();
+        s_mainScreen = FindObjectOfType<Canvas>();
 	}
 	
 	void Update () {
