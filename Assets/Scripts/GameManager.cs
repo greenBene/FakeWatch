@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private NewsGeneration s_newsSource;
-    public static NewsGeneration NewsSource
+    private NewsGeneration2 s_newsSource;
+    public static NewsGeneration2 NewsSource
     {
         get
         {
@@ -26,9 +26,19 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private Canvas s_mainScreen;
+    public static Canvas MainScreen
+    {
+        get
+        {
+            return Instance.s_mainScreen;
+        }
+    }
+
     // Use this for initialization
     void Start () {
-        s_newsSource = GameObject.Find("MainScreen").GetComponent<NewsGeneration>();	
+        s_newsSource = GetComponent<NewsGeneration2>();
+        s_mainScreen = FindObjectOfType<Canvas>();
 	}
 	
 	// Update is called once per frame

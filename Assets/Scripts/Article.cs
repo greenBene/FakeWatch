@@ -20,13 +20,13 @@ public class Article : MonoBehaviour {
     public float fadeOutTransparency, fadeOutSpeed;
 
     public void Assign (News news, NewsGeneration ng){
-        this.isFake = news.isFake;
-        ressortField.text = news.ressort;
-        headlineField.text = news.headline;
-        zeitungField.text = news.newspaper.ToUpper();
-        journalistField.text = news.author;
-        ortField.text = news.location;
-        datumField.text = news.date;
+        this.isFake = news.IsFake();
+        ressortField.text = news.GetInfo(InfoType.ressort);
+        headlineField.text = news.GetInfo(InfoType.headline);
+        zeitungField.text = news.GetInfo(InfoType.paper).ToUpper();
+        journalistField.text = news.GetInfo(InfoType.author);
+        ortField.text = news.GetInfo(InfoType.place);
+        datumField.text = news.GetInfo(InfoType.date);
         newsGeneration = ng;
         error = news.error;
     }

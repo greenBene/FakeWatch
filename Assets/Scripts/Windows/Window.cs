@@ -52,4 +52,10 @@ public abstract class Window : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    public virtual void Destroy(float delay)
+    {
+        transform.position = new Vector2(-10000, -10000);
+        Destroy(gameObject, delay);
+    }
 }
