@@ -19,7 +19,7 @@ public class NewsGeneration : MonoBehaviour {
     private int newsTillAutoInvoke;
     private NewsSource newsSource;
     private float currentDurationBetweenNews;
-    public float timeLeft;
+    public float timeLeft { get; private set; }
 
     private bool hasEnded = false;
 
