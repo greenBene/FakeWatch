@@ -12,23 +12,30 @@ public enum TimerState{
 public class Timer : MonoBehaviour {
 
     private Text text;
-    private NewsGeneration news;
     public TimerState state = TimerState.TimeShort;
+    
 
-    // Use this for initialization
     void Start() {
-        news = FindObjectOfType<NewsGeneration>();
         text = GetComponent<Text>();
         if (!text) {
             print("text not found. Timer");
         }
-        state = TimerState.Countdown;
+
+        GameManager.Instance.RegistTimer(this);
     }
-    // Update is called once per frame
+    private void OnDestroy() {
+        try {
+            GameManager.Instance.RegistTimer(this);//meldet nur sich selbst ab; 
+        } catch (System.Exception e) {
+            print(e.Message);
+        }
+    }
+
+
     void Update() {
         switch (state) {
         case TimerState.Countdown:
-            text.text = ((int)(news.timeLeft / 60)).ToString("D2") + ":" + ((int)(news.timeLeft % 60)).ToString("D2");
+            text.text = ((int)(GameManager.Instance.timeLeft / 60)).ToString("D2") + ":" + ((int)(GameManager.Instance.timeLeft % 60)).ToString("D2");
             break;
         case TimerState.TimeShort:
             text.text = System.DateTime.Now.ToString("HH:mm");
