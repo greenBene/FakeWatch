@@ -17,7 +17,7 @@ public class Article : MonoBehaviour {
     private Vector3 distanceToMouse;
     private NewsGeneration newsGeneration;
 
-    public float fadeOutTransparency, fadeOutSpeed;
+    //public float fadeOutTransparency, fadeOutSpeed;
 
     public void Assign (News news, NewsGeneration ng){
         this.isFake = news.IsFake();

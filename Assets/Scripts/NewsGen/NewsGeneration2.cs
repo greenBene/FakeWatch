@@ -19,7 +19,6 @@ public class NewsGeneration2 : MonoBehaviour {
     private int newsTillAutoInvoke;
     private NewsSource newsSource;
     private float currentDurationBetweenNews;
-    public float timeLeft { get; private set; }
 
     private bool hasEnded = false;
 
@@ -34,34 +33,27 @@ public class NewsGeneration2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        currentDurationBetweenNews = startDuration;
-        timeLeft = timeToPlayInSeconds;
-        newsTillAutoInvoke = newsWithoutInvokingAutmatically;
-
         if (PlayerPrefs.GetString("language") == "german"){
             newsSource = new NewsSourceForReal();
         } else {
             newsSource = new NewsSourceForRealEn();
         }
 
-        Invoke("ShowNextNews", 1f);
+        StartGeneration();
     }
 
 	private void Update()
 	{
-        if (!hasEnded)
-        {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft <= 0)
-            {
-                hasEnded = true;
-                ShowEndScreen();
-            }
-
-        }
 	}
 
-	public void GenerateArticle(News news) {
+    public void StartGeneration()
+    {
+        currentDurationBetweenNews = startDuration;
+        newsTillAutoInvoke = newsWithoutInvokingAutmatically;
+        Invoke("NextNewsInitiater", 1f);
+    }
+
+	private void GenerateArticle(News news) {
         if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
         newArticle.transform.SetParent(GameManager.MainScreen.transform);
@@ -70,7 +62,7 @@ public class NewsGeneration2 : MonoBehaviour {
         articleCount++;
     }
 
-    public void NextNewsInitiater() {
+    private void NextNewsInitiater() {
         if (hasEnded) return;
         ShowNextNews();
         currentDurationBetweenNews *= rate;
@@ -78,7 +70,7 @@ public class NewsGeneration2 : MonoBehaviour {
         Invoke("NextNewsInitiater", currentDurationBetweenNews);
     }
 
-    public void ShowNextNews() {
+    private void ShowNextNews() {
         if (hasEnded) return;
         GenerateArticle(newsSource.getNextNews());
     }
@@ -96,10 +88,11 @@ public class NewsGeneration2 : MonoBehaviour {
             }
         }
 
-        if (articleCount <= 0)
+        if (articleCount <= 0) // we never want an empty screen -> force new article
         {
             articleCount = 0;
-            Invoke("ShowNextNews", 1f);
+            CancelInvoke("NextNewsInitiater"); // we need to stop the delayed Invoke, otherwise it will plop up probably shortly after the now forced new article
+            Invoke("NextNewsInitiater", 1f);
         }
     }
 
@@ -138,7 +131,7 @@ public class NewsGeneration2 : MonoBehaviour {
 
     }
 
-    public void ShowEndScreen(){
+    /*private void ShowEndScreen(){
         // Todo Show End screen
         endScreen.enabled = true;
         endText.enabled = true;
@@ -159,5 +152,5 @@ public class NewsGeneration2 : MonoBehaviour {
               "correctMarkedArticles: " + correctMarkedArticles + "\n" +
               "wronglyMarkedArticlesAsTrue: " + wronglyMarkedArticlesAsTrue + "\n" +
               "wronglyMarkedArticlesAsFalse: " + wronglyMarkedArticlesAsFalse + "\n");
-    }
+    }*/
 }

@@ -9,18 +9,19 @@ public class ArticleWindow : Window {
     public AudioClip correctSound, wrongSound;
 
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
         base.SetPosition(RandomPosition());
         base.Show();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
-	private Vector2 RandomPosition()
+
+    public override void Update()
+    {
+        base.Update();
+    }
+
+
+    private Vector2 RandomPosition()
     {
         float halfVerticalSize = GetComponent<RectTransform>().rect.height / 2;
         float halfHorizontalSize = GetComponent<RectTransform>().rect.width / 2;
