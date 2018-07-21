@@ -65,7 +65,6 @@ public class NewsGeneration2 : MonoBehaviour {
     public void StopGeneration() {
         CancelInvoke();
         foreach(ArticleWindow it in GameManager.MainScreen.GetComponentsInChildren<ArticleWindow>()) {
-            print("destry window");
             it.Destroy();
         }
     }

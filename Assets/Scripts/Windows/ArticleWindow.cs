@@ -54,6 +54,7 @@ public class ArticleWindow : Window {
             source.clip = wrongSound;
         }
         source.Play();
+        GameManager.Instance.Score(news.IsFake(), correct);
         GameManager.NewsSource.RegisterSolvedNews();
         base.Destroy(source.clip.length);
     }
