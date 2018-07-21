@@ -3,15 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreditsWindow : Window {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
+    public override void Show() {
+        base.Show();
+        SetPosition(Screen.width / 2, Screen.height / 2);
+    }
 }
