@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class StartIcon : Icon {
 	
 	protected override void Execute() {
-		SceneManager.LoadScene("Tutorial");
+        GameManager.Instance.RequestStateChange(GameState.Tutorial);
 	}
 }
