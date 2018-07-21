@@ -53,6 +53,10 @@ public class NewsGeneration2 : MonoBehaviour {
         Invoke("NextNewsInitiater", 1f);
     }
 
+    public void StopGeneration() {
+        CancelInvoke();
+    }
+
 	private void GenerateArticle(News news) {
         if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, transform);
