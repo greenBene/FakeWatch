@@ -13,4 +13,6 @@ public class StringCollection {
     //TAGS
 
     //Sceens
+    public const string INTRO = "Intro";
+    public const string GAMEPLAY = "Gameplay2";
 }

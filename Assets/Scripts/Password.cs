@@ -32,6 +32,6 @@ public class Password : MonoBehaviour {
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(StringCollection.GAMEPLAY);
     }
 }

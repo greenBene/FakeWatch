@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState {
     Desktop = 0,
@@ -176,6 +177,10 @@ public class GameManager : MonoBehaviour {
             wronglyMarkedArticlesAsTrue++;
         else
             wronglyMarkedArticlesAsFalse++;
+    }
+
+    public void LockScreen() {
+        SceneManager.LoadScene(StringCollection.INTRO);
     }
 
     //===== ===== State Mashine ===== =====
