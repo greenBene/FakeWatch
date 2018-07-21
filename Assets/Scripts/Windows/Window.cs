@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(EventTrigger))]
 public abstract class Window : MonoBehaviour {
-	
+
 	private bool dragging = false;
 	private Vector2 distanceToMouse;
 
@@ -32,8 +32,18 @@ public abstract class Window : MonoBehaviour {
 	public void SetPosition(Vector2 pos) {
 		transform.position = pos;
 	}
-	
-	public void StartDragging()
+
+    public void MoveAbout(float x, float y)
+    {
+        MoveAbout(new Vector2(x, y));
+    }
+
+    public void MoveAbout(Vector2 distance)
+    {
+        SetPosition((Vector2)transform.position + distance);
+    }
+
+    public void StartDragging()
     {
         distanceToMouse = transform.position - Input.mousePosition;
         dragging = true;
