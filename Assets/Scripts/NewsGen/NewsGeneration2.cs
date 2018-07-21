@@ -33,13 +33,13 @@ public class NewsGeneration2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
-
         if (PlayerPrefs.GetString("language") == "german"){
             newsSource = new NewsSourceForReal();
         } else {
             newsSource = new NewsSourceForRealEn();
         }
+
+        StartGeneration();
     }
 
 	private void Update()

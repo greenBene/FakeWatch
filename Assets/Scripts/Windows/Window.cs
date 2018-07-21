@@ -4,20 +4,20 @@ using UnityEngine;
 
 public abstract class Window : MonoBehaviour {
 	
-	public float fadeOutTransparency, fadeOutSpeed;
-	
 	private bool dragging = false;
 	private Vector2 distanceToMouse;
 
 	// Use this for initialization
-	void Start () {
+	public virtual void Start () {
         gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if(dragging)
+	public virtual void Update () {
+        if (dragging)
+        {
             SetPosition((Vector2)Input.mousePosition + distanceToMouse);
+        }
 	}
 	
 	public virtual void Show() {
