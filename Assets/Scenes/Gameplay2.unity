@@ -1756,7 +1756,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 946543161}
+      - m_Target: {fileID: 1586417960}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -2293,7 +2293,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endScreen: {fileID: 1586417956}
-  timeToPlayInSeconds: 600
+  timeToPlayInSeconds: 5
+  DebugCorrect1: 0
+  DebugWrong1: 0
+  DebugWrong2: 0
   state: 0
 --- !u!4 &1256157040
 Transform:
@@ -2725,13 +2728,15 @@ GameObject:
   - component: {fileID: 1586417959}
   - component: {fileID: 1586417958}
   - component: {fileID: 1586417957}
+  - component: {fileID: 1586417960}
+  - component: {fileID: 1586417961}
   m_Layer: 5
   m_Name: endScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1586417957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2782,9 +2787,68 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13743882, y: 0.13900001}
   m_AnchorMax: {x: 0.87100005, y: 0.8743518}
-  m_AnchoredPosition: {x: -3, y: -3}
+  m_AnchoredPosition: {x: -3, y: -1160}
   m_SizeDelta: {x: 1, y: -0.29992676}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1586417960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586417956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215ccb1f335735b469304af676dc2bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 281340913}
+--- !u!114 &1586417961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586417956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1586417960}
+          m_MethodName: StartDragging
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1586417960}
+          m_MethodName: StopDragging
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1588788449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +3013,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694566492649110, guid: 8d0787f3328d453418544774f74a7bcd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d0787f3328d453418544774f74a7bcd, type: 2}

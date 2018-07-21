@@ -60,10 +60,15 @@ public class GameManager : MonoBehaviour {
     float timeToPlayInSeconds = 600f;
 
     public float timeLeft { get; private set; }
-
+    
     public int correctMarkedArticles { get; private set; }
     public int wronglyMarkedArticlesAsTrue { get; private set; }
     public int wronglyMarkedArticlesAsFalse { get; private set; }
+
+    [Header("Debug")]
+    public int DebugCorrect1 = 0;
+    public int DebugWrong1 = 0;
+    public int DebugWrong2 = 0;
 
     public GameState state = GameState.Desktop;
 
@@ -82,6 +87,9 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         StateTransition();
         StateOnStay(); //for stuff that has to be done every frame in an specifik state
+        DebugCorrect1 = correctMarkedArticles;
+        DebugWrong1 = wronglyMarkedArticlesAsFalse;
+        DebugWrong2 = wronglyMarkedArticlesAsTrue;
 	}
 
     //===== ===== Registration ===== =====
@@ -110,6 +118,15 @@ public class GameManager : MonoBehaviour {
                 tutorialFlag();
                 tutorialFlag = null;
             }
+        }
+    }
+
+    EndScreenWindow end = null;
+    public void RegistEnd(EndScreenWindow handle) {
+        if (end == handle)
+            end = null;
+        else {
+            end = handle;
         }
     }
 
@@ -222,7 +239,8 @@ public class GameManager : MonoBehaviour {
                 //timerFlag += timer.ChangeStateToTimeShort;//TODO: flag setzten
             break;
         case GameState.EndScreen:
-            endScreen.SetActive(false);
+            if (end)
+                end.Close();
             correctMarkedArticles = 0;
             wronglyMarkedArticlesAsFalse = 0;
             wronglyMarkedArticlesAsTrue = 0;
@@ -251,7 +269,9 @@ public class GameManager : MonoBehaviour {
                 //timerFlag += timer.ChangeStateToCountdown;//TODO: flag setzten
             break;
         case GameState.EndScreen:
-            endScreen.SetActive(true);
+            if (end)
+                end.Show();
+            print("im here");
             break;
         default:
             break;

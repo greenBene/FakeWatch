@@ -48,7 +48,6 @@ public class TutorialHandler : MonoBehaviour {
     }
 
     public void NextWindow() {
-        print(index + " : " + tutorialWindows.Length);
         tutorialWindows[index].Close();
         index++;
         if (index == tutorialWindows.Length) {
