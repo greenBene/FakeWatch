@@ -12,7 +12,7 @@ public enum TimerState{
 public class Timer : MonoBehaviour {
 
     private Text text;
-    public TimerState state = TimerState.TimeShort;
+    private TimerState state = TimerState.TimeShort;
     
 
     void Start() {
@@ -31,7 +31,6 @@ public class Timer : MonoBehaviour {
         }
     }
 
-
     void Update() {
         switch (state) {
         case TimerState.Countdown:
@@ -44,6 +43,13 @@ public class Timer : MonoBehaviour {
             text.text = "kurtz nach drölf";
             break;
         }
-        
+    }
+
+    public void ChangeStateToCountdown () {
+        state = TimerState.Countdown;
+    }
+
+    public void ChangeStateToTimeShort() {
+        state = TimerState.TimeShort;
     }
 }

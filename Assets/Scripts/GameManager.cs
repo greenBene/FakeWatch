@@ -82,20 +82,40 @@ public class GameManager : MonoBehaviour {
 
     //===== ===== Registration ===== =====
     Timer timer = null;
+    System.Action timerFlag;
     public void RegistTimer(Timer handle) {
         if (timer == handle)
             timer = null;
-        else
+        else {
             timer = handle;
+            if(timerFlag != null) {
+                timerFlag();
+                tutorialFlag = null;
+            }
+        }
     }
 
     TutorialHandler tutorial = null;
+    System.Action tutorialFlag;
     public void RegistTutorial(TutorialHandler handle) {
         if (tutorial == handle)
             tutorial = null;
-        else
+        else {
             tutorial = handle;
+            if(tutorialFlag != null) {
+                tutorialFlag();
+                tutorialFlag = null;
+            }
+        }
     }
+
+    /*NewsGeneration2 NewsGen = null;
+    public void RegistNewsGen(NewsGeneration2 handle) {
+        if (NewsGen == handle)
+            NewsGen = null;
+        else
+            NewsGen = handle;
+    }*///wir haben einen NewsGenerator2 Singelton im GameManager
 
     //===== ===== Comunicator ===== =====
     public bool RequestStateChange(GameState newState) {
@@ -167,7 +187,7 @@ public class GameManager : MonoBehaviour {
         case GameState.Tutorial:
             break;
         case GameState.Playing:
-            timeLeft -= Time.deltaTime;
+            timeLeft -= Time.deltaTime;//eventuel erst nach der ersten news machen
             break;
         case GameState.EndScreen:
             break;
@@ -184,13 +204,16 @@ public class GameManager : MonoBehaviour {
         case GameState.Desktop:
             break;
         case GameState.Tutorial:
-            tutorial.AbortTutorial();
+            if (tutorial)
+                tutorial.AbortTutorial();
+            else
+                tutorialFlag += tutorial.AbortTutorial;
             break;
         case GameState.Playing:
             if (timer)
-                timer.state = TimerState.TimeShort;
+                timer.ChangeStateToTimeShort();
             else
-                Debug.LogError("timer not found. GameManager");
+                timerFlag += timer.ChangeStateToTimeShort;
             break;
         case GameState.EndScreen:
             endScreen.SetActive(false);
@@ -208,15 +231,17 @@ public class GameManager : MonoBehaviour {
         case GameState.Desktop:
             break;
         case GameState.Tutorial:
-            //TODO: tutorial starten
-            //TODO: tutorial aktiv setzten
+            if (tutorial)
+                tutorial.StartTutorial();
+            else
+                tutorialFlag += tutorial.StartTutorial;
             break;
         case GameState.Playing:
             timeLeft = timeToPlayInSeconds;
             if (timer)
-                timer.state = TimerState.Countdown;
+                timer.ChangeStateToCountdown();
             else
-                Debug.LogError("timer not found. GameManager");
+                timerFlag += timer.ChangeStateToCountdown;
             break;
         case GameState.EndScreen:
             endScreen.SetActive(true);
