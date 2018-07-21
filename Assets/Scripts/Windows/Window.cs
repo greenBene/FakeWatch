@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EventTrigger))]
 public abstract class Window : MonoBehaviour {
 	
 	private bool dragging = false;
