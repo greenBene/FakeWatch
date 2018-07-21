@@ -15,7 +15,8 @@ public enum EventTrigger {
 
 public enum EventMessage {
     Failed = 0,
-    Sucsess
+    Sucsess,
+    Scip
 }
 
 [RequireComponent(typeof(NewsGeneration))]
@@ -44,6 +45,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private Canvas s_mainScreen;
+    public static Canvas MainScreen {
+        get {
+            return Instance.s_mainScreen;
+        }
+    }
+
     //===== ===== Variables ===== =====
     [SerializeField]
     GameObject endScreen = null;
@@ -53,26 +61,22 @@ public class GameManager : MonoBehaviour {
 
     public float timeLeft { get; private set; }
 
-    private int correctMarkedArticles = 0;
-    private int wronglyMarkedArticlesAsTrue = 0;
-    private int wronglyMarkedArticlesAsFalse = 0;
+    public int correctMarkedArticles { get; private set; }
+    public int wronglyMarkedArticlesAsTrue { get; private set; }
+    public int wronglyMarkedArticlesAsFalse { get; private set; }
 
-    GameState state = GameState.Desktop;
+    public GameState state = GameState.Desktop;
 
     //===== ===== MonoBehaviourStuff ===== =====
-    private Canvas s_mainScreen;
-    public static Canvas MainScreen
-    {
-        get
-        {
-            return Instance.s_mainScreen;
-        }
-    }
-
+    
     // Use this for initialization
     void Start () {
+        correctMarkedArticles = 0;
+        wronglyMarkedArticlesAsFalse = 0;
+        wronglyMarkedArticlesAsTrue = 0;
         s_newsSource = GetComponent<NewsGeneration2>();
         s_mainScreen = FindObjectOfType<Canvas>();
+        
 	}
 	
 	void Update () {
@@ -124,14 +128,15 @@ public class GameManager : MonoBehaviour {
             (state == GameState.Desktop && newState == GameState.EndScreen))
             return false;
 
-        ChangeState(newState);
-        return true;
+        return ChangeState(newState);
     }
 
     public void RequestStateChange(EventTrigger trigger, EventMessage message) {
         switch (trigger) {
         case EventTrigger.Tutorial:
             switch (message) {
+            case EventMessage.Scip:
+                goto case EventMessage.Sucsess;
             case EventMessage.Sucsess:
                 ChangeState(GameState.Playing);
                 break;
@@ -196,9 +201,9 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    void ChangeState(GameState newState) {
+    bool ChangeState(GameState newState) {
         if (state == newState)
-            return;
+            return false;
 
         switch (state) { //by exiting this state
         case GameState.Desktop:
@@ -206,15 +211,15 @@ public class GameManager : MonoBehaviour {
         case GameState.Tutorial:
             if (tutorial)
                 tutorial.AbortTutorial();
-            else
-                tutorialFlag += tutorial.AbortTutorial;
+            //else
+                //tutorialFlag += tutorial.AbortTutorial;//TODO: flag setzten
             break;
         case GameState.Playing:
             NewsSource.StopGeneration();
             if (timer)
                 timer.ChangeStateToTimeShort();
-            else
-                timerFlag += timer.ChangeStateToTimeShort;
+            //else
+                //timerFlag += timer.ChangeStateToTimeShort;//TODO: flag setzten
             break;
         case GameState.EndScreen:
             endScreen.SetActive(false);
@@ -234,16 +239,16 @@ public class GameManager : MonoBehaviour {
         case GameState.Tutorial:
             if (tutorial)
                 tutorial.StartTutorial();
-            else
-                tutorialFlag += tutorial.StartTutorial;
+            //else
+                //tutorialFlag += tutorial.StartTutorial;//TODO: flag setzten
             break;
         case GameState.Playing:
             timeLeft = timeToPlayInSeconds;
             NewsSource.StartGeneration();
             if (timer)
                 timer.ChangeStateToCountdown();
-            else
-                timerFlag += timer.ChangeStateToCountdown;
+            //else
+                //timerFlag += timer.ChangeStateToCountdown;//TODO: flag setzten
             break;
         case GameState.EndScreen:
             endScreen.SetActive(true);
@@ -251,7 +256,6 @@ public class GameManager : MonoBehaviour {
         default:
             break;
         }
+        return true;
     }
-
-    
 }

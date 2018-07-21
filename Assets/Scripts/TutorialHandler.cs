@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class TutorialHandler : MonoBehaviour {
 
-    GameObject[] tutorialWindows;
+    [Header("Debug")]
+    [SerializeField]
+    TutorialExplanationWindow[] tutorialWindows;
+    [SerializeField]
     int index = 0;
 
     private void Start() {
-        tutorialWindows = new GameObject[transform.childCount];
+        tutorialWindows = new TutorialExplanationWindow[transform.childCount];
         for (int i = 0; i < transform.childCount; i++) { //hohlt die childe objekte des tutorials und wirft sie in den array
-            tutorialWindows[i] = transform.GetChild(i).gameObject;
-            tutorialWindows[i].SetActive(false);
+            tutorialWindows[i] = transform.GetChild(i).GetComponent<TutorialExplanationWindow>();
         }
         GameManager.Instance.RegistTutorial(this);
     }
@@ -25,26 +27,34 @@ public class TutorialHandler : MonoBehaviour {
 
     public void StartTutorial() {
         if (tutorialWindows.Length != 0) {
-            tutorialWindows[0].SetActive(true);
+            tutorialWindows[0].Show();
             index = 0;
         }
     }
 
     public void AbortTutorial() {
-        tutorialWindows[index].SetActive(false);
+        if(index < tutorialWindows.Length)
+            tutorialWindows[index].Close();
+        else
+            tutorialWindows[tutorialWindows.Length-1].Close();
     }
 
     public void ExitTutorial() {
         GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Failed);
     }
 
+    public void SkipTutorial() {
+        GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Scip);
+    }
+
     public void NextWindow() {
+        print(index + " : " + tutorialWindows.Length);
+        tutorialWindows[index].Close();
+        index++;
         if (index == tutorialWindows.Length) {
             GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Sucsess);
             return;
         }
-        tutorialWindows[index].SetActive(false);
-        index++;
-        tutorialWindows[index].SetActive(true);
+        tutorialWindows[index].Show();
     }
 }

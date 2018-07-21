@@ -20,7 +20,6 @@ public class Timer : MonoBehaviour {
         if (!text) {
             print("text not found. Timer");
         }
-
         GameManager.Instance.RegistTimer(this);
     }
     private void OnDestroy() {

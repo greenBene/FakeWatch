@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartIcon : Icon {
 	
 	protected override void Execute() {
-        GameManager.Instance.RequestStateChange(GameState.Tutorial);
+        if (!GameManager.Instance.RequestStateChange(GameState.Tutorial))
+            print("Icon darf nicht wechseln");
 	}
 }
