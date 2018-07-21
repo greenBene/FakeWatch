@@ -6,14 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class NewsGeneration2 : MonoBehaviour {
 
+    [Header("Debug")]
+    [SerializeField]
+    bool ActivAtStart = false;
+
+    [Header("Artical Variables")]
     public GameObject articlePrefab;
 
     private int articleCount = 0;
 
     [Range(0, 120)] [SerializeField] float startDuration = 60f;
     [Range(0, 1)] [SerializeField] float rate = 0.9f;
-    [SerializeField] float timeToPlayInSeconds = 600f;
     [SerializeField] int newsWithoutInvokingAutmatically = 4;
+
+    [Header("No Funktion")]
+    [SerializeField] float timeToPlayInSeconds = 600f;
+    
 
 
     private int newsTillAutoInvoke;
@@ -39,7 +47,8 @@ public class NewsGeneration2 : MonoBehaviour {
             newsSource = new NewsSourceForRealEn();
         }
 
-        StartGeneration();
+        if(ActivAtStart)
+            StartGeneration();
     }
 
 	private void Update()

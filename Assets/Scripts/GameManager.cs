@@ -15,7 +15,8 @@ public enum EventTrigger {
 
 public enum EventMessage {
     Failed = 0,
-    Sucsess
+    Sucsess,
+    Scip
 }
 
 [RequireComponent(typeof(NewsGeneration))]
@@ -44,6 +45,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private Canvas s_mainScreen;
+    public static Canvas MainScreen {
+        get {
+            return Instance.s_mainScreen;
+        }
+    }
+
     //===== ===== Variables ===== =====
     [SerializeField]
     GameObject endScreen = null;
@@ -60,19 +68,13 @@ public class GameManager : MonoBehaviour {
     GameState state = GameState.Desktop;
 
     //===== ===== MonoBehaviourStuff ===== =====
-    private Canvas s_mainScreen;
-    public static Canvas MainScreen
-    {
-        get
-        {
-            return Instance.s_mainScreen;
-        }
-    }
-
+    
     // Use this for initialization
     void Start () {
         s_newsSource = GetComponent<NewsGeneration2>();
         s_mainScreen = FindObjectOfType<Canvas>();
+
+        ChangeState(GameState.Tutorial);
 	}
 	
 	void Update () {
@@ -132,6 +134,8 @@ public class GameManager : MonoBehaviour {
         switch (trigger) {
         case EventTrigger.Tutorial:
             switch (message) {
+            case EventMessage.Scip:
+                goto case EventMessage.Sucsess;
             case EventMessage.Sucsess:
                 ChangeState(GameState.Playing);
                 break;

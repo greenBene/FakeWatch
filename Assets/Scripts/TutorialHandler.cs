@@ -38,6 +38,10 @@ public class TutorialHandler : MonoBehaviour {
         GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Failed);
     }
 
+    public void SkipTutorial() {
+        GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Scip);
+    }
+
     public void NextWindow() {
         if (index == tutorialWindows.Length) {
             GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Sucsess);
