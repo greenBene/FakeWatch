@@ -210,6 +210,7 @@ public class GameManager : MonoBehaviour {
                 tutorialFlag += tutorial.AbortTutorial;
             break;
         case GameState.Playing:
+            NewsSource.StopGeneration();
             if (timer)
                 timer.ChangeStateToTimeShort();
             else
@@ -238,6 +239,7 @@ public class GameManager : MonoBehaviour {
             break;
         case GameState.Playing:
             timeLeft = timeToPlayInSeconds;
+            NewsSource.StartGeneration();
             if (timer)
                 timer.ChangeStateToCountdown();
             else
