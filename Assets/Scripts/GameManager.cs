@@ -245,6 +245,7 @@ public class GameManager : MonoBehaviour {
                 //tutorialFlag += tutorial.AbortTutorial;//TODO: flag setzten
             break;
         case GameState.Playing:
+            LogSystem.LogOnFile("===== ===== Game has Ended ===== =====");
             NewsSource.StopGeneration();
             if (timer)
                 timer.ChangeStateToTimeShort();
@@ -275,6 +276,7 @@ public class GameManager : MonoBehaviour {
             break;
         case GameState.Playing:
             timeLeft = timeToPlayInSeconds;
+            LogSystem.LogOnNewFile("===== ===== New Game Started ===== =====");
             NewsSource.StartGeneration();
             if (timer)
                 timer.ChangeStateToCountdown();
@@ -282,6 +284,7 @@ public class GameManager : MonoBehaviour {
                 //timerFlag += timer.ChangeStateToCountdown;//TODO: flag setzten
             break;
         case GameState.EndScreen:
+            LogSystem.LogOnFile("Correct: " + correctMarkedArticles + ". False positive: " + wronglyMarkedArticlesAsTrue + ". False negative: " + wronglyMarkedArticlesAsFalse);
             if (end)
                 end.Show();
             break;
