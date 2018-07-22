@@ -53,6 +53,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private MessengerHandler s_messengerHandler;
+    public static MessengerHandler MessengerHandler {
+        get {
+            return Instance.s_messengerHandler;
+        }
+    }
+
     //===== ===== Variables ===== =====
     [SerializeField]
     GameObject endScreen = null;
@@ -82,6 +89,7 @@ public class GameManager : MonoBehaviour {
         wronglyMarkedArticlesAsTrue = 0;
         s_newsSource = GetComponent<NewsGeneration2>();
         s_mainScreen = FindObjectOfType<Canvas>();
+        s_messengerHandler = GetComponent<MessengerHandler>();
         
 	}
 	
@@ -276,7 +284,6 @@ public class GameManager : MonoBehaviour {
         case GameState.EndScreen:
             if (end)
                 end.Show();
-            print("im here");
             break;
         default:
             break;

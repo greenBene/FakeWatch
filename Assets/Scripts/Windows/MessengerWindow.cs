@@ -10,14 +10,15 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
     [SerializeField] private float movementSpeed = 0f;
     [SerializeField] private float time;
     [SerializeField] private Text message;
+    [SerializeField] private Image image;
     [SerializeField] private int SlideStop;
-
+    
     private MessengerState state;
-    private int targetHight;
+    private float targetHight;
 
     // Use this for initialization
     public override void Start () {
-        
+        SlideStop = Screen.width - SlideStop;
 	}
 
     // Update is called once per frame
@@ -32,16 +33,22 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         Show("No text set!");
     }
 
-    public void Show(string messageString)
+    public float Show(string messageString)
     {
-        SetPosition(Screen.width, Screen.height + 76); // maybe a bit more offset?
-        targetHight = (int)transform.position.y;
-        time += Time.time;
         message.text = messageString;
+        float hight = message.preferredHeight;
+
+        image.rectTransform.sizeDelta = new Vector2(image.rectTransform.sizeDelta.x, hight);
+        SetPosition(Screen.width, 76); // maybe a bit more offset?
+
+        targetHight = transform.position.y;
+        time += Time.time;
         state = MessengerState.incoming;
+
+        return hight;
     }
 
-    public void SlideUp(int distance) {
+    public void SlideUp(float distance) {
         targetHight += distance;
     }
 
@@ -51,15 +58,15 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         switch (state)
         {
             case MessengerState.incoming:
-                MoveAbout(-movementSpeed/Time.deltaTime, 0);
+                MoveAbout(-movementSpeed * Time.deltaTime, 0);
                 break;
             case MessengerState.resting:
                 break;
             case MessengerState.movingUp:
-                MoveAbout(0, movementSpeed/Time.deltaTime);
+                MoveAbout(0, movementSpeed * Time.deltaTime);
                 break;
             case MessengerState.outgoing:
-                MoveAbout(movementSpeed/Time.deltaTime, 0);
+                MoveAbout(movementSpeed * Time.deltaTime, 0);
                 break;
         }
     }
@@ -73,6 +80,7 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         case MessengerState.incoming:
             break;
         case MessengerState.movingUp:
+            SetPosition(new Vector2(transform.position.x, targetHight));
             break;
         case MessengerState.outgoing:
             break;
@@ -92,7 +100,7 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         case MessengerState.outgoing:
             break;
         case MessengerState.resting:
-            SetPosition(SlideStop, (int)transform.position.y);
+            SetPosition(new Vector2(SlideStop, transform.position.y));
             break;
         default:
             break;
@@ -122,12 +130,13 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
                 ChangeState(MessengerState.resting);
             break;
         case MessengerState.outgoing:
-            if (transform.position.y >= Screen.width)
+            if (transform.position.x >= Screen.width)
                 Destroy();
             break;
         case MessengerState.resting:
-            if (transform.position.y < targetHight)
+            if (transform.position.y < targetHight - 1) {
                 ChangeState(MessengerState.movingUp);
+            }
             break;
         default:
             break;
