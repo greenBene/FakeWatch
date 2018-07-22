@@ -29,7 +29,11 @@ public class EndScreenWindow : Window {
     }
 
     public override void Destroy() {
-        GameManager.Instance.RegistEnd(this);
+        try {
+            GameManager.Instance.RegistEnd(this);
+        }catch(System.Exception e) {
+            print(e.Message);
+        }
         base.Destroy();
     }
 

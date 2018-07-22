@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour {
     public int wronglyMarkedArticlesAsTrue { get; private set; }
     public int wronglyMarkedArticlesAsFalse { get; private set; }
 
+    [SerializeField] public bool doLog = false;
+
     [Header("Debug")]
     public int DebugCorrect1 = 0;
     public int DebugWrong1 = 0;
@@ -269,6 +271,7 @@ public class GameManager : MonoBehaviour {
         case GameState.Desktop:
             break;
         case GameState.Tutorial:
+            LogSystem.LogOnNewFile("===== ===== Started Tutorial ===== =====");
             if (tutorial)
                 tutorial.StartTutorial();
             //else
@@ -276,7 +279,7 @@ public class GameManager : MonoBehaviour {
             break;
         case GameState.Playing:
             timeLeft = timeToPlayInSeconds;
-            LogSystem.LogOnNewFile("===== ===== New Game Started ===== =====");
+            LogSystem.LogOnFile("===== ===== New Game Started ===== =====");
             NewsSource.StartGeneration();
             if (timer)
                 timer.ChangeStateToCountdown();

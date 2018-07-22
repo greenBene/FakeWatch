@@ -2613,6 +2613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endScreen: {fileID: 1586417956}
   timeToPlayInSeconds: 20
+  doLog: 0
   DebugCorrect1: 0
   DebugWrong1: 0
   DebugWrong2: 0

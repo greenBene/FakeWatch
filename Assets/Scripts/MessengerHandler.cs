@@ -21,5 +21,10 @@ public class MessengerHandler : MonoBehaviour {
         }
 
         WindowList.Add(newMessenger);
+        LogSystem.LogOnFile("Messages on Screen: " + WindowList.Count);
+    }
+
+    public void DeleteMessage(MessengerWindow item) {
+        WindowList.Remove(item);
     }
 }

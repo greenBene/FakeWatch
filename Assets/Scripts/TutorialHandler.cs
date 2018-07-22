@@ -40,10 +40,12 @@ public class TutorialHandler : MonoBehaviour {
     }
 
     public void ExitTutorial() {
+        LogSystem.LogOnFile("Exited Tutorial at Window number: " + (index + 1));
         GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Failed);
     }
 
     public void SkipTutorial() {
+        LogSystem.LogOnFile("Skiped Tutorial at Window number: " + (index + 1));
         GameManager.Instance.RequestStateChange(EventTrigger.Tutorial, EventMessage.Scip);
     }
 

@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 30
-  time: 20
+  time: 5
   message: {fileID: 114543121947434022}
   image: {fileID: 114003708646442324}
   SlideStop: 50

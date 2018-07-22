@@ -44,8 +44,9 @@ public class ArticleWindow : Window {
 
     public void MarkAs(bool correct)
     {
+        LogSystem.LogOnFile("(N = " + news.IsFake() + " |P = " + correct + ") " + news.ToString());
         AudioSource source = GetComponent<AudioSource>();
-        if(news.IsFake() == !correct)
+        if(news.IsFake() == correct)//hier wahr ein !correct. stimmt das?
         {
             source.clip = correctSound;
         }

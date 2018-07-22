@@ -11,7 +11,7 @@ public class Logo : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         logo = GetComponent<Image>();
-
+        LogSystem.LogOnFile("Game is Played in " + PlayerPrefs.GetString("language"));
         if (PlayerPrefs.GetString("language") == "german")
             logo.sprite = logoGerman;
         else

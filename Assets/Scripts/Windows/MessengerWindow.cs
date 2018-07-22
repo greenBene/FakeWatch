@@ -27,6 +27,10 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         StateTransition();
         StateOnStay();
     }
+    public override void Destroy() {
+        GameManager.MessengerHandler.DeleteMessage(this);
+        base.Destroy();
+    }
 
     public override void Show()
     {

@@ -18,6 +18,7 @@ public class Ressource : MonoBehaviour {
 
     private void UpdateText(){
         text.text = RESSOURCE_NAME + ": " + ressource;
+        LogSystem.LogOnFile(text.text);
     } 
 
     public void LowerRessource()
