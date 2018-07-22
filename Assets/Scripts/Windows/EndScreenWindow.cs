@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class EndScreenWindow : Window {
     [SerializeField]
@@ -13,12 +14,12 @@ public class EndScreenWindow : Window {
     }
     public override void Show() {
         if (PlayerPrefs.GetString("language") == "german") {
-            text.text = "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310. \n\nSie haben " + GameManager.Instance.correctMarkedArticles +
+            text.text = "Mitarbeiter Evaluation von FactcheckerIn ID: " + GameManager.Instance.PlayerID + ". \n\nSie haben " + GameManager.Instance.correctMarkedArticles +
                 " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
                 " falsche Nachrichten als wahr\nund " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
                 " wahre Nachrichten als falsch eingestuft.";
         } else {
-            text.text = "Employee Evaluation of Factchecker ID: 0189310.\n\nYou have checked " + GameManager.Instance.correctMarkedArticles +
+            text.text = "Employee Evaluation of Factchecker ID: " + GameManager.Instance.PlayerID + ".\n\nYou have checked " + GameManager.Instance.correctMarkedArticles +
                 " news correctly based on their truth.\nYou marked " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
                 " fake news as true\nand " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
                 " true news as wrong.";
@@ -39,5 +40,9 @@ public class EndScreenWindow : Window {
 
     public void Restart() {
         GameManager.Instance.RequestStateChange(GameState.Desktop);
+    }
+
+    public void SaveHighScore() {
+        File.AppendAllText("HighScore.txt", GameManager.Instance.PlayerID + " aka " + "ADD NAME HERE" + ": Coreckt: " + GameManager.Instance.correctMarkedArticles + " Fasle Postive: " + GameManager.Instance.wronglyMarkedArticlesAsTrue + " False Negative: " + GameManager.Instance.wronglyMarkedArticlesAsFalse);
     }
 }

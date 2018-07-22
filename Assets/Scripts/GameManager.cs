@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour {
     public int wronglyMarkedArticlesAsTrue { get; private set; }
     public int wronglyMarkedArticlesAsFalse { get; private set; }
 
+    public int PlayerID = 0;
+
     [SerializeField] public bool doLog = false;
 
     [Header("Debug")]
@@ -271,7 +273,9 @@ public class GameManager : MonoBehaviour {
         case GameState.Desktop:
             break;
         case GameState.Tutorial:
+            PlayerID = Random.Range(0, 9999999);
             LogSystem.LogOnNewFile("===== ===== Started Tutorial ===== =====");
+            LogSystem.LogOnFile("PlayerID = " + PlayerID);
             if (tutorial)
                 tutorial.StartTutorial();
             //else
