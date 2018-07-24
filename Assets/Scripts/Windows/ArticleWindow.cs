@@ -46,7 +46,7 @@ public class ArticleWindow : Window {
     {
         LogSystem.LogOnFile("(N = " + news.IsFake() + " |P = " + correct + ") " + news.ToString());
         AudioSource source = GetComponent<AudioSource>();
-        if(news.IsFake() == correct)//hier wahr ein !correct. stimmt das?
+        if(news.IsFake() != correct)
         {
             source.clip = correctSound;
         }
@@ -56,7 +56,7 @@ public class ArticleWindow : Window {
             GameManager.MessengerHandler.NewMessage();//TODO: Inconsistensy übergeben
         }
         source.Play();
-        GameManager.Instance.Score(news.IsFake(), correct);
+        GameManager.Instance.Score(!news.IsFake(), correct);
         GameManager.NewsSource.RegisterSolvedNews();
         base.Destroy(source.clip.length);
     }
