@@ -84,11 +84,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c88f7c2b2df0e4a90beadb01293f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 30
-  time: 5
+  movementSpeed: 50
+  time: 7
   message: {fileID: 114543121947434022}
   image: {fileID: 114003708646442324}
-  SlideStop: 50
+  SlideStop: 150
 --- !u!114 &114543121947434022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,10 +110,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -150,8 +150,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1820.0001, y: 0}
-  m_SizeDelta: {x: 100, y: 14}
+  m_AnchoredPosition: {x: 1620, y: 0}
+  m_SizeDelta: {x: 300, y: 14}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &224810765028329566
 RectTransform:
@@ -169,5 +169,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 14}
+  m_SizeDelta: {x: 300, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
