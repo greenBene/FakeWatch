@@ -46,7 +46,11 @@ public class ArticleWindow : Window {
     {
         LogSystem.LogOnFile("(N = " + news.IsFake() + " |P = " + correct + ") " + news.ToString());
         AudioSource source = GetComponent<AudioSource>();
+<<<<<<< HEAD
         if(news.IsFake() == !correct)//hier wahr ein !correct. stimmt das? // Ja!
+=======
+        if(news.IsFake() != correct)
+>>>>>>> 0f60fbc199bf57086d94ff795f13e14404b5ea9f
         {
             source.clip = correctSound;
         }
@@ -56,7 +60,7 @@ public class ArticleWindow : Window {
             GameManager.MessengerHandler.NewMessage(news.conflict);
         }
         source.Play();
-        GameManager.Instance.Score(news.IsFake(), correct);
+        GameManager.Instance.Score(!news.IsFake(), correct);
         GameManager.NewsSource.RegisterSolvedNews();
         base.Destroy(source.clip.length);
     }
