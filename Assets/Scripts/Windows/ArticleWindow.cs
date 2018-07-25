@@ -46,11 +46,7 @@ public class ArticleWindow : Window {
     {
         LogSystem.LogOnFile("(N = " + news.IsFake() + " |P = " + correct + ") " + news.ToString());
         AudioSource source = GetComponent<AudioSource>();
-<<<<<<< HEAD
-        if(news.IsFake() == !correct)//hier wahr ein !correct. stimmt das? // Ja!
-=======
         if(news.IsFake() != correct)
->>>>>>> 0f60fbc199bf57086d94ff795f13e14404b5ea9f
         {
             source.clip = correctSound;
         }
