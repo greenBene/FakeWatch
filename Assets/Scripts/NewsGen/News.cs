@@ -7,14 +7,15 @@ public enum InfoType
     author,
     date,
     place,
-    ressort
+    ressort,
+    none
 }
 
 [System.Serializable]
 public class News {
 
     private Dictionary<InfoType, Info> info;
-    private Inconsistency conflict;
+    public Inconsistency conflict { get; private set; }
 
     public string error;
 

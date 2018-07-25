@@ -53,7 +53,7 @@ public class ArticleWindow : Window {
         else
         {
             source.clip = wrongSound;
-            GameManager.MessengerHandler.NewMessage();//TODO: Inconsistensy übergeben
+            GameManager.MessengerHandler.NewMessage(news.conflict);
         }
         source.Play();
         GameManager.Instance.Score(!news.IsFake(), correct);

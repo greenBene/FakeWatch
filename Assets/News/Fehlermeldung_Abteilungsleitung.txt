@@ -1,34 +1,38 @@
-Datum,Headline
-Sind Sie sicher, dass das thematisierte Ereignis am {1} stattfand? Was steht denn in Anlage A?
-Das Ereignis aus dem Artikel fand nicht am {1} statt. Haben Sie sich Anlage A angesehen?
-Der {1} steht in keinem Bezug zu dem im Artikel angegebenen Thema. Bitte Anlage A überprüfen.
-Am {1} gab es keine Medienberichterstattung zu dem im Artikel beschriebenen Ereignis. Wohl doch ein Fake, siehe Anlage A. 
-Am {1} wurde in den Medien nicht zum Thema des Artikels berichtet. Daher wahrscheinlich ein Fake!
+[TAG|HEADLINE]
+Sind Sie sicher, dass das thematisierte Ereignis am {0} stattfand? Was steht denn in Anlage A?
+Das Ereignis aus dem Artikel fand nicht am {0} statt. Haben Sie sich Anlage A angesehen?
+Der {0} steht in keinem Bezug zu dem im Artikel angegebenen Thema. Bitte Anlage A überprüfen.
+Am {0} gab es keine Medienberichterstattung zu dem im Artikel beschriebenen Ereignis. Wohl doch ein Fake, siehe Anlage A. 
+Am {0} wurde in den Medien nicht zum Thema des Artikels berichtet. Daher wahrscheinlich ein Fake!
 
-Autor,Ressort
-Das Fachgebiet von {1} ist leider nicht {2}. Haben Sie die Liste der Autoren in Anlage B abgeglichen?  
-{1} schreibt leider nicht zum Thema {2}. Bitte Liste der Autoren in Anlage B abgleichen.
-{1} ist leider nicht das Fachgebiet von {2}. Stand das so in Anlage B?
-{1} schreibt normalerweise nicht im Ressort {2}. Haben Sie das mit Anlage B abgeglichen?
-Zu {2} schreibt {1} normalerweise nicht. Das scheint ein Fake zu sein.
+[AUTOR|FACHGEBIET]
+Das Fachgebiet von {0} ist leider nicht {1}. Haben Sie die Liste der Autoren in Anlage B abgeglichen?  
+{0} schreibt leider nicht zum Thema {1}. Bitte Liste der Autoren in Anlage B abgleichen.
+{0} ist leider nicht das Fachgebiet von {1}. Stand das so in Anlage B?
+{0} schreibt normalerweise nicht im Ressort {1}. Haben Sie das mit Anlage B abgeglichen?
+Zu {1} schreibt {0} normalerweise nicht. Das scheint ein Fake zu sein.
 
-Autor,Zeitung
-Leider schreibt {1} nicht für die Zeitung {2}. Haben Sie Anlage B und Anlage C abgeglichen? 
-{1} schreibt nicht für die Zeitung {2}. Siehe Anlage B und Anlage C.
-Die Zeitung {2} bekommt keine Artikel von {1}. Stand das so in Anlage B und Anlage C?
-{1} ist nicht bei der Zeitung {2} angestellt. Anlage B mit Anlage C sollten das bestätigen.
-{1} schrieb bisher nicht für die Zeitung {2}. Scheint wohl eher ein Fake zu sein…
+[AUTOR|ZEITUNG]
+Leider schreibt {0} nicht für die Zeitung {1}. Haben Sie Anlage B und Anlage C abgeglichen? 
+{0} schreibt nicht für die Zeitung {1}. Siehe Anlage B und Anlage C.
+Die Zeitung {1} bekommt keine Artikel von {0}. Stand das so in Anlage B und Anlage C?
+{0} ist nicht bei der Zeitung {1} angestellt. Anlage B mit Anlage C sollten das bestätigen.
+{0} schrieb bisher nicht für die Zeitung {1}. Scheint wohl eher ein Fake zu sein…
 
-Zeitung,Ort
-Die Zeitung {1} erscheint leider nicht in {2}. Vergleichen Sie bitte Anlage D, den Merkzettel am Bildschirm und die Karte. 
-In {2} erscheint die Zeitung {1} nicht. Anlage D und die Karte sollten das bestätigen.	
-{1} erscheint nicht in {2}. Haben Sie Anlage D mit dem Merkzettel und der Karte Freilands verglichen? 
-Die Zeitung {1} wird nicht in {2} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an. 
-Der angebene Ort {2} stimmt nicht mit dem Veröffentlichungsort der Zeitung {1} überein. Wahrscheinlich ist die Nachricht ein Fake…
+[ZEITUNG|ORT]
+Die Zeitung {0} erscheint leider nicht in {1}. Vergleichen Sie bitte Anlage D, den Merkzettel am Bildschirm und die Karte. 
+In {1} erscheint die Zeitung {0} nicht. Anlage D und die Karte sollten das bestätigen.	
+{0} erscheint nicht in {1}. Haben Sie Anlage D mit dem Merkzettel und der Karte Freilands verglichen? 
+Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an. 
+Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…
 
-Datum,Zeitung
-Der {1} ist kein Wochentag, an dem die Zeitung {2} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?   
-Am {1} erschien die Zeitung {2} nicht. War das so nicht in Anlage E erkennbar? 
-{1} ist kein Wochentag an dem die Zeitung {2} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen? 
-Am {1} erscheint die Zeitung {2} normalerweise nicht. War das in Anlage E nicht erkennbar? 
-Der {1} ist ein Wochentag an dem die Zeitung {2} regulär nicht erscheint. Daher vermutlich Fake News.  
+[TAG|ZEITUNG]
+Der {0} ist kein Wochentag, an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?   
+Am {0} erschien die Zeitung {1} nicht. War das so nicht in Anlage E erkennbar? 
+{0} ist kein Wochentag an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen? 
+Am {0} erscheint die Zeitung {1} normalerweise nicht. War das in Anlage E nicht erkennbar? 
+Der {0} ist ein Wochentag an dem die Zeitung {1} regulär nicht erscheint. Daher vermutlich Fake News.  
+
+[KORREKT]
+Das ist war schon richtig!
+Nur weil es Ihnen nicht passt, ist es noch kein Fake!

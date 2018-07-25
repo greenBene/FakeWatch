@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MessengerHandler : MonoBehaviour {
-
+    
     [SerializeField] GameObject MessengerPrefab;
+    [SerializeField] private string pathToErrorMessages;
 
+    private ErrorMessageGenerator generator;
     List<MessengerWindow> WindowList;
     Dictionary<Inconsistency, string[]> Messages;
 
     private void Start() {
         WindowList = new List<MessengerWindow>();
-        //TODO: Phase informations into Messages Dictionatry
+        generator = new ErrorMessageGenerator(pathToErrorMessages);
     }
 
-    public void NewMessage(Inconsistency handle = null) {
+    public void NewMessage(Inconsistency handle) {
         MessengerWindow newMessenger = Instantiate(MessengerPrefab, GameManager.MainScreen.transform).GetComponent<MessengerWindow>();
-        float moveHight = newMessenger.Show("Dummy Message")/2;//TODO: richtige Message übergeben
-        //float moveHight = newMessenger.Show(string.Format(Messages[handle][Random.Range(0, Messages[handle].Length)], handle.info1.value, handle.info2.value) / 2;
+        float moveHight = newMessenger.Show(generator.GetMessage(handle))/2;
 
         foreach (MessengerWindow it in WindowList) {
             it.SlideUp(moveHight);
