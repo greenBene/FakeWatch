@@ -5,16 +5,19 @@ using UnityEngine;
 public class MessengerHandler : MonoBehaviour {
 
     [SerializeField] GameObject MessengerPrefab;
+    [SerializeField] private string pathToErrorMessages;
 
+    private ErrorMessageGenerator generator;
     List<MessengerWindow> WindowList;
 
     private void Start() {
         WindowList = new List<MessengerWindow>();
+        generator = new ErrorMessageGenerator(pathToErrorMessages);
     }
 
-    public void NewMessage(Inconsistency handle = null) {
+    public void NewMessage(Inconsistency handle) {
         MessengerWindow newMessenger = Instantiate(MessengerPrefab, GameManager.MainScreen.transform).GetComponent<MessengerWindow>();
-        float moveHight = newMessenger.Show("Dummy Message")/2;//TODO: richtige Message übergeben
+        float moveHight = newMessenger.Show(generator.GetMessage(handle))/2;
 
         foreach (MessengerWindow it in WindowList) {
             it.SlideUp(moveHight);

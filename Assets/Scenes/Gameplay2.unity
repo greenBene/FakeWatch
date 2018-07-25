@@ -2904,6 +2904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MessengerPrefab: {fileID: 1639959917338780, guid: 54d8dab8670faf04c991dbb76332ea67,
     type: 2}
+  pathToErrorMessages: Assets/News/Fehlermeldung_Abteilungsleitung.txt
 --- !u!1 &1288501984
 GameObject:
   m_ObjectHideFlags: 0

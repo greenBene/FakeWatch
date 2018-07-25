@@ -11,27 +11,34 @@
 
     public Info(string type, string value)
     {
-        switch(type)
+        this.type = ParseTypeString(type);
+        this.value = value;
+    }
+
+    public static InfoType ParseTypeString(string type)
+    {
+        InfoType infoType;
+        switch (type)
         {
             case "TAG":
-                this.type = InfoType.date;
+                infoType = InfoType.date;
                 break;
             case "ZEITUNG":
-                this.type = InfoType.paper;
+                infoType = InfoType.paper;
                 break;
             case "AUTOR":
-                this.type = InfoType.author;
+                infoType = InfoType.author;
                 break;
             case "FACHGEBIET":
-                this.type = InfoType.ressort;
+                infoType = InfoType.ressort;
                 break;
             case "ORT":
-                this.type = InfoType.place;
+                infoType = InfoType.place;
                 break;
             default:
-                this.type = InfoType.headline;
+                infoType = InfoType.headline;
                 break;
         }
-        this.value = value;
+        return infoType;
     }
 }
