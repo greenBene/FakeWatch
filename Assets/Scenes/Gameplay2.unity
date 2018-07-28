@@ -9038,7 +9038,6 @@ GameObject:
   - component: {fileID: 1256157039}
   - component: {fileID: 1256157041}
   - component: {fileID: 1256157042}
-  - component: {fileID: 1256157043}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9113,20 +9112,6 @@ MonoBehaviour:
   MessengerPrefab: {fileID: 1639959917338780, guid: 54d8dab8670faf04c991dbb76332ea67,
     type: 2}
   pathToErrorMessages: Assets/News/Fehlermeldung_Abteilungsleitung.txt
---- !u!114 &1256157043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1256157038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1903b8545ac213847935db22723468a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  p: 1
-  b: 1
-  newsCount: 0
 --- !u!1 &1288501984
 GameObject:
   m_ObjectHideFlags: 0

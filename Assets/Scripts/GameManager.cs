@@ -255,7 +255,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
             if (timer)
                 timer.ChangeStateToTimeShort();
             //else
-                //timerFlag += timer.ChangeStateToTimeShort;//TODO: flag setzten
+            //timerFlag += timer.ChangeStateToTimeShort;//TODO: flag setzten
             break;
         case GameState.EndScreen:
             if (end)
@@ -290,6 +290,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
                 timer.ChangeStateToCountdown();
             //else
                 //timerFlag += timer.ChangeStateToCountdown;//TODO: flag setzten
+            ProgressionManager.RestartCounter();
             break;
         case GameState.EndScreen:
             LogSystem.LogOnFile("Correct: " + correctMarkedArticles + ". False positive: " + wronglyMarkedArticlesAsTrue + ". False negative: " + wronglyMarkedArticlesAsFalse);

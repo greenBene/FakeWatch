@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomExtensions;
 
 public class ArticleWindow : Window {
 
@@ -39,7 +40,7 @@ public class ArticleWindow : Window {
         {
             fields = GetComponentsInChildren<NewsField>();
         }
-        //TODO: shuffle fields array
+        fields.Shuffle();
         foreach (NewsField field in fields)
         {
             bool showCorrect = false;

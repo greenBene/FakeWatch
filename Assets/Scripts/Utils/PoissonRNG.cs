@@ -47,7 +47,10 @@ public class PoissonRNG {
      **/
     public int Next(double lambda, int min, int max)
     {
-        if (min >= max)
+        if (min == max)
+            return min;
+
+        if (min > max)
         {
             throw new ArgumentOutOfRangeException("maximum smaller than minimum!");
         }
