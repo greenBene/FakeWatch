@@ -56,7 +56,7 @@ public class PoissonRNG {
         {
             k = Next(lambda);
         }
-        while (k + min < max);
+        while (k + min > max);
         return k + min;
     }
 }
