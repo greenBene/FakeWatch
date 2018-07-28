@@ -7,6 +7,7 @@ public class ArticleWindow : Window {
     private NewsField[] fields;
     private News news;
     public AudioClip correctSound, wrongSound;
+    int Progression = 0;
 
     // Use this for initialization
     public override void Start()
@@ -31,20 +32,28 @@ public class ArticleWindow : Window {
 
     public void AssignNews(News news)
     {
+        Progression = ProgressionManager.GetProgression();
         this.news = news;
         if(fields == null)
         {
             fields = GetComponentsInChildren<NewsField>();
         }
+        //TODO: shuffle fields array
         foreach (NewsField field in fields)
         {
-            field.SetInfo(news.GetInfo(field.type));
+            bool showCorrect = false;
+            if (Progression > 0 && news.GetTruthValue(field.type)) {
+                Progression--;
+                showCorrect = true;
+            }
+            field.SetInfo(news.GetInfo(field.type), showCorrect);
         }
+        
     }
 
     public void MarkAs(bool correct)
     {
-        LogSystem.LogOnFile("(N = " + news.IsFake() + " |P = " + correct + ") " + news.ToString());
+        LogSystem.LogOnFile("(N = " + !news.IsFake() + " |P = " + correct + ") " + news.ToString());
         AudioSource source = GetComponent<AudioSource>();
         if(news.IsFake() != correct)
         {

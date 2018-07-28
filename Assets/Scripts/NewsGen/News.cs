@@ -108,6 +108,10 @@ public class News {
         return info[type].value;
     }
 
+    public bool GetTruthValue(InfoType type) {
+        return conflict.GetTypes().item1 != type && conflict.GetTypes().item2 != type;
+    }
+
     public bool IsFake()
     {
         return conflict.exists;

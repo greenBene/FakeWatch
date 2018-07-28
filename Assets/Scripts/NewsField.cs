@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Text))]
 public class NewsField : MonoBehaviour {
 
     private Text info;
     public InfoType type;
+    private Image Highlight;
 
 	// Use this for initialization
 	void Start () {
         if (info == null)
         {
             info = GetComponent<Text>();
+        }
+        Highlight = GetComponent<Image>();
+        if (Highlight) {
+            Highlight.enabled = false;
         }
 	}
 	
@@ -22,11 +26,15 @@ public class NewsField : MonoBehaviour {
 		
 	}
 	
-	public void SetInfo(string newInfo) {
+	public void SetInfo(string newInfo, bool isCorrect = false) {
         if (info == null)
         {
-            info = GetComponent<Text>();
+            info = GetComponentInChildren<Text>();
         }
         info.text = newInfo;
+
+        if (isCorrect) {
+            Highlight.enabled = true;
+        }
 	}
 }
