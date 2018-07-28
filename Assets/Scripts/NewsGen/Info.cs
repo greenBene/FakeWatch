@@ -35,8 +35,11 @@
             case "ORT":
                 infoType = InfoType.place;
                 break;
-            default:
+            case "EVENT":
                 infoType = InfoType.headline;
+                break;
+            default:
+                infoType = InfoType.none;
                 break;
         }
         return infoType;

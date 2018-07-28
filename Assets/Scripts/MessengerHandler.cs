@@ -18,13 +18,15 @@ public class MessengerHandler : MonoBehaviour {
 
     public void NewMessage(Inconsistency handle) {
         MessengerWindow newMessenger = Instantiate(MessengerPrefab, GameManager.MainScreen.transform).GetComponent<MessengerWindow>();
-        float moveHight = newMessenger.Show(generator.GetMessage(handle));
+        string message = generator.GetMessage(handle);
+        float moveHight = newMessenger.Show(message);
 
         foreach (MessengerWindow it in WindowList) {
             it.SlideUp(moveHight);
         }
 
         WindowList.Add(newMessenger);
+        LogSystem.LogOnFile("New Message: " + message + " (based on inconsitency " + handle.info1.value + " <-> " + handle.info2.value);
         LogSystem.LogOnFile("Messages on Screen: " + WindowList.Count);
     }
 

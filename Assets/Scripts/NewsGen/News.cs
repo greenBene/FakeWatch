@@ -61,6 +61,7 @@ public class News {
 
         if(isFake)
         {
+            LogSystem.LogOnFile("Generating new news with error: " + error);
             conflict = new Inconsistency(error);
         }
         else

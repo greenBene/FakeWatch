@@ -16,7 +16,7 @@ public class ErrorMessageGenerator
             throw new Exception("File not found!");
         }
 
-        using (StreamReader sr = new StreamReader(filename))
+        using (StreamReader sr = new StreamReader(filename,System.Text.Encoding.UTF8))
         {
             while (sr.Peek() >= 0)
             {

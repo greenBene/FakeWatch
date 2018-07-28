@@ -311,6 +311,7 @@ public class Facts
 
                         //solution.TryGetValue(s2, out s2);
                         solution["ERROR"] = String.Format("{0}|{1}|{2}|{3}", t1, s1, t2, s2);
+                        LogSystem.LogOnFile(solution["ERROR"]);
                         return solution;
                     }
                 }
