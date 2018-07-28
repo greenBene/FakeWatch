@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
         s_newsSource = GetComponent<NewsGeneration2>();
         s_mainScreen = FindObjectOfType<Canvas>();
         s_messengerHandler = GetComponent<MessengerHandler>();
+
         audio = GetComponent<AudioSource>();
         audio.clip = DesktopStartAudio;
         audio.Play();
