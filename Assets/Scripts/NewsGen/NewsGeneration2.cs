@@ -28,8 +28,6 @@ public class NewsGeneration2 : MonoBehaviour {
     private NewsSource newsSource;
     private float currentDurationBetweenNews;
 
-    private bool hasEnded = false;
-
 
     private int correctMarkedArticles = 0;
     private int wronglyMarkedArticlesAsTrue = 0;
@@ -57,6 +55,7 @@ public class NewsGeneration2 : MonoBehaviour {
 
     public void StartGeneration()
     {
+        articleCount = 0;
         currentDurationBetweenNews = startDuration;
         newsTillAutoInvoke = newsWithoutInvokingAutmatically;
         Invoke("NextNewsInitiater", 1f);
@@ -70,7 +69,6 @@ public class NewsGeneration2 : MonoBehaviour {
     }
 
 	private void GenerateArticle(News news) {
-        if (hasEnded) return;
         GameObject newArticle = Instantiate(articlePrefab, GameManager.MainScreen.transform);
         newArticle.transform.SetSiblingIndex(4);
         newArticle.GetComponent<ArticleWindow>().AssignNews(news);
@@ -78,7 +76,6 @@ public class NewsGeneration2 : MonoBehaviour {
     }
 
     private void NextNewsInitiater() {
-        if (hasEnded) return;
         ShowNextNews();
         currentDurationBetweenNews *= rate;
         currentDurationBetweenNews = Mathf.Clamp(currentDurationBetweenNews, 0.25f, 120f);
@@ -86,7 +83,6 @@ public class NewsGeneration2 : MonoBehaviour {
     }
 
     private void ShowNextNews() {
-        if (hasEnded) return;
         GenerateArticle(newsSource.getNextNews());
     }
 

@@ -18,7 +18,7 @@ public class MessengerHandler : MonoBehaviour {
 
     public void NewMessage(Inconsistency handle) {
         MessengerWindow newMessenger = Instantiate(MessengerPrefab, GameManager.MainScreen.transform).GetComponent<MessengerWindow>();
-        float moveHight = newMessenger.Show(generator.GetMessage(handle))/2;
+        float moveHight = newMessenger.Show(generator.GetMessage(handle));
 
         foreach (MessengerWindow it in WindowList) {
             it.SlideUp(moveHight);
