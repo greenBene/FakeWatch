@@ -1,4 +1,4 @@
-﻿[TAG|EVENT]
+﻿[DATE|EVENT]
 Sind Sie sicher, dass das thematisierte Ereignis am {0} stattfand? Was steht denn in Anlage A?
 Das Ereignis aus dem Artikel fand nicht am {0} statt. Haben Sie sich Anlage A angesehen?
 Der {0} steht in keinem Bezug zu dem im Artikel angegebenen Thema. Bitte Anlage A überprüfen.
@@ -26,7 +26,7 @@ In {1} erscheint die Zeitung {0} nicht. Anlage D und die Karte sollten das best�
 Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an. 
 Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…
 
-[TAG|ZEITUNG]
+[DATE|ZEITUNG]
 Der {0} ist kein Wochentag, an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?   
 Am {0} erschien die Zeitung {1} nicht. War das so nicht in Anlage E erkennbar? 
 {0} ist kein Wochentag an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen? 

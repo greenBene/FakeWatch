@@ -369,7 +369,7 @@ public class NewsSourceForReal : NewsSource
         return news;
     }
 
-    public News GetNextNews(int compexity)
+    public News GetNextNews(int complexity)
     {
         Dictionary<string, string> solution = null;
         HeadlineInfo info = null;
@@ -378,7 +378,7 @@ public class NewsSourceForReal : NewsSource
             info = News[idx];
             idx = (idx + 1) % News.Count;
             List<string> findCats = null;
-            switch (compexity)
+            switch (complexity)
             {
                 case 0:
                     {

@@ -26,7 +26,7 @@ public class MessengerHandler : MonoBehaviour {
         }
 
         WindowList.Add(newMessenger);
-        LogSystem.LogOnFile("New Message: " + message + " (based on inconsitency " + handle.info1.value + " <-> " + handle.info2.value);
+        LogSystem.LogOnFile("New Message: " + message + " (based on inconsitency " + handle.info1.value + " <-> " + handle.info2.value + ")");
         LogSystem.LogOnFile("Messages on Screen: " + WindowList.Count);
     }
 

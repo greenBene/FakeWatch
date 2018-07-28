@@ -20,6 +20,9 @@
         InfoType infoType;
         switch (type)
         {
+            case "DATE":
+                infoType = InfoType.date;
+                break;
             case "TAG":
                 infoType = InfoType.date;
                 break;
