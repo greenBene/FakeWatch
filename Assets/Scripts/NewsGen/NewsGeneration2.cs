@@ -83,7 +83,7 @@ public class NewsGeneration2 : MonoBehaviour {
     }
 
     private void ShowNextNews() {
-        GenerateArticle(newsSource.getNextNews());
+        GenerateArticle(newsSource.GetNextNews(2));
     }
 
     public void RegisterSolvedNews()

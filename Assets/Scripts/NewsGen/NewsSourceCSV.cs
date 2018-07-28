@@ -42,4 +42,8 @@ public class NewsSourceCSV : MonoBehaviour, NewsSource {
         News news = (News) newsArray[Random.Range(0, newsArray.Capacity-1)]; //holt sich ein zufälliges element aus dem array und giebt es zurück
         return news;
     }
+
+    public News GetNextNews(int complexity) {
+        throw new System.NotImplementedException();
+    }
 }

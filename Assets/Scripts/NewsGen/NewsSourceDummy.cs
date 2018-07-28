@@ -24,4 +24,7 @@ public class NewsSourceDummy : NewsSource {
                         "Politik", null);
     }
 
+    public News GetNextNews(int complexity) {
+        throw new System.NotImplementedException();
+    }
 }
