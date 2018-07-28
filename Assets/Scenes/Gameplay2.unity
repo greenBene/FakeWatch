@@ -4612,22 +4612,22 @@ Prefab:
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1620
+      value: -942
       objectReference: {fileID: 0}
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -689
       objectReference: {fileID: 0}
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 498.4
       objectReference: {fileID: 0}
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 14
+      value: 258.5
       objectReference: {fileID: 0}
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
@@ -4661,7 +4661,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1639959917338780, guid: 54d8dab8670faf04c991dbb76332ea67, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229226438141458, guid: 54d8dab8670faf04c991dbb76332ea67,
+        type: 2}
+      propertyPath: SlideStop
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54d8dab8670faf04c991dbb76332ea67, type: 2}
