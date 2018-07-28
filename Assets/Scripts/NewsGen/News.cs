@@ -109,7 +109,10 @@ public class News {
     }
 
     public bool GetTruthValue(InfoType type) {
-        return conflict.GetTypes().item1 != type && conflict.GetTypes().item2 != type;
+        if (!IsFake())
+            return true;
+
+        return !conflict.GetTypes().Contains(type);
     }
 
     public bool IsFake()

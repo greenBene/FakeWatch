@@ -15,10 +15,6 @@ public class NewsField : MonoBehaviour {
         {
             info = GetComponent<Text>();
         }
-        Highlight = GetComponent<Image>();
-        if (Highlight) {
-            Highlight.enabled = false;
-        }
 	}
 	
 	// Update is called once per frame
@@ -32,9 +28,8 @@ public class NewsField : MonoBehaviour {
             info = GetComponentInChildren<Text>();
         }
         info.text = newInfo;
-
-        if (isCorrect) {
-            Highlight.enabled = true;
-        }
+        if(!Highlight)
+            Highlight = GetComponent<Image>();
+        Highlight.enabled = isCorrect;
 	}
 }

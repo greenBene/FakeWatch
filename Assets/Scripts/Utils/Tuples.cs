@@ -54,6 +54,10 @@
         return !t1.Equals(t2);
     }
 
+    public bool Contains(T element) {
+        return this.item1.Equals(element) || this.item2.Equals(element);
+    }
+
     public override int GetHashCode()
     {
         int i1 = item1.GetHashCode();
@@ -106,6 +110,10 @@ public class OrderedTuple<T>
     public static bool operator !=(OrderedTuple<T> t1, OrderedTuple<T> t2)
     {
         return !t1.Equals(t2);
+    }
+
+    public bool Contains(T element) {
+        return this.item1.Equals(element) || this.item2.Equals(element);
     }
 
     public override int GetHashCode()

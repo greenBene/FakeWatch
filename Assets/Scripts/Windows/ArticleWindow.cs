@@ -7,7 +7,7 @@ public class ArticleWindow : Window {
     private NewsField[] fields;
     private News news;
     public AudioClip correctSound, wrongSound;
-    int Progression = 0;
+    public int Progression = 0;
 
     // Use this for initialization
     public override void Start()
@@ -33,6 +33,7 @@ public class ArticleWindow : Window {
     public void AssignNews(News news)
     {
         Progression = ProgressionManager.GetProgression();
+        print("Progression: " + Progression);
         this.news = news;
         if(fields == null)
         {
@@ -42,7 +43,8 @@ public class ArticleWindow : Window {
         foreach (NewsField field in fields)
         {
             bool showCorrect = false;
-            if (Progression > 0 && news.GetTruthValue(field.type)) {
+            print(field.type + ": " +news.GetTruthValue(field.type));
+            if (Progression > 0 && field.type != InfoType.headline && news.GetTruthValue(field.type)) {
                 Progression--;
                 showCorrect = true;
             }
