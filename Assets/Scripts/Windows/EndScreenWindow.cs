@@ -41,8 +41,4 @@ public class EndScreenWindow : Window {
     public void Restart() {
         GameManager.Instance.RequestStateChange(GameState.Desktop);
     }
-
-    public void SaveHighScore() {
-        File.AppendAllText("HighScore.txt", GameManager.Instance.PlayerID + " aka " + "ADD NAME HERE" + ": Coreckt: " + GameManager.Instance.correctMarkedArticles + " Fasle Postive: " + GameManager.Instance.wronglyMarkedArticlesAsTrue + " False Negative: " + GameManager.Instance.wronglyMarkedArticlesAsFalse);
-    }
 }

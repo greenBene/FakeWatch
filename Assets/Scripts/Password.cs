@@ -20,13 +20,13 @@ public class Password : MonoBehaviour {
 
     public void CheckPW()
     {
-        if (pwField.textComponent.text==correctPW)
+        if (pwField.text == correctPW)
         {
             ChangeScene();
         }
         else
         {
-            pwField.textComponent.text = "";
+            pwField.text = "";
         }
     }
 

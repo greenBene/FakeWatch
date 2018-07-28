@@ -22,4 +22,8 @@ public static class LogSystem {
         fileName = "LOG\\" + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".txt";
         LogOnFile(message);
     }
+
+    public static void SaveHighScore() {
+        File.AppendAllText("HighScore.txt", GameManager.Instance.PlayerID + " aka " + "ADD NAME HERE" + ": Coreckt: " + GameManager.Instance.correctMarkedArticles + " Fasle Postive: " + GameManager.Instance.wronglyMarkedArticlesAsTrue + " False Negative: " + GameManager.Instance.wronglyMarkedArticlesAsFalse);
+    }
 }
