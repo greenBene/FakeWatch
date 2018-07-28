@@ -21,7 +21,8 @@ public enum EventMessage {
 }
 
 [RequireComponent(typeof(NewsGeneration))]
-public class GameManager : MonoBehaviour {
+[RequireComponent(typeof(MessengerHandler))]
+public class GameManager : MonoBehaviour,IStateMachine<GameState> {
 
     //===== ===== Singelton ===== =====
     private static GameManager s_instance;
