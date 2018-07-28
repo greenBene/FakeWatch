@@ -4627,7 +4627,7 @@ Prefab:
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 258.5
+      value: 338.15
       objectReference: {fileID: 0}
     - target: {fileID: 224760820605476674, guid: 54d8dab8670faf04c991dbb76332ea67,
         type: 2}
@@ -4661,12 +4661,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1639959917338780, guid: 54d8dab8670faf04c991dbb76332ea67, type: 2}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114229226438141458, guid: 54d8dab8670faf04c991dbb76332ea67,
-        type: 2}
-      propertyPath: SlideStop
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54d8dab8670faf04c991dbb76332ea67, type: 2}
@@ -6535,8 +6530,8 @@ RectTransform:
   m_Father: {fileID: 862160258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.05666667}
+  m_AnchorMax: {x: 1, y: 0.6666667}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6589,7 +6584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &842733937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9688,7 +9683,7 @@ MonoBehaviour:
   endScreen: {fileID: 1586417956}
   timeToPlayInSeconds: 20
   PlayerID: 0
-  doLog: 0
+  doLog: 1
   DebugCorrect1: 0
   DebugWrong1: 0
   DebugWrong2: 0
@@ -12430,8 +12425,8 @@ RectTransform:
   m_Father: {fileID: 999067669}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.8}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

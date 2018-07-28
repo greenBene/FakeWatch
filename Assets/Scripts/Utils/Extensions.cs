@@ -13,5 +13,9 @@
                 arr[r] = tmp;
             }
         }
+
+        public static string ToTimeString(this float f) {
+            return ((int)(f / 60)).ToString("D2") + ":" + ((int)(f % 60)).ToString("D2");
+        }
     }
 }

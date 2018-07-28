@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using CustomExtensions;
 
 public enum TimerState{
     Countdown = 0,
@@ -33,7 +34,7 @@ public class Timer : MonoBehaviour {
     void Update() {
         switch (state) {
         case TimerState.Countdown:
-            text.text = ((int)(GameManager.Instance.timeLeft / 60)).ToString("D2") + ":" + ((int)(GameManager.Instance.timeLeft % 60)).ToString("D2");
+            text.text = GameManager.Instance.timeLeft.ToTimeString();// ((int)(GameManager.Instance.timeLeft / 60)).ToString("D2") + ":" + ((int)(GameManager.Instance.timeLeft % 60)).ToString("D2");
             break;
         case TimerState.TimeShort:
             text.text = System.DateTime.Now.ToString("HH:mm");

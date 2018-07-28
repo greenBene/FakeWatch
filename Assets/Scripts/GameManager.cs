@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     [SerializeField]
     float timeToPlayInSeconds = 600f;
 
-    public float timeLeft { get; private set; }
+    public float timeLeft {get;  private set; }
     
     public int correctMarkedArticles { get; private set; }
     public int wronglyMarkedArticlesAsTrue { get; private set; }

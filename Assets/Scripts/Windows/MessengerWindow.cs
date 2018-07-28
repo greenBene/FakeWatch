@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using CustomExtensions;
 
 public enum MessengerState { incoming, resting, movingUp, outgoing };
 
@@ -10,6 +11,7 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
     [SerializeField] private float movementSpeed = 0f;
     [SerializeField] private float time;
     [SerializeField] private Text message;
+    [SerializeField] private Text timeStamp;
     [SerializeField] private Image image;
     [SerializeField] private int SlideStop;
     
@@ -40,16 +42,17 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
     public float Show(string messageString)
     {
         message.text = messageString;
-        float hight = message.preferredHeight;
+        float height = message.preferredHeight + 155 + 30;//fenster höhe über dem text + fenster höhe unter dem text
 
-        image.rectTransform.sizeDelta = new Vector2(image.rectTransform.sizeDelta.x, hight);
+        image.rectTransform.sizeDelta = new Vector2(image.rectTransform.sizeDelta.x, height);
         SetPosition(Screen.width, 76); // maybe a bit more offset?
 
         targetHight = transform.position.y;
         time += Time.time;
+        timeStamp.text = GameManager.Instance.timeLeft.ToTimeString();
         state = MessengerState.incoming;
 
-        return hight;
+        return height;
     }
 
     public void SlideUp(float distance) {
