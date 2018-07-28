@@ -22,6 +22,7 @@ public enum EventMessage {
 
 [RequireComponent(typeof(NewsGeneration))]
 [RequireComponent(typeof(MessengerHandler))]
+[RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour,IStateMachine<GameState> {
 
     //===== ===== Singelton ===== =====
@@ -62,6 +63,8 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     }
 
     //===== ===== Variables ===== =====
+    [SerializeField] AudioClip DesktopStartAudio;
+    [SerializeField] AudioClip LogOutAudio;
     [SerializeField]
     GameObject endScreen = null;
 
@@ -75,6 +78,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     public int wronglyMarkedArticlesAsFalse { get; private set; }
 
     public int PlayerID = 0;
+    AudioSource audio;
 
     [SerializeField] public bool doLog = false;
 
@@ -95,7 +99,9 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
         s_newsSource = GetComponent<NewsGeneration2>();
         s_mainScreen = FindObjectOfType<Canvas>();
         s_messengerHandler = GetComponent<MessengerHandler>();
-        
+        audio = GetComponent<AudioSource>();
+        audio.clip = DesktopStartAudio;
+        audio.Play();
 	}
 	
 	void Update () {
@@ -193,6 +199,13 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     }
 
     public void LockScreen() {
+        audio.clip = LogOutAudio;
+        audio.Play();
+        //StartCoroutine("SceneManager.LoadScene", StringCollection.INTRO);
+        Invoke("LoadIntro", LogOutAudio.length);
+    }
+
+    void LoadIntro() {
         SceneManager.LoadScene(StringCollection.INTRO);
     }
 
