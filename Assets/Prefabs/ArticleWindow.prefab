@@ -765,6 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctSound: {fileID: 8300000, guid: 372a785aaa6acb8489004b0910c472aa, type: 3}
   wrongSound: {fileID: 8300000, guid: 1bb87c0ad9982574886155c595060a40, type: 3}
+  Progression: 0
 --- !u!114 &114327355008034396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -895,7 +896,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519120774024436}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
