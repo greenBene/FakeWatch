@@ -44,7 +44,7 @@ ORT_Gl: Glasen
 ORT_He: Heuers
 ORT_Be: Bernhof
 ORT_Su: Suhlburg
-ORT_To: Torstatdt
+ORT_To: Torststadt
 ORT_Ka: Karst
 ORT_Da: Dammweih
 ORT_La: Lanne

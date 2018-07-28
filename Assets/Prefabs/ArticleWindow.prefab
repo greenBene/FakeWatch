@@ -684,7 +684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ort
+  m_Text: Torststadt
 --- !u!114 &114287152410586646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,7 +706,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d8d064cbc40b7ac429e2da8354239b48, type: 3}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -717,8 +717,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This is the Headline !! Wuschel stuff forever, test bei etwas l\xE4ngerem
-    Text. "
+  m_Text: Rehnholds cholerischer Anfall im Bundestag "Sexist Wehmert als Politiker
+    nicht geeignet und als Mensch nicht tragbar!"
 --- !u!114 &114287247677254434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -740,7 +740,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 65cc52ef84e985d4bb8dcd738519d4b6, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -751,7 +751,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Zeitung
+  m_Text: Grenzburger Blatt
 --- !u!114 &114314872076218968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -949,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ressort
+  m_Text: Wissenschaft
 --- !u!114 &114644555625627972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1030,13 +1030,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 5
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Datum
+  m_Text: 02.04.2018
 --- !u!114 &114731702338506004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,10 +1165,10 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Autor
+  m_Text: Stefan Stefanovitch
 --- !u!114 &114908918440389772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1582,8 +1582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -322.7, y: -55.25}
-  m_SizeDelta: {x: 290.7, y: 79.8}
+  m_AnchoredPosition: {x: -260.1, y: -50.9}
+  m_SizeDelta: {x: 434.8, y: 79.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224378930784526320
 RectTransform:
@@ -1638,8 +1638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.7400055, y: 10.25}
-  m_SizeDelta: {x: -11.48, y: -0.82}
+  m_AnchoredPosition: {x: 5.7400055, y: 5.33}
+  m_SizeDelta: {x: -11.48, y: -10.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224632743345643240
 RectTransform:
@@ -1767,8 +1767,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.22, y: 8.16}
-  m_SizeDelta: {x: -58.43, y: -16.33}
+  m_AnchoredPosition: {x: 0, y: 8.1625}
+  m_SizeDelta: {x: 0, y: -16.325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224964011477419168
 RectTransform:
