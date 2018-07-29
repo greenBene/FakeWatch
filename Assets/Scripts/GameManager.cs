@@ -261,6 +261,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
         case GameState.Playing:
             LogSystem.LogOnFile("===== ===== Game has Ended ===== =====");
             NewsSource.StopGeneration();
+            GameManager.MessengerHandler.DeleteAllMessages();
             if (timer)
                 timer.ChangeStateToTimeShort();
             //else

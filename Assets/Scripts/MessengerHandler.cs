@@ -33,4 +33,10 @@ public class MessengerHandler : MonoBehaviour {
     public void DeleteMessage(MessengerWindow item) {
         WindowList.Remove(item);
     }
+
+    public void DeleteAllMessages() {
+        foreach(MessengerWindow it in WindowList) {
+            it.RequestStateChange(MessengerState.outgoing);
+        }
+    }
 }

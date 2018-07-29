@@ -13,15 +13,15 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
     [SerializeField] private Text message;
     [SerializeField] private Text timeStamp;
     [SerializeField] private Image image;
-    [SerializeField] private int SlideStop;
+    [SerializeField] private float SlideStop;
     
     private MessengerState state;
     private float targetHight;
 
     // Use this for initialization
     public override void Start () {
-        SlideStop = Screen.width - SlideStop;
-	}
+        SlideStop = Screen.width - SlideStop * GameManager.MainScreen.transform.localScale.x;//macht dass die message bei andere aspect ratio nicht zuweit nach links geschoben wird
+    }
 
     // Update is called once per frame
     public override void Update()
@@ -42,10 +42,10 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
     public float Show(string messageString)
     {
         message.text = messageString;
-        float height = message.preferredHeight + 155 + 30;//fenster höhe über dem text + fenster höhe unter dem text
+        float height = message.preferredHeight + (155 + 30);//fenster höhe über dem text + fenster höhe unter dem text
 
         image.rectTransform.sizeDelta = new Vector2(image.rectTransform.sizeDelta.x, height);
-        SetPosition(Screen.width, 76); // maybe a bit more offset?
+        SetPosition(new Vector2(Screen.width, 76 * GameManager.MainScreen.transform.localScale.x)); // macht dass die bei allen aspect ratios an der richtigen stelle auftauchen
 
         targetHight = transform.position.y;
         time += Time.time;
@@ -56,7 +56,7 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
     }
 
     public void SlideUp(float distance) {
-        targetHight += distance;
+        targetHight += distance * GameManager.MainScreen.transform.localScale.x;//macht dass die message bei andere aspect ratio nicht zuweit hoch geschoben wird
     }
 
     //===== ===== State Mashine ===== =====
@@ -117,7 +117,8 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
 
     public bool RequestStateChange(MessengerState newState)
     {
-        throw new System.NotImplementedException();
+        ChangeState(newState);
+        return true;
     }
 
     public void StateTransition()

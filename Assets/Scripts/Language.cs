@@ -17,7 +17,7 @@ public class Language : MonoBehaviour {
 	void Start () {
         if(PlayerPrefs.GetString("language") == " ")
             PlayerPrefs.SetString("language", "german");
-
+        PlayerPrefs.SetString("language", "german");
         ChangeTo(PlayerPrefs.GetString("language"));
     }
 	
@@ -39,16 +39,16 @@ public class Language : MonoBehaviour {
         if (language == "german")
         {
             PlayerPrefs.SetString("language", "german");
-            button.sprite = germanFlag;
-            loginText.text = loginTextGerman;
+            //button.sprite = germanFlag;
+            //loginText.text = loginTextGerman;
             logo.sprite = logoGerman;
             
         }
         else
         {
             PlayerPrefs.SetString("language", "english");
-            button.sprite = englishFlag;
-            loginText.text = loginTextEnglish;
+           // button.sprite = englishFlag;
+            //loginText.text = loginTextEnglish;
             logo.sprite = logoEnglish;
         }
     }
