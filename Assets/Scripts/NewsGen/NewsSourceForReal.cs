@@ -37,13 +37,13 @@ public class NewsSourceForReal : NewsSource
     List<HeadlineInfo> News = new List<HeadlineInfo>
   {
     new HeadlineInfo(
-      "Wehmert zu Vertrauten: Gerlinde Wuschel besitzt keine Führungskompetenz.",
+      "Wehmert zu Vertrauten: Kandidierende Wuschel besitzt keine Führungskompetenz",
       "EVENT_WK",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Unregelmäßigkeiten bei Wuschel-Aufstellung",
+      "Unregelmäßigkeiten bei Aufstellung der Kandidatin Wuschel",
       "EVENT_WK",
       "FACHGEBIET_Po",
       false
@@ -55,61 +55,61 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "Anhänger der DVGF feiern die Aufstellung der ersten weiblichen Kanzlerkandidatur",
+      "Anhänger der DVGF feiern die Aufstellung der ersten weiblichen Kanzlerkandidatin",
       "EVENT_WK",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Gerlinde Wuschel erklärt Kandidatur für das Amt der Bundeskanzlerin.",
+      "Gerlinde Wuschel erklärt Kandidatur für das Amt der Bundeskanzlerin",
       "EVENT_WK",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Skandal: In seiner Zeit als Bürgermeister hat sich Wehmert Steuergelder veruntreut, um Swimmingpool zu bauen.",
+      "Skandal: In seiner Zeit als Bürgermeister veruntreute Wehmert Steuergelder, um Swimmingpool zu bauen!",
       "EVENT_VS",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Bürgermeister Wehmert erschlich sich Sozialleistungen im Amt.",
+      "Bürgermeister Wehmert erschlich sich Sozialleistungen im Amt",
       "EVENT_VS",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Whistleblower bei der FPF: Wehmert hat jahrelang Gelder veruntreut.",
+      "Whistleblower bei der FPF: Wehmert hat jahrelang Gelder veruntreut",
       "EVENT_VS",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Scheinbeschäftigung? Bürgermeister Wehmert hat eigene Frau als Sekretärin eingestellt.",
-      "EVENT_VS",
-      "FACHGEBIET_Po",
-      true
-    ),
-    new HeadlineInfo(
-      "Vetternwirtschaft im Rathaus: Wehmert beschäftigt Familienmitglieder!",
+      "Scheinbeschäftigung? Bürgermeister Wehmert stellte eigene Frau als Sekretärin ein",
       "EVENT_VS",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Bürgermeister Wehmert hat keine weiße Weste: Sexismus hinter verschlossener Tür.",
+      "Vetternwirtschaft im Rathaus? Wehmert beschäftigte Familienmitglieder!",
+      "EVENT_VS",
+      "FACHGEBIET_Po",
+      true
+    ),
+    new HeadlineInfo(
+      "Bürgermeister Wehmert hat keine weiße Weste: Sexismus hinter verschlossener Tür!",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Schmutzige Sex-Praktiken in Wehmerts Rathaus: Ein Insider packt aus.",
+      "Schmutzige Sex-Praktiken in Wehmerts Rathaus: Ein Insider packt aus",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Sexskandal im Rathaus: Gedemütigte Praktikantin packt aus!",
+      "Sex-Skandal im Rathaus: Gedemütigte Praktikantin packt aus!",
       "EVENT_SS",
       "FACHGEBIET_Po",
       false
@@ -121,7 +121,7 @@ public class NewsSourceForReal : NewsSource
       false
     ),
     new HeadlineInfo(
-      "“Das stimmt so nicht!” Wehmert vehement gegen Sexismusvorwürfe.",
+      "\"Das stimmt so nicht!\" Wehmert vehement gegen Sexismusvorwürfe",
       "EVENT_SS",
       "FACHGEBIET_Po",
       true
@@ -133,25 +133,25 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "Rückendeckung für Bürgermeister Wehmert im Sex-Sturm: Konkurrentin Wuschel gegen Fake News im Netz",
+      "Rückendeckung für Bürgermeister Wehmert in Sex-Shitstorm: Wuschel kritisiert Fake News Verbreitung",
       "EVENT_SS",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Wehmerts Skandal Tweet: Frauen raus aus der Politik!",
+      "Wehmerts Skandal-Tweet vor Frauenrechts-Demo: Frauen raus aus der Politik!",
       "EVENT_WF",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Mob aggressiver Feministinnen verwüsten Innenstadt",
+      "Mob aggressiver Feministinnen verwüstet Innenstadt",
       "EVENT_WF",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Gerlinde Wuschel auf Kundgebung: \"Nieder mit dem Patriarchat!\"",
+      "Gerlinde Wuschel auf Frauenrechts-Kundgebung: \"Nieder mit dem Patriarchat!\"",
       "EVENT_WF",
       "FACHGEBIET_Po",
       false
@@ -169,19 +169,19 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "\"Finger weg von unseren Eiern!\" Wehmerts Gesundheitsminister in Bedrängnis",
+      "\"Finger weg von unseren Eiern!\" Gesundheitsminister wegen Umweltskandal in Bedrängnis",
       "EVENT_US",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Wehmert-Veruntreuungs-Skandal: Industrie A47 Aktie stürzt ein",
+      "Wehmerts Veruntreuungs-Skandal: Industrie Aktie A47 stürzt ein",
       "EVENT_VS",
       "FACHGEBIET_Wi",
       false
     ),
     new HeadlineInfo(
-      "Die dreckige Spur des Düngegeldes",
+      "Die dreckige Spur des Düngergeldes führt in höchste politische Ebene",
       "EVENT_US",
       "FACHGEBIET_Wi",
       false
@@ -199,13 +199,13 @@ public class NewsSourceForReal : NewsSource
       false
     ),
     new HeadlineInfo(
-      "Gerlinde Wuschel mit Mehrheit der Stimmen zur Bundeskanzlerin gewählt.",
+      "Gerlinde Wuschel mit Mehrheit der Stimmen zur Bundeskanzlerin gewählt",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Gerlinde Wuschel gewinnt Wahl zur Bundeskanzlerin.",
+      "Gerlinde Wuschel gewinnt Wahl zur Bundeskanzlerin",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
@@ -217,19 +217,19 @@ public class NewsSourceForReal : NewsSource
       true
     ),
     new HeadlineInfo(
-      "Wahllokale nur bedingt barrierefrei: Rentner mussten Alternativen finden.",
+      "Wahllokale nur bedingt barrierefrei: Rentner mussten Alternativen finden",
       "EVENT_WT",
       "FACHGEBIET_Po",
       true
     ),
     new HeadlineInfo(
-      "Betrug bei der Bürgermeisterwahl: Illegale Immigranten gaben Stimmen für Wuschel ab.",
+      "Betrug bei der Bürgermeisterwahl: Illegale Immigranten gaben Stimmen für Wuschel ab",
       "EVENT_WT",
       "FACHGEBIET_Po",
       false
     ),
     new HeadlineInfo(
-      "Unstimmigkeiten bei der Wahl: Wuschel erklärt sich selbst zur Bürgermeisterin.",
+      "Unstimmigkeiten bei Wahl: Wuschel erklärt sich selbst zur Bundeskanzlerin!!!",
       "EVENT_WT",
       "FACHGEBIET_Po",
       false
@@ -241,26 +241,26 @@ public class NewsSourceForReal : NewsSource
       false
     ),
     new HeadlineInfo(
-      "Börse reagiert verhalten auf Umweltskandal.",
+      "Börse reagiert verhalten auf Umweltskandal",
       "EVENT_US",
       "FACHGEBIET_Wi",
       true
     ),
     new HeadlineInfo(
-      "Neuestes vom Pestizidskandal: Wissenschaft findet neuen Weg zur nachhaltigen Schädlingsbekämpfung",
+      "Pestizidskandal: Wissenschaft sucht neuen Weg zur nachhaltigen Schädlingsbekämpfung",
       "EVENT_US",
       "FACHGEBIET_Sc",
       true
     ),
     new HeadlineInfo(
-      "Bundeskanzlerwahl: Finanzwelt mit optimistischer Zukunftsprognose.",
+      "Bundeskanzlerwahl: Finanzwelt mit optimistischer Zukunftsprognose",
       "EVENT_WT",
       "FACHGEBIET_Wi",
       true
     ),
     new HeadlineInfo(
-      "Aus aktuellem Anlass: Bund weiblicher Vorstände fordert höhere Löhne für Frauen",
-      "EVENT_SS",
+      "Aus aktuellem Anlass: Bund weiblicher Vorstände fordert bessere Löhne für Frauen",
+      "EVENT_WF",
       "FACHGEBIET_Wi",
       true
     ),
@@ -277,7 +277,7 @@ public class NewsSourceForReal : NewsSource
       false
     ),
     new HeadlineInfo(
-      "Coca Cola will nach Mondladung Werbung im All prüfen",
+      "Fips Cola will nach Mondladung Möglichkeit für Werbung im All prüfen",
       "EVENT_ML",
       "FACHGEBIET_Wi",
       true
@@ -289,7 +289,7 @@ public class NewsSourceForReal : NewsSource
       false
     ),
     new HeadlineInfo(
-      "Aktienmarkt geschockt von Wuschels Kandidatur",
+      "Aktienmarkt reagiert erschüttert auf Wuschels Kandidatur",
       "EVENT_WK",
       "FACHGEBIET_Wi",
       true
