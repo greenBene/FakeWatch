@@ -16,7 +16,7 @@ public class Language : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         if(PlayerPrefs.GetString("language") == " ")
-            PlayerPrefs.SetString("language", "english");
+            PlayerPrefs.SetString("language", "german");
 
         ChangeTo(PlayerPrefs.GetString("language"));
     }

@@ -34,21 +34,27 @@ public class ArticleWindow : Window {
     public void AssignNews(News news)
     {
         Progression = ProgressionManager.GetProgression();
-        print("Progression: " + Progression);
+        bool ProgressFlag = false;
+        if (Progression == 3)
+            ProgressFlag = true;
+
         this.news = news;
         if(fields == null)
         {
             fields = GetComponentsInChildren<NewsField>();
         }
+
         fields.Shuffle();
         foreach (NewsField field in fields)
         {
             bool showCorrect = false;
-            print(field.type + ": " +news.GetTruthValue(field.type));
             if (Progression > 0 && field.type != InfoType.headline && news.GetTruthValue(field.type)) {
-                Progression--;
-                showCorrect = true;
+                if(!ProgressFlag || (ProgressFlag && field.type != InfoType.date)) {
+                    Progression--;
+                    showCorrect = true;
+                }
             }
+            
             field.SetInfo(news.GetInfo(field.type), showCorrect);
         }
         
