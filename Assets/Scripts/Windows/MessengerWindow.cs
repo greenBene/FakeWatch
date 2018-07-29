@@ -117,7 +117,8 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
 
     public bool RequestStateChange(MessengerState newState)
     {
-        throw new System.NotImplementedException();
+        ChangeState(newState);
+        return true;
     }
 
     public void StateTransition()
