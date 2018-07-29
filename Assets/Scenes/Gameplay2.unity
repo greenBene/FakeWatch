@@ -12830,7 +12830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DesktopStartAudio: {fileID: 8300000, guid: 21fc44a90098714499798cbc1a785623, type: 3}
-  LogOutAudio: {fileID: 8300000, guid: 155b76a1fbd09914a90d78beae31b6e4, type: 3}
+  LogOutAudio: {fileID: 1822849152049818, guid: f346a54e0fa88214e8658afdca82123a,
+    type: 2}
   endScreen: {fileID: 832346732}
   timeToPlayInSeconds: 420
   PlayerID: 0

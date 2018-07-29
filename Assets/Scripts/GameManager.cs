@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
 
     //===== ===== Variables ===== =====
     [SerializeField] AudioClip DesktopStartAudio;
-    [SerializeField] AudioClip LogOutAudio;
+    [SerializeField] GameObject LogOutAudio;
     [SerializeField]
     GameObject endScreen = null;
 
@@ -200,13 +200,8 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     }
 
     public void LockScreen() {
-        audio.clip = LogOutAudio;
-        audio.Play();
-        //StartCoroutine("SceneManager.LoadScene", StringCollection.INTRO);
-        Invoke("LoadIntro", LogOutAudio.length);
-    }
-
-    void LoadIntro() {
+        GameObject temp = Instantiate(LogOutAudio);
+        DontDestroyOnLoad(temp);
         SceneManager.LoadScene(StringCollection.INTRO);
     }
 
