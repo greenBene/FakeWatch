@@ -13,21 +13,18 @@ public class NewsGeneration2 : MonoBehaviour {
     [Header("Artical Variables")]
     public GameObject articlePrefab;
 
-    private int articleCount = 0;
 
+    [SerializeField] int newsWithoutInvokingAutmatically = 4;
     [Range(0, 120)] [SerializeField] float startDuration = 60f;
     [Range(0, 1)] [SerializeField] float rate = 0.9f;
-    [SerializeField] int newsWithoutInvokingAutmatically = 4;
+    [SerializeField] bool UseAdaptiveSystem = false;
+    [SerializeField] float AdaptiveStartDuration = 20f;
+    [SerializeField] float AdaptivePressure = 1f;
+    [SerializeField] float AdaptiveForgiveness = 0.7f;
+    [SerializeField] float AdaptiveMinDuration = 2f;
 
     [Header("No Funktion")]
     [SerializeField] float timeToPlayInSeconds = 600f;
-    
-
-
-    private int newsTillAutoInvoke;
-    private NewsSource newsSource;
-    private float currentDurationBetweenNews;
-
 
     private int correctMarkedArticles = 0;
     private int wronglyMarkedArticlesAsTrue = 0;
@@ -37,8 +34,15 @@ public class NewsGeneration2 : MonoBehaviour {
     public Text endText;
     public GameObject restartButton;
 
-	// Use this for initialization
-	void Start () {
+    private int newsTillAutoInvoke;
+    private NewsSource newsSource;
+
+    [Header("Debug")]
+    [SerializeField] private float currentDurationBetweenNews;
+    [SerializeField] private int articleCount = 0;
+
+    // Use this for initialization
+    void Start () {
         if (PlayerPrefs.GetString("language") == "german"){
             newsSource = new NewsSourceForReal();
         } else {
@@ -56,34 +60,60 @@ public class NewsGeneration2 : MonoBehaviour {
     public void StartGeneration()
     {
         articleCount = 0;
-        currentDurationBetweenNews = startDuration;
+        if (UseAdaptiveSystem)
+            currentDurationBetweenNews = AdaptiveStartDuration + AdaptivePressure; //to compensate first News Invoce
+        else
+            currentDurationBetweenNews = startDuration;
         newsTillAutoInvoke = newsWithoutInvokingAutmatically;
         Invoke("NextNewsInitiater", 1f);
     }
 
     public void StopGeneration() {
         CancelInvoke();
-        foreach(ArticleWindow it in GameManager.MainScreen.GetComponentsInChildren<ArticleWindow>()) {
+        foreach (ArticleWindow it in GameManager.MainScreen.GetComponentsInChildren<ArticleWindow>()) {
             it.Destroy();
         }
     }
 
-	private void GenerateArticle(News news) {
-        GameObject newArticle = Instantiate(articlePrefab, GameManager.MainScreen.transform);
-        newArticle.transform.SetSiblingIndex(4);
-        newArticle.GetComponent<ArticleWindow>().AssignNews(news);
-        articleCount++;
-    }
-
     private void NextNewsInitiater() {
+        if (UseAdaptiveSystem) {
+            AdaptiveNextNewsInitiator();
+            return;
+        }
         ShowNextNews();
         currentDurationBetweenNews *= rate;
         currentDurationBetweenNews = Mathf.Clamp(currentDurationBetweenNews, 0.25f, 120f);
         Invoke("NextNewsInitiater", currentDurationBetweenNews);
     }
 
+    /// <summary>
+    /// adapteds difficulty to playerspeed
+    /// </summary>
+    /// <remarks>
+    /// AdaptiveSlowDown should be smaler than AdaptiveSpeedUp
+    /// </remarks>
+    private void AdaptiveNextNewsInitiator() {
+        CancelInvoke("AdaptiveNextNewsInitiator");
+        if (articleCount > 0)
+            currentDurationBetweenNews += AdaptiveForgiveness;
+        else
+            currentDurationBetweenNews -= AdaptivePressure;
+        if (currentDurationBetweenNews < AdaptiveMinDuration)
+            currentDurationBetweenNews = AdaptiveMinDuration;
+
+        ShowNextNews();
+        Invoke("AdaptiveNextNewsInitiator", currentDurationBetweenNews);
+    }
+
     private void ShowNextNews() {
         GenerateArticle(newsSource.GetNextNews(2));
+    }
+
+    private void GenerateArticle(News news) {
+        GameObject newArticle = Instantiate(articlePrefab, GameManager.MainScreen.transform);
+        newArticle.transform.SetSiblingIndex(4);
+        newArticle.GetComponent<ArticleWindow>().AssignNews(news);
+        articleCount++;
     }
 
     public void RegisterSolvedNews()

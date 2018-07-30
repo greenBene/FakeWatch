@@ -12869,13 +12869,20 @@ MonoBehaviour:
   ActivAtStart: 0
   articlePrefab: {fileID: 1783136907020872, guid: 8d0787f3328d453418544774f74a7bcd,
     type: 2}
+  newsWithoutInvokingAutmatically: 4
   startDuration: 60
   rate: 0.9
-  newsWithoutInvokingAutmatically: 4
+  UseAdaptiveSystem: 0
+  AdaptiveStartDuration: 60
+  AdaptivePressure: 4
+  AdaptiveForgiveness: 1
+  AdaptiveMinDuration: 2
   timeToPlayInSeconds: 600
   endScreen: {fileID: 0}
   endText: {fileID: 0}
   restartButton: {fileID: 0}
+  currentDurationBetweenNews: 0
+  articleCount: 0
 --- !u!114 &1256157042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20842,7 +20849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00014798465, y: 0}
+  m_AnchoredPosition: {x: -0.00027005497, y: 0}
   m_SizeDelta: {x: -0.00009615597, y: 468}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2140127614
