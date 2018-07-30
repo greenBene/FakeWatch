@@ -1,0 +1,69 @@
+﻿Abteilung F
+
+Vielen Dank für Ihr Interesse an Abteilung F. Die ursprüngliche Version unseres Spiels wurde im Rahmen des "Fake Jam" Game Jams entwickelt. Dieser wurde von Stiftung Digitale Spielekultur in Kooperation mit der Staatsministerin für Kultur und Medien, der Games Academy Berlin und dem Entwicklerstudio Maschinen-Mensch veranstaltet. Die vorliegende, überarbeitete Version entstand in etwas geänderter Besetzung für den Gamescom-Stand der Bundeszentrale für politische Bildung. 
+
+Das derzeitige Entwicklerteam hinter Abteilung F besteht aus (in alphabetischer Reihenfolge)
+
+Sven Ahlgrimm / @SvenAhlgrimm  
+- tba -
+
+Benedikt Maria Beckermann / @greenBene
+- Web Design -
+
+Andreas Edmeier / @Quwertzuiop
+- Refactoring / Programming / Trailer Editing-
+
+Tobias Kohl / @Roy_Burns_fnx
+- Refactoring / Programming -  
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design / PR -
+
+Felix Szczesny / @FelixSzczesny 
+- Art Design -
+
+
+
+Die ursprüngliche „Fake-Jam“ Game Jam-Version haben entwickelt (in alphabetischer Reihenfolge)
+
+Sven Ahlgrimm / @SvenAhlgrimm
+- UX Design / Frontend Programming -
+
+Daniel Berndt / @D40B
+- Backend Programming -
+
+Benedikt Maria Beckermann / @greenBene
+- Programming -
+
+Andreas Edmeier / @Quwertzuiop
+- Game Design -
+
+Jörg Friedel / @jofrie83 
+- Art Design / Story Writing -
+
+Tobias Kohl / @Roy_Burns_fnx
+- Game Design -
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design -
+
+Felix Szczesny / @FelixSzczesny
+- Art Design -
+
+
+
+Für Unterstützung, Energie und Motivation danken wir ganz herzlich 
+Carolin Wendt von der Stiftung Digitale Spielekultur 
+der Staatsministerin für Kultur und Medien und ihren Mitarbeiter*innen 
+Johannes Kristmann und Riad Djemili von Maschinen-Mensch 
+Matthias Thanos von der Bundeszentrale für politische Bildung 
+Lorenzo Pilia von BerlinGameScene.com 
+sowie  Carola Brozio und Philipp Schäfer.
+
+
+
+Weitere Informationen zu Abteilung F sowie die Möglichkeit zum kostenlosen Download des Spiels finden Sie unter www.abteilung-f.de
+
+Wenn Sie uns kontaktieren möchten, erreichen Sie uns unter info@abteilung-f.de
+
+Für aktuelle Informationen zu Updates, Veranstaltungen oder Informationen zum Thema Fake News folgen Sie uns gerne auf Twitter unter @AbteilungF

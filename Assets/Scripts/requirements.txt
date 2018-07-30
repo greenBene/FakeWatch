@@ -1,0 +1,13 @@
+Article -> ArticleWindow
+
+Interface:
+
+public Text headlineField, zeitungField, journalistField, ortField, datumField, ressortField;
+public Text correctButtonTextField;
+public float fadeOutTransparency, fadeOutSpeed;
+
+public void Assign (News news, NewsGeneration ng);
+public void MarkAsTrue();
+public void MarkAsFake();
+public void StartDragging();
+public void StopDragging();
