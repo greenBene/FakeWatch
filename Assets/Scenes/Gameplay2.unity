@@ -1432,8 +1432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -725.4, y: -141}
-  m_SizeDelta: {x: 446.8, y: 400}
+  m_AnchoredPosition: {x: -707.7, y: -141}
+  m_SizeDelta: {x: 464.5, y: 400}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &165334726
 MonoBehaviour:
@@ -1461,17 +1461,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 222
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xF6chten Sie ausf\xFChrlicher \xFCber die Arbeitsschritte informiert
-    werden, lesen Sie dazu bitte die\r\nvorliegende <b>Arbeitsanweisung f\xFCr Faktenchecker.\r</b>\n\nBitte
-    \xFCberpr\xFCfen Sie, ob Ihnen wirklich s\xE4mtliche relevanten Dokumente (<b>Anlagen
-    A bis E</b>) vollst\xE4ndig\r\nzur Verf\xFCgung stehen. Sollte Ihnen Unterlagen
-    fehlen, wenden Sie sich bitte an Ihren\r\nAbteilungsleiter. \r"
+  m_Text: "F\xFCr eine detaillierte Erl\xE4uterung der Arbeitsschritte lesen Sie bei
+    Bedarf bitte das Dokument <b>Arbeitsanweisung f\xFCr Faktenchecker.\r</b>\n\nBitte
+    \xFCberpr\xFCfen Sie, ob Ihnen alle relevanten Dokumente (<b>Anlagen A bis E</b>)
+    vollst\xE4ndig vorliegen. Sollten Unterlagen fehlen, wenden Sie sich bitte vor
+    Arbeitsbeginn an Ihren\r Abteilungsleiter. \r"
 --- !u!222 &165334727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2989,20 +2989,21 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Sehr geehrte/r <b>MfN_AbtF-Gast_237</b>,\n\r\nwir danken Ihnen, dass Sie
-    sich so kurzfristig bereiterkl\xE4rt haben, die Abteilung F zu unterst\xFCtzen.\r\nAufgrund
-    des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische\r\nNachrichtenbeitr\xE4ge
-    getarnt sind, arbeiten derzeit s\xE4mtliche Mitarbeiterinnen und Mitarbeiter unter\r\nHochdruck
-    an deren Kennzeichnung und Richtigstellung.\r\n\nZur Identifikation dieser Falschmeldungen
-    im Vorfeld ben\xF6tigen wir <b>Sie</b>. Helfen Sie uns die\r\nDesinformationskampagnen
-    zu bek\xE4mpfen und den B\xFCrgerinnen und B\xFCrgern Freilands einen\r\nfreiheitlichen,
-    demokratischen Meinungsbildungsprozess zu erm\xF6glichen. \r"
+    sich so kurzfristig bereit-\nerkl\xE4rt haben, die Abteilung F zu unterst\xFCtzen.\r
+    Wegen des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische\r
+    Nachrichtenbeitr\xE4ge getarnt sind, arbeiten derzeit s\xE4mtliche Mitarbeiterinnen
+    und Mitarbeiter unter Hochdruck an deren Kennzeichnung und Richtigstellung. \n\nZur
+    Identifikation dieser Falschmeldungen im Vorfeld ben\xF6tigen wir <b>Sie</b>.
+    Helfen Sie uns, die\r Desinformations-\nkampagnen zu bek\xE4mpfen und den B\xFCrgerinnen
+    und B\xFCrgern Freilands einen\r freiheitlichen und demokratischen Meinungsbildungsprozess
+    zu erm\xF6glichen. \r"
 --- !u!222 &312801731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3245,7 +3246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5499, y: -184}
+  m_AnchoredPosition: {x: -7.1498, y: -174}
   m_SizeDelta: {x: 1089.9, y: 76.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322842949
@@ -3269,20 +3270,20 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a33e7dcc314d1ed41b67a4252bf24b75, type: 3}
-    m_FontSize: 22
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\xDCberpr\xFCfen Sie die Informationen auf Richtigkeit und markieren Sie
-    die Nachrichten mit\r\nFalschinformationen ggf. als Fake News. F\xFChren Sie dazu
-    <b>5 Arbeitsschritte</b> durch. "
+    die Nachrichten mit\r falschen informationen ggf. als Fake News. F\xFChren Sie
+    dazu bitte die <b>5 Arbeitsschritte</b> durch, die im Folgenden erkl\xE4rt werden. "
 --- !u!222 &322842950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3463,8 +3464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5499268, y: -173}
-  m_SizeDelta: {x: 915.1, y: 104.2}
+  m_AnchoredPosition: {x: -0.000087023, y: -144.89993}
+  m_SizeDelta: {x: 915.1, y: 134.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &363132390
 MonoBehaviour:
@@ -3492,7 +3493,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4139,7 +4140,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Unsere eigene Software FactCheck (v3.02) filtert Nachrichten aus den Sozialen
-    Medien und bereitet\r\ndie f\xFCr Sie relevanten Informationen in einheitlicher
+    Medien und bereitet\r die f\xFCr Sie relevanten Informationen in einheitlicher
     Form auf. "
 --- !u!222 &446051242
 CanvasRenderer:
@@ -5354,8 +5355,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -130}
-  m_SizeDelta: {x: 1099.1, y: 83.5}
+  m_AnchoredPosition: {x: -91.89996, y: -130}
+  m_SizeDelta: {x: 1099.1, y: 98}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &555005896
 MonoBehaviour:
@@ -5383,14 +5384,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 222
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Das ist das Ende der Einf\xFChrung.\nBitte vergessen sie nicht ihnen zu
-    verf\xFCgung stehende Unterlagen zu benutzen."
+  m_Text: "Ihre Einf\xFChrung in unsere Fact-Checking-Software (v3.02) ist damit beendet.
+    Denken Sie daran, die vorliegenden Dokumente f\xFCr Ihre Recherche zu nutzen und
+    arbeiten Sie sorgf\xE4ltig.  "
 --- !u!222 &555005897
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5679,8 +5681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5499268, y: -160}
-  m_SizeDelta: {x: 1015.1, y: 104.2}
+  m_AnchoredPosition: {x: -2.5499268, y: -144.89998}
+  m_SizeDelta: {x: 1015.1, y: 134.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586391196
 MonoBehaviour:
@@ -5708,15 +5710,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Schreiben die genannten Autorinnen und Autoren auch wirklich f\xFCr die
-    angegeben Zeitung? Sehen\r Sie sich dazu <b>Anlage C</b> an. \nVergleichen Sie
-    die K\xFCrzel der Autoren mit <b>Anlage B</b>, falls notwendig"
+    angegebene Zeitung? Sehen\r Sie sich dazu <b>Anlage C</b> an und vergleichen Sie
+    die K\xFCrzel der Autoren mit <b>Anlage B</b>."
 --- !u!222 &586391197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6880,7 +6882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -92, y: -412}
+  m_AnchoredPosition: {x: -91.9, y: -404}
   m_SizeDelta: {x: 1099.1, y: 238.5}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &737414636
@@ -6909,17 +6911,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 222
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Aus Sicherheitsgr\xFCnden sammeln unsere Server ihre \xFCberpr\xFCften
-    Informationen in kurzen\r\nIntervallen, um Sie zeitnah mit den Ergebnissen Ihrer
-    Kolleginnen und Kollegen zu vergleichen. Sie\r haben daher nun <b>7 Minuten</b>
-    Zeit (siehe Timer), um m\xF6glichst viele Informationen zu \xFCberpr\xFCfen. Die\r
-    Leitung der Abteilung F w\xFCnscht Ihnen gutes Gelingen! "
+    Informationen in kurzen\r Intervallen, um Sie mit den Ergebnissen Ihrer Kolleginnen
+    und Kollegen zu vergleichen. Sie\r haben daher nun <b>7 Minuten</b> Zeit (siehe
+    Timer), um m\xF6glichst viele Informationen zu \xFCberpr\xFCfen. \n\nDie\r Leitung
+    der Abteilung F w\xFCnscht Ihnen gutes Gelingen! "
 --- !u!222 &737414637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11754,8 +11756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5499268, y: -160}
-  m_SizeDelta: {x: 816, y: 104.2}
+  m_AnchoredPosition: {x: 3.2001, y: -144.89998}
+  m_SizeDelta: {x: 857, y: 134.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129344554
 MonoBehaviour:
@@ -11783,14 +11785,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\xDCberpr\xFCfen Sie, ob der Artikel auch wirklich zum Zeitpunkt des thematisierten
-    Ereignisses stattfand.\r\nSehen Sie sich dazu <b>Anlage A</b> an. "
+    Ereignisses erschienen ist.\r Sehen Sie sich dazu <b>Anlage A</b> an. "
 --- !u!222 &1129344555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12025,8 +12027,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5499268, y: -160}
-  m_SizeDelta: {x: 915.1, y: 104.2}
+  m_AnchoredPosition: {x: -2.5499268, y: -144.89993}
+  m_SizeDelta: {x: 915.1, y: 134.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146560481
 MonoBehaviour:
@@ -12054,15 +12056,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Stimmt der genannte Ort, in dem die angegebene Zeitungsquelle publiziert
-    sein soll? Vergleichen Sie\r hierzu <b>Anlage D</b> mit der vorliegenden Karte
-    Freilands und ggf. der \xDCbersicht \xFCber die Bundesl\xE4nder. "
+  m_Text: "Stimmt der genannte Ort, in dem die angegebene Zeitung publiziert sein
+    soll? Vergleichen Sie\r hierzu <b>Anlage D</b> mit der vorliegenden Karte Freilands
+    und ggf. \nder \xDCbersicht \xFCber die Bundesl\xE4nder. "
 --- !u!222 &1146560482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15715,8 +15717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5499268, y: -174}
-  m_SizeDelta: {x: 960.3, y: 104.2}
+  m_AnchoredPosition: {x: -0.000087023, y: -144.89993}
+  m_SizeDelta: {x: 960.3, y: 134.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583331017
 MonoBehaviour:
@@ -15744,14 +15746,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ist das Erscheinungsdatum der Zeitung korrekt oder zumindest plausibel.
-    \nSehen Sie sich dazu <b>Anlage\r E</b> an und nehmen Sie einen Kalender zur Hand,
+  m_Text: "Ist das Erscheinungsdatum der Zeitung korrekt oder zumindest plausibel?
+    Sehen Sie sich dazu <b>Anlage\r E</b> an und nehmen Sie einen Kalender zur Hand,
     falls n\xF6tig. "
 --- !u!222 &1583331018
 CanvasRenderer:

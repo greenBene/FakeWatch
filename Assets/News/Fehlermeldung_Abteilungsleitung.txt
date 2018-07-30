@@ -8,7 +8,7 @@ Am {0} wurde in den Medien nicht zum Thema des Artikels berichtet. Daher wahrsch
 [AUTOR|FACHGEBIET]
 Das Fachgebiet von {0} ist leider nicht {1}. Haben Sie die Liste der Autoren in Anlage B abgeglichen?  
 {0} schreibt leider nicht zum Thema {1}. Bitte Liste der Autoren in Anlage B abgleichen.
-{0} ist leider nicht das Fachgebiet von {1}. Stand das so in Anlage B?
+{1} ist leider nicht das Fachgebiet von {0}. Stand das so in Anlage B?
 {0} schreibt normalerweise nicht im Ressort {1}. Haben Sie das mit Anlage B abgeglichen?
 Zu {1} schreibt {0} normalerweise nicht. Das scheint ein Fake zu sein.
 
