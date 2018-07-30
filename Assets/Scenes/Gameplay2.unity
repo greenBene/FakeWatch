@@ -20891,30 +20891,29 @@ MonoBehaviour:
     dem Entwicklerstudio Maschinen-Mensch veranstaltet. Die vorliegende, \xFCberarbeitete
     Version entstand in etwas ge\xE4nderter Besetzung f\xFCr den Gamescom-Stand der
     Bundeszentrale f\xFCr politische Bildung. \r\n\r\nDas derzeitige Entwicklerteam
-    hinter Abteilung F besteht aus (in alphabetischer Reihenfolge)\r\n\r\nSven Ahlgrimm
-    / @SvenAhlgrimm  \r\n- tba -\r\n\r\nBenedikt Maria Beckermann / @greenBene\r\n-
-    Web Design -\r\n\r\nAndreas Edmeier / @Quwertzuiop\r\n- Refactoring / Programming
-    / Trailer Editing-\n\r\nTobias Kohl / @Roy_Burns_fnx\r\n- Refactoring / Programming
-    -  \r\n\r\nChristoph Plewe / @ChristophPlewe\r\n- Story Writing / Sound Design
-    / PR -\r\n\r\nFelix Szczesny / @FelixSzczesny \r\n- Art Design -\r\n\r\n\r\n\r\nDie
-    urspr\xFCngliche \u201EFake-Jam\u201C Game Jam-Version haben entwickelt (in alphabetischer
-    Reihenfolge)\r\n\r\nSven Ahlgrimm / @SvenAhlgrimm\r\n- UX Design / Frontend Programming
-    -\r\n\r\nDaniel Berndt / @D40B\r\n- Backend Programming -\r\n\r\nBenedikt Maria
-    Beckermann / @greenBene\r\n- Programming -\r\n\r\nAndreas Edmeier / @Quwertzuiop\r\n-
-    Game Design -\r\n\r\nJ\xF6rg Friedel / @jofrie83 \r\n- Art Design / Story Writing
-    -\r\n\r\nTobias Kohl / @Roy_Burns_fnx\r\n- Game Design -\r\n\r\nChristoph Plewe
-    / @ChristophPlewe\r\n- Story Writing / Sound Design -\r\n\r\nFelix Szczesny /
-    @FelixSzczesny\r\n- Art Design -\r\n\r\n\r\n\r\nF\xFCr Unterst\xFCtzung, Energie
-    und Motivation danken wir ganz herzlich \r\nCarolin Wendt von der Stiftung Digitale
-    Spielekultur \r\nder Staatsministerin f\xFCr Kultur und Medien und ihren Mitarbeiter*innen
-    \r\nJohannes Kristmann und Riad Djemili von Maschinen-Mensch \r\nMatthias Thanos
-    von der Bundeszentrale f\xFCr politische Bildung \r\nLorenzo Pilia von BerlinGameScene.com
-    \r\nsowie  Carola Brozio und Philipp Sch\xE4fer.\r\n\r\n\r\n\r\nWeitere Informationen
-    zu Abteilung F sowie die M\xF6glichkeit zum kostenlosen Download des Spiels finden
-    Sie unter www.abteilung-f.de\r\n\r\nWenn Sie uns kontaktieren m\xF6chten, erreichen
-    Sie uns unter info@abteilung-f.de\r\n\r\nF\xFCr aktuelle Informationen zu Updates,
-    Veranstaltungen oder Informationen zum Thema Fake News folgen Sie uns gerne auf
-    Twitter unter @AbteilungF\r\n"
+    hinter Abteilung F besteht aus (in alphabetischer Reihenfolge)\r\n\nBenedikt Maria
+    Beckermann / @greenBene\r\n- Web Design -\r\n\r\nAndreas Edmeier / @Quwertzuiop\r\n-
+    Refactoring / Programming / Trailer Editing-\n\r\nTobias Kohl / @Roy_Burns_fnx\r\n-
+    Refactoring / Programming -  \r\n\r\nChristoph Plewe / @ChristophPlewe\r\n- Story
+    Writing / Sound Design / PR -\r\n\r\nFelix Szczesny / @FelixSzczesny \r\n- Art
+    Design -\r\n\r\n\r\n\r\nDie urspr\xFCngliche \u201EFake-Jam\u201C Game Jam-Version
+    haben entwickelt (in alphabetischer Reihenfolge)\r\n\r\nSven Ahlgrimm / @SvenAhlgrimm\r\n-
+    UX Design / Frontend Programming -\r\n\r\nDaniel Berndt / @D40B\r\n- Backend Programming
+    -\r\n\r\nBenedikt Maria Beckermann / @greenBene\r\n- Programming -\r\n\r\nAndreas
+    Edmeier / @Quwertzuiop\r\n- Game Design -\r\n\r\nJ\xF6rg Friedel / @jofrie83 \r\n-
+    Art Design / Story Writing -\r\n\r\nTobias Kohl / @Roy_Burns_fnx\r\n- Game Design
+    -\r\n\r\nChristoph Plewe / @ChristophPlewe\r\n- Story Writing / Sound Design -\r\n\r\nFelix
+    Szczesny / @FelixSzczesny\r\n- Art Design -\r\n\r\n\r\n\r\nF\xFCr Unterst\xFCtzung,
+    Energie und Motivation danken wir ganz herzlich \r\nCarolin Wendt von der Stiftung
+    Digitale Spielekultur \r\nder Staatsministerin f\xFCr Kultur und Medien und ihren
+    Mitarbeiter*innen \r\nJohannes Kristmann und Riad Djemili von Maschinen-Mensch
+    \r\nMatthias Thanos von der Bundeszentrale f\xFCr politische Bildung \r\nLorenzo
+    Pilia von BerlinGameScene.com \r\nsowie  Carola Brozio und Philipp Sch\xE4fer.\r\n\r\n\r\n\r\nWeitere
+    Informationen zu Abteilung F sowie die M\xF6glichkeit zum kostenlosen Download
+    des Spiels finden Sie unter www.abteilung-f.de\r\n\r\nWenn Sie uns kontaktieren
+    m\xF6chten, erreichen Sie uns unter info@abteilung-f.de\r\n\r\nF\xFCr aktuelle
+    Informationen zu Updates, Veranstaltungen oder Informationen zum Thema Fake News
+    folgen Sie uns gerne auf Twitter unter @AbteilungF\r\n"
 --- !u!222 &2140127615
 CanvasRenderer:
   m_ObjectHideFlags: 0
