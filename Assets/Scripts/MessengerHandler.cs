@@ -5,7 +5,7 @@ using UnityEngine;
 public class MessengerHandler : MonoBehaviour {
     
     [SerializeField] GameObject MessengerPrefab;
-    [SerializeField] private string pathToErrorMessages;
+    //[SerializeField] private string pathToErrorMessages;
 
     private ErrorMessageGenerator generator;
     List<MessengerWindow> WindowList;
@@ -13,7 +13,7 @@ public class MessengerHandler : MonoBehaviour {
 
     private void Start() {
         WindowList = new List<MessengerWindow>();
-        generator = new ErrorMessageGenerator(pathToErrorMessages);
+        generator = new ErrorMessageGenerator();
     }
 
     public void NewMessage(Inconsistency handle) {

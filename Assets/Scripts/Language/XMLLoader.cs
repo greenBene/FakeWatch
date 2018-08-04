@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml;
 
-public enum xmlFiles { scene};
+public enum xmlFiles { scene, errors};
 
 public class XMLLoader{
 
@@ -14,13 +14,17 @@ public class XMLLoader{
     public XMLLoader()
     {
         string fileScenes = "Assets/Language/Scene.xml";
-
+        string fileErrors = "Assets/Language/Errors.xml";
 
         xmlDict = new Dictionary<xmlFiles, XmlDocument>();
 
         XmlDocument scenes = new XmlDocument();
         scenes.Load(fileScenes);
         xmlDict.Add(xmlFiles.scene, scenes);
+
+        XmlDocument errors = new XmlDocument();
+        errors.Load(fileErrors);
+        xmlDict.Add(xmlFiles.errors, errors);
 
         UpdateLanguage(false);
     }
@@ -64,7 +68,7 @@ public class XMLLoader{
             int numElements = nodes.Count;
             if (numElements == 0)
             {
-                throw new System.Exception("No collection-element found with language=" + language);
+                throw new System.Exception("No collection-element found with language=" + language + " - selection: " + string.Format("//collection[@language='{0}']", language));
             }
             else if (numElements > 1)
             {
