@@ -62,6 +62,14 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
         }
     }
 
+    private XMLLoader s_xmlLoader;
+    public static XMLLoader XMLLoader    {
+        get
+        {
+            return Instance.s_xmlLoader;
+        }
+    }
+
     //===== ===== Variables ===== =====
     [SerializeField] AudioClip DesktopStartAudio;
     [SerializeField] GameObject LogOutAudio;
