@@ -25,7 +25,7 @@ public class ModularImageLoader : ModularLanguageLoader {
         Sprite newSprite;
         try
         {
-            newSprite = Resources.Load(path + newValue) as Sprite;
+            newSprite = Resources.Load<Sprite>(path + newValue);
             Debug.Log("Loaded sprite at " + path + newValue);
             if (newSprite == null) { Debug.Log("Sprite is null"); }
         }
