@@ -11,7 +11,6 @@ public abstract class Window : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
         gameObject.SetActive(false);
-        MoveToFront();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +23,8 @@ public abstract class Window : MonoBehaviour {
 	
 	public virtual void Show() {
         gameObject.SetActive(true);
-	}
+        MoveToFront();
+    }
 	
 	public void SetPosition(int x, int y) {
 		SetPosition(new Vector2(x, y));
