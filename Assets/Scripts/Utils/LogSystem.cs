@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using UnityEngine;
+using System.Diagnostics;
+using System.Reflection;
 
 public static class LogSystem {
 
     static string fileName = "LOG\\" + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "_EXE.txt";
+
+    public static void LogOnConsole(string message) {
+        StackTrace stackTrace = new StackTrace();
+        UnityEngine.Debug.Log(message + " called from " + stackTrace.GetFrame(1).GetMethod().Name + " in " + stackTrace.GetFrame(1).GetMethod().ReflectedType.Name);
+    }
 
     public static void LogOnFile(string message) {
         if (!GameManager.Instance.doLog)
