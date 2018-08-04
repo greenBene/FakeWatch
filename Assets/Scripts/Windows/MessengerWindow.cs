@@ -52,6 +52,8 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         timeStamp.text = GameManager.Instance.timeLeft.ToTimeString();
         state = MessengerState.incoming;
 
+        base.Show();
+
         return height * GameManager.MainScreen.transform.localScale.x;
     }
 
