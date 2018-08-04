@@ -25,10 +25,10 @@ public class ArticleWindow : Window {
 
     private Vector2 RandomPosition()
     {
-        float halfVerticalSize = GetComponent<RectTransform>().rect.height / 2;
-        float halfHorizontalSize = GetComponent<RectTransform>().rect.width / 2;
+        float halfVerticalSize = GetComponent<RectTransform>().rect.height / 2 * GameManager.MainScreen.transform.localScale.y;
+        float halfHorizontalSize = GetComponent<RectTransform>().rect.width / 2 * GameManager.MainScreen.transform.localScale.x;
         //dirty fix für aspect ratio, ist nicht ganz richtig antscheinend
-        return new Vector2(UnityEngine.Random.Range(0 + halfHorizontalSize * GameManager.MainScreen.transform.localScale.x, Screen.width - halfHorizontalSize * GameManager.MainScreen.transform.localScale.x), UnityEngine.Random.Range(0 + halfVerticalSize, Screen.height - halfVerticalSize));
+        return new Vector2(UnityEngine.Random.Range(0 + halfHorizontalSize, Screen.width - halfHorizontalSize), UnityEngine.Random.Range(0 + halfVerticalSize, Screen.height - halfVerticalSize));
     }
 
     public void AssignNews(News news)

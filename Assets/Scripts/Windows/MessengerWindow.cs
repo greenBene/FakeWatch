@@ -52,11 +52,11 @@ public class MessengerWindow : Window, IStateMachine<MessengerState> {
         timeStamp.text = GameManager.Instance.timeLeft.ToTimeString();
         state = MessengerState.incoming;
 
-        return height;
+        return height * GameManager.MainScreen.transform.localScale.x;
     }
 
     public void SlideUp(float distance) {
-        targetHight += distance * GameManager.MainScreen.transform.localScale.x;//macht dass die message bei andere aspect ratio nicht zuweit hoch geschoben wird
+        targetHight += distance;//macht dass die message bei andere aspect ratio nicht zuweit hoch geschoben wird
     }
 
     //===== ===== State Mashine ===== =====

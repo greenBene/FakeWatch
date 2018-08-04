@@ -12872,7 +12872,7 @@ MonoBehaviour:
   newsWithoutInvokingAutmatically: 4
   startDuration: 60
   rate: 0.9
-  UseAdaptiveSystem: 0
+  UseAdaptiveSystem: 1
   AdaptiveStartDuration: 60
   AdaptivePressure: 4
   AdaptiveForgiveness: 1
@@ -14579,7 +14579,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1783136907020872, guid: 8d0787f3328d453418544774f74a7bcd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114149194899445758, guid: 8d0787f3328d453418544774f74a7bcd,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114327355008034396, guid: 8d0787f3328d453418544774f74a7bcd,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d0787f3328d453418544774f74a7bcd, type: 2}
