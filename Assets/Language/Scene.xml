@@ -8,74 +8,72 @@
 	<text name="Quit" category="Button">Quit</text>
 	
 	<text name="Credits" category="Header">Credits.txt - Viewer</text>
-	<text name="Credits" category="Text">
-		Abteilung F
+	<text name="Credits" category="Text">Abteilung F
 
-		Vielen Dank für Ihr Interesse an Abteilung F. Die ursprüngliche Version unseres Spiels wurde im Rahmen des "Fake Jam" Game Jams entwickelt. Dieser wurde von Stiftung Digitale Spielekultur in Kooperation mit der Staatsministerin für Kultur und Medien, der Games Academy Berlin und dem Entwicklerstudio Maschinen-Mensch veranstaltet. Die vorliegende, überarbeitete Version entstand in etwas geänderter Besetzung für den Gamescom-Stand der Bundeszentrale für politische Bildung.
+Vielen Dank für Ihr Interesse an Abteilung F. Die ursprüngliche Version unseres Spiels wurde im Rahmen des "Fake Jam" Game Jams entwickelt. Dieser wurde von Stiftung Digitale Spielekultur in Kooperation mit der Staatsministerin für Kultur und Medien, der Games Academy Berlin und dem Entwicklerstudio Maschinen-Mensch veranstaltet. Die vorliegende, überarbeitete Version entstand in etwas geänderter Besetzung für den Gamescom-Stand der Bundeszentrale für politische Bildung.
 
-		Das derzeitige Entwicklerteam hinter Abteilung F besteht aus (in alphabetischer Reihenfolge)
+Das derzeitige Entwicklerteam hinter Abteilung F besteht aus (in alphabetischer Reihenfolge)
 
-		Benedikt Maria Beckermann / @greenBene
-		- Web Design -
+Benedikt Maria Beckermann / @greenBene
+- Web Design -
 
-		Andreas Edmeier / @Quwertzuiop
-		- Refactoring / Programming / Trailer Editing-
+Andreas Edmeier / @Quwertzuiop
+- Refactoring / Programming / Trailer Editing-
 
-		Tobias Kohl / @Roy_Burns_fnx
-		- Refactoring / Programming -
+Tobias Kohl / @Roy_Burns_fnx
+- Refactoring / Programming -
 
-		Christoph Plewe / @ChristophPlewe
-		- Story Writing / Sound Design / PR -
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design / PR -
 
-		Felix Szczesny / @FelixSzczesny
-		- Art Design -
-
-
-
-		Die ursprüngliche „Fake-Jam“ Game Jam-Version haben entwickelt (in alphabetischer Reihenfolge)
-
-		Sven Ahlgrimm / @SvenAhlgrimm
-		- UX Design / Frontend Programming -
-
-		Daniel Berndt / @D40B
-		- Backend Programming -
-
-		Benedikt Maria Beckermann / @greenBene
-		- Programming -
-
-		Andreas Edmeier / @Quwertzuiop
-		- Game Design -
-
-		Jörg Friedel / @jofrie83
-		- Art Design / Story Writing -
-
-		Tobias Kohl / @Roy_Burns_fnx
-		- Game Design -
-
-		Christoph Plewe / @ChristophPlewe
-		- Story Writing / Sound Design -
-
-		Felix Szczesny / @FelixSzczesny
-		- Art Design -
+Felix Szczesny / @FelixSzczesny
+- Art Design -
 
 
 
-		Für Unterstützung, Energie und Motivation danken wir ganz herzlich
-		Carolin Wendt von der Stiftung Digitale Spielekultur
-		der Staatsministerin für Kultur und Medien und ihren Mitarbeiter*innen
-		Johannes Kristmann und Riad Djemili von Maschinen-Mensch
-		Matthias Thanos von der Bundeszentrale für politische Bildung
-		Lorenzo Pilia von BerlinGameScene.com
-		sowie  Carola Brozio und Philipp Schäfer.
+Die ursprüngliche „Fake-Jam“ Game Jam-Version haben entwickelt (in alphabetischer Reihenfolge)
+
+Sven Ahlgrimm / @SvenAhlgrimm
+- UX Design / Frontend Programming -
+
+Daniel Berndt / @D40B
+- Backend Programming -
+
+Benedikt Maria Beckermann / @greenBene
+- Programming -
+
+Andreas Edmeier / @Quwertzuiop
+- Game Design -
+
+Jörg Friedel / @jofrie83
+- Art Design / Story Writing -
+
+Tobias Kohl / @Roy_Burns_fnx
+- Game Design -
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design -
+
+Felix Szczesny / @FelixSzczesny
+- Art Design -
 
 
 
-		Weitere Informationen zu Abteilung F sowie die Möglichkeit zum kostenlosen Download des Spiels finden Sie unter www.abteilung-f.de
+Für Unterstützung, Energie und Motivation danken wir ganz herzlich
+Carolin Wendt von der Stiftung Digitale Spielekultur
+der Staatsministerin für Kultur und Medien und ihren Mitarbeiter*innen
+Johannes Kristmann und Riad Djemili von Maschinen-Mensch
+Matthias Thanos von der Bundeszentrale für politische Bildung
+Lorenzo Pilia von BerlinGameScene.com
+sowie  Carola Brozio und Philipp Schäfer.
 
-		Wenn Sie uns kontaktieren möchten, erreichen Sie uns unter info@abteilung-f.de
 
-		Für aktuelle Informationen zu Updates, Veranstaltungen oder Informationen zum Thema Fake News folgen Sie uns gerne auf Twitter unter @AbteilungF
-	</text>
+
+Weitere Informationen zu Abteilung F sowie die Möglichkeit zum kostenlosen Download des Spiels finden Sie unter www.abteilung-f.de
+
+Wenn Sie uns kontaktieren möchten, erreichen Sie uns unter info@abteilung-f.de
+
+Für aktuelle Informationen zu Updates, Veranstaltungen oder Informationen zum Thema Fake News folgen Sie uns gerne auf Twitter unter @AbteilungF</text>
 	<text name="Credits" category="Icon">Credits.txt</text>
 
 	<text name="Zeitung" category="Text">Zeitung</text>
@@ -89,91 +87,36 @@
 	<path name="ExampleNews1" category="Image">Tut Images/schritt1tut</path>
 	<path name="OperatingInstructions" category="Image">Tut Images/arbeitsanweisung</path>
 	<path name="ExampleNews2" category="Image">Tut Images/windowGrun</path>
-	<text name="TutorialWindow1" category="Text">
-		Willkommen im Intranet des Ministeriums für Nachrichtenkompetenz
-		FactCheck, Version 3.02
+	<text name="TutorialWindow1" category="Text">Willkommen im Intranet des Ministeriums für Nachrichtenkompetenz FactCheck, Version 3.02
 
-		Sie sind eingeloggt als &lt;b&gt;
-			MfN_AbtF-Gast_237
-		&lt;/b&gt;
-	</text>
-	<text name="TutorialWindow2" category="Text">
-		Sehr geehrte/r &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;,
+Sie sind eingeloggt als &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;</text>
+	<text name="TutorialWindow2" category="Text">Sehr geehrte/r &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;,
 
-		wir danken Ihnen, dass Sie sich so kurzfristig bereit-
-		erklärt haben, die Abteilung F zu unterstützen.
-		Wegen des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische
-		Nachrichtenbeiträge getarnt sind, arbeiten derzeit sämtliche Mitarbeiterinnen und Mitarbeiter unter Hochdruck an deren Kennzeichnung und Richtigstellung.
+wir danken Ihnen, dass Sie sich so kurzfristig bereiterklärt haben, die Abteilung F zu unterstützen.
+Wegen des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische Nachrichtenbeiträge getarnt sind, arbeiten derzeit sämtliche Mitarbeiterinnen und Mitarbeiter unter Hochdruck an deren Kennzeichnung und Richtigstellung.
 
-		Zur Identifikation dieser Falschmeldungen im Vorfeld benötigen wir &lt;b&gt;Sie&lt;/b&gt;. Helfen Sie uns, die
-		Desinformations-
-		kampagnen zu bekämpfen und den Bürgerinnen und Bürgern Freilands einen
-		freiheitlichen und demokratischen Meinungsbildungsprozess zu ermöglichen.
-	</text>
+Zur Identifikation dieser Falschmeldungen im Vorfeld benötigen wir &lt;b&gt;Sie&lt;/b&gt;. Helfen Sie uns, die Desinformationskampagnen zu bekämpfen und den Bürgerinnen und Bürgern Freilands einen freiheitlichen und demokratischen Meinungsbildungsprozess zu ermöglichen.</text>
 	<!--first text in the third tutorial window-->
-	<text name="TutorialWindow3.1" category="Text">
-		Unsere eigene Software FactCheck (v3.02) filtert Nachrichten aus den Sozialen Medien und bereitet
-		die für Sie relevanten Informationen in einheitlicher Form auf.
-	</text>
-	<text name="TutorialWindow3.2" category="Text">
-		Überprüfen Sie die Informationen auf Richtigkeit und markieren Sie die Nachrichten mit
-		falschen informationen ggf. als Fake News. Führen Sie dazu bitte die &lt;b&gt;5 Arbeitsschritte&lt;/b&gt; durch, die im Folgenden erklärt werden.
-	</text>
-	<text name="TutorialWindow4.1" category="Text">
-		&lt;b&gt;Schritt 1) Veröffentlichungsdatum der Nachricht &lt;/b&gt;
-	</text>
-	<text name="TutorialWindow4.2" category ="Text">
-		Überprüfen Sie, ob der Artikel auch wirklich zum Zeitpunkt des thematisierten Ereignisses erschienen ist.
-		Sehen Sie sich dazu &lt;b&gt;Anlage A&lt;/b&gt; an.
-	</text>
-	<text name="TutorialWindow5.1" category="Text">
-		&lt;b&gt;Schritt 2) Autorinnen/Autoren und ihre Fachgebiete &lt;/b&gt;
-	</text>
-	<text name="TutorialWindow5.2" category="Text">
-		Schreiben die Autorin oder der Autor auch wirklich für das angegebene Ressort? Sehen Sie sich dazu
-		&lt;b&gt;Anlage B&lt;/b&gt; an.
-	</text>
-	<text name="TutorialWindow6.1" category="Text">
-		&lt;b&gt;Schritt 3) Autorinnen / Autoren und ihre Zeitungen&lt;/b&gt;
-	</text>
-	<text name="TutorialWindow6.2" category="Text">
-		Schreiben die genannten Autorinnen und Autoren auch wirklich für die angegebene Zeitung? Sehen
-		Sie sich dazu &lt;b&gt;Anlage C&lt;/b&gt; an und vergleichen Sie die Kürzel der Autoren mit &lt;b&gt;Anlage B&lt;/b&gt;.
-	</text>
-	<text name="TutorialWindow7.1" category="Text">
-		&lt;b&gt;Schritt 4) Veröffentlichungsort&lt;/b&gt;
-	</text>
-	<text name="TutorialWindow7.2" category="Text">
-		Stimmt der genannte Ort, in dem die angegebene Zeitung publiziert sein soll? Vergleichen Sie
-		hierzu &lt;b&gt;Anlage D&lt;/b&gt; mit der vorliegenden Karte Freilands und ggf.
-		der Übersicht über die Bundesländer.
-	</text>
-	<text name="TutorialWindow8.1" category="Text">
-		&lt;b&gt;Schritt 5) Veröffentlichungsdatum&lt;/b&gt;
-	</text>
-	<text name="TutorialWindow8.2" category="Text">
-		Ist das Erscheinungsdatum der Zeitung korrekt oder zumindest plausibel? Sehen Sie sich dazu &lt;b&gt;Anlage E&lt;/b&gt; an und nehmen Sie einen Kalender zur Hand, falls nötig.
-	</text>
-	<text name="TutorialWindow9" category="Text">
-		Für eine detaillierte Erläuterung der Arbeitsschritte lesen Sie bei Bedarf bitte das Dokument &lt;b&gt;Arbeitsanweisung für Faktenchecker.&lt;/b&gt;
+	<text name="TutorialWindow3.1" category="Text">Unsere eigene Software FactCheck (v3.02) filtert Nachrichten aus den Sozialen Medien und bereitet die für Sie relevanten Informationen in einheitlicher Form auf.</text>
+	<text name="TutorialWindow3.2" category="Text">Überprüfen Sie die Informationen auf Richtigkeit und markieren Sie die Nachrichten mit falschen informationen ggf. als Fake News. Führen Sie dazu bitte die &lt;b&gt;5 Arbeitsschritte&lt;/b&gt; durch, die im Folgenden erklärt werden.</text>
+	<text name="TutorialWindow4.1" category="Text">&lt;b&gt;Schritt 1) Veröffentlichungsdatum der Nachricht &lt;/b&gt;</text>
+	<text name="TutorialWindow4.2" category ="Text">Überprüfen Sie, ob der Artikel auch wirklich zum Zeitpunkt des thematisierten Ereignisses erschienen ist. Sehen Sie sich dazu &lt;b&gt;Anlage A&lt;/b&gt; an.</text>
+	<text name="TutorialWindow5.1" category="Text">&lt;b&gt;Schritt 2) Autorinnen/Autoren und ihre Fachgebiete &lt;/b&gt;</text>
+	<text name="TutorialWindow5.2" category="Text">Schreiben die Autorin oder der Autor auch wirklich für das angegebene Ressort? Sehen Sie sich dazu &lt;b&gt;Anlage B&lt;/b&gt; an.</text>
+	<text name="TutorialWindow6.1" category="Text">&lt;b&gt;Schritt 3) Autorinnen / Autoren und ihre Zeitungen&lt;/b&gt;</text>
+	<text name="TutorialWindow6.2" category="Text">Schreiben die genannten Autorinnen und Autoren auch wirklich für die angegebene Zeitung? Sehen Sie sich dazu &lt;b&gt;Anlage C&lt;/b&gt; an und vergleichen Sie die Kürzel der Autoren mit &lt;b&gt;Anlage B&lt;/b&gt;.</text>
+	<text name="TutorialWindow7.1" category="Text">&lt;b&gt;Schritt 4) Veröffentlichungsort&lt;/b&gt;</text>
+	<text name="TutorialWindow7.2" category="Text">Stimmt der genannte Ort, in dem die angegebene Zeitung publiziert sein soll? Vergleichen Sie hierzu &lt;b&gt;Anlage D&lt;/b&gt; mit der vorliegenden Karte Freilands und ggf. der Übersicht über die Bundesländer.</text>
+	<text name="TutorialWindow8.1" category="Text">&lt;b&gt;Schritt 5) Veröffentlichungsdatum&lt;/b&gt;</text>
+	<text name="TutorialWindow8.2" category="Text">Ist das Erscheinungsdatum der Zeitung korrekt oder zumindest plausibel? Sehen Sie sich dazu &lt;b&gt;Anlage E&lt;/b&gt; an und nehmen Sie einen Kalender zur Hand, falls nötig.</text>
+	<text name="TutorialWindow9" category="Text">Für eine detaillierte Erläuterung der Arbeitsschritte lesen Sie bei Bedarf bitte das Dokument &lt;b&gt;Arbeitsanweisung für Faktenchecker.&lt;/b&gt;
 
-		Bitte überprüfen Sie, ob Ihnen alle relevanten Dokumente (&lt;b&gt;Anlagen A bis E&lt;/b&gt;) vollständig vorliegen. Sollten Unterlagen fehlen, wenden Sie sich bitte vor Arbeitsbeginn an Ihren
-		Abteilungsleiter.
-	</text>
-	<text name="TutorialWindow10" category="Text">
-		Zu Beginn arbeiten Sie Nachrichten auf, die bereits teilweise verifiziert wurden (siehe grüne Markierung). Konzentrieren Sie sich daher auf die noch nicht überprüften Informationen.
-	</text>
-	<text name="TutorialWindow11.1" category="Text">
-		Ihre Einführung in unsere Fact-Checking-Software (v3.02) ist damit beendet. Denken Sie daran, die vorliegenden Dokumente für Ihre Recherche zu nutzen und arbeiten Sie sorgfältig.
-	</text>
-	<text name="TutorialWindow11.2" category="Text">
-		Aus Sicherheitsgründen sammeln unsere Server ihre überprüften Informationen in kurzen
-		Intervallen, um Sie mit den Ergebnissen Ihrer Kolleginnen und Kollegen zu vergleichen. Sie
-		haben daher nun &lt;b&gt;7 Minuten&lt;/b&gt; Zeit (siehe Timer), um möglichst viele Informationen zu überprüfen.
+Bitte überprüfen Sie, ob Ihnen alle relevanten Dokumente (&lt;b&gt;Anlagen A bis E&lt;/b&gt;) vollständig vorliegen. Sollten Unterlagen fehlen, wenden Sie sich bitte vor Arbeitsbeginn an Ihren Abteilungsleiter.</text>
+	<text name="TutorialWindow10" category="Text">Zu Beginn arbeiten Sie Nachrichten auf, die bereits teilweise verifiziert wurden (siehe grüne Markierung). Konzentrieren Sie sich daher auf die noch nicht überprüften Informationen.</text>
+	<text name="TutorialWindow11.1" category="Text">Ihre Einführung in unsere Fact-Checking-Software (v3.02) ist damit beendet. Denken Sie daran, die vorliegenden Dokumente für Ihre Recherche zu nutzen und arbeiten Sie sorgfältig.</text>
+	<text name="TutorialWindow11.2" category="Text">Aus Sicherheitsgründen sammeln unsere Server ihre überprüften Informationen in kurzen Intervallen, um Sie mit den Ergebnissen Ihrer Kolleginnen und Kollegen zu vergleichen. Sie haben daher nun &lt;b&gt;7 Minuten&lt;/b&gt; Zeit (siehe Timer), um möglichst viele Informationen zu überprüfen.
 
-		Die
-		Leitung der Abteilung F wünscht Ihnen gutes Gelingen!
-	</text>
+Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
 	<text name="Next" category="Button">>> Next</text>
 	<text name="Skip" category="Button">Skip</text>
 	<text name="Start" category="Button">Start</text>
@@ -185,9 +128,7 @@
 	<text name="Fake" category="Button">Fake</text>
 
 	<text name="End" category="Header">Ende der Arbeitsphase</text>
-	<text name="End" category="Text">
-		Mitarbeiter Evaluation von FactcheckerIn ID: {0}. \n\nSie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie {2} falsche Nachrichten als wahr\nund {3} wahre Nachrichten als falsch eingestuft.
-	</text>
+	<text name="End" category="Text"> Mitarbeiter Evaluation von FactcheckerIn ID: {0}. \n\nSie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie {2} falsche Nachrichten als wahr\nund {3} wahre Nachrichten als falsch eingestuft.</text>
 	<text name="LogOut" category="Button">Log Out</text>
 	<text name="BackToDesktop" category="Button">Back to Desktop</text>
 
