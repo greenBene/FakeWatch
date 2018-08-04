@@ -128,7 +128,11 @@ Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
 	<text name="Fake" category="Button">Fake</text>
 
 	<text name="End" category="Header">Ende der Arbeitsphase</text>
-	<text name="End" category="Text"> Mitarbeiter Evaluation von FactcheckerIn ID: {0}. \n\nSie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie {2} falsche Nachrichten als wahr\nund {3} wahre Nachrichten als falsch eingestuft.</text>
+	<text name="End" category="Text"> Mitarbeiter Evaluation von FactcheckerIn ID: {0}.
+
+Sie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.
+Dagegen haben Sie {2} falsche Nachrichten als wahr
+und {3} wahre Nachrichten als falsch eingestuft.</text>
 	<text name="LogOut" category="Button">Log Out</text>
 	<text name="BackToDesktop" category="Button">Back to Desktop</text>
 

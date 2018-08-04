@@ -7,25 +7,32 @@ using System.IO;
 public class EndScreenWindow : Window {
     [SerializeField]
     Text text;
+    [SerializeField]
+    bool UseXML;
 
     public override void Start() {
         base.Start();
         GameManager.Instance.RegistEnd(this);
     }
     public override void Show() {
-        if (PlayerPrefs.GetString("language") == "german") {
-            text.text = "Mitarbeiter Evaluation von FactcheckerIn ID: " + GameManager.Instance.PlayerID + ". \n\nSie haben " + GameManager.Instance.correctMarkedArticles +
-                " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
-                " falsche Nachrichten als wahr\nund " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
-                " wahre Nachrichten als falsch eingestuft.";
+        if (UseXML) {
+            text.text = string.Format(GameManager.XMLLoader.GetValue(xmlFiles.scene, "text",new string[2] { "name", "category" }, new string[2] { "End", "Text" }),
+                GameManager.Instance.PlayerID, GameManager.Instance.correctMarkedArticles, GameManager.Instance.wronglyMarkedArticlesAsTrue, GameManager.Instance.wronglyMarkedArticlesAsFalse);
         } else {
-            text.text = "Employee Evaluation of Factchecker ID: " + GameManager.Instance.PlayerID + ".\n\nYou have checked " + GameManager.Instance.correctMarkedArticles +
-                " news correctly based on their truth.\nYou marked " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
-                " fake news as true\nand " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
-                " true news as wrong.";
+            if (PlayerPrefs.GetString("language") == "german") {
+                text.text = "Mitarbeiter Evaluation von FactcheckerIn ID: " + GameManager.Instance.PlayerID + ". \n\nSie haben " + GameManager.Instance.correctMarkedArticles +
+                    " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
+                    " falsche Nachrichten als wahr\nund " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
+                    " wahre Nachrichten als falsch eingestuft.";
+            } else {
+                text.text = "Employee Evaluation of Factchecker ID: " + GameManager.Instance.PlayerID + ".\n\nYou have checked " + GameManager.Instance.correctMarkedArticles +
+                    " news correctly based on their truth.\nYou marked " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
+                    " fake news as true\nand " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
+                    " true news as wrong.";
+            }
         }
-        SetPosition(Screen.width / 2, Screen.height / 2);
 
+        SetPosition(Screen.width / 2, Screen.height / 2);
         base.Show();
     }
 

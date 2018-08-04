@@ -8763,6 +8763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 614537399}
+  UseXML: 1
 --- !u!114 &832346735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16707,6 +16708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 281340913}
+  UseXML: 0
 --- !u!114 &1586417961
 MonoBehaviour:
   m_ObjectHideFlags: 0
