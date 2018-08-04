@@ -13,10 +13,13 @@ public class XMLLoader{
 
     public XMLLoader()
     {
+        string fileScenes = "Language/Scene.xml";
+
+
         xmlDict = new Dictionary<xmlFiles, XmlDocument>();
 
         XmlDocument scenes = new XmlDocument();
-        scenes.Load("Language/Scene.xml");
+        scenes.Load(fileScenes);
         xmlDict.Add(xmlFiles.scene, scenes);
 
         UpdateLanguage(false);

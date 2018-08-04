@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
 	
 	void Update () {
         StateTransition();
-        StateOnStay(); //for stuff that has to be done every frame in an specifik state
+        StateOnStay(); //for stuff that has to be done every frame in an specific state
         DebugCorrect1 = correctMarkedArticles;
         DebugWrong1 = wronglyMarkedArticlesAsFalse;
         DebugWrong2 = wronglyMarkedArticlesAsTrue;
