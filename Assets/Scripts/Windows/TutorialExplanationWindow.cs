@@ -9,7 +9,7 @@ public class TutorialExplanationWindow : Window {
         SetPosition(Screen.width / 2, Screen.height / 2);
     }
 
-    protected override void MoveToFront() {
+    public override void MoveToFront() {
         this.gameObject.transform.parent.transform.SetAsLastSibling();
     }
 }

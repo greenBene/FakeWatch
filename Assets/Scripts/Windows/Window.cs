@@ -72,7 +72,7 @@ public abstract class Window : MonoBehaviour {
         Destroy(gameObject, delay);
     }
 
-    protected virtual void MoveToFront()
+    public virtual void MoveToFront()
     {
         this.gameObject.transform.SetAsLastSibling();
     }
