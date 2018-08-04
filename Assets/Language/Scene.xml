@@ -87,7 +87,7 @@
 	
 	<text name="Tutorial" category="Header">Fact-Checking-Software (v3.02)</text>
 	<path name="ExampleNews1" category="Image">Tut Images/schritt1tut.png</path>
-	<path name="arbeitsanweisung" category="Image">Tut Images/arbeitsanweisung.png</path>
+	<path name="OperatingInstructions" category="Image">Tut Images/arbeitsanweisung.png</path>
 	<path name="ExampleNews2" category="Image">Tut Images/windowGrun.png</path>
 	<text name="TutorialWindow1" category="Text">
 		Willkommen im Intranet des Ministeriums für Nachrichtenkompetenz
@@ -176,6 +176,7 @@
 	</text>
 	<text name="Next" category="Button">>> Next</text>
 	<text name="Skip" category="Button">Skip</text>
+	<text name="Start" category="Button">Start</text>
 	
 	<text name="Game" category="Icon">Fact Checking Software.exe</text>
 	<path name="Game" category="Image">Icons/gameDesktopIcon.png</path>

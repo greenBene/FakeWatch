@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 501219204}
   - component: {fileID: 501219206}
   - component: {fileID: 501219205}
+  - component: {fileID: 501219207}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -438,6 +439,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501219203}
+--- !u!114 &501219207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501219203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Intro
+  attrname: Password
 --- !u!1 &1371697499
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +462,7 @@ GameObject:
   - component: {fileID: 1371697500}
   - component: {fileID: 1371697502}
   - component: {fileID: 1371697501}
+  - component: {fileID: 1371697503}
   m_Layer: 5
   m_Name: logo
   m_TagString: Untagged
@@ -506,6 +521,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1371697499}
+--- !u!114 &1371697503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371697499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: LogoWhite
 --- !u!1 &1456960046
 GameObject:
   m_ObjectHideFlags: 0

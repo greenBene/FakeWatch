@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 2460942}
   - component: {fileID: 2460944}
   - component: {fileID: 2460943}
+  - component: {fileID: 2460945}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -191,6 +192,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2460941}
+--- !u!114 &2460945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2460941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &6070029
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +283,7 @@ GameObject:
   - component: {fileID: 13896934}
   - component: {fileID: 13896936}
   - component: {fileID: 13896935}
+  - component: {fileID: 13896937}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -333,6 +348,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 13896933}
+--- !u!114 &13896937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 13896933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Quit
 --- !u!1 &31885092
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +627,7 @@ GameObject:
   - component: {fileID: 49350931}
   - component: {fileID: 49350933}
   - component: {fileID: 49350932}
+  - component: {fileID: 49350934}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -664,6 +693,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49350930}
+--- !u!114 &49350934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49350930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow1
 --- !u!1 &51757898
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +960,7 @@ GameObject:
   - component: {fileID: 79268631}
   - component: {fileID: 79268633}
   - component: {fileID: 79268632}
+  - component: {fileID: 79268634}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -982,6 +1025,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 79268630}
+--- !u!114 &79268634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79268630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Icon
+  attrname: Creadits
 --- !u!1 &83184257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1116,7 @@ GameObject:
   - component: {fileID: 83267089}
   - component: {fileID: 83267091}
   - component: {fileID: 83267090}
+  - component: {fileID: 83267092}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -1118,6 +1175,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83267088}
+--- !u!114 &83267092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83267088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: LogoBlack
 --- !u!1 &96735664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1480,7 @@ GameObject:
   - component: {fileID: 165334725}
   - component: {fileID: 165334727}
   - component: {fileID: 165334726}
+  - component: {fileID: 165334728}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1478,6 +1549,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165334724}
+--- !u!114 &165334728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165334724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow9
 --- !u!1 &175232458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1641,7 @@ GameObject:
   - component: {fileID: 176977182}
   - component: {fileID: 176977184}
   - component: {fileID: 176977183}
+  - component: {fileID: 176977185}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1624,6 +1709,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 176977181}
+--- !u!114 &176977185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176977181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Start
 --- !u!1 &180655753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,6 +1800,7 @@ GameObject:
   - component: {fileID: 181152554}
   - component: {fileID: 181152556}
   - component: {fileID: 181152555}
+  - component: {fileID: 181152557}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -1766,6 +1865,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 181152553}
+--- !u!114 &181152557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 181152553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &184199462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2357,7 @@ GameObject:
   - component: {fileID: 219882486}
   - component: {fileID: 219882488}
   - component: {fileID: 219882487}
+  - component: {fileID: 219882489}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -2309,6 +2422,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 219882485}
+--- !u!114 &219882489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219882485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &227399855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,6 +2445,7 @@ GameObject:
   - component: {fileID: 227399856}
   - component: {fileID: 227399858}
   - component: {fileID: 227399857}
+  - component: {fileID: 227399859}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2383,6 +2510,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227399855}
+--- !u!114 &227399859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227399855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Icon
+  attrname: Game
 --- !u!1 &235456056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,6 +3078,7 @@ GameObject:
   - component: {fileID: 312801729}
   - component: {fileID: 312801731}
   - component: {fileID: 312801730}
+  - component: {fileID: 312801732}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3010,6 +3151,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 312801728}
+--- !u!114 &312801732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312801728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow2
 --- !u!1 &317440414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3378,7 @@ GameObject:
   - component: {fileID: 322842948}
   - component: {fileID: 322842950}
   - component: {fileID: 322842949}
+  - component: {fileID: 322842951}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -3290,6 +3445,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 322842947}
+--- !u!114 &322842951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 322842947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow3.2
 --- !u!1 &336367613
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,6 +3468,7 @@ GameObject:
   - component: {fileID: 336367614}
   - component: {fileID: 336367616}
   - component: {fileID: 336367615}
+  - component: {fileID: 336367617}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3364,6 +3533,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 336367613}
+--- !u!114 &336367617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336367613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Zeitung
 --- !u!1 &345387606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3624,7 @@ GameObject:
   - component: {fileID: 363132389}
   - component: {fileID: 363132391}
   - component: {fileID: 363132390}
+  - component: {fileID: 363132392}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -3507,6 +3690,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 363132388}
+--- !u!114 &363132392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363132388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow5.2
 --- !u!1 &364596240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3713,7 @@ GameObject:
   - component: {fileID: 364596241}
   - component: {fileID: 364596243}
   - component: {fileID: 364596242}
+  - component: {fileID: 364596244}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3583,6 +3780,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 364596240}
+--- !u!114 &364596244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 364596240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow10
 --- !u!1 &367628474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,6 +4016,7 @@ GameObject:
   - component: {fileID: 421446301}
   - component: {fileID: 421446303}
   - component: {fileID: 421446302}
+  - component: {fileID: 421446304}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -3870,6 +4081,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 421446300}
+--- !u!114 &421446304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421446300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &421967694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,6 +4104,7 @@ GameObject:
   - component: {fileID: 421967695}
   - component: {fileID: 421967697}
   - component: {fileID: 421967696}
+  - component: {fileID: 421967698}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3944,6 +4169,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 421967694}
+--- !u!114 &421967698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421967694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Autor
 --- !u!1 &434318283
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,6 +4320,7 @@ GameObject:
   - component: {fileID: 446051240}
   - component: {fileID: 446051242}
   - component: {fileID: 446051241}
+  - component: {fileID: 446051243}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4148,6 +4387,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 446051239}
+--- !u!114 &446051243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446051239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow3.1
 --- !u!1 &457890133
 GameObject:
   m_ObjectHideFlags: 0
@@ -4159,6 +4411,7 @@ GameObject:
   - component: {fileID: 457890134}
   - component: {fileID: 457890136}
   - component: {fileID: 457890135}
+  - component: {fileID: 457890137}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4226,6 +4479,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457890133}
+--- !u!114 &457890137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457890133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &462254452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,6 +4571,7 @@ GameObject:
   - component: {fileID: 465220151}
   - component: {fileID: 465220153}
   - component: {fileID: 465220152}
+  - component: {fileID: 465220154}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4372,6 +4639,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 465220150}
+--- !u!114 &465220154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 465220150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &471580945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5265,6 +5545,7 @@ GameObject:
   - component: {fileID: 537658420}
   - component: {fileID: 537658422}
   - component: {fileID: 537658421}
+  - component: {fileID: 537658423}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -5323,6 +5604,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537658419}
+--- !u!114 &537658423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537658419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews1
 --- !u!1 &555005894
 GameObject:
   m_ObjectHideFlags: 0
@@ -5333,6 +5627,7 @@ GameObject:
   - component: {fileID: 555005895}
   - component: {fileID: 555005897}
   - component: {fileID: 555005896}
+  - component: {fileID: 555005898}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5399,6 +5694,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 555005894}
+--- !u!114 &555005898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555005894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow11.1
 --- !u!1 &565200524
 GameObject:
   m_ObjectHideFlags: 0
@@ -5659,6 +5967,7 @@ GameObject:
   - component: {fileID: 586391195}
   - component: {fileID: 586391197}
   - component: {fileID: 586391196}
+  - component: {fileID: 586391198}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -5725,6 +6034,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 586391194}
+--- !u!114 &586391198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 586391194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow6.2
 --- !u!1 &592755070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6005,6 +6327,7 @@ GameObject:
   - component: {fileID: 614537398}
   - component: {fileID: 614537400}
   - component: {fileID: 614537399}
+  - component: {fileID: 614537401}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6070,6 +6393,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 614537397}
+--- !u!114 &614537401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 614537397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: End
 --- !u!1 &614839241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,6 +6606,7 @@ GameObject:
   - component: {fileID: 690902901}
   - component: {fileID: 690902903}
   - component: {fileID: 690902902}
+  - component: {fileID: 690902904}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6337,6 +6674,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 690902900}
+--- !u!114 &690902904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 690902900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: LogOut
 --- !u!1 &707614053
 GameObject:
   m_ObjectHideFlags: 0
@@ -6553,6 +6903,7 @@ GameObject:
   - component: {fileID: 714927679}
   - component: {fileID: 714927681}
   - component: {fileID: 714927680}
+  - component: {fileID: 714927682}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6620,6 +6971,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714927678}
+--- !u!114 &714927682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714927678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &716235707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6631,6 +6995,7 @@ GameObject:
   - component: {fileID: 716235708}
   - component: {fileID: 716235710}
   - component: {fileID: 716235709}
+  - component: {fileID: 716235711}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6698,6 +7063,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 716235707}
+--- !u!114 &716235711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716235707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: BackToDesktop
 --- !u!1 &719535268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6709,6 +7087,7 @@ GameObject:
   - component: {fileID: 719535269}
   - component: {fileID: 719535271}
   - component: {fileID: 719535270}
+  - component: {fileID: 719535272}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6776,6 +7155,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719535268}
+--- !u!114 &719535272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719535268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &725553672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6786,6 +7178,7 @@ GameObject:
   - component: {fileID: 725553673}
   - component: {fileID: 725553675}
   - component: {fileID: 725553674}
+  - component: {fileID: 725553676}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6850,6 +7243,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 725553672}
+--- !u!114 &725553676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725553672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow8.1
 --- !u!1 &737414634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,6 +7266,7 @@ GameObject:
   - component: {fileID: 737414635}
   - component: {fileID: 737414637}
   - component: {fileID: 737414636}
+  - component: {fileID: 737414638}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -6928,6 +7335,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 737414634}
+--- !u!114 &737414638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737414634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow11.2
 --- !u!1 &763759665
 GameObject:
   m_ObjectHideFlags: 0
@@ -7135,6 +7555,7 @@ GameObject:
   - component: {fileID: 774319736}
   - component: {fileID: 774319738}
   - component: {fileID: 774319737}
+  - component: {fileID: 774319739}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7202,6 +7623,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 774319735}
+--- !u!114 &774319739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774319735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &777150241
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,6 +7646,7 @@ GameObject:
   - component: {fileID: 777150242}
   - component: {fileID: 777150244}
   - component: {fileID: 777150243}
+  - component: {fileID: 777150245}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -7270,6 +7705,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777150241}
+--- !u!114 &777150245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777150241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: LogoBlack
 --- !u!1 &798805891
 GameObject:
   m_ObjectHideFlags: 0
@@ -7415,6 +7863,7 @@ GameObject:
   - component: {fileID: 800747053}
   - component: {fileID: 800747055}
   - component: {fileID: 800747054}
+  - component: {fileID: 800747056}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7482,6 +7931,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800747052}
+--- !u!114 &800747056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800747052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &805088081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,6 +8569,7 @@ GameObject:
   - component: {fileID: 815462625}
   - component: {fileID: 815462627}
   - component: {fileID: 815462626}
+  - component: {fileID: 815462628}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8174,6 +8637,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815462624}
+--- !u!114 &815462628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815462624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &825439153
 GameObject:
   m_ObjectHideFlags: 0
@@ -8522,6 +8998,7 @@ GameObject:
   - component: {fileID: 839924601}
   - component: {fileID: 839924603}
   - component: {fileID: 839924602}
+  - component: {fileID: 839924604}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -8580,6 +9057,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 839924600}
+--- !u!114 &839924604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839924600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews1
 --- !u!1 &845651451
 GameObject:
   m_ObjectHideFlags: 0
@@ -8659,6 +9149,7 @@ GameObject:
   - component: {fileID: 847519733}
   - component: {fileID: 847519735}
   - component: {fileID: 847519734}
+  - component: {fileID: 847519736}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8726,6 +9217,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 847519732}
+--- !u!114 &847519736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 847519732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &853803079
 GameObject:
   m_ObjectHideFlags: 0
@@ -8737,6 +9241,7 @@ GameObject:
   - component: {fileID: 853803080}
   - component: {fileID: 853803082}
   - component: {fileID: 853803081}
+  - component: {fileID: 853803083}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8804,6 +9309,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 853803079}
+--- !u!114 &853803083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853803079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &856335143
 GameObject:
   m_ObjectHideFlags: 0
@@ -9243,6 +9761,7 @@ GameObject:
   - component: {fileID: 910956792}
   - component: {fileID: 910956794}
   - component: {fileID: 910956793}
+  - component: {fileID: 910956795}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -9310,6 +9829,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910956791}
+--- !u!114 &910956795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910956791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &931526392
 GameObject:
   m_ObjectHideFlags: 0
@@ -9320,6 +9852,7 @@ GameObject:
   - component: {fileID: 931526393}
   - component: {fileID: 931526395}
   - component: {fileID: 931526394}
+  - component: {fileID: 931526396}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -9378,6 +9911,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931526392}
+--- !u!114 &931526396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931526392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews1
 --- !u!1 &933225605
 GameObject:
   m_ObjectHideFlags: 0
@@ -9525,6 +10071,7 @@ GameObject:
   - component: {fileID: 938572337}
   - component: {fileID: 938572339}
   - component: {fileID: 938572338}
+  - component: {fileID: 938572340}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -9592,6 +10139,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 938572336}
+--- !u!114 &938572340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938572336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &941539087
 GameObject:
   m_ObjectHideFlags: 0
@@ -9602,6 +10162,7 @@ GameObject:
   - component: {fileID: 941539088}
   - component: {fileID: 941539090}
   - component: {fileID: 941539089}
+  - component: {fileID: 941539091}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -9666,6 +10227,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941539087}
+--- !u!114 &941539091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941539087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow4.1
 --- !u!1 &943672985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9867,6 +10441,7 @@ GameObject:
   - component: {fileID: 964752294}
   - component: {fileID: 964752296}
   - component: {fileID: 964752295}
+  - component: {fileID: 964752297}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -9934,6 +10509,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 964752293}
+--- !u!114 &964752297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964752293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &970708811
 GameObject:
   m_ObjectHideFlags: 0
@@ -9945,6 +10533,7 @@ GameObject:
   - component: {fileID: 970708812}
   - component: {fileID: 970708814}
   - component: {fileID: 970708813}
+  - component: {fileID: 970708815}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -10012,6 +10601,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 970708811}
+--- !u!114 &970708815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970708811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &974914731
 GameObject:
   m_ObjectHideFlags: 0
@@ -10022,6 +10624,7 @@ GameObject:
   - component: {fileID: 974914732}
   - component: {fileID: 974914734}
   - component: {fileID: 974914733}
+  - component: {fileID: 974914735}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -10080,6 +10683,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974914731}
+--- !u!114 &974914735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974914731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews1
 --- !u!1 &989984785
 GameObject:
   m_ObjectHideFlags: 0
@@ -10304,6 +10920,7 @@ GameObject:
   - component: {fileID: 1019170257}
   - component: {fileID: 1019170259}
   - component: {fileID: 1019170258}
+  - component: {fileID: 1019170260}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -10362,6 +10979,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1019170256}
+--- !u!114 &1019170260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1019170256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: Game
 --- !u!1 &1027625928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10372,6 +11002,7 @@ GameObject:
   - component: {fileID: 1027625929}
   - component: {fileID: 1027625931}
   - component: {fileID: 1027625930}
+  - component: {fileID: 1027625932}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -10436,6 +11067,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027625928}
+--- !u!114 &1027625932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027625928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1044958773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11042,6 +11686,7 @@ GameObject:
   - component: {fileID: 1076470956}
   - component: {fileID: 1076470958}
   - component: {fileID: 1076470957}
+  - component: {fileID: 1076470959}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -11100,6 +11745,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076470955}
+--- !u!114 &1076470959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076470955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews1
 --- !u!1 &1079022315
 GameObject:
   m_ObjectHideFlags: 0
@@ -11444,6 +12102,7 @@ GameObject:
   - component: {fileID: 1097718428}
   - component: {fileID: 1097718430}
   - component: {fileID: 1097718429}
+  - component: {fileID: 1097718431}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -11508,6 +12167,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1097718427}
+--- !u!114 &1097718431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097718427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow6.1
 --- !u!1 &1108048512
 GameObject:
   m_ObjectHideFlags: 0
@@ -11586,6 +12258,7 @@ GameObject:
   - component: {fileID: 1110927532}
   - component: {fileID: 1110927534}
   - component: {fileID: 1110927533}
+  - component: {fileID: 1110927535}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -11650,6 +12323,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110927531}
+--- !u!114 &1110927535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110927531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1128743290
 GameObject:
   m_ObjectHideFlags: 0
@@ -11660,6 +12346,7 @@ GameObject:
   - component: {fileID: 1128743291}
   - component: {fileID: 1128743293}
   - component: {fileID: 1128743292}
+  - component: {fileID: 1128743294}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -11724,6 +12411,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1128743290}
+--- !u!114 &1128743294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128743290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1129344552
 GameObject:
   m_ObjectHideFlags: 0
@@ -11734,6 +12434,7 @@ GameObject:
   - component: {fileID: 1129344553}
   - component: {fileID: 1129344555}
   - component: {fileID: 1129344554}
+  - component: {fileID: 1129344556}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -11799,6 +12500,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1129344552}
+--- !u!114 &1129344556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129344552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow4.2
 --- !u!1 &1135147343
 GameObject:
   m_ObjectHideFlags: 0
@@ -12005,6 +12719,7 @@ GameObject:
   - component: {fileID: 1146560480}
   - component: {fileID: 1146560482}
   - component: {fileID: 1146560481}
+  - component: {fileID: 1146560483}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -12071,6 +12786,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146560479}
+--- !u!114 &1146560483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1146560479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow7.2
 --- !u!1 &1157660384
 GameObject:
   m_ObjectHideFlags: 0
@@ -12467,6 +13195,7 @@ GameObject:
   - component: {fileID: 1198620697}
   - component: {fileID: 1198620699}
   - component: {fileID: 1198620698}
+  - component: {fileID: 1198620700}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -12531,6 +13260,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198620696}
+--- !u!114 &1198620700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198620696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1208930138
 GameObject:
   m_ObjectHideFlags: 0
@@ -12541,6 +13283,7 @@ GameObject:
   - component: {fileID: 1208930139}
   - component: {fileID: 1208930141}
   - component: {fileID: 1208930140}
+  - component: {fileID: 1208930142}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -12605,6 +13348,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1208930138}
+--- !u!114 &1208930142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1208930138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Datum
 --- !u!1 &1228990946
 GameObject:
   m_ObjectHideFlags: 0
@@ -13003,6 +13759,7 @@ GameObject:
   - component: {fileID: 1258949432}
   - component: {fileID: 1258949434}
   - component: {fileID: 1258949433}
+  - component: {fileID: 1258949435}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -13070,6 +13827,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1258949431}
+--- !u!114 &1258949435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258949431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &1263264932
 GameObject:
   m_ObjectHideFlags: 0
@@ -13148,6 +13918,7 @@ GameObject:
   - component: {fileID: 1267128098}
   - component: {fileID: 1267128100}
   - component: {fileID: 1267128099}
+  - component: {fileID: 1267128101}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -13212,6 +13983,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267128097}
+--- !u!114 &1267128101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1267128097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Ort
 --- !u!1 &1288501984
 GameObject:
   m_ObjectHideFlags: 0
@@ -13289,11 +14073,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288501984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46093f37074eb443a6baf524a9e6f5b, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logoEnglish: {fileID: 21300000, guid: b9c494b167f957e4e981ccfddd6c0012, type: 3}
-  logoGerman: {fileID: 21300000, guid: 2cb535bbf235ef4449faaf21ac1d347a, type: 3}
+  attrcategory: Image
+  attrname: LogoWhite
 --- !u!1 &1298561967
 GameObject:
   m_ObjectHideFlags: 0
@@ -13518,6 +14302,7 @@ GameObject:
   - component: {fileID: 1341517586}
   - component: {fileID: 1341517588}
   - component: {fileID: 1341517587}
+  - component: {fileID: 1341517589}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -13576,6 +14361,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341517585}
+--- !u!114 &1341517589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341517585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews1
 --- !u!1 &1360852662
 GameObject:
   m_ObjectHideFlags: 0
@@ -13851,6 +14649,7 @@ GameObject:
   - component: {fileID: 1394499205}
   - component: {fileID: 1394499207}
   - component: {fileID: 1394499206}
+  - component: {fileID: 1394499208}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -13915,6 +14714,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1394499204}
+--- !u!114 &1394499208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1394499204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1395202895
 GameObject:
   m_ObjectHideFlags: 0
@@ -14345,6 +15157,7 @@ GameObject:
   - component: {fileID: 1446199477}
   - component: {fileID: 1446199479}
   - component: {fileID: 1446199478}
+  - component: {fileID: 1446199480}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -14412,6 +15225,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1446199476}
+--- !u!114 &1446199480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446199476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Next
 --- !u!1 &1453574442
 GameObject:
   m_ObjectHideFlags: 0
@@ -14944,6 +15770,7 @@ GameObject:
   - component: {fileID: 1500763541}
   - component: {fileID: 1500763543}
   - component: {fileID: 1500763542}
+  - component: {fileID: 1500763544}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -15002,6 +15829,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1500763540}
+--- !u!114 &1500763544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500763540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: ExampleNews2
 --- !u!1 &1514496052
 GameObject:
   m_ObjectHideFlags: 0
@@ -15442,6 +16282,7 @@ GameObject:
   - component: {fileID: 1569214346}
   - component: {fileID: 1569214348}
   - component: {fileID: 1569214347}
+  - component: {fileID: 1569214349}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -15506,6 +16347,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569214345}
+--- !u!114 &1569214349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569214345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1575743842
 GameObject:
   m_ObjectHideFlags: 0
@@ -15702,6 +16556,7 @@ GameObject:
   - component: {fileID: 1583331016}
   - component: {fileID: 1583331018}
   - component: {fileID: 1583331017}
+  - component: {fileID: 1583331019}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -15768,6 +16623,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1583331015}
+--- !u!114 &1583331019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583331015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow8.2
 --- !u!1 &1586417956
 GameObject:
   m_ObjectHideFlags: 0
@@ -16056,6 +16924,7 @@ GameObject:
   - component: {fileID: 1618731028}
   - component: {fileID: 1618731030}
   - component: {fileID: 1618731029}
+  - component: {fileID: 1618731031}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -16120,6 +16989,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1618731027}
+--- !u!114 &1618731031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618731027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1620534911
 GameObject:
   m_ObjectHideFlags: 0
@@ -16479,6 +17361,7 @@ GameObject:
   - component: {fileID: 1643738647}
   - component: {fileID: 1643738649}
   - component: {fileID: 1643738648}
+  - component: {fileID: 1643738650}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -16543,6 +17426,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1643738646}
+--- !u!114 &1643738650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643738646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Headline
 --- !u!224 &1645528198 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224235564358316398, guid: 8d0787f3328d453418544774f74a7bcd,
@@ -17276,6 +18172,7 @@ GameObject:
   - component: {fileID: 1735539560}
   - component: {fileID: 1735539562}
   - component: {fileID: 1735539561}
+  - component: {fileID: 1735539563}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -17334,6 +18231,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1735539559}
+--- !u!114 &1735539563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735539559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8709f6bac86b4aa792ace37c17c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Image
+  attrname: OperatingInstructions
 --- !u!1 &1753612891
 GameObject:
   m_ObjectHideFlags: 0
@@ -17344,6 +18254,7 @@ GameObject:
   - component: {fileID: 1753612892}
   - component: {fileID: 1753612894}
   - component: {fileID: 1753612893}
+  - component: {fileID: 1753612895}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -17408,6 +18319,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1753612891}
+--- !u!114 &1753612895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753612891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow7.1
 --- !u!1 &1769312290
 GameObject:
   m_ObjectHideFlags: 0
@@ -17418,6 +18342,7 @@ GameObject:
   - component: {fileID: 1769312291}
   - component: {fileID: 1769312293}
   - component: {fileID: 1769312292}
+  - component: {fileID: 1769312294}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -17482,6 +18407,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1769312290}
+--- !u!114 &1769312294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1769312290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: End
 --- !u!1 &1771062561
 GameObject:
   m_ObjectHideFlags: 0
@@ -17634,6 +18572,7 @@ GameObject:
   - component: {fileID: 1793445198}
   - component: {fileID: 1793445200}
   - component: {fileID: 1793445199}
+  - component: {fileID: 1793445201}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -17698,6 +18637,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1793445197}
+--- !u!114 &1793445201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793445197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Credits
 --- !u!1 &1794439761
 GameObject:
   m_ObjectHideFlags: 0
@@ -17969,6 +18921,7 @@ GameObject:
   - component: {fileID: 1839057241}
   - component: {fileID: 1839057243}
   - component: {fileID: 1839057242}
+  - component: {fileID: 1839057244}
   m_Layer: 5
   m_Name: WindowTitle
   m_TagString: Untagged
@@ -18033,6 +18986,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1839057240}
+--- !u!114 &1839057244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839057240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Tutorial
 --- !u!1 &1854370239
 GameObject:
   m_ObjectHideFlags: 0
@@ -18917,6 +19883,7 @@ GameObject:
   - component: {fileID: 1962835079}
   - component: {fileID: 1962835081}
   - component: {fileID: 1962835080}
+  - component: {fileID: 1962835082}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -18984,6 +19951,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962835078}
+--- !u!114 &1962835082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962835078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &1964677309
 GameObject:
   m_ObjectHideFlags: 0
@@ -19083,6 +20063,7 @@ GameObject:
   - component: {fileID: 1969187736}
   - component: {fileID: 1969187738}
   - component: {fileID: 1969187737}
+  - component: {fileID: 1969187739}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -19150,6 +20131,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1969187735}
+--- !u!114 &1969187739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1969187735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Skip
 --- !u!1 &1972261170
 GameObject:
   m_ObjectHideFlags: 0
@@ -20070,6 +21064,7 @@ GameObject:
   - component: {fileID: 2066874665}
   - component: {fileID: 2066874667}
   - component: {fileID: 2066874666}
+  - component: {fileID: 2066874668}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -20134,6 +21129,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066874664}
+--- !u!114 &2066874668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066874664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow5.1
 --- !u!1 &2091632591
 GameObject:
   m_ObjectHideFlags: 0
@@ -20556,6 +21564,7 @@ GameObject:
   - component: {fileID: 2123770863}
   - component: {fileID: 2123770865}
   - component: {fileID: 2123770864}
+  - component: {fileID: 2123770866}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -20620,6 +21629,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123770862}
+--- !u!114 &2123770866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2123770862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Ressort
 --- !u!1 &2132445258
 GameObject:
   m_ObjectHideFlags: 0
@@ -20827,6 +21849,7 @@ GameObject:
   - component: {fileID: 2140127615}
   - component: {fileID: 2140127614}
   - component: {fileID: 2140127616}
+  - component: {fileID: 2140127617}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -20931,6 +21954,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041b84fcc27c82b41ab11f3386114ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2140127617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140127612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: Creadits
 --- !u!1 &2146353441
 GameObject:
   m_ObjectHideFlags: 0
