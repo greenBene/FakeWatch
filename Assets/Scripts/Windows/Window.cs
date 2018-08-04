@@ -11,6 +11,7 @@ public abstract class Window : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
         gameObject.SetActive(false);
+        MoveToFront();
 	}
 	
 	// Update is called once per frame
@@ -45,6 +46,7 @@ public abstract class Window : MonoBehaviour {
 
     public void StartDragging()
     {
+        MoveToFront();
         distanceToMouse = transform.position - Input.mousePosition;
         dragging = true;
     }
@@ -68,5 +70,10 @@ public abstract class Window : MonoBehaviour {
     {
         transform.position = new Vector2(-10000, -10000);
         Destroy(gameObject, delay);
+    }
+
+    protected virtual void MoveToFront()
+    {
+        this.gameObject.transform.SetAsLastSibling();
     }
 }
