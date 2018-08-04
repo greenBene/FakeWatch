@@ -9,10 +9,10 @@ public class ModularStringLoader : ModularLanguageLoader {
     Text textToChange;
 
     // Use this for initialization
-    void Start ()
+    protected override void Start ()
     {
         textToChange = gameObject.GetComponent<Text>();
-        base.Renew();
+        base.Start();
 	}
 
     protected override string GetElementName()

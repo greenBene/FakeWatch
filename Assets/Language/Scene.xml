@@ -2,12 +2,12 @@
 
 <collection language="german">
 	<text name="Password" category="Intro">Passwort</text>
-	<path name="LogoWhite" category="Image">Assets\Graphics\logo.png</path>
-	<path name="LogoBlack" category="Image">Assets\Graphics\logo (1).png</path>
+	<path name="LogoWhite" category="Image">logo.png</path>
+	<path name="LogoBlack" category="Image">logo (1).png</path>
 	
 	<text name="Quit" category="Button">Quit</text>
 	
-	<text name="Credits" category="Header">Creadits.txt - Viewer</text>
+	<text name="Credits" category="Header">Credits.txt - Viewer</text>
 	<text name="Credits" category="Text">
 		Abteilung F
 
@@ -86,9 +86,9 @@
 	<text name="Ort" category="Text">Ort</text>
 	
 	<text name="Tutorial" category="Header">Fact-Checking-Software (v3.02)</text>
-	<path name="ExampleNews1" category="Image">Assets\Graphics\Tut Images\schritt1tut.png</path>
-	<path name="arbeitsanweisung" category="Image">Assets\Graphics\Tut Images\arbeitsanweisung.png</path>
-	<path name="ExampleNews2" category="Image">Assets\Graphics\Tut Images\windowGrun.png</path>
+	<path name="ExampleNews1" category="Image">Tut Images/schritt1tut.png</path>
+	<path name="arbeitsanweisung" category="Image">Tut Images/arbeitsanweisung.png</path>
+	<path name="ExampleNews2" category="Image">Tut Images/windowGrun.png</path>
 	<text name="TutorialWindow1" category="Text">
 		Willkommen im Intranet des Ministeriums für Nachrichtenkompetenz
 		FactCheck, Version 3.02
@@ -178,7 +178,7 @@
 	<text name="Skip" category="Button">Skip</text>
 	
 	<text name="Game" category="Icon">Fact Checking Software.exe</text>
-	<path name="Game" category="Image">Assets\Graphics\Icons\gameDesktopIcon.png</path>
+	<path name="Game" category="Image">Icons/gameDesktopIcon.png</path>
 	<text name="Autor" category="Header">von</text>
 	<text name="Correct" category="Button">Korrekt</text>
 	<text name="Fake" category="Button">Fake</text>

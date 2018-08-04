@@ -98,6 +98,11 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     public GameState state = GameState.Desktop;
 
     //===== ===== MonoBehaviourStuff ===== =====
+
+    void Awake()
+    {
+        s_xmlLoader = new XMLLoader();
+    }
     
     // Use this for initialization
     void Start () {

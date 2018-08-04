@@ -13,7 +13,7 @@ public class XMLLoader{
 
     public XMLLoader()
     {
-        string fileScenes = "Language/Scene.xml";
+        string fileScenes = "Assets/Language/Scene.xml";
 
 
         xmlDict = new Dictionary<xmlFiles, XmlDocument>();
@@ -36,7 +36,7 @@ public class XMLLoader{
         language = PlayerPrefs.GetString("language");
         foreach (xmlFiles file in xmlDict.Keys)
         {
-            XmlNodeList nodes = xmlDict[file].SelectNodes(string.Format("//collection[@language='{0}'", language));
+            XmlNodeList nodes = xmlDict[file].SelectNodes(string.Format("//collection[@language='{0}']", language));
             int numElements = nodes.Count;
             if (numElements == 0)
             {

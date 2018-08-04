@@ -10,7 +10,7 @@ public abstract class ModularLanguageLoader : MonoBehaviour {
     private string attrelement;
 
     // Use this for initialization
-    void Start ()
+    protected virtual void Start ()
     {
         attrelement = GetElementName();
         Renew();
@@ -25,7 +25,8 @@ public abstract class ModularLanguageLoader : MonoBehaviour {
 
     private string buildSearchString()
     {
-        return string.Format("//{0}[@name='{1}' and @category='{2}]", attrelement, attrname, attrcategory);
+        Debug.Log("xpath: " + string.Format("//{0}[@name='{1}' and @category='{2}']", attrelement, attrname, attrcategory));
+        return string.Format("//{0}[@name='{1}' and @category='{2}']", attrelement, attrname, attrcategory);
     }
 
     private string getValue(XmlNode root)
@@ -40,7 +41,7 @@ public abstract class ModularLanguageLoader : MonoBehaviour {
         {
             return string.Format("Multiple {0}-elements found with attributes name={1} and category={2}", attrelement.ToString(), attrname, attrcategory);
         }
-        else return nodes[0].Value;
+        else return nodes[0].InnerText;
     }
 
     protected abstract string GetElementName();

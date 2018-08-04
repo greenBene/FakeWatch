@@ -9,9 +9,9 @@ public class ModularImageLoader : ModularLanguageLoader {
     Image ImageToChange;
 
     // Use this for initialization
-    void Start () {
+    protected override void Start () {
         ImageToChange = GetComponent<Image>();
-        Renew();
+        base.Start();
 	}
 
     protected override string GetElementName()
@@ -21,10 +21,13 @@ public class ModularImageLoader : ModularLanguageLoader {
 
     protected override void ExecuteChange(string newValue)
     {
+        string path = PlayerPrefs.GetString("language") + "/";
         Sprite newSprite;
         try
         {
-            newSprite = Resources.Load(newValue) as Sprite;
+            newSprite = Resources.Load(path + newValue) as Sprite;
+            Debug.Log("Loaded sprite at " + path + newValue);
+            if (newSprite == null) { Debug.Log("Sprite is null"); }
         }
         catch
         {
