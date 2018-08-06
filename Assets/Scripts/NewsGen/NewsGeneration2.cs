@@ -98,6 +98,7 @@ public class NewsGeneration2 : MonoBehaviour {
             currentDurationBetweenNews += AdaptiveForgiveness;
         else
             currentDurationBetweenNews -= AdaptivePressure;
+
         if (currentDurationBetweenNews < AdaptiveMinDuration)
             currentDurationBetweenNews = AdaptiveMinDuration;
 
@@ -132,8 +133,12 @@ public class NewsGeneration2 : MonoBehaviour {
         if (articleCount <= 0) // we never want an empty screen -> force new article
         {
             articleCount = 0;
-            CancelInvoke("NextNewsInitiater"); // we need to stop the delayed Invoke, otherwise it will plop up probably shortly after the now forced new article
-            Invoke("NextNewsInitiater", 1f);
+            if (UseAdaptiveSystem) {
+                Invoke("AdaptiveNextNewsInitiator", AdaptiveMinDuration/2);
+            } else {
+                CancelInvoke("NextNewsInitiater"); // we need to stop the delayed Invoke, otherwise it will plop up probably shortly after the now forced new article
+                Invoke("NextNewsInitiater", 1f);
+            }
         }
     }
 
