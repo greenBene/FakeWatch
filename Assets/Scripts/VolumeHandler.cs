@@ -10,6 +10,7 @@ public class VolumeHandler : MonoBehaviour {
 
     private void Start() {
         slider = GetComponent<Slider>();
+        AudioListener.volume = slider.value;
     }
 
     public void ChangeVolume() {
