@@ -184,7 +184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &2460944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: '-'
 --- !u!222 &13896936
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -685,8 +685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Willkommen im Intranet des Ministeriums f\xFCr Nachrichtenkompetenz\r\nFactCheck,
-    Version 3.02\r\n\nSie sind eingeloggt als <b>MfN_AbtF-Gast_237\r</b>"
+  m_Text: '-'
 --- !u!222 &49350933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1092,7 +1091,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits.txt
+  m_Text: '-'
 --- !u!222 &79268633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1612,11 +1611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "F\xFCr eine detaillierte Erl\xE4uterung der Arbeitsschritte lesen Sie bei
-    Bedarf bitte das Dokument <b>Arbeitsanweisung f\xFCr Faktenchecker.\r</b>\n\nBitte
-    \xFCberpr\xFCfen Sie, ob Ihnen alle relevanten Dokumente (<b>Anlagen A bis E</b>)
-    vollst\xE4ndig vorliegen. Sollten Unterlagen fehlen, wenden Sie sich bitte vor
-    Arbeitsbeginn an Ihren\r Abteilungsleiter. \r"
+  m_Text: '-'
 --- !u!222 &165334727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1775,7 +1770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: '-'
 --- !u!222 &176977184
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1932,7 +1927,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &181152556
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2489,7 +2484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &219882488
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2577,7 +2572,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact Checking Software
+  m_Text: '-'
 --- !u!222 &227399858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3210,15 +3205,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sehr geehrte/r <b>MfN_AbtF-Gast_237</b>,\n\r\nwir danken Ihnen, dass Sie
-    sich so kurzfristig bereit-\nerkl\xE4rt haben, die Abteilung F zu unterst\xFCtzen.\r
-    Wegen des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische\r
-    Nachrichtenbeitr\xE4ge getarnt sind, arbeiten derzeit s\xE4mtliche Mitarbeiterinnen
-    und Mitarbeiter unter Hochdruck an deren Kennzeichnung und Richtigstellung. \n\nZur
-    Identifikation dieser Falschmeldungen im Vorfeld ben\xF6tigen wir <b>Sie</b>.
-    Helfen Sie uns, die\r Desinformations-\nkampagnen zu bek\xE4mpfen und den B\xFCrgerinnen
-    und B\xFCrgern Freilands einen\r freiheitlichen und demokratischen Meinungsbildungsprozess
-    zu erm\xF6glichen. \r"
+  m_Text: '-'
 --- !u!222 &312801731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3510,9 +3497,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xDCberpr\xFCfen Sie die Informationen auf Richtigkeit und markieren Sie
-    die Nachrichten mit\r falschen informationen ggf. als Fake News. F\xFChren Sie
-    dazu bitte die <b>5 Arbeitsschritte</b> durch, die im Folgenden erkl\xE4rt werden. "
+  m_Text: '-'
 --- !u!222 &322842950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3756,8 +3741,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Schreiben die Autorin oder der Autor auch wirklich f\xFCr das angegebene
-    Ressort? Sehen Sie sich dazu\r <b>Anlage B</b> an. "
+  m_Text: '-'
 --- !u!222 &363132391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3845,9 +3829,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Zu Beginn arbeiten Sie Nachrichten auf, die bereits teilweise verifiziert
-    wurden (siehe gr\xFCne Markierung). Konzentrieren Sie sich daher auf die noch
-    nicht \xFCberpr\xFCften Informationen."
+  m_Text: '-'
 --- !u!222 &364596243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4148,7 +4130,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &421446303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4452,9 +4434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Unsere eigene Software FactCheck (v3.02) filtert Nachrichten aus den Sozialen
-    Medien und bereitet\r die f\xFCr Sie relevanten Informationen in einheitlicher
-    Form auf. "
+  m_Text: '-'
 --- !u!222 &446051242
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4545,7 +4525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &457890136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4705,7 +4685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &465220153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5141,7 +5121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5759,9 +5739,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ihre Einf\xFChrung in unsere Fact-Checking-Software (v3.02) ist damit beendet.
-    Denken Sie daran, die vorliegenden Dokumente f\xFCr Ihre Recherche zu nutzen und
-    arbeiten Sie sorgf\xE4ltig.  "
+  m_Text: '-'
 --- !u!222 &555005897
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6099,9 +6077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Schreiben die genannten Autorinnen und Autoren auch wirklich f\xFCr die
-    angegebene Zeitung? Sehen\r Sie sich dazu <b>Anlage C</b> an und vergleichen Sie
-    die K\xFCrzel der Autoren mit <b>Anlage B</b>."
+  m_Text: '-'
 --- !u!222 &586391197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6458,8 +6434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mitarbeiter Evaluation von FactcheckerIn ID: 0189310 \n\nSie haben 3 von
-    7 Nachrichten korrekt auf ihren Warheitsgehalt beurteilt."
+  m_Text: '-'
 --- !u!222 &614537400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6726,7 +6701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Log Out
+  m_Text: '-'
 --- !u!222 &690902903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7023,7 +6998,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &714927681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7115,7 +7090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to Desktop
+  m_Text: '-'
 --- !u!222 &716235710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7207,7 +7182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &719535271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7296,7 +7271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<b>Schritt 5) Ver\xF6ffentlichungsdatum  </b>"
+  m_Text: '-'
 --- !u!222 &725553675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7384,11 +7359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aus Sicherheitsgr\xFCnden sammeln unsere Server ihre \xFCberpr\xFCften
-    Informationen in kurzen\r Intervallen, um Sie mit den Ergebnissen Ihrer Kolleginnen
-    und Kollegen zu vergleichen. Sie\r haben daher nun <b>7 Minuten</b> Zeit (siehe
-    Timer), um m\xF6glichst viele Informationen zu \xFCberpr\xFCfen. \n\nDie\r Leitung
-    der Abteilung F w\xFCnscht Ihnen gutes Gelingen! "
+  m_Text: '-'
 --- !u!222 &737414637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7675,7 +7646,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &774319738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7983,7 +7954,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &800747055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8311,7 +8282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8343,7 +8314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2140127613}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 2
   m_Elasticity: 0.1
@@ -8689,7 +8660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &815462627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9271,7 +9242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &847519735
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9363,7 +9334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &853803082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9883,7 +9854,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &910956794
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10193,7 +10164,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &938572339
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10282,7 +10253,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<b>Schritt 1) Ver\xF6ffentlichungsdatum der Nachricht </b>"
+  m_Text: '-'
 --- !u!222 &941539090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10563,7 +10534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &964752296
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10655,7 +10626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &970708814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11122,7 +11093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1027625931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12222,7 +12193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: <b>Schritt 3) Autorinnen / Autoren und ihre Zeitungen</b>
+  m_Text: '-'
 --- !u!222 &1097718430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12378,7 +12349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1110927534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12466,7 +12437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1128743293
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12554,8 +12525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xDCberpr\xFCfen Sie, ob der Artikel auch wirklich zum Zeitpunkt des thematisierten
-    Ereignisses erschienen ist.\r Sehen Sie sich dazu <b>Anlage A</b> an. "
+  m_Text: '-'
 --- !u!222 &1129344555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12839,9 +12809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Stimmt der genannte Ort, in dem die angegebene Zeitung publiziert sein
-    soll? Vergleichen Sie\r hierzu <b>Anlage D</b> mit der vorliegenden Karte Freilands
-    und ggf. \nder \xDCbersicht \xFCber die Bundesl\xE4nder. "
+  m_Text: '-'
 --- !u!222 &1146560482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13315,7 +13283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1198620699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13880,7 +13848,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &1258949434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14471,8 +14439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 143}
-  m_SizeDelta: {x: 434, y: 79}
+  m_AnchoredPosition: {x: -31.6, y: 50.6}
+  m_SizeDelta: {x: 434, y: 59.5}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1347964683
 MonoBehaviour:
@@ -14940,7 +14908,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1394499207
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15450,7 +15418,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>> Next'
+  m_Text: '-'
 --- !u!222 &1446199479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16573,7 +16541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1569214348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16847,9 +16815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ist das Erscheinungsdatum der Zeitung korrekt oder zumindest plausibel?
-    Sehen Sie sich dazu <b>Anlage\r E</b> an und nehmen Sie einen Kalender zur Hand,
-    falls n\xF6tig. "
+  m_Text: '-'
 --- !u!222 &1583331018
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17216,7 +17182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1618731030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18546,7 +18512,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<b>Schritt 4) Ver\xF6ffentlichungsort \r </b>"
+  m_Text: '-'
 --- !u!222 &1753612894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18634,7 +18600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ende der Arbeitsphase
+  m_Text: '-'
 --- !u!222 &1769312293
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18938,7 +18904,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits.txt
+  m_Text: '-'
 --- !u!222 &1793445200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19287,7 +19253,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fact-Checking-Software (v3.02)
+  m_Text: '-'
 --- !u!222 &1839057243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20251,7 +20217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &1962835081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20431,7 +20397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skip
+  m_Text: '-'
 --- !u!222 &1969187738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21430,7 +21396,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: <b>Schritt 2) Autorinnen/Autoren und ihre Fachgebiete </b>
+  m_Text: '-'
 --- !u!222 &2066874667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22215,36 +22181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Abteilung F\r\n\r\nVielen Dank f\xFCr Ihr Interesse an Abteilung F. Die
-    urspr\xFCngliche Version unseres Spiels wurde im Rahmen des \"Fake Jam\" Game
-    Jams entwickelt. Dieser wurde von Stiftung Digitale Spielekultur in Kooperation
-    mit der Staatsministerin f\xFCr Kultur und Medien, der Games Academy Berlin und
-    dem Entwicklerstudio Maschinen-Mensch veranstaltet. Die vorliegende, \xFCberarbeitete
-    Version entstand in etwas ge\xE4nderter Besetzung f\xFCr den Gamescom-Stand der
-    Bundeszentrale f\xFCr politische Bildung. \r\n\r\nDas derzeitige Entwicklerteam
-    hinter Abteilung F besteht aus (in alphabetischer Reihenfolge)\r\n\nBenedikt Maria
-    Beckermann / @greenBene\r\n- Web Design -\r\n\r\nAndreas Edmeier / @Quwertzuiop\r\n-
-    Refactoring / Programming / Trailer Editing-\n\r\nTobias Kohl / @Roy_Burns_fnx\r\n-
-    Refactoring / Programming -  \r\n\r\nChristoph Plewe / @ChristophPlewe\r\n- Story
-    Writing / Sound Design / PR -\r\n\r\nFelix Szczesny / @FelixSzczesny \r\n- Art
-    Design -\r\n\r\n\r\n\r\nDie urspr\xFCngliche \u201EFake-Jam\u201C Game Jam-Version
-    haben entwickelt (in alphabetischer Reihenfolge)\r\n\r\nSven Ahlgrimm / @SvenAhlgrimm\r\n-
-    UX Design / Frontend Programming -\r\n\r\nDaniel Berndt / @D40B\r\n- Backend Programming
-    -\r\n\r\nBenedikt Maria Beckermann / @greenBene\r\n- Programming -\r\n\r\nAndreas
-    Edmeier / @Quwertzuiop\r\n- Game Design -\r\n\r\nJ\xF6rg Friedel / @jofrie83 \r\n-
-    Art Design / Story Writing -\r\n\r\nTobias Kohl / @Roy_Burns_fnx\r\n- Game Design
-    -\r\n\r\nChristoph Plewe / @ChristophPlewe\r\n- Story Writing / Sound Design -\r\n\r\nFelix
-    Szczesny / @FelixSzczesny\r\n- Art Design -\r\n\r\n\r\n\r\nF\xFCr Unterst\xFCtzung,
-    Energie und Motivation danken wir ganz herzlich \r\nCarolin Wendt von der Stiftung
-    Digitale Spielekultur \r\nder Staatsministerin f\xFCr Kultur und Medien und ihren
-    Mitarbeiter*innen \r\nJohannes Kristmann und Riad Djemili von Maschinen-Mensch
-    \r\nMatthias Thanos von der Bundeszentrale f\xFCr politische Bildung \r\nLorenzo
-    Pilia von BerlinGameScene.com \r\nsowie  Carola Brozio und Philipp Sch\xE4fer.\r\n\r\n\r\n\r\nWeitere
-    Informationen zu Abteilung F sowie die M\xF6glichkeit zum kostenlosen Download
-    des Spiels finden Sie unter www.abteilung-f.de\r\n\r\nWenn Sie uns kontaktieren
-    m\xF6chten, erreichen Sie uns unter info@abteilung-f.de\r\n\r\nF\xFCr aktuelle
-    Informationen zu Updates, Veranstaltungen oder Informationen zum Thema Fake News
-    folgen Sie uns gerne auf Twitter unter @AbteilungF\r\n"
+  m_Text: '-'
 --- !u!222 &2140127615
 CanvasRenderer:
   m_ObjectHideFlags: 0
