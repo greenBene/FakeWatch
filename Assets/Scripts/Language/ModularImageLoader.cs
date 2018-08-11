@@ -23,16 +23,12 @@ public class ModularImageLoader : ModularLanguageLoader {
     {
         string path = PlayerPrefs.GetString("language") + "/";
         Sprite newSprite;
-        try
-        {
-            newSprite = Resources.Load<Sprite>(path + newValue);
-            Debug.Log("Loaded sprite at " + path + newValue);
-            if (newSprite == null) { Debug.Log("Sprite is null"); }
+        newSprite = Resources.Load<Sprite>(path + newValue);
+        Debug.Log("Loaded sprite at " + path + newValue);
+        if (newSprite == null) {
+            Debug.Log("Sprite is null");
+        } else {
+            ImageToChange.sprite = newSprite;
         }
-        catch
-        {
-            throw new System.Exception("Problem changing Image" + ImageToChange.name);
-        }
-        ImageToChange.sprite = newSprite;
     }
 }
