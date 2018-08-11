@@ -33,7 +33,7 @@ public static class LogSystem {
         lines[0] = score + ";" + GameManager.Instance.PlayerID + ";" + alias + ";" + GameManager.Instance.correctMarkedArticles + ";" + GameManager.Instance.wronglyMarkedArticlesAsTrue + ";" + GameManager.Instance.wronglyMarkedArticlesAsFalse;
         System.Array.Sort(lines, (string y, string x) => int.Parse(x.Split(';')[0]) - int.Parse(y.Split(';')[0]));
         
-        File.WriteAllText("Highscore.csv", "SCORE" + ";" + "ID" + ";" + "NAME" + ";" + "CORECKT" + ";" + "FALSE +" + ";" + "FALSE -" + System.Environment.NewLine);
+        File.WriteAllText("Highscore.csv", "SCORE" + ";" + "ID" + ";" + "NAME" + ";" + "CORRECT" + ";" + "FALSE +" + ";" + "FALSE -" + System.Environment.NewLine);
         foreach(var line in lines) {
             File.AppendAllText("Highscore.csv", line + System.Environment.NewLine);
             Debug.Log(line);
