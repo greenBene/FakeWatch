@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<collection language="german">
+<File>
+  <collection language="german">
 	<text name="Password" category="Intro">Passwort</text>
 	<path name="LogoWhite" category="Image">logo</path>
 	<path name="LogoBlack" category="Image">logo (1)</path>
@@ -24,7 +25,7 @@ Tobias Kohl / @Roy_Burns_fnx
 - Refactoring / Programming -
 
 Christoph Plewe / @ChristophPlewe
-- Story Writing / Sound Design / PR -
+- Story Writing / Sound Design / PR / Translation -
 
 Felix Szczesny / @FelixSzczesny
 - Art Design -
@@ -83,7 +84,7 @@ Für aktuelle Informationen zu Updates, Veranstaltungen oder Informationen zum T
 	<text name="Autor" category="Text">Autor</text>
 	<text name="Ort" category="Text">Ort</text>
 	
-	<text name="Tutorial" category="Header">Fact-Checking-Software (v3.02)</text>
+	<text name="Tutorial" category="Header">FactCheck Software (v3.02)</text>
 	<path name="ExampleNews1" category="Image">Tut Images/schritt1tut</path>
 	<path name="OperatingInstructions" category="Image">Tut Images/arbeitsanweisung</path>
 	<path name="ExampleNews2" category="Image">Tut Images/windowGrun</path>
@@ -141,3 +142,146 @@ und {3} wahre Nachrichten als falsch eingestuft.</text>
 	<text name="MessageAbsender" category="Header">von</text>
 	<text name="MessageAbsender" category="Text">Abteilungsleitung</text>
 </collection>
+  <collection language="english">
+	<text name="Password" category="Intro">Passwort</text>
+	<path name="LogoWhite" category="Image">logo</path>
+	<path name="LogoBlack" category="Image">logo (1)</path>
+	
+	<text name="Quit" category="Button">Quit</text>
+	
+	<text name="Credits" category="Header">Credits.txt - Viewer</text>
+	<text name="Credits" category="Text">Abteilung F
+
+Thank you for your interest in our game Department F. The original version of our game was created during the "Fake Jam" game jam. This game jam was organized and held by Stiftung Digitale Spielekultur in cooperation with the German Federal Government Commissioner for Culture and the Media, the Games Academy Berlin and the game developers of Maschinen-Mensch. This current, reworked version was created by members of the original team for the Gamescom-booth of the Federal Agency of Civic Education.
+
+The current game developers behind Abteilung F are (in alphabetical order)
+
+Benedikt Maria Beckermann / @greenBene
+- Web Design -
+
+Andreas Edmeier / @Quwertzuiop
+- Refactoring / Programming / Trailer Editing-
+
+Tobias Kohl / @Roy_Burns_fnx
+- Refactoring / Programming -
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design / PR / Translation -
+
+Felix Szczesny / @FelixSzczesny
+- Art Design -
+
+
+
+The original game developers behind the „Fake-Jam“ version of Abteilung F were (in alphabetical order)
+
+Sven Ahlgrimm / @SvenAhlgrimm
+- UX Design / Frontend Programming -
+
+Daniel Berndt / @D40B
+- Backend Programming -
+
+Benedikt Maria Beckermann / @greenBene
+- Programming -
+
+Andreas Edmeier / @Quwertzuiop
+- Game Design -
+
+Jörg Friedel / @jofrie83
+- Art Design / Story Writing -
+
+Tobias Kohl / @Roy_Burns_fnx
+- Game Design -
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design -
+
+Felix Szczesny / @FelixSzczesny
+- Art Design -
+
+
+
+For their support, energy and for motivating us to keep working on Abteilung F we would like to thank...
+Carolin Wendt of the Stiftung Digitale Spielekultur
+The Federal Government Commissioner for Culture and the Media as well as her representatives 
+Johannes Kristmann and Riad Djemili of Maschinen-Mensch
+Matthias Thanos of the Federal Agency of Civic Education
+Lorenzo Pilia of BerlinGameScene.com
+as well as Carola Brozio and Philipp Schäfer.
+
+
+
+For further information about the game and a free download please visit www.abteilung-f.de
+
+If you would like to contact us, you can write an e-mail to info@abteilung-f.de
+
+For news on updates, events and more information on the subject of Fake News you can follow us on Twitter via @AbteilungF</text>
+	<text name="Credits" category="Icon">Credits.txt</text>
+
+	<text name="Zeitung" category="Text">Newspaper</text>
+	<text name="Ressort" category="Text">Department</text>
+	<text name="Datum" category="Text">Date of Publication</text>
+	<text name="Headline" category="Text">Headline</text>
+	<text name="Autor" category="Text">Author</text>
+	<text name="Ort" category="Text">Place of Publication</text>
+	
+	<text name="Tutorial" category="Header">FactCheck Software (v3.02)</text>
+	<path name="ExampleNews1" category="Image">Tut Images/schritt1tut</path>
+	<path name="OperatingInstructions" category="Image">Tut Images/arbeitsanweisung</path>
+	<path name="ExampleNews2" category="Image">Tut Images/windowGrun</path>
+	<text name="TutorialWindow1" category="Text">Welcome to the intranet of the Ministry for News Competence FactCheck, Software Version 3.02
+
+You are logged in as &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;</text>
+	<text name="TutorialWindow2" category="Text">Dear &lt;b&gt;MfNC_DeptF-Guest_237&lt;/b&gt;,
+
+we want to express our gratitude for your support of the Department F. 
+Due to the recent increase of deliberate misinformation on the internet disguised as journalistic articles, all our employees are currently preoccupied marking and correcting these “fake news”.
+
+In order to identify these articles beforehand we need &lt;b&gt;you&lt;/b&gt;! Help us fight these disinformation campaigns and preserve our democratic values. Help us to enable the free formation of opinion for the citizens of Freiland.</text>
+	<!--first text in the third tutorial window-->
+	<text name="TutorialWindow3.1" category="Text">Our software FactCheck (v3.02) will search for news articles on Social Media platforms and will present you with relevant contextual information.</text>
+	<text name="TutorialWindow3.2" category="Text">Please check if the specified information is accurate and mark articles with false information as "fake news" if necessary. In order to do this please carry out &lt;b&gt;5 steps&lt;/b&gt; explained in the following.</text>
+	<text name="TutorialWindow4.1" category="Text">&lt;b&gt;Step 1) Date of Publication and the Event Referred to &lt;/b&gt;</text>
+	<text name="TutorialWindow4.2" category ="Text">Please check if the article was published during the time when its main topic was covered by other media as well. See &lt;b&gt;Appendix A&lt;/b&gt;.</text>
+	<text name="TutorialWindow5.1" category="Text">&lt;b&gt;Step 2) Autorinnen/Autoren und ihre Fachgebiete &lt;/b&gt;</text>
+	<text name="TutorialWindow5.2" category="Text">Schreiben die Autorin oder der Autor auch wirklich für das angegebene Ressort? Sehen Sie sich dazu &lt;b&gt;Anlage B&lt;/b&gt; an.</text>
+	<text name="TutorialWindow6.1" category="Text">&lt;b&gt;Schritt 3) Autorinnen / Autoren und ihre Zeitungen&lt;/b&gt;</text>
+	<text name="TutorialWindow6.2" category="Text">Schreiben die genannten Autorinnen und Autoren auch wirklich für die angegebene Zeitung? Sehen Sie sich dazu &lt;b&gt;Anlage C&lt;/b&gt; an und vergleichen Sie die Kürzel der Autoren mit &lt;b&gt;Anlage B&lt;/b&gt;.</text>
+	<text name="TutorialWindow7.1" category="Text">&lt;b&gt;Schritt 4) Veröffentlichungsort&lt;/b&gt;</text>
+	<text name="TutorialWindow7.2" category="Text">Stimmt der genannte Ort, in dem die angegebene Zeitung publiziert sein soll? Vergleichen Sie hierzu &lt;b&gt;Anlage D&lt;/b&gt; mit der vorliegenden Karte Freilands und ggf. der Übersicht über die Bundesländer.</text>
+	<text name="TutorialWindow8.1" category="Text">&lt;b&gt;Schritt 5) Veröffentlichungsdatum&lt;/b&gt;</text>
+	<text name="TutorialWindow8.2" category="Text">Ist das Erscheinungsdatum der Zeitung korrekt oder zumindest plausibel? Sehen Sie sich dazu &lt;b&gt;Anlage E&lt;/b&gt; an und nehmen Sie einen Kalender zur Hand, falls nötig.</text>
+	<text name="TutorialWindow9" category="Text">Für eine detaillierte Erläuterung der Arbeitsschritte lesen Sie bei Bedarf bitte das Dokument &lt;b&gt;Arbeitsanweisung für Faktenchecker.&lt;/b&gt;
+
+Bitte überprüfen Sie, ob Ihnen alle relevanten Dokumente (&lt;b&gt;Anlagen A bis E&lt;/b&gt;) vollständig vorliegen. Sollten Unterlagen fehlen, wenden Sie sich bitte vor Arbeitsbeginn an Ihren Abteilungsleiter.</text>
+	<text name="TutorialWindow10" category="Text">Zu Beginn arbeiten Sie Nachrichten auf, die bereits teilweise verifiziert wurden (siehe grüne Markierung). Konzentrieren Sie sich daher auf die noch nicht überprüften Informationen.</text>
+	<text name="TutorialWindow11.1" category="Text">Ihre Einführung in unsere Fact-Checking-Software (v3.02) ist damit beendet. Denken Sie daran, die vorliegenden Dokumente für Ihre Recherche zu nutzen und arbeiten Sie sorgfältig.</text>
+	<text name="TutorialWindow11.2" category="Text">Aus Sicherheitsgründen sammeln unsere Server ihre überprüften Informationen in kurzen Intervallen, um Sie mit den Ergebnissen Ihrer Kolleginnen und Kollegen zu vergleichen. Sie haben daher nun &lt;b&gt;7 Minuten&lt;/b&gt; Zeit (siehe Timer), um möglichst viele Informationen zu überprüfen.
+
+Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
+	<text name="Next" category="Button">>> Next</text>
+	<text name="Skip" category="Button">Skip</text>
+	<text name="Start" category="Button">Start</text>
+	
+	<text name="Game" category="Icon">Fact Checking Software.exe</text>
+	<path name="Game" category="Image">Icons/gameDesktopIcon</path>
+	<text name="Autor" category="Header">von</text>
+	<text name="Correct" category="Button">Korrekt</text>
+	<text name="Fake" category="Button">Fake</text>
+
+	<text name="End" category="Header">Ende der Arbeitsphase</text>
+	<text name="End" category="Text"> Mitarbeiter Evaluation von FactcheckerIn ID: {0}.
+
+Sie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.
+Dagegen haben Sie {2} falsche Nachrichten als wahr
+und {3} wahre Nachrichten als falsch eingestuft.</text>
+	<text name="LogOut" category="Button">Log Out</text>
+	<text name="BackToDesktop" category="Button">Back to Desktop</text>
+
+	<text name="MessageBetreff" category="Header">Betreff:</text>
+	<text name="MessageBetreff" category="Text">Fehlermeldung</text>
+	<text name="MessageAbsender" category="Header">von</text>
+	<text name="MessageAbsender" category="Text">Abteilungsleitung</text>
+</collection>
+</File>
+
