@@ -25,8 +25,8 @@ public abstract class ModularLanguageLoader : MonoBehaviour {
 
     private string buildSearchString()
     {
-        Debug.Log("xpath: " + string.Format("//{0}[@name='{1}' and @category='{2}']", attrelement, attrname, attrcategory));
-        return string.Format("//{0}[@name='{1}' and @category='{2}']", attrelement, attrname, attrcategory);
+        Debug.Log("xpath: " + string.Format("{0}[@name='{1}' and @category='{2}']", attrelement, attrname, attrcategory));
+        return string.Format("{0}[@name='{1}' and @category='{2}']", attrelement, attrname, attrcategory);
     }
 
     private string getValue(XmlNode root)

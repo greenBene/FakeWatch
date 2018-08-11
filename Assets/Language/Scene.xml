@@ -93,8 +93,7 @@ Für aktuelle Informationen zu Updates, Veranstaltungen oder Informationen zum T
 Sie sind eingeloggt als &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;</text>
 	<text name="TutorialWindow2" category="Text">Sehr geehrte/r &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;,
 
-wir danken Ihnen, dass Sie sich so kurzfristig bereiterklärt haben, die Abteilung F zu unterstützen.
-Wegen des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische Nachrichtenbeiträge getarnt sind, arbeiten derzeit sämtliche Mitarbeiterinnen und Mitarbeiter unter Hochdruck an deren Kennzeichnung und Richtigstellung.
+wir danken Ihnen, dass Sie sich so kurzfristig bereiterklärt haben, die Abteilung F zu unterstützen. Wegen des aktuell sehr hohen Aufkommens an Falschmeldungen, die als journalistische Nachrichtenbeiträge getarnt sind, arbeiten derzeit sämtliche Mitarbeiterinnen und Mitarbeiter unter Hochdruck an deren Kennzeichnung und Richtigstellung.
 
 Zur Identifikation dieser Falschmeldungen im Vorfeld benötigen wir &lt;b&gt;Sie&lt;/b&gt;. Helfen Sie uns, die Desinformationskampagnen zu bekämpfen und den Bürgerinnen und Bürgern Freilands einen freiheitlichen und demokratischen Meinungsbildungsprozess zu ermöglichen.</text>
 	<!--first text in the third tutorial window-->
@@ -220,10 +219,10 @@ For news on updates, events and more information on the subject of Fake News you
 
 	<text name="Zeitung" category="Text">Newspaper</text>
 	<text name="Ressort" category="Text">Department</text>
-	<text name="Datum" category="Text">Date of Publication</text>
+	<text name="Datum" category="Text">Date</text>
 	<text name="Headline" category="Text">Headline</text>
 	<text name="Autor" category="Text">Author</text>
-	<text name="Ort" category="Text">Place of Publication</text>
+	<text name="Ort" category="Text">Place</text>
 	
 	<text name="Tutorial" category="Header">FactCheck Software (v3.02)</text>
 	<path name="ExampleNews1" category="Image">Tut Images/schritt1tut</path>
@@ -234,8 +233,7 @@ For news on updates, events and more information on the subject of Fake News you
 You are logged in as &lt;b&gt;MfN_AbtF-Gast_237&lt;/b&gt;</text>
 	<text name="TutorialWindow2" category="Text">Dear &lt;b&gt;MfNC_DeptF-Guest_237&lt;/b&gt;,
 
-we want to express our gratitude for your support of the Department F. 
-Due to the recent increase of deliberate misinformation on the internet disguised as journalistic articles, all our employees are currently preoccupied marking and correcting these “fake news”.
+we want to express our gratitude for your support of the Department F. Due to the recent increase of deliberate misinformation on the internet disguised as journalistic articles, all our employees are currently preoccupied marking and correcting these “fake news”.
 
 In order to identify these articles beforehand we need &lt;b&gt;you&lt;/b&gt;! Help us fight these disinformation campaigns and preserve our democratic values. Help us to enable the free formation of opinion for the citizens of Freiland.</text>
 	<!--first text in the third tutorial window-->
