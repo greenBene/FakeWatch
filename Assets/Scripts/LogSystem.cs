@@ -25,7 +25,7 @@ public static class LogSystem {
 
     public static void SaveHighScore(string alias) {
         if (!File.Exists("Highscore.csv"))
-            File.AppendAllText("Highscore.csv", "SCORE" + ";" + "ID" + ";" + "NAME" + ";" + "CORECKT" + ";" + "FALSE +" + ";" + "FALSE -" + System.Environment.NewLine);
+            File.AppendAllText("Highscore.csv", "SCORE" + ";" + "ID" + ";" + "NAME" + ";" + "CORRECT" + ";" + "FALSE +" + ";" + "FALSE -" + System.Environment.NewLine);
 
         float score = ((GameManager.Instance.correctMarkedArticles * 10000) /(GameManager.Instance.correctMarkedArticles + GameManager.Instance.wronglyMarkedArticlesAsTrue + GameManager.Instance.wronglyMarkedArticlesAsFalse));
         

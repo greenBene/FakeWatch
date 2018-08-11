@@ -14146,9 +14146,9 @@ MonoBehaviour:
   LogOutAudio: {fileID: 1822849152049818, guid: f346a54e0fa88214e8658afdca82123a,
     type: 2}
   endScreen: {fileID: 832346732}
-  timeToPlayInSeconds: 10
+  timeToPlayInSeconds: 420
   PlayerID: 0
-  doLog: 0
+  doLog: 1
   DebugCorrect1: 0
   DebugWrong1: 0
   DebugWrong2: 0
