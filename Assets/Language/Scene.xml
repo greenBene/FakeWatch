@@ -128,7 +128,7 @@ Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
 	<text name="Fake" category="Button">Fake</text>
 
 	<text name="End" category="Header">Ende der Arbeitsphase</text>
-	<text name="End" category="Text"> Mitarbeiter Evaluation von FactcheckerIn ID: {0}.
+	<text name="End" category="Text">Mitarbeiter Evaluation von FactcheckerIn ID: {0}.
 
 Sie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.
 Dagegen haben Sie {2} falsche Nachrichten als wahr
@@ -140,7 +140,7 @@ und {3} wahre Nachrichten als falsch eingestuft.</text>
 	<text name="MessageBetreff" category="Text">Fehlermeldung</text>
 	<text name="MessageAbsender" category="Header">von</text>
 	<text name="MessageAbsender" category="Text">Abteilungsleitung</text>
-</collection>
+  </collection>
   <collection language="english">
 	<text name="Password" category="Intro">Passwort</text>
 	<path name="LogoWhite" category="Image">logo</path>
@@ -268,7 +268,7 @@ Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
 	<text name="Fake" category="Button">Fake</text>
 
 	<text name="End" category="Header">Ende der Arbeitsphase</text>
-	<text name="End" category="Text"> Mitarbeiter Evaluation von FactcheckerIn ID: {0}.
+	<text name="End" category="Text">Mitarbeiter Evaluation von FactcheckerIn ID: {0}.
 
 Sie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.
 Dagegen haben Sie {2} falsche Nachrichten als wahr
@@ -276,10 +276,8 @@ und {3} wahre Nachrichten als falsch eingestuft.</text>
 	<text name="LogOut" category="Button">Log Out</text>
 	<text name="BackToDesktop" category="Button">Back to Desktop</text>
 
-	<text name="MessageBetreff" category="Header">Betreff:</text>
 	<text name="MessageBetreff" category="Text">Fehlermeldung</text>
 	<text name="MessageAbsender" category="Header">von</text>
 	<text name="MessageAbsender" category="Text">Abteilungsleitung</text>
-</collection>
-</File>
+  </collection>
 

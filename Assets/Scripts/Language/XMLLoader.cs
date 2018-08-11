@@ -39,7 +39,7 @@ public class XMLLoader{
             new System.Exception("Key value pairs not assignable");
         }
 
-        string SearchString = "//" + attrelement + "[";
+        string SearchString = attrelement + "[";
         for(int i = 0; i < key.Length-1; i++) {
             SearchString += "@" + key[i] + "='" + value[i] + "' and ";
         }

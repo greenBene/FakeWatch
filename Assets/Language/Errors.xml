@@ -31,7 +31,7 @@
 			<message>Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an.</message>
 			<message>Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…</message>
 		</error>
-		<error info1="ZEITUNG" info2="ORT">
+		<error info1="DATE" info2="ZEITUNG">
 			<message>Der {0} ist kein Wochentag, an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?</message>
 			<message>Am {0} erschien die Zeitung {1} nicht. War das so nicht in Anlage E erkennbar?</message>
 			<message>{0} ist kein Wochentag an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen?</message>
@@ -79,7 +79,7 @@
 			<message>Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an.</message>
 			<message>Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…</message>
 		</error>
-		<error info1="ZEITUNG" info2="ORT">
+		<error info1="DATE" info2="ZEITUNG">
 			<message>Der {0} ist kein Wochentag, an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?</message>
 			<message>Am {0} erschien die Zeitung {1} nicht. War das so nicht in Anlage E erkennbar?</message>
 			<message>{0} ist kein Wochentag an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen?</message>
