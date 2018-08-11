@@ -28,10 +28,12 @@ public class Language : MonoBehaviour {
 
     public void Change()
     {
-        if (PlayerPrefs.GetString("language") == "german")
+        if (PlayerPrefs.GetString("language") == "german") {
             ChangeTo("english");
-        else
+            
+        } else {
             ChangeTo("german");
+        }
     }
 
     public void ChangeTo(string language)

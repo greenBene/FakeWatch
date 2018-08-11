@@ -23,7 +23,20 @@ public static class LogSystem {
         LogOnFile(message);
     }
 
-    public static void SaveHighScore() {
-        File.AppendAllText("HighScore.txt", GameManager.Instance.PlayerID + " aka " + "ADD NAME HERE" + ": Coreckt: " + GameManager.Instance.correctMarkedArticles + " Fasle Postive: " + GameManager.Instance.wronglyMarkedArticlesAsTrue + " False Negative: " + GameManager.Instance.wronglyMarkedArticlesAsFalse);
+    public static void SaveHighScore(string alias) {
+        if (!File.Exists("Highscore.csv"))
+            File.AppendAllText("Highscore.csv", "SCORE" + ";" + "ID" + ";" + "NAME" + ";" + "CORECKT" + ";" + "FALSE +" + ";" + "FALSE -" + System.Environment.NewLine);
+
+        float score = ((GameManager.Instance.correctMarkedArticles * 10000) /(GameManager.Instance.correctMarkedArticles + GameManager.Instance.wronglyMarkedArticlesAsTrue + GameManager.Instance.wronglyMarkedArticlesAsFalse));
+        
+        string[] lines = File.ReadAllLines("Highscore.csv");
+        lines[0] = score + ";" + GameManager.Instance.PlayerID + ";" + alias + ";" + GameManager.Instance.correctMarkedArticles + ";" + GameManager.Instance.wronglyMarkedArticlesAsTrue + ";" + GameManager.Instance.wronglyMarkedArticlesAsFalse;
+        System.Array.Sort(lines, (string y, string x) => int.Parse(x.Split(';')[0]) - int.Parse(y.Split(';')[0]));
+        
+        File.WriteAllText("Highscore.csv", "SCORE" + ";" + "ID" + ";" + "NAME" + ";" + "CORECKT" + ";" + "FALSE +" + ";" + "FALSE -" + System.Environment.NewLine);
+        foreach(var line in lines) {
+            File.AppendAllText("Highscore.csv", line + System.Environment.NewLine);
+            Debug.Log(line);
+        }
     }
 }
