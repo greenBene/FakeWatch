@@ -133,6 +133,7 @@ Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
 Sie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.
 Dagegen haben Sie {2} falsche Nachrichten als wahr
 und {3} wahre Nachrichten als falsch eingestuft.</text>
+    <text name="End" category="InputField">Name für Highscore</text>
 	<text name="LogOut" category="Button">Log Out</text>
 	<text name="BackToDesktop" category="Button">Back to Desktop</text>
 
@@ -273,6 +274,7 @@ Die Leitung der Abteilung F wünscht Ihnen gutes Gelingen!</text>
 Sie haben {1} Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.
 Dagegen haben Sie {2} falsche Nachrichten als wahr
 und {3} wahre Nachrichten als falsch eingestuft.</text>
+    <text name="End" category="InputField">Name for Highscore</text>
 	<text name="LogOut" category="Button">Log Out</text>
 	<text name="BackToDesktop" category="Button">Back to Desktop</text>
 
