@@ -26,7 +26,7 @@
 		<error info1="ZEITUNG" info2="ORT">
 			foo(string elem, string[] params, string[] vals)
 			<message>Die Zeitung {0} erscheint leider nicht in {1}. Vergleichen Sie bitte Anlage D, den Merkzettel am Bildschirm und die Karte.</message>
-			<message>In {1} erscheint die Zeitung {0} nicht. Anlage D und die Karte sollten das bestätigen</message>
+			<message>In {1} erscheint die Zeitung {0} nicht. Anlage D und die Karte sollten das bestätigen.</message>
 			<message>{0} erscheint nicht in {1}. Haben Sie Anlage D mit dem Merkzettel und der Karte Freilands verglichen?</message>
 			<message>Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an.</message>
 			<message>Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…</message>
@@ -51,50 +51,52 @@
 	</collection>
 	<collection language="english" type="errormessage">
 		<error info1="DATE" info2="EVENT">
-			<message>Sind Sie sicher, dass das thematisierte Ereignis am {0} stattfand? Was steht denn in Anlage A?</message>
-			<message>Das Ereignis aus dem Artikel fand nicht am {0} statt. Haben Sie sich Anlage A angesehen?</message>
-			<message>Der {0} steht in keinem Bezug zu dem im Artikel angegebenen Thema. Bitte Anlage A überprüfen.</message>
-			<message>Am {0} gab es keine Medienberichterstattung zu dem im Artikel beschriebenen Ereignis. Wohl doch ein Fake, siehe Anlage A.</message>
-			<message>Am {0} wurde in den Medien nicht zum Thema des Artikels berichtet. Daher wahrscheinlich ein Fake!</message>
+			<message>Are you sure that the event actually took place on {0}? Have you checked appendix A?</message>
+			<message>The event discussed in the article didn't take place on {0}. Did you check appendix A?</message>
+			<message>On {0} the event specified in the article didn't take place. Please check appendix A more thoroughly.</message>
+			<message>There was no media coverage on the event specified in the article on {0}. Presumably fake news, check appendix A.</message>
+			<message>ANo other news reports on this topic on {0}. Fake news I assume? Check appendix A...</message>
 		</error>
 		<error info1="AUTOR" info2="FACHGEBIET">
-			<message>Das Fachgebiet von {0} ist leider nicht {1}. Haben Sie die Liste der Autoren in Anlage B abgeglichen?</message>
-			<message>{0} schreibt leider nicht zum Thema {1}. Bitte Liste der Autoren in Anlage B abgleichen.</message>
-			<message>{1} ist leider nicht das Fachgebiet von {0}. Stand das so in Anlage B?</message>
-			<message>{0} schreibt normalerweise nicht im Ressort {1}. Haben Sie das mit Anlage B abgeglichen?</message>
-			<message>Zu {1} schreibt {0} normalerweise nicht. Das scheint ein Fake zu sein.</message>
+			<message>{0} is definitely no expert on {1}. Have you checked the directory of journalists in appendix B?</message>
+			<message>{0} usually doesn't write about {1}. Please check directory of journalists in appendix B. </message>
+			<message>{1}? I don't think {0} writes about {1}. Did appendix B say so?</message>
+			<message>{0} usually doesn't write for the {1}-department. Have you checked appendix B?</message>
+			<message>No articles about {1} by {0}. Definitely no expert on this. Seems to be fake!</message>
 		</error>
 		<error info1="AUTOR" info2="ZEITUNG">
-			<message>Leider schreibt {0} nicht für die Zeitung {1}. Haben Sie Anlage B und Anlage C abgeglichen?</message>
-			<message>{0} schreibt nicht für die Zeitung {1}. Siehe Anlage B und Anlage C.</message>
-			<message>Die Zeitung {1} bekommt keine Artikel von {0}. Stand das so in Anlage B und Anlage C?</message>
-			<message>{0} ist nicht bei der Zeitung {1} angestellt. Anlage B mit Anlage C sollten das bestätigen.</message>
-			<message>{0} schrieb bisher nicht für die Zeitung {1}. Scheint wohl eher ein Fake zu sein…</message>
+			<message>{0} doesn't write for {1}. Have you compared appendix B and appendix C?</message>
+			<message>{0} doesn't write for {1}. See appendix B and C!</message>
+			<message>{1} doesn't publish articles by {0}. Did appendix B and C say otherwise?</message>
+			<message>{0} is not employed by {1}. Appendix B and C should confirm that.</message>
+			<message>Until now {0} didn't write for {1}. Seems to be a fake...</message>
 		</error>
 		<error info1="ZEITUNG" info2="ORT">
 			foo(string elem, string[] params, string[] vals)
-			<message>Die Zeitung {0} erscheint leider nicht in {1}. Vergleichen Sie bitte Anlage D, den Merkzettel am Bildschirm und die Karte.</message>
-			<message>In {1} erscheint die Zeitung {0} nicht. Anlage D und die Karte sollten das bestätigen</message>
-			<message>{0} erscheint nicht in {1}. Haben Sie Anlage D mit dem Merkzettel und der Karte Freilands verglichen?</message>
-			<message>Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an.</message>
-			<message>Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…</message>
+			<message>{0} is not published in {1}. Please compare appendix D, the map and the note on the regions of Freiland.</message>
+			<message>There is no {0} in {1}. A quick check of appendix D and the map should confirm that.</message>
+			<message>{0} is not published in {1}. Have you compared appendix D with the note on the regions and the map of Freiland?</message>
+			<message>The newspaper {0} is not published in {1}. Please check appendix D and the map.</message>
+			<message>The specified place of publication, {1}, is definitely wrong for {0}. Very likely that the article is a fake...</message>
 		</error>
 		<error info1="DATE" info2="ZEITUNG">
-			<message>Der {0} ist kein Wochentag, an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?</message>
-			<message>Am {0} erschien die Zeitung {1} nicht. War das so nicht in Anlage E erkennbar?</message>
-			<message>{0} ist kein Wochentag an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen?</message>
-			<message>Am {0} erscheint die Zeitung {1} normalerweise nicht. War das in Anlage E nicht erkennbar?</message>
-			<message>Der {0} ist ein Wochentag an dem die Zeitung {1} regulär nicht erscheint. Daher vermutlich Fake News.</message>
+			<message>{0} is no weekday on which {1} is published. Have you compared appendix E with a calendar?</message>
+			<message>{0} is not the publication date for {1}. Couldn't you tell by checking appendix E?</message>
+			<message>{1} usually isn't usually shipped on {0}. Have you compared appendix E to a calendar?</message>
+			<message>{1} isn't published on {0}. Did appendix E say otherwise?</message>
+			<message>{0} is not a weekday on which {1} is released on a regular basis. Probably fake news!</message>
 		</error>
 		<error info1="NONE" info2="NONE">
-			<message>Da waren Sie etwas zu kritisch, die Nachricht war korrekt.</message>
-			<message>Da waren Sie etwas zu eifrig, das waren keine Fake News! Bitte sorgfältiger überprüfen...</message>
-			<message>Bitte keine korrekten Nachrichten als Fake markiert. Das sollte nicht passieren...</message>
-			<message>Da ist Ihnen ein Fehler unterlaufen: Die Nachricht war korrekt!</message>
-			<message>Achten Sie darauf, keine korrekten Nachrichten als Fake zu markieren.</message>
-			<message>Bitte besser Prüfen! Wir dürfen journalistische Arbeit nicht behindern.</message>
-			<message>Die Nachricht war korrekt. Haben Sie alle Dokumente richtig überprüft?</message>
-			<message>War die Nachricht nicht doch korrekt? Das müssen wir dringend prüfen.</message>
+			<message>You were a little bit too critical. This article was correct!</message>
+			<message>Don't be too eager to mark articles as fake news! Please work carefully...</message>
+			<message>Please don't mark correct news as fake. This mustn't happen...</message>
+			<message>Oh no, you made a mistake: This article was correct!</message>
+			<message>Please be careful not to mark correct articles as fake news.</message>
+			<message>We mustn't hinder professional journalists from publishing.</message>
+			<message>This article was correct. Have you checked all documents?</message>
+			<message>Wasn't this article correct? Please check more carefully.</message>
+      <message>Be honest: You're just guessing by now, aren't you?</message>
+      <message>Look, if you don't take this seriously you're not very helpful to our cause...</message>
 		</error>
 	</collection>
 </File>
