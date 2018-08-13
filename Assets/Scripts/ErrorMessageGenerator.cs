@@ -13,7 +13,7 @@ public class ErrorMessageGenerator
     public ErrorMessageGenerator()
     {
         var root = GameManager.XMLLoader.GetRoot(xmlFiles.errors);
-        XmlNodeList nodes = root.SelectNodes("//error");
+        XmlNodeList nodes = root.SelectNodes("error");
         foreach(XmlNode node in nodes)
         {
             string p1 = node.Attributes["info1"].Value;
