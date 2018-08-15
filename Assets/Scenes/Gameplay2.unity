@@ -12846,6 +12846,7 @@ GameObject:
   - component: {fileID: 1097718428}
   - component: {fileID: 1097718430}
   - component: {fileID: 1097718429}
+  - component: {fileID: 1097718431}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -12910,6 +12911,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1097718427}
+--- !u!114 &1097718431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097718427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Text
+  attrname: TutorialWindow6.1
 --- !u!1 &1103625161
 GameObject:
   m_ObjectHideFlags: 0
