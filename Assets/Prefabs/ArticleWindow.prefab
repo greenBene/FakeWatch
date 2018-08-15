@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 224668515873045456}
   - component: {fileID: 222727669627463280}
   - component: {fileID: 114744887893032802}
+  - component: {fileID: 114487460057727006}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 224964011477419168}
   - component: {fileID: 222162003443100696}
   - component: {fileID: 114153970591266468}
+  - component: {fileID: 114891378289690910}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -112,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1472390200798476
 GameObject:
   m_ObjectHideFlags: 1
@@ -211,6 +213,7 @@ GameObject:
   - component: {fileID: 224811718392431592}
   - component: {fileID: 222613224804350256}
   - component: {fileID: 114149194899445758}
+  - component: {fileID: 114880218162427582}
   m_Layer: 5
   m_Name: von
   m_TagString: Untagged
@@ -564,7 +567,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: von
+  m_Text: '-'
 --- !u!114 &114153970591266468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -597,7 +600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Korrekt
+  m_Text: '-'
 --- !u!114 &114183545692165974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -684,7 +687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Torststadt
+  m_Text: '-'
 --- !u!114 &114287152410586646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,8 +720,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rehnholds cholerischer Anfall im Bundestag "Sexist Wehmert als Politiker
-    nicht geeignet und als Mensch nicht tragbar!"
+  m_Text: '-'
 --- !u!114 &114287247677254434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -751,7 +753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Grenzburger Blatt
+  m_Text: '-'
 --- !u!114 &114314872076218968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -826,6 +828,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114487460057727006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274199552966472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Fake
 --- !u!114 &114490607611056666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -949,7 +964,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wissenschaft
+  m_Text: '-'
 --- !u!114 &114644555625627972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1036,7 +1051,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 02.04.2018
+  m_Text: '-'
 --- !u!114 &114731702338506004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1096,7 +1111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fake
+  m_Text: '-'
 --- !u!114 &114745901779839682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1168,7 +1183,33 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stefan Stefanovitch
+  m_Text: '-'
+--- !u!114 &114880218162427582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1557555074887140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Header
+  attrname: Autor
+--- !u!114 &114891378289690910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1352784908916684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51936f8f3f18c3d43a40e108d43bf9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrcategory: Button
+  attrname: Correct
 --- !u!114 &114908918440389772
 MonoBehaviour:
   m_ObjectHideFlags: 1

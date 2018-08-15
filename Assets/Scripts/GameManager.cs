@@ -62,6 +62,14 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
         }
     }
 
+    private XMLLoader s_xmlLoader;
+    public static XMLLoader XMLLoader    {
+        get
+        {
+            return Instance.s_xmlLoader;
+        }
+    }
+
     //===== ===== Variables ===== =====
     [SerializeField] AudioClip DesktopStartAudio;
     [SerializeField] GameObject LogOutAudio;
@@ -90,6 +98,11 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
     public GameState state = GameState.Desktop;
 
     //===== ===== MonoBehaviourStuff ===== =====
+
+    void Awake()
+    {
+        s_xmlLoader = new XMLLoader();
+    }
     
     // Use this for initialization
     void Start () {
@@ -107,7 +120,7 @@ public class GameManager : MonoBehaviour,IStateMachine<GameState> {
 	
 	void Update () {
         StateTransition();
-        StateOnStay(); //for stuff that has to be done every frame in an specifik state
+        StateOnStay(); //for stuff that has to be done every frame in an specific state
         DebugCorrect1 = correctMarkedArticles;
         DebugWrong1 = wronglyMarkedArticlesAsFalse;
         DebugWrong2 = wronglyMarkedArticlesAsTrue;

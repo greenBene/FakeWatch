@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 using System;
+using System.Xml;
 
 public class ErrorMessageGenerator
 {
@@ -9,6 +10,49 @@ public class ErrorMessageGenerator
     private Dictionary<UnorderedTuple<InfoType>, OrderedTuple<InfoType>> argumentOrder = new Dictionary<UnorderedTuple<InfoType>, OrderedTuple<InfoType>>();
     private Random rng = new Random();
     
+    public ErrorMessageGenerator()
+    {
+        var root = GameManager.XMLLoader.GetRoot(xmlFiles.errors);
+        XmlNodeList nodes = root.SelectNodes("error");
+        foreach(XmlNode node in nodes)
+        {
+            string p1 = node.Attributes["info1"].Value;
+            string p2 = node.Attributes["info2"].Value;
+            InfoType t1 = Info.ParseTypeString(p1);
+            InfoType t2 = Info.ParseTypeString(p2);
+
+            UnorderedTuple<InfoType> types = new UnorderedTuple<InfoType>(t1, t2);
+            OrderedTuple<InfoType> order = new OrderedTuple<InfoType>(t1, t2);
+            if(!messages.ContainsKey(types))
+            {
+                messages.Add(types, new List<string>());
+            }
+            if(!argumentOrder.ContainsKey(types))
+            {
+                argumentOrder.Add(types, order);
+            }
+            bool switchPlaceholders = false;
+            if(argumentOrder[types]!=order)
+            {
+                switchPlaceholders = true;
+            }
+
+            XmlNodeList textnodes = node.SelectNodes("./message");
+            foreach(XmlNode textnode in textnodes)
+            {
+                string text = textnode.InnerText;
+                if (switchPlaceholders)
+                {
+                    text = text.Replace("{0}", "{N}");
+                    text = text.Replace("{1}", "{0}");
+                    text = text.Replace("{N}", "{1}");
+                }
+                messages[types].Add(text);
+            }
+        }
+    }
+
+    //===== ===== OLD IMPLEMENTATION ===== =====//
     public ErrorMessageGenerator(string filename)
     {
         if (!File.Exists(filename))
