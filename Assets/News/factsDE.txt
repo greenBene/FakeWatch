@@ -1,6 +1,6 @@
 ZEITUNG_Ta: Tagesblatt
 ZEITUNG_Ab: Abendblatt
-ZEITUNG_Lo: Lokal post
+ZEITUNG_Lo: Lokal Post
 ZEITUNG_La: Land Zeitung
 ZEITUNG_Fr: Freiland Aktuell
 ZEITUNG_Ha: Hallesche Zeitung

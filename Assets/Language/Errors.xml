@@ -82,7 +82,7 @@
 		<error info1="DATE" info2="ZEITUNG">
 			<message>{0} is no weekday on which {1} is published. Have you compared appendix E with a calendar?</message>
 			<message>{0} is not the publication date for {1}. Couldn't you tell by checking appendix E?</message>
-			<message>{1} usually isn't usually shipped on {0}. Have you compared appendix E to a calendar?</message>
+			<message>{1} isn't usually shipped on {0}. Have you compared appendix E to a calendar?</message>
 			<message>{1} isn't published on {0}. Did appendix E say otherwise?</message>
 			<message>{0} is not a weekday on which {1} is released on a regular basis. Probably fake news!</message>
 		</error>
