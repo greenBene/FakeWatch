@@ -21,7 +21,7 @@ public class EndScreenWindow : Window {
         } else {
             if (PlayerPrefs.GetString("language") == "german") {
                 text.text = "Mitarbeiter Evaluation von FactcheckerIn ID: " + GameManager.Instance.PlayerID + ". \n\nSie haben " + GameManager.Instance.correctMarkedArticles +
-                    " Nachrichten korrekt auf ihren Warheitsgehalt beurteilt.\nDagegen haben Sie " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
+                    " Nachrichten korrekt auf ihren Wahrheitsgehalt beurteilt.\nDagegen haben Sie " + GameManager.Instance.wronglyMarkedArticlesAsTrue +
                     " falsche Nachrichten als wahr\nund " + GameManager.Instance.wronglyMarkedArticlesAsFalse +
                     " wahre Nachrichten als falsch eingestuft.";
             } else {
