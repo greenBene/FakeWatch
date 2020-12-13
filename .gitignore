@@ -37,3 +37,5 @@ sysinfo.txt
 LOG/
 
 Highscore\.csv
+Rewrite/AbteilungF/.vs
+*.vsconfig
