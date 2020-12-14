@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
+	[SerializeField] News myNewsPrototype;
+
 	IProgression myProgression;
 	INewsFactory myFactory;
 	bool myIsInTutorial = true;
@@ -17,7 +19,10 @@ public class Game : MonoBehaviour
 	private void Start()
 	{
 		myFactory = new SimpleNewsFactory();
+		myFactory.SetNewsPrototype(myNewsPrototype);
+
 		myProgression = new TutorialProgression();
+		myIsInTutorial = true;
 
 		myLastNews = Time.time;
 		myCurrentDelay = 1; // TODO(andreas): get this to be settable

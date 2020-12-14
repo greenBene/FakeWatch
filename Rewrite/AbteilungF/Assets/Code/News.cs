@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 
+[CreateAssetMenu(fileName = "NewsPrototype", menuName = "NewsPrototype")]
 public class News : ScriptableObject
 {
 	private bool myIsCorrect;
