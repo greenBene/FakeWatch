@@ -6,6 +6,8 @@
 	public const string FAKE = "Fake";
 	public const string CORRECT = "Correct";
 
+	public const string NO_CONNECTION = "None|None";
+
 	public static string KeyFromNewsElement(newsElement aElement)
 	{
 		switch (aElement) {
@@ -24,5 +26,38 @@
 		default:
 			return "";
 		}
+	}
+
+	public static string KeyFromConnection(newsElement aLhs, newsElement aRhs)
+	{
+		string key;
+		if(IsConnection(aLhs, aRhs, newsElement.date, newsElement.title, out key)) {
+			return key;
+		}
+		if (IsConnection(aLhs, aRhs, newsElement.autor, newsElement.areaOfExpertise, out key)) {
+			return key;
+		}
+		if (IsConnection(aLhs, aRhs, newsElement.autor, newsElement.newspaper, out key)) {
+			return key;
+		}
+		if (IsConnection(aLhs, aRhs, newsElement.newspaper, newsElement.place, out key)) {
+			return key;
+		}
+		if (IsConnection(aLhs, aRhs, newsElement.date, newsElement.newspaper, out key)) {
+			return key;
+		}
+
+		return "";
+	}
+
+	private static bool IsConnection(newsElement aLhs, newsElement aRhs, newsElement aCheckA, newsElement aCheckB, out string key)
+	{
+		if ((aLhs == aCheckA && aRhs == aCheckB)
+			|| (aRhs == aCheckA && aLhs == aCheckB)) {
+			key = KeyFromNewsElement(aCheckA) + "|" + KeyFromNewsElement(aCheckB);
+			return true;
+		}
+		key = "";
+		return false;
 	}
 }

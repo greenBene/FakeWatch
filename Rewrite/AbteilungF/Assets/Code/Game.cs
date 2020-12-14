@@ -8,12 +8,13 @@ public class Game : MonoBehaviour
 
 	IProgression myProgression;
 	INewsFactory myFactory;
+	NotificationHandler myNotificationHandler = null;
 	bool myIsInTutorial = true;
 
 	float myLastNews;
 	float myCurrentDelay;
 
-	SortedSet<News> myNewses;
+	SortedSet<News> myNewses = new SortedSet<News>();
 
 
 	private void Start()
@@ -47,14 +48,14 @@ public class Game : MonoBehaviour
 
 	private void OnClickFake(News aNews)
 	{
-		aNews.MarkAs(false, myProgression).Execute();
+		aNews.MarkAs(false, myProgression, myNotificationHandler).Execute();
 		myCurrentDelay = myProgression.GetCurrentDelay();
 		myNewses.Remove(aNews);
 	}
 
 	private void OnClickCorrect(News aNews)
 	{
-		aNews.MarkAs(true, myProgression).Execute();
+		aNews.MarkAs(true, myProgression, myNotificationHandler).Execute();
 		myCurrentDelay = myProgression.GetCurrentDelay();
 		myNewses.Remove(aNews);
 	}

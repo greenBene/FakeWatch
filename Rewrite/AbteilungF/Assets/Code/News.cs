@@ -75,7 +75,7 @@ public class News : ScriptableObject
 		Destroy(myPrefab);
 	}
 
-	public ICommand MarkAs(bool aCorrect, IProgression aProgression)
+	public ICommand MarkAs(bool aCorrect, IProgression aProgression, NotificationHandler aHandler)
 	{
 		Kill();
 
@@ -83,9 +83,9 @@ public class News : ScriptableObject
 			return new NullCommand(aProgression);
 		} else {
 			if (myIsCorrect) {
-				return new WasCorrectCommand(aProgression, myLoalisator);
+				return new WasCorrectCommand(aProgression, aHandler, myLoalisator);
 			} else {
-				return new ErrorMessageCommand(aProgression, myLoalisator, myLhs, myRhs);
+				return new ErrorMessageCommand(aProgression, aHandler, myLoalisator, myLhs, myRhs);
 			}
 		}
 	}
@@ -93,13 +93,17 @@ public class News : ScriptableObject
 	class ErrorMessageCommand : ICommand
 	{
 		private IProgression myProgression;
+		private NotificationHandler myHandler;
 		private ILocalisator myLocalisator;
 		private newsElement myLhs;
 		private newsElement myRhs;
 
-		public ErrorMessageCommand(IProgression aProgression, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
+		private TextMeshProUGUI myText;
+
+		public ErrorMessageCommand(IProgression aProgression, NotificationHandler aHandler, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 		{
 			myProgression = aProgression;
+			myHandler = aHandler;
 			myLocalisator = aLocalisator;
 			myLhs = aLhs;
 			myRhs = aRhs;
@@ -108,23 +112,43 @@ public class News : ScriptableObject
 		public void Execute()
 		{
 			myProgression.SetFalseNegative();
+			myText = myHandler.CreateNotification();
+			Data.GetInstance().myLanguage.OnValueChangeWithState += ChangLang;
+			ChangLang(Data.GetInstance().myLanguage.value);
+		}
+
+		public void ChangLang(language aLanguage)
+		{
+			myText.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.KeyFromConnection(myLhs, myRhs));
 		}
 	}
 
 	class WasCorrectCommand : ICommand
 	{
 		private IProgression myProgression;
+		private NotificationHandler myHandler;
 		private ILocalisator myLocalisator;
 
-		public WasCorrectCommand(IProgression aProgression, ILocalisator aLocalisator)
+		private TextMeshProUGUI myText;
+
+		public WasCorrectCommand(IProgression aProgression, NotificationHandler aHandler, ILocalisator aLocalisator)
 		{
 			myProgression = aProgression;
+			myHandler = aHandler;
 			myLocalisator = aLocalisator;
 		}
 
 		public void Execute()
 		{
 			myProgression.SetFalsePositive();
+			myText = myHandler.CreateNotification();
+			Data.GetInstance().myLanguage.OnValueChangeWithState += ChangLang;
+			ChangLang(Data.GetInstance().myLanguage.value);
+		}
+
+		public void ChangLang(language aLanguage)
+		{
+			myText.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.NO_CONNECTION);
 		}
 	}
 
