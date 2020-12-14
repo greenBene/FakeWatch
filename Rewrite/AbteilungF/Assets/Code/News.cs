@@ -7,20 +7,20 @@ public class News : ScriptableObject
 	private bool myIsCorrect;
 	private newsElement myLhs;
 	private newsElement myRhs;
-	private Dictionary<newsElement, string> myContent;
+	private List<newsElement> myContent;
 	private ILocalisator myLoalisator;
 	[SerializeField] MonoBehaviour myPrefab;
 
 	private NewsRefHolder myRefHolder;
 
-	public News(Dictionary<newsElement, string> aContent, ILocalisator aLocalisator)
+	public News(List<newsElement> aContent, ILocalisator aLocalisator)
 	{
 		myIsCorrect = false;
 		myContent = aContent;
 		myLoalisator = aLocalisator;
 	}
 
-	public News(Dictionary<newsElement, string> aContent, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
+	public News(List<newsElement> aContent, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 	{
 		myIsCorrect = true;
 		myLhs = aLhs;
@@ -43,12 +43,25 @@ public class News : ScriptableObject
 
 	void UpdateLanguage(language aLanguage)
 	{
-		myRefHolder.myTitle.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.title]);
-		myRefHolder.myAutor.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.autor]);
-		myRefHolder.myNewspaper.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.newspaper]);
-		myRefHolder.myPlace.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.place]);
-		myRefHolder.myDate.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.date]);
-		myRefHolder.myAreaOfExpertise.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.areaOfExpertise]);
+		myRefHolder.myTitle.text = myContent.Contains(newsElement.title)
+			? myLoalisator.GetLocaString(aLanguage, StringCollecton.KeyFromNewsElement(newsElement.title))
+			: "";
+		myRefHolder.myAutor.text = myContent.Contains(newsElement.autor)
+			? myLoalisator.GetLocaString(aLanguage, StringCollecton.KeyFromNewsElement(newsElement.autor))
+			: "";
+		myRefHolder.myNewspaper.text = myContent.Contains(newsElement.newspaper)
+			? myLoalisator.GetLocaString(aLanguage, StringCollecton.KeyFromNewsElement(newsElement.newspaper))
+			: "";
+		myRefHolder.myPlace.text = myContent.Contains(newsElement.place)
+			? myLoalisator.GetLocaString(aLanguage, StringCollecton.KeyFromNewsElement(newsElement.place))
+			: "";
+		myRefHolder.myDate.text = myContent.Contains(newsElement.date)
+			? myLoalisator.GetLocaString(aLanguage, StringCollecton.KeyFromNewsElement(newsElement.date))
+			: "";
+		myRefHolder.myAreaOfExpertise.text = myContent.Contains(newsElement.areaOfExpertise)
+			? myLoalisator.GetLocaString(aLanguage, StringCollecton.KeyFromNewsElement(newsElement.areaOfExpertise))
+			: "";
+
 		myRefHolder.myFake.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.FAKE);
 		myRefHolder.myCorrect.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.CORRECT);
 	}
