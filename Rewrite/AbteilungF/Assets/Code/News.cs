@@ -29,13 +29,16 @@ public class News : ScriptableObject
 		myLoalisator = aLocalisator;
 	}
 
-	public void Show()
+	public void Show(System.Action<News> aFakeCallback, System.Action<News> aCorrectCallback)
 	{
 		myPrefab = Instantiate(myPrefab);
 		myRefHolder = myPrefab.GetComponent<NewsRefHolder>();
 
 		Data.GetInstance().myLanguage.OnValueChangeWithState += UpdateLanguage;
 		UpdateLanguage(Data.GetInstance().myLanguage.value);
+
+		myRefHolder.OnClickFake += aFakeCallback;
+		myRefHolder.OnClickCorrect += aCorrectCallback;
 	}
 
 	void UpdateLanguage(language aLanguage)
@@ -46,14 +49,8 @@ public class News : ScriptableObject
 		myRefHolder.myPlace.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.place]);
 		myRefHolder.myDate.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.date]);
 		myRefHolder.myAreaOfExpertise.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.areaOfExpertise]);
-		var element = myRefHolder.myFake.GetComponentInChildren<TextMeshProUGUI>();
-		if (element) {
-			element.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.FAKE);
-		}
-		element = myRefHolder.myCorrect.GetComponentInChildren<TextMeshProUGUI>();
-		if (element) {
-			element.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.CORRECT);
-		}
+		myRefHolder.myFake.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.FAKE);
+		myRefHolder.myCorrect.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.CORRECT);
 	}
 
 	public void Kill()

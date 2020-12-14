@@ -23,6 +23,7 @@ public enum achivement
 
 public interface ISDK
 {
+	void UpdateSDK();
 	string GetUserName();
 	void SetScore(highScoreEntry aEntry);
 	List<highScoreEntry> GetHighScoreList();

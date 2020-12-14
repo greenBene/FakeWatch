@@ -6,15 +6,19 @@ using UnityEngine.UI;
 
 public class NewsRefHolder : MonoBehaviour
 {
+	public System.Action<News> OnClickFake;
+	public System.Action<News> OnClickCorrect;
+
 	public TextMeshProUGUI myTitle;
 	public TextMeshProUGUI myAutor;
 	public TextMeshProUGUI myNewspaper;
 	public TextMeshProUGUI myPlace;
 	public TextMeshProUGUI myDate;
 	public TextMeshProUGUI myAreaOfExpertise;
+	public TextMeshProUGUI myFake;
+	public TextMeshProUGUI myCorrect;
 
-	public Button myFake;
-	public Button myCorrect;
+	[HideInInspector] public News myNews;
 
 	private void Start()
 	{
@@ -48,5 +52,15 @@ public class NewsRefHolder : MonoBehaviour
 			Destroy(gameObject);
 			return;
 		}
+	}
+
+	public void ClickFake()
+	{
+		OnClickFake?.Invoke(myNews);
+	}
+
+	public void ClickCorrect()
+	{
+		OnClickCorrect?.Invoke(myNews);
 	}
 }
