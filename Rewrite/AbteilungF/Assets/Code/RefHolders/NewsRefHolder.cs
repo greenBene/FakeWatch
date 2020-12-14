@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class NewsRefHolder : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class NewsRefHolder : MonoBehaviour
 	public TextMeshProUGUI myPlace;
 	public TextMeshProUGUI myDate;
 	public TextMeshProUGUI myAreaOfExpertise;
+
+	public Button myFake;
+	public Button myCorrect;
 
 	private void Start()
 	{

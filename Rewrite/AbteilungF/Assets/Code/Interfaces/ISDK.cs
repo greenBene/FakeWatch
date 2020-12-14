@@ -23,11 +23,11 @@ public enum achivement
 
 public interface ISDK
 {
+	string GetUserName();
 	void SetScore(highScoreEntry aEntry);
 	List<highScoreEntry> GetHighScoreList();
 	void SetLanguage(language aLanguage);
 	language GetCurrentLanguage();
 	List<language> GetAvailableLanguages();
 	void SetAchivement(achivement aAchivement);
-	ILocalisator CreateLocalisator();
 }

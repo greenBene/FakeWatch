@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class News : ScriptableObject
 {
-	private bool myIsFake;
+	private bool myIsCorrect;
 	private newsElement myLhs;
 	private newsElement myRhs;
 	private Dictionary<newsElement, string> myContent;
@@ -15,14 +16,14 @@ public class News : ScriptableObject
 
 	public News(Dictionary<newsElement, string> aContent, ILocalisator aLocalisator)
 	{
-		myIsFake = false;
+		myIsCorrect = false;
 		myContent = aContent;
 		myLoalisator = aLocalisator;
 	}
 
 	public News(Dictionary<newsElement, string> aContent, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 	{
-		myIsFake = true;
+		myIsCorrect = true;
 		myLhs = aLhs;
 		myRhs = aRhs;
 		myContent = aContent;
@@ -46,6 +47,14 @@ public class News : ScriptableObject
 		myRefHolder.myPlace.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.place]);
 		myRefHolder.myDate.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.date]);
 		myRefHolder.myAreaOfExpertise.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.areaOfExpertise]);
+		var element = myRefHolder.myFake.GetComponentInChildren<TextMeshProUGUI>();
+		if (element) {
+			element.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.FAKE);
+		}
+		element = myRefHolder.myCorrect.GetComponentInChildren<TextMeshProUGUI>();
+		if (element) {
+			element.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.CORRECT);
+		}
 	}
 
 	public void Kill()
@@ -56,29 +65,31 @@ public class News : ScriptableObject
 		Destroy(myPrefab);
 	}
 
-	public ICommand MarkAs(bool aFake)
+	public ICommand MarkAs(bool aCorrect, IProgression aProgression)
 	{
 		Kill();
 
-		if (aFake == myIsFake) {
-			return new NullCommand();
+		if (aCorrect == myIsCorrect) {
+			return new NullCommand(aProgression);
 		} else {
-			if (myIsFake) {
-				return new ErrorMessageCommand(myLoalisator, myLhs, myRhs);
+			if (myIsCorrect) {
+				return new WasCorrectCommand(aProgression, myLoalisator);
 			} else {
-				return new WasCorrectCommand(myLoalisator);
+				return new ErrorMessageCommand(aProgression, myLoalisator, myLhs, myRhs);
 			}
 		}
 	}
 
 	class ErrorMessageCommand : ICommand
 	{
+		private IProgression myProgression;
 		private ILocalisator myLocalisator;
 		private newsElement myLhs;
 		private newsElement myRhs;
 
-		public ErrorMessageCommand(ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
+		public ErrorMessageCommand(IProgression aProgression, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 		{
+			myProgression = aProgression;
 			myLocalisator = aLocalisator;
 			myLhs = aLhs;
 			myRhs = aRhs;
@@ -86,27 +97,39 @@ public class News : ScriptableObject
 
 		public void Execute()
 		{
-			throw new System.NotImplementedException();
+			myProgression.SetFalseNegative();
 		}
 	}
 
 	class WasCorrectCommand : ICommand
 	{
+		private IProgression myProgression;
 		private ILocalisator myLocalisator;
 
-		public WasCorrectCommand(ILocalisator aLocalisator)
+		public WasCorrectCommand(IProgression aProgression, ILocalisator aLocalisator)
 		{
+			myProgression = aProgression;
 			myLocalisator = aLocalisator;
 		}
 
 		public void Execute()
 		{
-			throw new System.NotImplementedException();
+			myProgression.SetFalsePositive();
 		}
 	}
 
 	class NullCommand : ICommand
 	{
-		public void Execute() { }
+		private IProgression myProgression;
+
+		public NullCommand(IProgression aProgression)
+		{
+			myProgression = aProgression;
+		}
+
+		public void Execute()
+		{
+			myProgression.SetCorrect();
+		}
 	}
 }
