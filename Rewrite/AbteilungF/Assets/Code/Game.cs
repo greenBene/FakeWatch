@@ -10,23 +10,31 @@ public class Game : MonoBehaviour
 	INewsFactory myFactory;
 	NotificationHandler myNotificationHandler = null;
 	bool myIsInTutorial = true;
+	Timer myTimer;
 
 	float myLastNews;
 	float myCurrentDelay;
 
 	SortedSet<News> myNewses = new SortedSet<News>();
 
-
-	private void Start()
+	public void MyStart(NotificationHandler aNotificationHandler, float aStartDelay)
 	{
+		Kill();
+
+		myNotificationHandler = aNotificationHandler;
+
 		myFactory = new SimpleNewsFactory();
 		myFactory.SetNewsPrototype(myNewsPrototype);
 
 		myProgression = new TutorialProgression();
 		myIsInTutorial = true;
 
+		myTimer = new Timer();
+
+		myTimer.OnCountdownEnded += Kill;
+
 		myLastNews = Time.time;
-		myCurrentDelay = 1; // TODO(andreas): get this to be settable
+		myCurrentDelay = aStartDelay;
 	}
 
 	private void Update()
@@ -58,5 +66,13 @@ public class Game : MonoBehaviour
 		aNews.MarkAs(true, myProgression, myNotificationHandler).Execute();
 		myCurrentDelay = myProgression.GetCurrentDelay();
 		myNewses.Remove(aNews);
+	}
+
+	private void Kill()
+	{
+		foreach(var it in myNewses) {
+			it.Kill();
+		}
+		myNotificationHandler.MyReset();
 	}
 }

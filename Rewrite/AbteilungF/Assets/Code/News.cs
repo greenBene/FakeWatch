@@ -98,7 +98,7 @@ public class News : ScriptableObject
 		private newsElement myLhs;
 		private newsElement myRhs;
 
-		private TextMeshProUGUI myText;
+		private NotificationRefHolder myNotification;
 
 		public ErrorMessageCommand(IProgression aProgression, NotificationHandler aHandler, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 		{
@@ -112,14 +112,23 @@ public class News : ScriptableObject
 		public void Execute()
 		{
 			myProgression.SetFalseNegative();
-			myText = myHandler.CreateNotification();
+			myNotification = myHandler.CreateNotification();
 			Data.GetInstance().myLanguage.OnValueChangeWithState += ChangLang;
 			ChangLang(Data.GetInstance().myLanguage.value);
+
+			myNotification.OnRemove += Finish;
 		}
 
-		public void ChangLang(language aLanguage)
+		void ChangLang(language aLanguage)
 		{
-			myText.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.KeyFromConnection(myLhs, myRhs));
+			myNotification.myMessage.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.KeyFromConnection(myLhs, myRhs));
+		}
+
+		void Finish()
+		{
+			if (Data.Exists()) {
+				Data.GetInstance().myLanguage.OnValueChangeWithState -= ChangLang;
+			}
 		}
 	}
 
@@ -129,7 +138,7 @@ public class News : ScriptableObject
 		private NotificationHandler myHandler;
 		private ILocalisator myLocalisator;
 
-		private TextMeshProUGUI myText;
+		private NotificationRefHolder myNotification;
 
 		public WasCorrectCommand(IProgression aProgression, NotificationHandler aHandler, ILocalisator aLocalisator)
 		{
@@ -141,14 +150,23 @@ public class News : ScriptableObject
 		public void Execute()
 		{
 			myProgression.SetFalsePositive();
-			myText = myHandler.CreateNotification();
+			myNotification = myHandler.CreateNotification();
 			Data.GetInstance().myLanguage.OnValueChangeWithState += ChangLang;
 			ChangLang(Data.GetInstance().myLanguage.value);
+
+			myNotification.OnRemove += Finish;
 		}
 
-		public void ChangLang(language aLanguage)
+		void ChangLang(language aLanguage)
 		{
-			myText.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.NO_CONNECTION);
+			myNotification.myMessage.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.NO_CONNECTION);
+		}
+
+		void Finish()
+		{
+			if (Data.Exists()) {
+				Data.GetInstance().myLanguage.OnValueChangeWithState -= ChangLang;
+			}
 		}
 	}
 

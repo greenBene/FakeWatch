@@ -5,7 +5,12 @@ using TMPro;
 
 public class NotificationHandler : MonoBehaviour
 {
-    public TextMeshProUGUI CreateNotification()
+    public NotificationRefHolder CreateNotification()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public void MyReset()
 	{
 		throw new System.NotImplementedException();
 	}
