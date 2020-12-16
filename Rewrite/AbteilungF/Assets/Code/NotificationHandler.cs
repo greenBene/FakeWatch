@@ -5,13 +5,24 @@ using TMPro;
 
 public class NotificationHandler : MonoBehaviour
 {
-    public NotificationRefHolder CreateNotification()
+	[SerializeField] GameObject myMessengerPrefab;
+	[SerializeField] float myTimeToLife;
+
+	LinkedList<NotificationWindow> myWindowList;
+
+	public NotificationWindow CreateNotification()
 	{
-		throw new System.NotImplementedException();
+		NotificationWindow newMessenger = Instantiate(myMessengerPrefab, transform).GetComponent<NotificationWindow>();
+		newMessenger.Setup(myWindowList.AddFirst(newMessenger), myTimeToLife);
+
+		return newMessenger;
 	}
 
 	public void MyReset()
 	{
-		throw new System.NotImplementedException();
+		foreach(var it in myWindowList) {
+			it.Disappear();
+		}
+		myWindowList.Clear();
 	}
 }

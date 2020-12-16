@@ -98,7 +98,7 @@ public class News : ScriptableObject
 		private newsElement myLhs;
 		private newsElement myRhs;
 
-		private NotificationRefHolder myNotification;
+		private NotificationWindow myNotification;
 
 		public ErrorMessageCommand(IProgression aProgression, NotificationHandler aHandler, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 		{
@@ -121,7 +121,7 @@ public class News : ScriptableObject
 
 		void ChangLang(language aLanguage)
 		{
-			myNotification.myMessage.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.KeyFromConnection(myLhs, myRhs));
+			myNotification.ChangeText(myLocalisator.GetLocaString(aLanguage, StringCollecton.KeyFromConnection(myLhs, myRhs)));
 		}
 
 		void Finish()
@@ -138,7 +138,7 @@ public class News : ScriptableObject
 		private NotificationHandler myHandler;
 		private ILocalisator myLocalisator;
 
-		private NotificationRefHolder myNotification;
+		private NotificationWindow myNotification;
 
 		public WasCorrectCommand(IProgression aProgression, NotificationHandler aHandler, ILocalisator aLocalisator)
 		{
@@ -159,7 +159,7 @@ public class News : ScriptableObject
 
 		void ChangLang(language aLanguage)
 		{
-			myNotification.myMessage.text = myLocalisator.GetLocaString(aLanguage, StringCollecton.NO_CONNECTION);
+			myNotification.ChangeText(myLocalisator.GetLocaString(aLanguage, StringCollecton.NO_CONNECTION));
 		}
 
 		void Finish()
