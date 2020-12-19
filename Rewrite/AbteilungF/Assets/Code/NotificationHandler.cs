@@ -7,13 +7,14 @@ public class NotificationHandler : MonoBehaviour
 {
 	[SerializeField] GameObject myMessengerPrefab;
 	[SerializeField] float myTimeToLife;
+	[SerializeField] float mySpeed;
 
 	LinkedList<NotificationWindow> myWindowList;
 
 	public NotificationWindow CreateNotification()
 	{
 		NotificationWindow newMessenger = Instantiate(myMessengerPrefab, transform).GetComponent<NotificationWindow>();
-		newMessenger.Setup(myWindowList.AddFirst(newMessenger), myTimeToLife);
+		newMessenger.Setup(myWindowList.AddFirst(newMessenger), mySpeed, myTimeToLife);
 
 		return newMessenger;
 	}

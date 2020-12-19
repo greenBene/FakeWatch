@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class NotificationWindow : MonoBehaviour
 {
+	const float locSmallNumber = 0.001f;
+
 	public System.Action OnRemove;
 
 	[SerializeField] TextMeshProUGUI myMessage;
@@ -14,11 +17,13 @@ public class NotificationWindow : MonoBehaviour
 	LinkedListNode<NotificationWindow> mySelfIterator;
 	float myTargetPositionHight;
 	float myHight;
+	float mySpeed;
 
-	public void Setup(LinkedListNode<NotificationWindow> aSelfIterator, float aTimeToLife)
+	public void Setup(LinkedListNode<NotificationWindow> aSelfIterator, float aSpeed, float aTimeToLife)
 	{
 		mySelfIterator = aSelfIterator;
 		StartCoroutine(Kill(aTimeToLife));
+		mySpeed = aSpeed;
 		myMoveInAnimation.Play();
 	}
 
@@ -38,6 +43,8 @@ public class NotificationWindow : MonoBehaviour
 	public void Disappear()
 	{
 		StopAllCoroutines();
+		mySelfIterator.Next?.Value.ChangeTargetPositionHight(myTargetPositionHight);
+
 		myMoveOutAnimation.Play();
 		OnRemove?.Invoke();
 	}
@@ -45,12 +52,23 @@ public class NotificationWindow : MonoBehaviour
 	IEnumerator Kill(float delay)
 	{
 		yield return new WaitForSeconds(delay);
-		mySelfIterator.List.Remove(mySelfIterator);
 		Disappear();
+		mySelfIterator.List.Remove(mySelfIterator);
 	}
-	
-    void Update()
-    {
-        //TODO: get to target position
-    }
+
+	void Update()
+	{
+		var rectTrans = (RectTransform)transform;
+		if (Mathf.Abs(myTargetPositionHight - rectTrans.anchoredPosition.x) < locSmallNumber) {
+			return;
+		}
+
+		bool HasToGoUp = myTargetPositionHight > rectTrans.anchoredPosition.x;
+
+		rectTrans.anchoredPosition += new Vector2(HasToGoUp ? mySpeed : -mySpeed, 0);
+
+		if ((myTargetPositionHight > rectTrans.anchoredPosition.x) != HasToGoUp) {
+			rectTrans.anchoredPosition = new Vector2(myTargetPositionHight, rectTrans.anchoredPosition.y);
+		}
+	}
 }
