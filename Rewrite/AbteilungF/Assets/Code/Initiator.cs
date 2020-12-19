@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Initiator : MonoBehaviour
+namespace AbteilungF
 {
-	private void Start()
+	public class Initiator : MonoBehaviour
 	{
-		Data.GetInstance().mySDK = new LocalDataSDK();
-		Data.GetInstance().myLocalisator = new JSONLocalisator();
-		SceneManager.LoadScene(StringCollecton.LOCKSCREEN);
+		private void Start()
+		{
+			Data.GetInstance().mySDK = new LocalDataSDK();
+			Data.GetInstance().myLocalisator = new JSONLocalisator();
+			SceneManager.LoadScene(StringCollecton.LOCKSCREEN);
+		}
 	}
 }

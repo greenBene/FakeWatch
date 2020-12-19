@@ -1,32 +1,36 @@
-﻿public class DynamicProgression : IProgression
+﻿namespace AbteilungF
 {
-	public float GetCurrentDelay()
+	public class DynamicProgression : IProgression
 	{
-		throw new System.NotImplementedException();
-	}
+		public float GetCurrentDelay()
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public bool HasReachedMaxProgression()
-	{
-		throw new System.NotImplementedException();
-	}
+		public bool HasReachedMaxProgression()
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public void SetCorrect()
-	{
-		throw new System.NotImplementedException();
-	}
+		public void SetCorrect()
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public void SetFalseNegative()
-	{
-		throw new System.NotImplementedException();
-	}
+		public void SetFalseNegative()
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public void SetFalsePositive()
-	{
-		throw new System.NotImplementedException();
-	}
+		public void SetFalsePositive()
+		{
+			throw new System.NotImplementedException();
+		}
 
-	public News TriggerNews(INewsFactory aFactory)
-	{
-		return aFactory.GetNextNews(Data.GetInstance().myLocalisator);
+		public News TriggerNews(INewsFactory aFactory)
+		{
+			return aFactory.GetNextNews(Data.GetInstance().myLocalisator);
+		}
 	}
 }
+

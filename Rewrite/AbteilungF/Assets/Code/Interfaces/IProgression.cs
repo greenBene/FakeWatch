@@ -1,10 +1,12 @@
-﻿
-public interface IProgression
+﻿namespace AbteilungF
 {
-	News TriggerNews(INewsFactory aFactory);
-	bool HasReachedMaxProgression();
-	float GetCurrentDelay();
-	void SetFalsePositive();
-	void SetFalseNegative();
-	void SetCorrect();
+	public interface IProgression
+	{
+		News TriggerNews(INewsFactory aFactory);
+		bool HasReachedMaxProgression();
+		float GetCurrentDelay();
+		void SetFalsePositive();
+		void SetFalseNegative();
+		void SetCorrect();
+	}
 }

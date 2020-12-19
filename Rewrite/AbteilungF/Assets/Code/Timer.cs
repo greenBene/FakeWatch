@@ -2,52 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+namespace AbteilungF
 {
-	public System.Action OnCountdownEnded;
-	public System.Action<float> OnCountdownReset;
-	public System.Action OnDoEffect;
-
-	[SerializeField] AnimationCurve myEffectTriggers;
-	[SerializeField] Animation myStartAnimation;
-	[SerializeField] Animation myEffectAnimation;
-	int myLastEffectValue;
-
-	bool myIsInCountdown = false;
-	float myCountdownLeft;
-
-	public void StartCountdown(float aLength)
+	public class Timer : MonoBehaviour
 	{
-		if (myIsInCountdown) {
-			OnCountdownReset?.Invoke(myCountdownLeft);
-		}
-		myIsInCountdown = true;
+		public System.Action OnCountdownEnded;
+		public System.Action<float> OnCountdownReset;
+		public System.Action OnDoEffect;
 
-		myCountdownLeft = aLength;
-		myLastEffectValue = (int)myEffectTriggers.Evaluate(aLength);
+		[SerializeField] AnimationCurve myEffectTriggers;
+		[SerializeField] Animation myStartAnimation;
+		[SerializeField] Animation myEffectAnimation;
+		int myLastEffectValue;
 
-		myStartAnimation.Play();
-	}
+		bool myIsInCountdown = false;
+		float myCountdownLeft;
 
-	private void Update()
-	{
-		if (!myIsInCountdown) {
-			return;
-		}
-
-		myCountdownLeft -= Time.deltaTime;
-
-		if(myCountdownLeft <= 0) {
-			OnCountdownEnded?.Invoke();
+		public void StartCountdown(float aLength)
+		{
+			if (myIsInCountdown) {
+				OnCountdownReset?.Invoke(myCountdownLeft);
+			}
 			myIsInCountdown = true;
-			return;
+
+			myCountdownLeft = aLength;
+			myLastEffectValue = (int)myEffectTriggers.Evaluate(aLength);
+
+			myStartAnimation.Play();
 		}
 
-		int newValue = (int)myEffectTriggers.Evaluate(myCountdownLeft);
-		if(myLastEffectValue != newValue) {
-			myLastEffectValue = newValue;
-			OnDoEffect();
-			myEffectAnimation.Play();
+		private void Update()
+		{
+			if (!myIsInCountdown) {
+				return;
+			}
+
+			myCountdownLeft -= Time.deltaTime;
+
+			if (myCountdownLeft <= 0) {
+				OnCountdownEnded?.Invoke();
+				myIsInCountdown = true;
+				return;
+			}
+
+			int newValue = (int)myEffectTriggers.Evaluate(myCountdownLeft);
+			if (myLastEffectValue != newValue) {
+				myLastEffectValue = newValue;
+				OnDoEffect();
+				myEffectAnimation.Play();
+			}
 		}
 	}
 }

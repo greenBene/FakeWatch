@@ -3,72 +3,74 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
-public class NotificationWindow : MonoBehaviour
+namespace AbteilungF
 {
-	const float locSmallNumber = 0.001f;
-
-	public System.Action OnRemove;
-
-	[SerializeField] TextMeshProUGUI myMessage;
-	[SerializeField] Animation myMoveInAnimation;
-	[SerializeField] Animation myMoveOutAnimation;
-
-	LinkedListNode<NotificationWindow> mySelfIterator;
-	float myTargetPositionHight;
-	float myHight;
-	float mySpeed;
-
-	public void Setup(LinkedListNode<NotificationWindow> aSelfIterator, float aSpeed, float aTimeToLife)
+	public class NotificationWindow : MonoBehaviour
 	{
-		mySelfIterator = aSelfIterator;
-		StartCoroutine(Kill(aTimeToLife));
-		mySpeed = aSpeed;
-		myMoveInAnimation.Play();
-	}
+		const float locSmallNumber = 0.001f;
 
-	public void ChangeText(string aText)
-	{
-		myMessage.text = aText;
-		// TODO: caluclate new Hight
-		ChangeTargetPositionHight(myTargetPositionHight);
-	}
+		public System.Action OnRemove;
 
-	void ChangeTargetPositionHight(float aTargetPositionHight)
-	{
-		myTargetPositionHight = aTargetPositionHight;
-		mySelfIterator.Next?.Value.ChangeTargetPositionHight(aTargetPositionHight + myHight);
-	}
+		[SerializeField] TextMeshProUGUI myMessage;
+		[SerializeField] Animation myMoveInAnimation;
+		[SerializeField] Animation myMoveOutAnimation;
 
-	public void Disappear()
-	{
-		StopAllCoroutines();
-		mySelfIterator.Next?.Value.ChangeTargetPositionHight(myTargetPositionHight);
+		LinkedListNode<NotificationWindow> mySelfIterator;
+		float myTargetPositionHight;
+		float myHight;
+		float mySpeed;
 
-		myMoveOutAnimation.Play();
-		OnRemove?.Invoke();
-	}
-
-	IEnumerator Kill(float delay)
-	{
-		yield return new WaitForSeconds(delay);
-		Disappear();
-		mySelfIterator.List.Remove(mySelfIterator);
-	}
-
-	void Update()
-	{
-		var rectTrans = (RectTransform)transform;
-		if (Mathf.Abs(myTargetPositionHight - rectTrans.anchoredPosition.x) < locSmallNumber) {
-			return;
+		public void Setup(LinkedListNode<NotificationWindow> aSelfIterator, float aSpeed, float aTimeToLife)
+		{
+			mySelfIterator = aSelfIterator;
+			StartCoroutine(Kill(aTimeToLife));
+			mySpeed = aSpeed;
+			myMoveInAnimation.Play();
 		}
 
-		bool HasToGoUp = myTargetPositionHight > rectTrans.anchoredPosition.x;
+		public void ChangeText(string aText)
+		{
+			myMessage.text = aText;
+			// TODO: caluclate new Hight
+			ChangeTargetPositionHight(myTargetPositionHight);
+		}
 
-		rectTrans.anchoredPosition += new Vector2(HasToGoUp ? mySpeed : -mySpeed, 0);
+		void ChangeTargetPositionHight(float aTargetPositionHight)
+		{
+			myTargetPositionHight = aTargetPositionHight;
+			mySelfIterator.Next?.Value.ChangeTargetPositionHight(aTargetPositionHight + myHight);
+		}
 
-		if ((myTargetPositionHight > rectTrans.anchoredPosition.x) != HasToGoUp) {
-			rectTrans.anchoredPosition = new Vector2(myTargetPositionHight, rectTrans.anchoredPosition.y);
+		public void Disappear()
+		{
+			StopAllCoroutines();
+			mySelfIterator.Next?.Value.ChangeTargetPositionHight(myTargetPositionHight);
+
+			myMoveOutAnimation.Play();
+			OnRemove?.Invoke();
+		}
+
+		IEnumerator Kill(float delay)
+		{
+			yield return new WaitForSeconds(delay);
+			Disappear();
+			mySelfIterator.List.Remove(mySelfIterator);
+		}
+
+		void Update()
+		{
+			var rectTrans = (RectTransform)transform;
+			if (Mathf.Abs(myTargetPositionHight - rectTrans.anchoredPosition.x) < locSmallNumber) {
+				return;
+			}
+
+			bool HasToGoUp = myTargetPositionHight > rectTrans.anchoredPosition.x;
+
+			rectTrans.anchoredPosition += new Vector2(HasToGoUp ? mySpeed : -mySpeed, 0);
+
+			if ((myTargetPositionHight > rectTrans.anchoredPosition.x) != HasToGoUp) {
+				rectTrans.anchoredPosition = new Vector2(myTargetPositionHight, rectTrans.anchoredPosition.y);
+			}
 		}
 	}
 }

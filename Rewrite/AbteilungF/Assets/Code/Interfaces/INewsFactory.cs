@@ -1,18 +1,21 @@
 ﻿using System.Collections.Generic;
 
-public enum newsElement
+namespace AbteilungF
 {
-	title,
-	autor,
-	newspaper,
-	place,
-	date,
-	areaOfExpertise,
-}
+	public enum newsElement
+	{
+		title,
+		autor,
+		newspaper,
+		place,
+		date,
+		areaOfExpertise,
+	}
 
-public interface INewsFactory
-{
-	void SetNewsPrototype(News aNews);
-	News GetNextNews(ILocalisator aLocalisator);
-	News GetNextNews(List<newsElement> aContainsElements, ILocalisator aLocalisator);
+	public interface INewsFactory
+	{
+		void SetNewsPrototype(News aNews);
+		News GetNextNews(ILocalisator aLocalisator);
+		News GetNextNews(List<newsElement> aContainsElements, ILocalisator aLocalisator);
+	}
 }

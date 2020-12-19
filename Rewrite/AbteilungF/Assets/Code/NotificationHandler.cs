@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class NotificationHandler : MonoBehaviour
+namespace AbteilungF
 {
-	[SerializeField] GameObject myMessengerPrefab;
-	[SerializeField] float myTimeToLife;
-	[SerializeField] float mySpeed;
-
-	LinkedList<NotificationWindow> myWindowList;
-
-	public NotificationWindow CreateNotification()
+	public class NotificationHandler : MonoBehaviour
 	{
-		NotificationWindow newMessenger = Instantiate(myMessengerPrefab, transform).GetComponent<NotificationWindow>();
-		newMessenger.Setup(myWindowList.AddFirst(newMessenger), mySpeed, myTimeToLife);
+		[SerializeField] GameObject myMessengerPrefab;
+		[SerializeField] float myTimeToLife;
+		[SerializeField] float mySpeed;
 
-		return newMessenger;
-	}
+		LinkedList<NotificationWindow> myWindowList;
 
-	public void MyReset()
-	{
-		foreach(var it in myWindowList) {
-			it.Disappear();
+		public NotificationWindow CreateNotification()
+		{
+			NotificationWindow newMessenger = Instantiate(myMessengerPrefab, transform).GetComponent<NotificationWindow>();
+			newMessenger.Setup(myWindowList.AddFirst(newMessenger), mySpeed, myTimeToLife);
+
+			return newMessenger;
 		}
-		myWindowList.Clear();
+
+		public void MyReset()
+		{
+			foreach (var it in myWindowList) {
+				it.Disappear();
+			}
+			myWindowList.Clear();
+		}
 	}
 }

@@ -1,5 +1,7 @@
-﻿
-public interface ICommand
+﻿namespace AbteilungF
 {
-	void Execute();
+	public interface ICommand
+	{
+		void Execute();
+	}
 }

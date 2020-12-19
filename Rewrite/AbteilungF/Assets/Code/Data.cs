@@ -1,19 +1,22 @@
 ﻿using AsserTOOLres;
 
-public class Data : Singleton<Data>
+namespace AbteilungF
 {
-	public Observable<language> myLanguage;
-	public ISDK mySDK;
-	public ILocalisator myLocalisator;
-
-	private void Start()
+	public class Data : Singleton<Data>
 	{
+		public Observable<language> myLanguage;
+		public ISDK mySDK;
+		public ILocalisator myLocalisator;
 
-		myLanguage.value = mySDK.GetCurrentLanguage();
-	}
+		private void Start()
+		{
 
-	private void FixedUpdate()
-	{
-		mySDK.UpdateSDK();
+			myLanguage.value = mySDK.GetCurrentLanguage();
+		}
+
+		private void FixedUpdate()
+		{
+			mySDK.UpdateSDK();
+		}
 	}
 }
