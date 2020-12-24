@@ -22,6 +22,7 @@
 			case newsElement.place:
 				return "Place";
 			case newsElement.date:
+			case newsElement.day:
 				return "Date";
 			case newsElement.areaOfExpertise:
 				return "AOE";

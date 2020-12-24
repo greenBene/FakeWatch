@@ -9,6 +9,7 @@ namespace AbteilungF
 		newspaper,
 		place,
 		date,
+		day,
 		areaOfExpertise,
 	}
 

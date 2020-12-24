@@ -50,7 +50,7 @@ namespace AbteilungF
 			myRefHolder.myAutor.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.autor]);
 			myRefHolder.myNewspaper.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.newspaper]);
 			myRefHolder.myPlace.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.place]);
-			myRefHolder.myDate.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.date]);
+			myRefHolder.myDate.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.date]); //TODO: make date and day work together
 			myRefHolder.myAreaOfExpertise.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.areaOfExpertise]);
 
 			myRefHolder.myFake.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.FAKE);

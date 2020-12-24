@@ -1,0 +1,46 @@
+﻿[DATE|EVENT]
+Sind Sie sicher, dass das thematisierte Ereignis am {0} stattfand? Was steht denn in Anlage A?
+Das Ereignis aus dem Artikel fand nicht am {0} statt. Haben Sie sich Anlage A angesehen?
+Der {0} steht in keinem Bezug zu dem im Artikel angegebenen Thema. Bitte Anlage A überprüfen.
+Am {0} gab es keine Medienberichterstattung zu dem im Artikel beschriebenen Ereignis. Wohl doch ein Fake, siehe Anlage A. 
+Am {0} wurde in den Medien nicht zum Thema des Artikels berichtet. Daher wahrscheinlich ein Fake!
+
+[AUTOR|FACHGEBIET]
+Das Fachgebiet von {0} ist leider nicht {1}. Haben Sie die Liste der Autoren in Anlage B abgeglichen?  
+{0} schreibt leider nicht zum Thema {1}. Bitte Liste der Autoren in Anlage B abgleichen.
+{1} ist leider nicht das Fachgebiet von {0}. Stand das so in Anlage B?
+{0} schreibt normalerweise nicht im Ressort {1}. Haben Sie das mit Anlage B abgeglichen?
+Zu {1} schreibt {0} normalerweise nicht. Das scheint ein Fake zu sein.
+
+[AUTOR|ZEITUNG]
+Leider schreibt {0} nicht für die Zeitung {1}. Haben Sie Anlage B und Anlage C abgeglichen? 
+{0} schreibt nicht für die Zeitung {1}. Siehe Anlage B und Anlage C.
+Die Zeitung {1} bekommt keine Artikel von {0}. Stand das so in Anlage B und Anlage C?
+{0} ist nicht bei der Zeitung {1} angestellt. Anlage B mit Anlage C sollten das bestätigen.
+{0} schrieb bisher nicht für die Zeitung {1}. Scheint wohl eher ein Fake zu sein…
+
+[ZEITUNG|ORT]
+Die Zeitung {0} erscheint leider nicht in {1}. Vergleichen Sie bitte Anlage D, den Merkzettel am Bildschirm und die Karte. 
+In {1} erscheint die Zeitung {0} nicht. Anlage D und die Karte sollten das bestätigen.	
+{0} erscheint nicht in {1}. Haben Sie Anlage D mit dem Merkzettel und der Karte Freilands verglichen? 
+Die Zeitung {0} wird nicht in {1} veröffentlicht. Sehen Sie sich bitte nochmals Anlage D und die Karte an. 
+Der angebene Ort {1} stimmt nicht mit dem Veröffentlichungsort der Zeitung {0} überein. Wahrscheinlich ist die Nachricht ein Fake…
+
+[DATE|ZEITUNG]
+Der {0} ist kein Wochentag, an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit einem Kalender verglichen?   
+Am {0} erschien die Zeitung {1} nicht. War das so nicht in Anlage E erkennbar? 
+{0} ist kein Wochentag an dem die Zeitung {1} erscheint. Haben Sie Anlage E mit dem Kalender abgeglichen? 
+Am {0} erscheint die Zeitung {1} normalerweise nicht. War das in Anlage E nicht erkennbar? 
+Der {0} ist ein Wochentag an dem die Zeitung {1} regulär nicht erscheint. Daher vermutlich Fake News.  
+
+[KORREKT]
+Da waren Sie etwas zu kritisch, die Nachricht war korrekt.
+Da waren Sie etwas zu eifrig, das waren keine Fake News! Bitte sorgfältiger überprüfen...
+Bitte keine korrekten Nachrichten als Fake markiert. Das sollte nicht passieren... 
+Da ist Ihnen ein Fehler unterlaufen: Die Nachricht war korrekt!
+Achten Sie darauf, keine korrekten Nachrichten als Fake zu markieren. 
+Bitte besser Prüfen! Wir dürfen journalistische Arbeit nicht behindern. 
+Die Nachricht war korrekt. Haben Sie alle Dokumente richtig überprüft?
+War die Nachricht nicht doch korrekt? Das müssen wir dringend prüfen.
+Nachricht war korrekt!!! Da müssen wir später nochmal dringend ran.
+Wir können uns keine Behinderung journalistischer Arbeit erlauben. Bitte Artikel besser prüfen.
