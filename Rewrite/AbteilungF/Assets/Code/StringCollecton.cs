@@ -9,23 +9,29 @@
 		public const string CORRECT = "Correct";
 
 		public const string NO_CONNECTION = "None|None";
+		public const string TITLE = "Title";
+		public const string AUTOR = "Autor";
+		public const string NEWSPAPER = "Newspaper";
+		public const string PLACE = "Place";
+		public const string DATE = "Date";
+		public const string AOE = "AOE";
 
 		public static string KeyFromNewsElement(newsElement aElement)
 		{
 			switch (aElement) {
 			case newsElement.title:
-				return "Title";
+				return TITLE;
 			case newsElement.autor:
-				return "Autor";
+				return AUTOR;
 			case newsElement.newspaper:
-				return "Newspaper";
+				return NEWSPAPER;
 			case newsElement.place:
-				return "Place";
+				return PLACE;
 			case newsElement.date:
 			case newsElement.day:
-				return "Date";
+				return DATE;
 			case newsElement.areaOfExpertise:
-				return "AOE";
+				return AOE;
 			default:
 				return "";
 			}

@@ -12,6 +12,7 @@ namespace AbteilungF
 		int falseNegative;
 	}
 
+	[System.Serializable]
 	public enum language
 	{
 		deDE,

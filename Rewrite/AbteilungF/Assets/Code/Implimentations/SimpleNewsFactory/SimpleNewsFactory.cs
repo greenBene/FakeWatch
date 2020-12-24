@@ -8,7 +8,7 @@ namespace AbteilungF
 		private News myNewsPrototype;
 
 		private List<Node> myNodes;
-		private INodeFactory myNodeFactory = new LegacyNodeFactory(UnityEngine.Application.streamingAssetsPath + "/factsDE");
+		private INodeFactory myNodeFactory = new LegacyNodeFactory(UnityEngine.Application.streamingAssetsPath + "/factsDE.txt");
 
 		public SimpleNewsFactory()
 		{
