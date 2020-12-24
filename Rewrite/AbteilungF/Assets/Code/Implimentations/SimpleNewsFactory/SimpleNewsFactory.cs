@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AbteilungF.SNF;
 
 namespace AbteilungF
 {
@@ -6,9 +7,12 @@ namespace AbteilungF
 	{
 		private News myNewsPrototype;
 
+		private List<Node> myNodes;
+		private INodeFactory myNodeFactory = new LegacyNodeFactory(UnityEngine.Application.streamingAssetsPath + "/factsDE");
+
 		public SimpleNewsFactory()
 		{
-
+			myNodes = myNodeFactory.GetNodes();
 		}
 
 		public News GetNextNews(ILocalisator aLocalisator)
@@ -25,14 +29,23 @@ namespace AbteilungF
 
 		public News GetNextNews(List<newsElement> aContainsElements, ILocalisator aLocalisator)
 		{
-			var keys = new Dictionary<newsElement, string>();
+			NodeCollection worker = new NodeCollection();
+
+			do {
+				myNodes.Shuffle();
+				foreach (var it in myNodes) {
+					if (!aContainsElements.Contains(it.GetElement())
+						|| worker.GetContainingElements().Contains(it.GetElement())) {
+						continue;
+					}
+
+					worker.InsertNode(it);
+				}
+			} while (!worker.GetContainingElements().AreTheSame(aContainsElements));
+
+
 			News news = new News();
-
-			foreach (var it in aContainsElements) {
-				keys[it] = ""; // TODO: find a key
-			}
-
-			news.Setup(keys, aLocalisator);
+			news.Setup(worker.Collaps(), aLocalisator);
 			return news;
 		}
 
