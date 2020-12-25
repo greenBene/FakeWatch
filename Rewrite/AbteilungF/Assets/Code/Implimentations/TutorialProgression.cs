@@ -27,7 +27,7 @@
 			throw new System.NotImplementedException();
 		}
 
-		public News TriggerNews(INewsFactory aFactory)
+		public News TriggerNews(INewsFactory aFactory, ILocalisator aLocalisator)
 		{
 			throw new System.NotImplementedException();
 		}

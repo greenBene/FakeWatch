@@ -2,7 +2,7 @@
 {
 	public interface IProgression
 	{
-		News TriggerNews(INewsFactory aFactory);
+		News TriggerNews(INewsFactory aFactory, ILocalisator aLocalisator);
 		bool HasReachedMaxProgression();
 		float GetCurrentDelay();
 		void SetFalsePositive();

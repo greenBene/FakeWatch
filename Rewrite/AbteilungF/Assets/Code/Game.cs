@@ -6,6 +6,8 @@ namespace AbteilungF
 {
 	public class Game : MonoBehaviour
 	{
+		public System.Action OnGameHasEnded;
+
 		[SerializeField] News myNewsPrototype;
 
 		IProgression myProgression;
@@ -19,7 +21,7 @@ namespace AbteilungF
 
 		SortedSet<News> myNewses = new SortedSet<News>();
 
-		public void MyStart(NotificationHandler aNotificationHandler, float aStartDelay)
+		public void MyStart(NotificationHandler aNotificationHandler)
 		{
 			Kill();
 
@@ -28,21 +30,27 @@ namespace AbteilungF
 			myFactory = new SimpleNewsFactory();
 			myFactory.SetNewsPrototype(myNewsPrototype);
 
-			myProgression = new TutorialProgression();
+			myProgression = new DummyProgression();
+			//myProgression = new TutorialProgression();
 			myIsInTutorial = true;
 
 			myTimer = new Timer();
 
 			myTimer.OnCountdownEnded += Kill;
+			myTimer.OnCountdownEnded += EndOfGame;
 
 			myLastNews = Time.time;
-			myCurrentDelay = aStartDelay;
+			myCurrentDelay = myProgression.GetCurrentDelay();
+
+			Data.GetInstance().myCorrect.value = 0;
+			Data.GetInstance().myFalsePositive.value = 0;
+			Data.GetInstance().myFalseNegative.value = 0;
 		}
 
 		private void Update()
 		{
 			if (myLastNews + myCurrentDelay <= Time.time) {
-				var news = myProgression.TriggerNews(myFactory);
+				var news = myProgression.TriggerNews(myFactory, Data.GetInstance().myLocalisator);
 				news.Show(OnClickFake, OnClickCorrect);
 				myNewses.Add(news);
 
@@ -51,9 +59,14 @@ namespace AbteilungF
 
 				if (myIsInTutorial && myProgression.HasReachedMaxProgression()) {
 					myIsInTutorial = false;
-					myProgression = new DynamicProgression();
+					//myProgression = new DynamicProgression();
 				}
 			}
+		}
+
+		private void OnDestroy()
+		{
+			Kill();
 		}
 
 		private void OnClickFake(News aNews)
@@ -76,6 +89,11 @@ namespace AbteilungF
 				it.Kill();
 			}
 			myNotificationHandler.MyReset();
+		}
+
+		private void EndOfGame()
+		{
+			OnGameHasEnded?.Invoke();
 		}
 	}
 }

@@ -104,6 +104,7 @@ namespace AbteilungF
 				myProgression.SetFalseNegative();
 				myNotification = myHandler.CreateNotification();
 				Data.GetInstance().myLanguage.OnValueChangeWithState += ChangLang;
+				Data.GetInstance().myFalseNegative.value++;
 				ChangLang(Data.GetInstance().myLanguage.value);
 
 				myNotification.OnRemove += Finish;
@@ -142,6 +143,7 @@ namespace AbteilungF
 				myProgression.SetFalsePositive();
 				myNotification = myHandler.CreateNotification();
 				Data.GetInstance().myLanguage.OnValueChangeWithState += ChangLang;
+				Data.GetInstance().myFalsePositive.value++;
 				ChangLang(Data.GetInstance().myLanguage.value);
 
 				myNotification.OnRemove += Finish;
@@ -172,6 +174,7 @@ namespace AbteilungF
 			public void Execute()
 			{
 				myProgression.SetCorrect();
+				Data.GetInstance().myCorrect.value++;
 			}
 		}
 	}

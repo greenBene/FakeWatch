@@ -27,9 +27,9 @@
 			throw new System.NotImplementedException();
 		}
 
-		public News TriggerNews(INewsFactory aFactory)
+		public News TriggerNews(INewsFactory aFactory, ILocalisator aLocalisator)
 		{
-			return aFactory.GetNextNews(Data.GetInstance().myLocalisator);
+			throw new System.NotImplementedException();
 		}
 	}
 }
