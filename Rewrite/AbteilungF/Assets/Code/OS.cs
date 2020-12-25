@@ -13,6 +13,9 @@ namespace AbteilungF
 
 		public void StartExe(IExecutable aExecutable)
 		{
+			if (myExecutables.ContainsKey(aExecutable)) {
+				return;
+			}
 			var refHolder = Instantiate(myWindowPrototype, transform).GetComponent<WindowRefHolder>();
 			myExecutables[aExecutable] = refHolder;
 

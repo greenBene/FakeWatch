@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace AbteilungF
 {
-	public interface IExecutable
+	[System.Serializable]
+	public abstract class IExecutable : Object
 	{
-		System.Action OnFinished { get; set; }
-		System.Action OnRequestPause { get; set; }
-		System.Action<float, float> OnRequestSize { get; set; }
+		public System.Action OnFinished { get; set; }
+		public System.Action OnRequestPause { get; set; }
+		public System.Action<float, float> OnRequestSize { get; set; }
 
-		void Init(RectTransform aWindowContent);
-		void Pause();
-		void Resume();
-		void Kill();
+		public void Init(RectTransform aWindowContent) { }
+		public void Pause() { }
+		public void Resume() { }
+		public void Kill() { }
 	}
 }
