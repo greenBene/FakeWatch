@@ -8,8 +8,8 @@ namespace AbteilungF
 {
 	public class NewsRefHolder : MonoBehaviour
 	{
-		public System.Action<News> OnClickFake;
-		public System.Action<News> OnClickCorrect;
+		public System.Action OnClickFake;
+		public System.Action OnClickCorrect;
 
 		public TextMeshProUGUI myTitle;
 		public TextMeshProUGUI myAutor;
@@ -19,8 +19,6 @@ namespace AbteilungF
 		public TextMeshProUGUI myAreaOfExpertise;
 		public TextMeshProUGUI myFake;
 		public TextMeshProUGUI myCorrect;
-
-		[HideInInspector] public News myNews;
 
 		private void Start()
 		{
@@ -54,16 +52,6 @@ namespace AbteilungF
 				Destroy(gameObject);
 				return;
 			}
-		}
-
-		public void ClickFake()
-		{
-			OnClickFake?.Invoke(myNews);
-		}
-
-		public void ClickCorrect()
-		{
-			OnClickCorrect?.Invoke(myNews);
 		}
 	}
 }

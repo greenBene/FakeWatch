@@ -51,7 +51,7 @@ namespace AbteilungF
 		{
 			if (myLastNews + myCurrentDelay <= Time.time) {
 				var news = myProgression.TriggerNews(myFactory, Data.GetInstance().myLocalisator);
-				news.Show(OnClickFake, OnClickCorrect);
+				news.Show(() => OnClickFake(news), () => OnClickCorrect(news));
 				myNewses.Add(news);
 
 				myLastNews = Time.time;

@@ -32,7 +32,7 @@ namespace AbteilungF
 			myLoalisator = aLocalisator;
 		}
 
-		public void Show(System.Action<News> aFakeCallback, System.Action<News> aCorrectCallback)
+		public void Show(System.Action aFakeCallback, System.Action aCorrectCallback)
 		{
 			myPrefab = Instantiate(myPrefab);
 			myRefHolder = myPrefab.GetComponent<NewsRefHolder>();
