@@ -1,15 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace AbteilungF
 {
-	public class WindowRefHolder : MonoBehaviour
+	public class WindowRefHolder : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 	{
 		public System.Action OnClose;
 		public System.Action OnMinimice;
 
 		public RectTransform myExeContent;
+
+		Vector2 myCurserOffset;
+
+		public void OnBeginDrag(PointerEventData eventData)
+		{
+			myCurserOffset = (Vector2)transform.position - eventData.position;
+		}
+
+		public void OnDrag(PointerEventData eventData)
+		{
+			transform.position = eventData.position + myCurserOffset;
+		}
+
+		public void OnEndDrag(PointerEventData eventData)
+		{
+
+		}
 
 		private void Start()
 		{
