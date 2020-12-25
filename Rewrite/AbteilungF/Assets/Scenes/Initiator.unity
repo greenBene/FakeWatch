@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d95253ecaf1b7d42979c00e3c5436db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myLocaSprites: []
 --- !u!4 &959068594
 Transform:
   m_ObjectHideFlags: 0
