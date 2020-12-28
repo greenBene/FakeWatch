@@ -21,13 +21,21 @@ namespace AbteilungF.SNF
 		{
 			var nodes = new Dictionary<string, Node>();
 
-			var nodeDeclarations = Regex.Matches(myFile, "^((.*)_.*):");
+			var nodeDeclarations = Regex.Matches(myFile, "[\\n|^]((.*)_.*):");
 			foreach (Match it in nodeDeclarations) {
 				nodes[it.Groups[1].Value] = new Node(NewsElementFromString(it.Groups[2].Value), it.Groups[1].Value);
 			}
 
-			var combinations = Regex.Matches(myFile, "^(.*)->(.*)$");
+			var combinations = Regex.Matches(myFile, "{\\n|^](.*) -> (.*)[\\r|$]");
 			foreach (Match it in combinations) {
+				if (!nodes.ContainsKey(it.Groups[1].Value)) {
+					Debug.LogWarning("node " + it.Groups[1].Value + " cant be found");
+					continue;
+				}
+				if (!nodes.ContainsKey(it.Groups[2].Value)) {
+					Debug.LogWarning("node " + it.Groups[1].Value + " cant be found");
+					continue;
+				}
 				nodes[it.Groups[1].Value].AddNode(nodes[it.Groups[2].Value]);
 				nodes[it.Groups[2].Value].AddNode(nodes[it.Groups[1].Value]);
 			}

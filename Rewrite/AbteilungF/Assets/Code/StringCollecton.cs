@@ -7,6 +7,8 @@
 		public const string CREDITS = "Credits";
 		public const string TUTORIAL = "Tutorial";
 		public const string CONTINUE = "Continue";
+		public const string GAMELABLE = "GameLable";
+		public const string AUTORLABLE = "AutorLable";
 
 		public const string FAKE = "Fake";
 		public const string CORRECT = "Correct";

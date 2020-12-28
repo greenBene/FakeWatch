@@ -8,6 +8,8 @@ namespace AsserTOOLres
 	[RequireComponent(typeof(TextMeshProUGUI))]
 	public class FitToText : MonoBehaviour
 	{
+		[SerializeField] bool myVariableHight = true;
+
 		TextMeshProUGUI myText;
 
 		private void Start()
@@ -17,7 +19,9 @@ namespace AsserTOOLres
 
 		private void FixedUpdate()
 		{
-			((RectTransform)transform).sizeDelta = new Vector2(((RectTransform)transform).sizeDelta.x, myText.preferredHeight);
+			((RectTransform)transform).sizeDelta = new Vector2(
+				myVariableHight ? ((RectTransform)transform).sizeDelta.x : myText.preferredWidth,
+				myVariableHight ? myText.preferredHeight : ((RectTransform)transform).sizeDelta.y);
 		}
 	}
 }

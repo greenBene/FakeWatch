@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 namespace AbteilungF
 {
 	[CreateAssetMenu(fileName = "NewsPrototype", menuName = "NewsPrototype")]
-	public class News : ScriptableObject
+	public class News : ScriptableObject, IComparable
 	{
 		private bool myIsCorrect;
 		private newsElement myLhs;
@@ -18,14 +19,14 @@ namespace AbteilungF
 
 		public void Setup(Dictionary<newsElement, string> aContent, ILocalisator aLocalisator)
 		{
-			myIsCorrect = false;
+			myIsCorrect = true;
 			myContent = aContent;
 			myLoalisator = aLocalisator;
 		}
 
 		public void Setup(Dictionary<newsElement, string> aContent, ILocalisator aLocalisator, newsElement aLhs, newsElement aRhs)
 		{
-			myIsCorrect = true;
+			myIsCorrect = false;
 			myLhs = aLhs;
 			myRhs = aRhs;
 			myContent = aContent;
@@ -34,7 +35,7 @@ namespace AbteilungF
 
 		public void Show(System.Action aFakeCallback, System.Action aCorrectCallback)
 		{
-			myPrefab = Instantiate(myPrefab);
+			myPrefab = Instantiate(myPrefab, OS.GetInstance().GetDesktop());
 			myRefHolder = myPrefab.GetComponent<NewsRefHolder>();
 
 			Data.GetInstance().myLanguage.OnValueChangeWithState += UpdateLanguage;
@@ -52,9 +53,6 @@ namespace AbteilungF
 			myRefHolder.myPlace.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.place]);
 			myRefHolder.myDate.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.date]); //TODO: make date and day work together
 			myRefHolder.myAreaOfExpertise.text = myLoalisator.GetLocaString(aLanguage, myContent[newsElement.areaOfExpertise]);
-
-			myRefHolder.myFake.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.FAKE);
-			myRefHolder.myCorrect.text = myLoalisator.GetLocaString(aLanguage, StringCollecton.CORRECT);
 		}
 
 		public void Kill()
@@ -62,7 +60,7 @@ namespace AbteilungF
 			if (Data.Exists()) {
 				Data.GetInstance().myLanguage.OnValueChangeWithState -= UpdateLanguage;
 			}
-			Destroy(myPrefab);
+			Destroy(myPrefab.gameObject);
 		}
 
 		public ICommand MarkAs(bool aCorrect, IProgression aProgression, NotificationHandler aHandler)
@@ -78,6 +76,11 @@ namespace AbteilungF
 					return new ErrorMessageCommand(aProgression, aHandler, myLoalisator, myLhs, myRhs);
 				}
 			}
+		}
+
+		public int CompareTo(object obj)
+		{
+			return (this == (News)obj) ? 0 : 1;
 		}
 
 		class ErrorMessageCommand : ICommand

@@ -17,8 +17,6 @@ namespace AbteilungF
 		public TextMeshProUGUI myPlace;
 		public TextMeshProUGUI myDate;
 		public TextMeshProUGUI myAreaOfExpertise;
-		public TextMeshProUGUI myFake;
-		public TextMeshProUGUI myCorrect;
 
 		private void Start()
 		{
@@ -52,6 +50,16 @@ namespace AbteilungF
 				Destroy(gameObject);
 				return;
 			}
+		}
+
+		public void ClickFake()
+		{
+			OnClickFake?.Invoke();
+		}
+
+		public void ClickCorrect()
+		{
+			OnClickCorrect?.Invoke();
 		}
 	}
 }

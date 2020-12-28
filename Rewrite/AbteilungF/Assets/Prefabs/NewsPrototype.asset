@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b190cc793388144d8c6fb812f6daf8a, type: 3}
   m_Name: NewsPrototype
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 0}
+  myPrefab: {fileID: 4843584534772807477, guid: e9c24f18b67312e4c90ba082684be09d, type: 3}

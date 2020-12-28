@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AbteilungF.SNF;
+using UnityEngine;
 
 namespace AbteilungF
 {
@@ -44,7 +45,7 @@ namespace AbteilungF
 			} while (!worker.GetContainingElements().AreTheSame(aContainsElements));
 
 
-			News news = new News();
+			News news = ScriptableObject.Instantiate(myNewsPrototype);
 			news.Setup(worker.Collaps(), aLocalisator);
 			return news;
 		}

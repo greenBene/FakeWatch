@@ -10,6 +10,7 @@ namespace AbteilungF
 		Dictionary<Executable, WindowRefHolder> myExecutables = new Dictionary<Executable, WindowRefHolder>();
 		[SerializeField] GameObject myWindowPrototype;
 		[SerializeField] NotificationHandler myNotificationHandler;
+		[SerializeField] RectTransform myDesktop;
 
 		public void StartExe(Executable aExecutable)
 		{
@@ -32,6 +33,11 @@ namespace AbteilungF
 		public NotificationHandler GetNotificationHandler()
 		{
 			return myNotificationHandler;
+		}
+
+		public RectTransform GetDesktop()
+		{
+			return myDesktop;
 		}
 
 		void HandleExeFinished(Executable aExecutable)

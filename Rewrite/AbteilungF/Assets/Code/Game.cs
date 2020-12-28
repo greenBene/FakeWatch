@@ -39,7 +39,7 @@ namespace AbteilungF
 			//myTimer.OnCountdownEnded += EndOfGame;
 
 			myLastNews = Time.time;
-			myCurrentDelay = myProgression.GetCurrentDelay();
+			myCurrentDelay = 0;
 
 			Data.GetInstance().myCorrect.value = 0;
 			Data.GetInstance().myFalsePositive.value = 0;

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5495864819292126872}
   - component: {fileID: 51549258125806829}
+  - component: {fileID: 200963919275800209}
   m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
@@ -54,6 +55,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myExeContent: {fileID: 2555774578677358495}
   myButtonPanle: {fileID: 5369407043981421669}
+--- !u!114 &200963919275800209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732034108693736784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2357ade3107540a20fbddd54365e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388533782937780231
 GameObject:
   m_ObjectHideFlags: 0

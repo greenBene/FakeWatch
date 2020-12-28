@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myWindowPrototype: {fileID: 732034108693736784, guid: db83cf160256d9847a8ef0fc9dfae42e, type: 3}
   myNotificationHandler: {fileID: 116847638}
+  myDesktop: {fileID: 1753637260}
 --- !u!1 &1306606285
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ed76c547a3d124ea355722032545a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myKey: GameName
+  myKey: GameLable
 --- !u!114 &1469824629
 MonoBehaviour:
   m_ObjectHideFlags: 0
