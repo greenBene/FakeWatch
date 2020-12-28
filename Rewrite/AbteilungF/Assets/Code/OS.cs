@@ -27,7 +27,7 @@ namespace AbteilungF
 			refHolder.OnClose += () => HandleExeFinished(aExecutable);
 			refHolder.OnMinimice += aExecutable.Pause;
 
-			aExecutable.Init(refHolder.myExeContent, refHolder.myButtonPanle);
+			refHolder.myTitle.myKey = aExecutable.Init(refHolder.myExeContent, refHolder.myButtonPanle);
 		}
 
 		public NotificationHandler GetNotificationHandler()

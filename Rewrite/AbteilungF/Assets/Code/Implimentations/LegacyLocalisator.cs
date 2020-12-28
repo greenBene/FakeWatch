@@ -9,22 +9,31 @@ namespace AbteilungF
 	{
 		string myFactsDEPath;
 		string myFactsENPath;
-		string myCreditsPath;
+		string myCreditsDEPath;
+		string myCreditsENPath;
+		string mySceneDEPath;
+		string mySceneENPath;
 		string myNotificationsPath;
 
 		bool myLoadedFactsDE = false;
 		bool myLoadedFactsEN = false;
-		bool myLoadedCredits = false;
+		bool myLoadedCreditsDE = false;
+		bool myLoadedCreditsEN = false;
+		bool myLoadedSceneDE = false;
+		bool myLoadedSceneEN = false;
 		bool myLoadedNotifications = false;
 
 		Dictionary<System.Tuple<language, string>, List<string>> myLoca = new Dictionary<System.Tuple<language, string>, List<string>>();
 		Dictionary<System.Tuple<language, string>, Sprite> mySprites;
 
-		public LegacyLocalisator(string aFactsDEPath, string aFactsENPath, string aCreditsPath, string aNotificationsPath, Dictionary<System.Tuple<language, string>, Sprite> aSprites)
+		public LegacyLocalisator(string aFactsDEPath, string aFactsENPath, string aCreditsDEPath, string aCreditsENPath, string aSceneDEPath, string aSceneENPath, string aNotificationsPath, Dictionary<System.Tuple<language, string>, Sprite> aSprites)
 		{
 			myFactsDEPath = aFactsDEPath;
 			myFactsENPath = aFactsENPath;
-			myCreditsPath = aCreditsPath;
+			myCreditsDEPath = aCreditsDEPath;
+			myCreditsENPath = aCreditsENPath;
+			mySceneDEPath = aSceneDEPath;
+			mySceneENPath = aSceneENPath;
 			myNotificationsPath = aNotificationsPath;
 			mySprites = aSprites;
 		}
@@ -40,6 +49,7 @@ namespace AbteilungF
 
 			{
 				string file = "";
+				string file2 = "";
 				switch (aLanguage) {
 				case language.deDE:
 					if (!myLoadedFactsDE
@@ -47,12 +57,34 @@ namespace AbteilungF
 						file = File.ReadAllText(myFactsDEPath);
 						myLoadedFactsDE = true;
 					}
+					if (!myLoadedCreditsDE
+						&& File.Exists(myCreditsDEPath)) {
+						SaveAdd(new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS), File.ReadAllText(myCreditsDEPath));
+						myLoca[new System.Tuple<language, string>(language.enEN, StringCollecton.CREDITS)] = myLoca[new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS)];
+						myLoadedCreditsDE = true;
+					}
+					if (!myLoadedSceneDE
+						&& File.Exists(mySceneDEPath)) {
+						file2 = File.ReadAllText(mySceneDEPath);
+						myLoadedSceneDE = true;
+					}
 					break;
 				case language.enEN:
 					if (!myLoadedFactsEN
 						&& File.Exists(myFactsENPath)) {
 						file = File.ReadAllText(myFactsENPath);
 						myLoadedFactsEN = true;
+					}
+					if (!myLoadedCreditsEN
+						&& File.Exists(myCreditsENPath)) {
+						SaveAdd(new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS), File.ReadAllText(myCreditsENPath));
+						myLoca[new System.Tuple<language, string>(language.enEN, StringCollecton.CREDITS)] = myLoca[new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS)];
+						myLoadedCreditsEN = true;
+					}
+					if (!myLoadedSceneEN
+						&& File.Exists(mySceneENPath)) {
+						file2 = File.ReadAllText(mySceneENPath);
+						myLoadedSceneEN = true;
 					}
 					break;
 				default:
@@ -62,13 +94,11 @@ namespace AbteilungF
 				foreach (Match it in matcher) {
 					SaveAdd(new System.Tuple<language, string>(aLanguage, it.Groups[1].Value), it.Groups[2].Value);
 				}
-			}
 
-			if (!myLoadedCredits
-				&& File.Exists(myCreditsPath)) {
-				SaveAdd(new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS), File.ReadAllText(myCreditsPath));
-				myLoca[new System.Tuple<language, string>(language.enEN, StringCollecton.CREDITS)] = myLoca[new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS)];
-				myLoadedCredits = true;
+				matcher = Regex.Matches(file2, "[\\n|^](.*): (.*)[\\r|$]");
+				foreach (Match it in matcher) {
+					SaveAdd(new System.Tuple<language, string>(aLanguage, it.Groups[1].Value), it.Groups[2].Value);
+				}
 			}
 
 			if (!myLoadedNotifications

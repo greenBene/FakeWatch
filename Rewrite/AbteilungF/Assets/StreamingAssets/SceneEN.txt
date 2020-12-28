@@ -1,0 +1,25 @@
+Password: Passwort
+Quit: Quit
+CreditsTitle: Credits.txt - Viewer
+CreditsLable: Credits.txt
+Zeitung: Newspaper
+Ressort: Department
+Datum: Date
+Headline: Headline
+Autor: Author
+Ort: Place
+GameLable: FactCheck Software (v3.02)
+Next: Next
+Skip: Skip
+Start: Start
+AutorLable: by
+Correct: Correct
+Fake: Fake
+End: End of Fact-Checking Cycle
+InputField: Name for Highscore
+LogOut: Log Out
+BackToDesktop: Back to Desktop
+MessageBetreff: Subject:
+MessageBetreff: Marking Error
+MessageAbsender: by
+MessageAbsender: Head of Department

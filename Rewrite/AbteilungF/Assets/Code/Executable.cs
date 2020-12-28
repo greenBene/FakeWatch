@@ -11,7 +11,7 @@ namespace AbteilungF
 		public System.Action OnRequestPause { get; set; }
 		public System.Action<float, float> OnRequestSize { get; set; }
 
-		public abstract void Init(RectTransform aWindowContent, RectTransform aButtonPanle);
+		public abstract string Init(RectTransform aWindowContent, RectTransform aButtonPanle);
 		public abstract void Pause();
 		public abstract void Resume();
 		public abstract void Kill();

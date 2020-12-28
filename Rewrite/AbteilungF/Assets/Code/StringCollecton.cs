@@ -5,13 +5,20 @@
 		public const string LOCKSCREEN = "LockScreen";
 		public const string INGAME = "InGame";
 		public const string CREDITS = "Credits";
+
 		public const string TUTORIAL = "Tutorial";
-		public const string CONTINUE = "Continue";
+		public const string START = "Start";
+		public const string QUIT = "Quit";
 		public const string GAMELABLE = "GameLable";
 		public const string AUTORLABLE = "AutorLable";
+		public const string CREDITSLABLE = "CreditsLable";
+
+		public const string GAMETITLE = "GameTitle";
+		public const string CREDITSTITLE = "CreditsTitle";
 
 		public const string FAKE = "Fake";
 		public const string CORRECT = "Correct";
+		public const string PASSWORD = "Password";
 
 		public const string NO_CONNECTION = "None|None";
 		public const string TITLE = "Title";
@@ -68,7 +75,7 @@
 		{
 			if ((aLhs == aCheckA && aRhs == aCheckB)
 				|| (aRhs == aCheckA && aLhs == aCheckB)) {
-				key = KeyFromNewsElement(aCheckA) + "|" + KeyFromNewsElement(aCheckB);
+				key = "[" + KeyFromNewsElement(aCheckA) + "|" + KeyFromNewsElement(aCheckB) + "]";
 				return true;
 			}
 			key = "";

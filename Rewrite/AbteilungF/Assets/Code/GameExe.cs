@@ -14,12 +14,13 @@ namespace AbteilungF {
 
 		Game myGame;
 
-		public override void Init(RectTransform aWindowContent, RectTransform aButtonPanle)
+		public override string Init(RectTransform aWindowContent, RectTransform aButtonPanle)
 		{
 			var element = Instantiate(myTutorialContent, aWindowContent);
 			element.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<StringLocalisator>().myKey = StringCollecton.TUTORIAL;
 			var goButton = (RectTransform)Instantiate(myGoButton, aButtonPanle).transform;
 			goButton.GetComponent<Button>().onClick.AddListener(OnGo);
+			return StringCollecton.GAMETITLE;
 		}
 
 		public override void Kill()

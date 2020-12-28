@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f78484eed1aad5429f4d746e5dbf725, type: 3}
   m_Name: CreditsExe
   m_EditorClassIdentifier: 
-  myKey: Credits
+  myContentKey: Credits
+  myTitleKey: CreditsTitle
   myPrefab: {fileID: 2130380778767608675, guid: 207c90b8e6e0f714fa25304f2e7efcca, type: 3}

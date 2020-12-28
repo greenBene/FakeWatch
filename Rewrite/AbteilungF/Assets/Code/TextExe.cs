@@ -8,17 +8,19 @@ namespace AbteilungF
 	[CreateAssetMenu(fileName = "TextExe", menuName = "TextViewer")]
 	public class TextExe : Executable
 	{
-		[SerializeField] string myKey;
+		[SerializeField] string myContentKey;
+		[SerializeField] string myTitleKey;
 		[SerializeField] GameObject myPrefab;
 
 		TextMeshProUGUI myText;
 
-		public override void Init(RectTransform aWindowContent, RectTransform aButtonPanle)
+		public override string Init(RectTransform aWindowContent, RectTransform aButtonPanle)
 		{
 			var element = Instantiate(myPrefab, aWindowContent);
 			myText = element.GetComponentInChildren<TextMeshProUGUI>();
 			Data.GetInstance().myLanguage.OnValueChangeWithState += UpdateTest;
 			UpdateTest(Data.GetInstance().myLanguage.value);
+			return myTitleKey;
 		}
 
 		public override void Kill()
@@ -38,7 +40,7 @@ namespace AbteilungF
 
 		void UpdateTest(language aLanguage)
 		{
-			myText.text = Data.GetInstance().myLocalisator.GetLocaString(aLanguage, myKey);
+			myText.text = Data.GetInstance().myLocalisator.GetLocaString(aLanguage, myContentKey);
 		}
 	}
 }

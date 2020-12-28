@@ -11,6 +11,7 @@ namespace AbteilungF
 
 		public RectTransform myExeContent;
 		public RectTransform myButtonPanle;
+		public StringLocalisator myTitle;
 
 		private void Start()
 		{

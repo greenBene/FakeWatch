@@ -1,0 +1,25 @@
+Password: Passwort
+Quit: Quit
+CreditsTitle: Credits.txt - Viewer
+CreditsLable: Credits.txt
+Zeitung: Zeitung
+Ressort: Ressort
+Datum: Datum
+Headline: Schlagzeile
+Autor: Autor
+Ort: Ort
+GameLable: FactCheck Software (v3.02)
+Next: Next
+Skip: Skip
+Start: Start
+AutorLable: von
+Correct: Korrekt
+Fake: Fake
+End: Ende der Arbeitsphase
+InputField: Name für Highscore
+LogOut: Log Out
+BackToDesktop: Back to Desktop
+MessageBetreffLable: Betreff:
+MessageBetreffValue: Fehlermeldung
+MessageAbsenderLable: von
+MessageAbsenderValue: Abteilungsleitung

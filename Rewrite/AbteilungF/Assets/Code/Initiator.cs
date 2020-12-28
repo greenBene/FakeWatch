@@ -27,7 +27,10 @@ namespace AbteilungF
 			Data.GetInstance().myLocalisator = new LegacyLocalisator(
 				Application.streamingAssetsPath + "/factsDE.txt",
 				Application.streamingAssetsPath + "/factsEN.txt",
-				Application.streamingAssetsPath + "/Credits.txt",
+				Application.streamingAssetsPath + "/CreditsDE.txt",
+				Application.streamingAssetsPath + "/CreditsEN.txt",
+				Application.streamingAssetsPath + "/SceneDE.txt",
+				Application.streamingAssetsPath + "/SceneEN.txt",
 				Application.streamingAssetsPath + "/Fehlermeldung_Abteilungsleitung.txt",
 				locaSprites);
 

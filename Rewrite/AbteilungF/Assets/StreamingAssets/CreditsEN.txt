@@ -1,0 +1,66 @@
+﻿Abteilung F
+
+Thank you for your interest in our game Department F. The original version of our game was created during the "Fake Jam" game jam. This game jam was organized and held by Stiftung Digitale Spielekultur in cooperation with the German Federal Government Commissioner for Culture and the Media, the Games Academy Berlin and the game developers of Maschinen-Mensch. This current, reworked version was created by members of the original team for the Gamescom-booth of the Federal Agency of Civic Education.
+
+The current game developers behind Abteilung F are (in alphabetical order)
+
+Benedikt Maria Beckermann / @greenBene
+- Web Design -
+
+Andreas Edmeier / @Quwertzuiop
+- Refactoring / Programming / Trailer Editing-
+
+Tobias Kohl / @Roy_Burns_fnx
+- Refactoring / Programming -
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design / PR / Translation -
+
+Felix Szczesny / @FelixSzczesny
+- Art Design -
+
+
+
+The original game developers behind the „Fake-Jam“ version of Abteilung F were (in alphabetical order)
+
+Sven Ahlgrimm / @SvenAhlgrimm
+- UX Design / Frontend Programming -
+
+Daniel Berndt / @D40B
+- Backend Programming -
+
+Benedikt Maria Beckermann / @greenBene
+- Programming -
+
+Andreas Edmeier / @Quwertzuiop
+- Game Design -
+
+Jörg Friedel / @jofrie83
+- Art Design / Story Writing -
+
+Tobias Kohl / @Roy_Burns_fnx
+- Game Design -
+
+Christoph Plewe / @ChristophPlewe
+- Story Writing / Sound Design -
+
+Felix Szczesny / @FelixSzczesny
+- Art Design -
+
+
+
+For their support, energy and for motivating us to keep working on Abteilung F we would like to thank...
+Carolin Wendt of the Stiftung Digitale Spielekultur
+The Federal Government Commissioner for Culture and the Media as well as her representatives
+Johannes Kristmann and Riad Djemili of Maschinen-Mensch
+Matthias Thanos of the Federal Agency of Civic Education
+Lorenzo Pilia of BerlinGameScene.com
+as well as Carola Brozio and Philipp Schäfer.
+
+
+
+For further information about the game and a free download please visit www.abteilung-f.de
+
+If you would like to contact us, you can write an e-mail to info@abteilung-f.de
+
+For news on updates, events and more information on the subject of Fake News you can follow us on Twitter via @AbteilungF
