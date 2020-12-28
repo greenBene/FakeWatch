@@ -4,6 +4,9 @@
 	{
 		public const string LOCKSCREEN = "LockScreen";
 		public const string INGAME = "InGame";
+		public const string CREDITS = "Credits";
+		public const string TUTORIAL = "Tutorial";
+		public const string CONTINUE = "Continue";
 
 		public const string FAKE = "Fake";
 		public const string CORRECT = "Correct";

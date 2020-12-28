@@ -7,15 +7,7 @@ using UnityEngine.UI;
 namespace AbteilungF {
 	public class Icon : MonoBehaviour, IPointerClickHandler
 	{
-		[SerializeField] string myKey;
-		[SerializeField] Image myIcon;
-		[SerializeField] IExecutable myExecutable;
-
-		private void Start()
-		{
-			Data.GetInstance().myLanguage.OnValueChangeWithState += UpdateIcon;
-			UpdateIcon(Data.GetInstance().myLanguage.value);
-		}
+		[SerializeField] Executable myExecutable;
 
 		public void OnPointerClick(PointerEventData eventData)
 		{
@@ -24,11 +16,6 @@ namespace AbteilungF {
 			}
 
 			OS.GetInstance().StartExe(myExecutable);
-		}
-
-		void UpdateIcon(language aLanguage)
-		{
-			myIcon.sprite = Data.GetInstance().myLocalisator.GetLocaSprite(aLanguage, myKey);
 		}
 	}
 }
