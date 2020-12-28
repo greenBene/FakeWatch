@@ -14,18 +14,17 @@ namespace AbteilungF
 		INewsFactory myFactory;
 		NotificationHandler myNotificationHandler = null;
 		bool myIsInTutorial = true;
-		Timer myTimer;
+		//Timer myTimer;
 
 		float myLastNews;
 		float myCurrentDelay;
 
 		SortedSet<News> myNewses = new SortedSet<News>();
 
-		public void MyStart(NotificationHandler aNotificationHandler)
+		private void Start()
 		{
+			myNotificationHandler = OS.GetInstance().GetNotificationHandler();
 			Kill();
-
-			myNotificationHandler = aNotificationHandler;
 
 			myFactory = new SimpleNewsFactory();
 			myFactory.SetNewsPrototype(myNewsPrototype);
@@ -34,10 +33,10 @@ namespace AbteilungF
 			//myProgression = new TutorialProgression();
 			myIsInTutorial = true;
 
-			myTimer = new Timer();
+			//myTimer = new Timer();
 
-			myTimer.OnCountdownEnded += Kill;
-			myTimer.OnCountdownEnded += EndOfGame;
+			//myTimer.OnCountdownEnded += Kill;
+			//myTimer.OnCountdownEnded += EndOfGame;
 
 			myLastNews = Time.time;
 			myCurrentDelay = myProgression.GetCurrentDelay();
@@ -83,7 +82,7 @@ namespace AbteilungF
 			myNewses.Remove(aNews);
 		}
 
-		private void Kill()
+		public void Kill()
 		{
 			foreach (var it in myNewses) {
 				it.Kill();

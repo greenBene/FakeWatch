@@ -5,16 +5,15 @@ using UnityEditor;
 
 namespace AbteilungF
 {
-	[System.Serializable]
-	public abstract class IExecutable : Object
+	public abstract class Executable : ScriptableObject
 	{
 		public System.Action OnFinished { get; set; }
 		public System.Action OnRequestPause { get; set; }
 		public System.Action<float, float> OnRequestSize { get; set; }
 
-		public void Init(RectTransform aWindowContent) { }
-		public void Pause() { }
-		public void Resume() { }
-		public void Kill() { }
+		public abstract void Init(RectTransform aWindowContent, RectTransform aButtonPanle);
+		public abstract void Pause();
+		public abstract void Resume();
+		public abstract void Kill();
 	}
 }

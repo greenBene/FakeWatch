@@ -11,7 +11,7 @@ namespace AbteilungF
 		[SerializeField] float myTimeToLife;
 		[SerializeField] float mySpeed;
 
-		LinkedList<NotificationWindow> myWindowList;
+		LinkedList<NotificationWindow> myWindowList = new LinkedList<NotificationWindow>();
 
 		public NotificationWindow CreateNotification()
 		{

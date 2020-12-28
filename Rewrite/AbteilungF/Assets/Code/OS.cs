@@ -7,11 +7,11 @@ namespace AbteilungF
 {
 	public class OS : Singleton<OS>
 	{
-		Dictionary<IExecutable, WindowRefHolder> myExecutables;
+		Dictionary<Executable, WindowRefHolder> myExecutables = new Dictionary<Executable, WindowRefHolder>();
 		[SerializeField] GameObject myWindowPrototype;
 		[SerializeField] NotificationHandler myNotificationHandler;
 
-		public void StartExe(IExecutable aExecutable)
+		public void StartExe(Executable aExecutable)
 		{
 			if (myExecutables.ContainsKey(aExecutable)) {
 				return;
@@ -19,13 +19,14 @@ namespace AbteilungF
 			var refHolder = Instantiate(myWindowPrototype, transform).GetComponent<WindowRefHolder>();
 			myExecutables[aExecutable] = refHolder;
 
-			aExecutable.Init(refHolder.myExeContent);
 			aExecutable.OnFinished += () => HandleExeFinished(aExecutable);
 			aExecutable.OnRequestPause += () => HandleRequestPause(aExecutable);
 			aExecutable.OnRequestSize += (float aWidth, float aHight) => HandleRequestSize(aExecutable, aWidth, aHight);
 
-			refHolder.OnClose += aExecutable.Kill;
+			refHolder.OnClose += () => HandleExeFinished(aExecutable);
 			refHolder.OnMinimice += aExecutable.Pause;
+
+			aExecutable.Init(refHolder.myExeContent, refHolder.myButtonPanle);
 		}
 
 		public NotificationHandler GetNotificationHandler()
@@ -33,7 +34,7 @@ namespace AbteilungF
 			return myNotificationHandler;
 		}
 
-		void HandleExeFinished(IExecutable aExecutable)
+		void HandleExeFinished(Executable aExecutable)
 		{
 			if (!myExecutables.ContainsKey(aExecutable)) {
 				return;
@@ -46,7 +47,7 @@ namespace AbteilungF
 			aExecutable.Kill();
 		}
 
-		void HandleRequestPause(IExecutable aExecutable)
+		void HandleRequestPause(Executable aExecutable)
 		{
 			if (!myExecutables.ContainsKey(aExecutable)
 				|| !myExecutables[aExecutable].gameObject.activeSelf) {
@@ -57,7 +58,7 @@ namespace AbteilungF
 			aExecutable.Pause();
 		}
 
-		void HandleRequestSize(IExecutable aExecutable, float aWidth, float aHight)
+		void HandleRequestSize(Executable aExecutable, float aWidth, float aHight)
 		{
 			if (!myExecutables.ContainsKey(aExecutable)) {
 				return;

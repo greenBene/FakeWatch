@@ -11,12 +11,14 @@ namespace AbteilungF
 		public System.Action OnMinimice;
 
 		public RectTransform myExeContent;
+		public RectTransform myButtonPanle;
 
 		Vector2 myCurserOffset;
 
 		public void OnBeginDrag(PointerEventData eventData)
 		{
 			myCurserOffset = (Vector2)transform.position - eventData.position;
+			Debug.Log("start");
 		}
 
 		public void OnDrag(PointerEventData eventData)
@@ -36,6 +38,11 @@ namespace AbteilungF
 				Destroy(gameObject);
 				return;
 			}
+		}
+
+		public void Close()
+		{
+			OnClose?.Invoke();
 		}
 	}
 }
