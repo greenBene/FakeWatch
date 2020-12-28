@@ -60,14 +60,14 @@ namespace AbteilungF
 				}
 				var matcher = Regex.Matches(file, "^(.*): (.*)$");
 				foreach (Match it in matcher) {
-					SaveAdd(new System.Tuple<language, string>(aLanguage, it.Groups[0].Value), it.Groups[1].Value);
+					SaveAdd(new System.Tuple<language, string>(aLanguage, it.Groups[1].Value), it.Groups[2].Value);
 				}
 			}
 
 			if (!myLoadedCredits
 				&& File.Exists(myCreditsPath)) {
-				SaveAdd(new System.Tuple<language, string>(language.deDE, aKey), File.ReadAllText(myCreditsPath));
-				myLoca[new System.Tuple<language, string>(language.enEN, aKey)] = myLoca[new System.Tuple<language, string>(language.deDE, aKey)];
+				SaveAdd(new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS), File.ReadAllText(myCreditsPath));
+				myLoca[new System.Tuple<language, string>(language.enEN, StringCollecton.CREDITS)] = myLoca[new System.Tuple<language, string>(language.deDE, StringCollecton.CREDITS)];
 				myLoadedCredits = true;
 			}
 

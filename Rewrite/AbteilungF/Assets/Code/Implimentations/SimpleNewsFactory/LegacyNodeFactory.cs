@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnityEngine;
 
 namespace AbteilungF.SNF
 {
@@ -22,13 +23,13 @@ namespace AbteilungF.SNF
 
 			var nodeDeclarations = Regex.Matches(myFile, "^((.*)_.*):");
 			foreach (Match it in nodeDeclarations) {
-				nodes[it.Groups[0].Value] = new Node(NewsElementFromString(it.Groups[1].Value), it.Groups[0].Value);
+				nodes[it.Groups[1].Value] = new Node(NewsElementFromString(it.Groups[2].Value), it.Groups[1].Value);
 			}
 
 			var combinations = Regex.Matches(myFile, "^(.*)->(.*)$");
 			foreach (Match it in combinations) {
-				nodes[it.Groups[0].Value].AddNode(nodes[it.Groups[1].Value]);
-				nodes[it.Groups[1].Value].AddNode(nodes[it.Groups[0].Value]);
+				nodes[it.Groups[1].Value].AddNode(nodes[it.Groups[2].Value]);
+				nodes[it.Groups[2].Value].AddNode(nodes[it.Groups[1].Value]);
 			}
 
 			var list = new List<Node>();
@@ -61,7 +62,7 @@ namespace AbteilungF.SNF
 			if (aKey == "DATE") {
 				return newsElement.date;
 			}
-			throw new System.ArgumentException();
+			throw new System.ArgumentException("Key was: " + aKey);
 		}
 	}
 }
