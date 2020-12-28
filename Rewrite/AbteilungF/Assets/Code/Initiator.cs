@@ -34,7 +34,7 @@ namespace AbteilungF
 				Application.streamingAssetsPath + "/Fehlermeldung_Abteilungsleitung.txt",
 				locaSprites);
 
-			SceneManager.LoadScene(StringCollecton.INGAME);
+			SceneManager.LoadScene(StringCollecton.LOCKSCREEN);
 
 			Destroy(this);
 		}

@@ -14,19 +14,19 @@ namespace AbteilungF.SNF
 				return;
 			}
 
-			myFile = System.IO.File.ReadAllText(aPath);
+			myFile = "\r\n" + System.IO.File.ReadAllText(aPath) + "\r\n";
 		}
 
 		public List<Node> GetNodes()
 		{
 			var nodes = new Dictionary<string, Node>();
 
-			var nodeDeclarations = Regex.Matches(myFile, "[\\n|^]((.*)_.*):");
+			var nodeDeclarations = Regex.Matches(myFile, "\\n((.*)_.*):");
 			foreach (Match it in nodeDeclarations) {
 				nodes[it.Groups[1].Value] = new Node(NewsElementFromString(it.Groups[2].Value), it.Groups[1].Value);
 			}
 
-			var combinations = Regex.Matches(myFile, "{\\n|^](.*) -> (.*)[\\r|$]");
+			var combinations = Regex.Matches(myFile, "\\n(.*) -> (.*)\\r");
 			foreach (Match it in combinations) {
 				if (!nodes.ContainsKey(it.Groups[1].Value)) {
 					Debug.LogWarning("node " + it.Groups[1].Value + " cant be found");

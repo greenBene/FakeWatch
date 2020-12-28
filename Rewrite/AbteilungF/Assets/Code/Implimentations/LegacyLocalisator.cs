@@ -90,12 +90,13 @@ namespace AbteilungF
 				default:
 					throw new System.NotSupportedException();
 				}
-				var matcher = Regex.Matches(file, "[\\n|^](.*): (.*)[\\r|$]");
+				file = "\r\n" + file + "\r\n";
+				var matcher = Regex.Matches(file, "\\n(.*): (.*)\\r");
 				foreach (Match it in matcher) {
 					SaveAdd(new System.Tuple<language, string>(aLanguage, it.Groups[1].Value), it.Groups[2].Value);
 				}
-
-				matcher = Regex.Matches(file2, "[\\n|^](.*): (.*)[\\r|$]");
+				file2 = "\r\n" + file2 + "\r\n";
+				matcher = Regex.Matches(file2, "\\n(.*): (.*)\\r");
 				foreach (Match it in matcher) {
 					SaveAdd(new System.Tuple<language, string>(aLanguage, it.Groups[1].Value), it.Groups[2].Value);
 				}
