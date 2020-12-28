@@ -92,6 +92,7 @@ namespace AbteilungF
 
 					SaveAdd(new System.Tuple<language, string>(language.deDE, currentKey), line);
 				}
+				myLoadedNotifications = true;
 			}
 
 			if(myLoca.ContainsKey(new System.Tuple<language, string>(aLanguage, aKey))) {

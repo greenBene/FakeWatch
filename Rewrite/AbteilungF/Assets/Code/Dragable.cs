@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
 	Vector2 myCurserOffset;
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 		myCurserOffset = (Vector2)transform.position - eventData.position;
-		Debug.Log("start");
+		transform.SetAsLastSibling();
 	}
 
 	public void OnDrag(PointerEventData eventData)
@@ -19,5 +19,10 @@ public class Dragable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 	public void OnEndDrag(PointerEventData eventData)
 	{
 
+	}
+
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		transform.SetAsLastSibling();
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace AbteilungF {
 	[CreateAssetMenu(fileName = "GameExe", menuName = "Game")]
@@ -15,15 +16,18 @@ namespace AbteilungF {
 
 		public override void Init(RectTransform aWindowContent, RectTransform aButtonPanle)
 		{
-			Instantiate(myTutorialContent, aWindowContent);
+			var element = Instantiate(myTutorialContent, aWindowContent);
+			element.GetComponentInChildren<TextMeshProUGUI>().gameObject.AddComponent<StringLocalisator>().myKey = StringCollecton.TUTORIAL;
 			var goButton = (RectTransform)Instantiate(myGoButton, aButtonPanle).transform;
 			goButton.GetComponent<Button>().onClick.AddListener(OnGo);
 		}
 
 		public override void Kill()
 		{
-			myGame?.Kill();
-			Destroy(myGame.gameObject);
+			if (myGame) {
+				myGame.Kill();
+				Destroy(myGame.gameObject);
+			}
 		}
 
 		public override void Pause()

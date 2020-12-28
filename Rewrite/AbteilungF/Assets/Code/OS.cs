@@ -17,7 +17,7 @@ namespace AbteilungF
 			if (myExecutables.ContainsKey(aExecutable)) {
 				return;
 			}
-			var refHolder = Instantiate(myWindowPrototype, transform).GetComponent<WindowRefHolder>();
+			var refHolder = Instantiate(myWindowPrototype, myDesktop).GetComponent<WindowRefHolder>();
 			myExecutables[aExecutable] = refHolder;
 
 			aExecutable.OnFinished += () => HandleExeFinished(aExecutable);

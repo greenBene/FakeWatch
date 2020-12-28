@@ -165,6 +165,12 @@ MonoBehaviour:
   - key1: 1
     key2: icon
     value: {fileID: 21300000, guid: 04e89fe74c65bdc4ea64a4a8bd09fd2d, type: 3}
+  - key1: 0
+    key2: text
+    value: {fileID: 21300000, guid: ea659f8aa9a756245a3e88afdbe543be, type: 3}
+  - key1: 1
+    key2: text
+    value: {fileID: 21300000, guid: ea659f8aa9a756245a3e88afdbe543be, type: 3}
 --- !u!4 &959068594
 Transform:
   m_ObjectHideFlags: 0
