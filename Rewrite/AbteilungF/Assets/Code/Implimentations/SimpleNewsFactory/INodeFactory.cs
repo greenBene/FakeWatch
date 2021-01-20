@@ -7,5 +7,6 @@ namespace AbteilungF.SNF
 	public interface INodeFactory
 	{
 		List<Node> GetNodes();
+		Dictionary<newsElement, List<newsElement>> GetConnectionMap();
 	}
 }

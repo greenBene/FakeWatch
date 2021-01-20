@@ -8,6 +8,9 @@ namespace AbteilungF.SNF
 	{
 		string myFile;
 
+		List<Node> myNodes = null;
+		Dictionary<newsElement, List<newsElement>> myConnections = null;
+
 		public LegacyNodeFactory(string aPath)
 		{
 			if (!System.IO.File.Exists(aPath)) {
@@ -17,34 +20,58 @@ namespace AbteilungF.SNF
 			myFile = "\r\n" + System.IO.File.ReadAllText(aPath) + "\r\n";
 		}
 
+		public Dictionary<newsElement, List<newsElement>> GetConnectionMap() {
+			if(myConnections == null) {
+				Init();
+			}
+			return myConnections;
+		}
+
 		public List<Node> GetNodes()
 		{
+			if(myNodes == null) {
+				Init();
+			}
+			return myNodes;
+		}
+
+		void Init() {
 			var nodes = new Dictionary<string, Node>();
 
 			var nodeDeclarations = Regex.Matches(myFile, "\\n((.*)_.*):");
-			foreach (Match it in nodeDeclarations) {
+			foreach(Match it in nodeDeclarations) {
 				nodes[it.Groups[1].Value] = new Node(NewsElementFromString(it.Groups[2].Value), it.Groups[1].Value);
 			}
 
 			var combinations = Regex.Matches(myFile, "\\n(.*) -> (.*)\\r");
-			foreach (Match it in combinations) {
-				if (!nodes.ContainsKey(it.Groups[1].Value)) {
+			foreach(Match it in combinations) {
+				if(!nodes.ContainsKey(it.Groups[1].Value)) {
 					Debug.LogWarning("node " + it.Groups[1].Value + " cant be found");
 					continue;
 				}
-				if (!nodes.ContainsKey(it.Groups[2].Value)) {
+				if(!nodes.ContainsKey(it.Groups[2].Value)) {
 					Debug.LogWarning("node " + it.Groups[1].Value + " cant be found");
 					continue;
 				}
-				nodes[it.Groups[1].Value].AddNode(nodes[it.Groups[2].Value]);
-				nodes[it.Groups[2].Value].AddNode(nodes[it.Groups[1].Value]);
+				var firstNode = nodes[it.Groups[1].Value];
+				var secondNode = nodes[it.Groups[2].Value];
+				firstNode.AddNode(secondNode);
+				secondNode.AddNode(firstNode);
+
+				if(myConnections[firstNode.GetElement()] == null) {
+					myConnections[firstNode.GetElement()] = new List<newsElement>();
+				}
+				myConnections[firstNode.GetElement()].Add(secondNode.GetElement());
+				if(myConnections[secondNode.GetElement()] == null) {
+					myConnections[secondNode.GetElement()] = new List<newsElement>();
+				}
+				myConnections[secondNode.GetElement()].Add(firstNode.GetElement());
 			}
 
-			var list = new List<Node>();
-			foreach (var it in nodes) {
-				list.Add(it.Value);
+			myNodes = new List<Node>();
+			foreach(var it in nodes) {
+				myNodes.Add(it.Value);
 			}
-			return list;
 		}
 
 		newsElement NewsElementFromString(string aKey)

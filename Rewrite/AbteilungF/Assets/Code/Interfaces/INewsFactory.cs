@@ -11,6 +11,7 @@ namespace AbteilungF
 		date,
 		day,
 		areaOfExpertise,
+		size
 	}
 
 	public interface INewsFactory
